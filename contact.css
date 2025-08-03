@@ -1,0 +1,14 @@
+/* === Base Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+/* Additional CSS omitted for brevity */
