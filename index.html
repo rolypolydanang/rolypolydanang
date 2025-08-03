@@ -5,8 +5,7 @@
   <!-- External Libraries -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="menu.css" />
 
   <title>Roly Poly Spring Rolls Da Nang | Vietnamese Restaurant & Café</title>
 
@@ -16,7 +15,6 @@
   <meta name="description" content="Healthy, fresh Vietnamese spring rolls near My Khe Beach in Da Nang. Vegan-friendly, gluten-free, with salted coffee, coconut coffee, and matcha in a cozy An Thuong café." />
 
   <!-- Favicon -->
-  <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -38,366 +36,432 @@
   <meta name="twitter:description" content="Vegan & gluten-free Vietnamese spring rolls, salted coffee, matcha, and more near the beach in Da Nang." />
   <meta name="twitter:image" content="https://rolypolydanang.vn/images/logo.jpg" />
   <meta name="twitter:site" content="@rolypolydanang" />
-
-  <!-- 🔽 Your full CSS starts here -->
-  <style>
-    /* === Base Styles === */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      color: #333;
-      background-color: #fff;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    h1, h2, h3, h4 {
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    /* Hero Section */
-    .hero {
-      background-color: #111;
-      min-height: 100vh;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 2rem;
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .subheadline {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .hero-buttons .btn {
-      display: inline-block;
-      margin: 0 0.5rem;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      background: #ff6a00;
-      color: white;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .hero-buttons .btn.secondary {
-      background: transparent;
-      border: 2px solid white;
-    }
-
-    .hero-buttons .btn.secondary:hover {
-      background: white;
-      color: #333;
-      box-shadow: 0 0 0 2px #333 inset;
-    }
-
-    /* About Section */
-    .about-snippet {
-      padding: 4rem 0;
-      background-color: #f9f9f9;
-      text-align: center;
-    }
-
-    .about-snippet p {
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .about-snippet .btn {
-      background: #ff6a00;
-      color: white;
-      padding: 0.6rem 1.4rem;
-      border-radius: 4px;
-      display: inline-block;
-      transition: background 0.3s;
-    }
-
-    .about-snippet .btn:hover {
-      background: #e55b00;
-    }
-
-    /* What Makes Us Different */
-    .different {
-      padding: 4rem 0;
-      background-color: white;
-      text-align: center;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .feature {
-      background: #fafafa;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Accordion */
-    .accordion {
-      background: #f5f5f5;
-      padding: 4rem 1rem;
-    }
-
-    .accordion .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .accordion-item {
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 1.5rem;
-    }
-
-    .accordion-button {
-      width: 100%;
-      padding: 1rem 1.25rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      background: #fff;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background-color 0.3s ease;
-      border-radius: 6px;
-    }
-
-    .accordion-button:hover,
-    .accordion-button:focus {
-      background-color: #f8f8f8;
-      outline: 2px solid #ff6a00;
-      outline-offset: 2px;
-    }
-
-    .accordion-button[aria-expanded="true"] {
-      background-color: #e0e0e0;
-    }
-
-    .accordion-button .icon {
-      font-size: 1.5rem;
-      margin-left: 1rem;
-      transition: transform 0.3s ease;
-      color: #888;
-    }
-
-    .accordion-button[aria-expanded="true"] .icon {
-      transform: rotate(45deg);
-      color: #ff6a00;
-    }
-
-    .accordion-content {
-      padding: 0 1.25rem 1rem;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
-      background: #fff;
-    }
-
-    .accordion-content a.btn.small {
-      margin-top: 0.75rem;
-    }
-
-    /* Footer */
-    footer {
-      background: #222;
-      color: #ddd;
-      padding: 3rem 1rem 1rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-col h3,
-    .footer-col h4 {
-      margin-bottom: 1rem;
-      color: #fff;
-    }
-
-    .footer-col a {
-      color: #ddd;
-      transition: color 0.3s;
-    }
-
-    .footer-col a:hover {
-      color: #fff;
-    }
-
-    .btn.small {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      background: #ff6a00;
-      color: white;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      margin: 0.5rem 0;
-    }
-
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 0.5rem;
-      font-size: 1.25rem;
-      color: #ddd;
-      transition: color 0.3s ease;
-      width: 32px;
-      height: 32px;
-    }
-
-    .social-links a:hover {
-      color: #fff;
-    }
-
-    .swiper {
-      padding-bottom: 2.5rem;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      max-height: 320px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .swiper-slide:hover img {
-      transform: scale(1.02);
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #ff6a00;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .swiper-pagination-bullet {
-      background: #ccc;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: #ff6a00;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero h2 {
-        font-size: 1.3rem;
-      }
-
-      .subheadline {
-        font-size: 1rem;
-        padding: 0 1rem;
-      }
-
-      .hero-buttons .btn {
-        display: block;
-        margin: 0.5rem auto;
-      }
-
-      .feature {
-        padding: 1rem;
-        font-size: 0.95rem;
-      }
-
-      .swiper-button-next,
-      .swiper-button-prev {
-        display: none;
-      }
-
-      .swiper-slide img {
-        max-height: 240px;
-      }
-    }
-
-    .copyright {
-      text-align: center;
-      margin-top: 1rem;
-    }
-  </style>
 </head>
+<body>
+
+ <!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      
+
+
+      <h1>Roly Poly Fresh Spring Rolls Da Nang – Vietnamese Restaurant & Café in An Thuong</h1>
+      
+      <img src="images/storefront-hero.jpg" alt="Front view of Roly Poly Fresh Spring Rolls Da Nang café" style="max-width: 800px; width: 100%; display: block; margin: 0 auto 1.5rem; border-radius: 8px;" />
+
+      
+      <h2>Da Nang’s First Specialty Spring Roll Café — Freshly Handmade Gỏi Cuốn with Signature Sauces</h2>
+      <p class="subheadline">
+        Healthy, handmade <strong>Gỏi Cuốn</strong> (rice paper rolls / summer rolls) with 7 unique fillings, served with house-made sauces. Enjoy fresh spring rolls, specialty coffee, matcha, and juices in our cozy An Thuong café.
+      </p>
+      <div class="hero-buttons">
+        <a href="menu.html#menu-section" class="btn">View Menu</a>
+        <a href="contact.html" class="btn secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+  <section class="about-snippet">
+    <div class="container">
+      <h2>About Roly Poly Fresh Spring Rolls Da Nang</h2>
+      <p>
+        Roly Poly Fresh Spring Rolls Da Nang is the city’s first specialty café dedicated to fresh <strong>spring rolls, rice paper rolls, and summer rolls</strong> — all handmade to order with high-quality ingredients. We offer <strong>vegan-friendly</strong> and <strong>gluten-free options</strong>, perfect for health-conscious travelers.
+      </p>
+      <p>
+        Located in the heart of <strong>An Thuong</strong>, just minutes from <strong>My Khe Beach</strong>, our cozy vintage café is a favorite with locals and tourists looking for healthy Vietnamese food. Dine in and enjoy free Wi-Fi, indoor seating, and Instagram-worthy vibes.
+      </p>
+      <p>
+        Each roll is served with our unique house-made sauces. Pair your meal with our signature drinks: <strong>Vietnamese salted coffee</strong>, <strong>coconut coffee</strong>, <strong>matcha lattes</strong>, and refreshing <strong>juices</strong>.
+      </p>
+      <a href="menu.html" class="btn">View Menu</a>
+    </div>
+  </section>
+
+  <!-- What Makes Us Different Section -->
+<section class="different" aria-labelledby="what-makes-us-different-heading">
+  <div class="container">
+    <h2 id="what-makes-us-different-heading">What Makes Us Different</h2>
+    <div class="features-grid" role="list">
+      
+      <div class="feature" role="listitem">
+        <h3>Fresh to Order</h3>
+        <p>Spring rolls (Gỏi Cuốn) made fresh when you order — never pre-made.</p>
+      </div>
+
+      <div class="feature" role="listitem">
+        <h3>House-Made Sauces</h3>
+        <p>Unique dipping sauces, all made in-house to match each roll perfectly.</p>
+      </div>
+
+      <div class="feature" role="listitem">
+        <h3>Specialty Drinks</h3>
+        <p>Vietnamese salted coffee, coconut coffee, matcha lattes, and fresh juices.</p>
+      </div>
+
+      <div class="feature" role="listitem">
+        <h3>Vegan & Gluten-Free Options</h3>
+        <p>7 roll varieties with vegan-friendly and gluten-free choices available.</p>
+      </div>
+
+      <div class="feature" role="listitem">
+        <h3>Great Location</h3>
+        <p>Located in An Thuong — just 5 minutes from My Khe Beach.</p>
+      </div>
+
+      <div class="feature" role="listitem">
+        <h3>Tourist-Friendly</h3>
+        <p>English-speaking staff, walk-in welcome, and free Wi-Fi inside the café.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <!-- Carousel Section -->
+<section class="carousel-wrapper" aria-labelledby="featured-carousel-heading">
+  <div class="container">
+    <h2 id="featured-carousel-heading" class="visually-hidden">Featured Items Carousel</h2>
+
+    <div class="swiper" aria-label="Featured Spring Rolls and Drinks">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="images/garlic-prawn-spring-roll-roly-poly-da-nang.jpg" alt="Garlic prawn rice paper roll with peanut sauce in Da Nang" loading="lazy" />
+          <div class="carousel-caption"><h3>Garlic Prawn Spring Roll</h3></div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/lemongrass-beef-spring-roll-roly-poly-da-nang.jpg" alt="Lemongrass beef summer roll with house-made dipping sauce" loading="lazy" />
+          <div class="carousel-caption"><h3>Lemongrass Beef Spring Roll</h3></div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/my-khe-sunrise-juice-roly-poly-da-nang.jpg" alt="Mỹ Khê Sunrise juice with watermelon, pineapple, and lime" loading="lazy" />
+          <div class="carousel-caption"><h3>Mỹ Khê Sunrise Juice</h3></div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/iced-coconut-coffee-roly-poly-da-nang.jpg" alt="Vietnamese iced coconut coffee in a glass with milk foam" loading="lazy" />
+          <div class="carousel-caption"><h3>Iced Coconut Coffee</h3></div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/iced-strawberry-matcha-latte-roly-poly-da-nang.jpg" alt="Iced strawberry matcha latte with milk in Da Nang café" loading="lazy" />
+          <div class="carousel-caption"><h3>Iced Strawberry Matcha Latte</h3></div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev" aria-label="Previous slide"></div>
+      <div class="swiper-button-next" aria-label="Next slide"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- FAQ Section -->
+<section class="accordion" aria-labelledby="faq-heading">
+  <h2 id="faq-heading" class="visually-hidden">Frequently Asked Questions</h2>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">What makes your spring rolls different?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>Our spring rolls (Gỏi Cuốn) are handmade fresh to order in Da Nang and fully customizable. Choose from 7 different protein options — including vegan-friendly and gluten-free choices — and enjoy them with our three house-made sauces: Vietnamese fish sauce, toasted sesame, and peanut.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">Do you have vegan and gluten-free options?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>Yes! We offer several vegan and gluten-free spring rolls. Gluten-free options include Garlic Prawn, Smoked Goose, Satay Chicken, Poached Chicken & Avocado, and Tofu, Mushroom & Avocado (Vegan). All are wrapped in rice paper and made fresh to order. Our Vietnamese fish sauce is gluten-free — please inform our staff if you need to avoid gluten or have allergies.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">Do you serve Vietnamese coffee and matcha?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>Yes! We serve authentic Vietnamese salted coffee, iced coconut coffee, and iced matcha lattes — all made in-house. Our matcha drinks are made with ceremonial grade matcha powder and oat milk. Try the Iced Strawberry Matcha Latte — it’s a customer favorite and dairy-free.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">Do you offer delivery in Da Nang?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>Yes! We offer free delivery within 3 km of our café — including the An Thuong area. Just call us directly to order at in-store prices. For wider delivery in Da Nang, you can use GrabFood (note: Grab adds 20% to food and 15% to drinks).</p>
+      <a href="tel:+84327306076" class="btn small">Call for Free Delivery</a>
+      <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn small" target="_blank">Order on GrabFood</a>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">What are your opening hours?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>We’re open from Monday to Saturday, 10:00 AM to 8:00 PM. Closed on Sundays.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">Do I need a reservation?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>No reservation needed — we’re a walk-in friendly restaurant and café. Just drop by anytime during our opening hours!</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">What payment methods do you accept?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>We accept cash, MoMo transfer, and bank cards including Visa, Mastercard, and Apple Pay. A 3% surcharge applies to all card and digital wallet payments. Most international cards are welcome.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false">
+      <span class="accordion-title" role="heading" aria-level="3">Are you open during holidays?</span>
+      <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="accordion-content" hidden>
+      <p>Our opening hours may change during Vietnamese public holidays, including Tet (Lunar New Year). For the latest updates, please check our Instagram or Facebook pages before visiting.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3>Roly Poly Fresh Spring Rolls Da Nang</h3>
+        <p>
+          <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="View location on Google Maps">
+            05 An Thượng 6, Bắc Mỹ Phú,<br />Ngũ Hành Sơn, Đà Nẵng 550000
+          </a>
+        </p>
+        <p><a href="tel:+84327306076">+84 327 306 076</a></p>
+        <p>Open Monday–Saturday<br />10:00 AM – 8:00 PM</p>
+        <p>Closed Sundays</p>
+      </div>
+
+      <!-- Delivery & Social -->
+      <div class="footer-col">
+        <h4>Delivery & Social</h4>
+        <p>Free delivery within 3 km — call to order</p>
+        <a href="tel:+84327306076" class="btn small">Call for Delivery</a>
+        <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn small" target="_blank">Order on GrabFood</a>
+
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" aria-label="Google Maps">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/rolypolydanang" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com/rolypolydanang" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662-Reviews-Roly_Poly_Fresh_Spring_Rolls_Da_Nang-Da_Nang.html" target="_blank" aria-label="TripAdvisor">
+            <!-- TripAdvisor SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" fill="currentColor" style="vertical-align: middle;" aria-hidden="true">
+              <path d="M195.4 184.6c-41.4 0-75 33.6-75 75s33.6 75 75 75 75-33.6 75-75-33.6-75-75-75zm0 120c-24.8 0-45-20.2-45-45s20.2-45 45-45 45 20.2 45 45-20.2 45-45 45zm121.2-120c-41.4 0-75 33.6-75 75s33.6 75 75 75 75-33.6 75-75-33.6-75-75-75zm0 120c-24.8 0-45-20.2-45-45s20.2-45 45-45 45 20.2 45 45-20.2 45-45 45zM430.4 152.4L512 96h-152l-21.6 16.6C300.8 91.2 256 80 256 80s-44.8 11.2-82.4 32.6L152 96H0l81.6 56.4C30.2 194.2 0 252.6 0 320c0 106 86 192 192 192 66 0 124.2-32.4 160-82.2 35.8 49.8 94 82.2 160 82.2 106 0 192-86 192-192 0-67.4-30.2-125.8-81.6-167.6z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div> <!-- End .footer-grid -->
+
+    <div class="copyright">
+      <p>© <span id="current-year"></span> Roly Poly Fresh Spring Rolls Da Nang. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Roly Poly Fresh Spring Rolls Da Nang",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://rolypolydanang.vn/images/logo.jpg"
+  },
+  "description": "Vietnamese café and restaurant in An Thuong serving fresh spring rolls (Gỏi Cuốn), gluten-free and vegan options, salted coffee, and matcha drinks near My Khe Beach.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn",
+    "addressLocality": "Đà Nẵng",
+    "postalCode": "550000",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 16.048690,
+    "longitude": 108.244106
+  },
+  "telephone": "+84 327 306 076",
+  "priceRange": "₫₫",
+  "servesCuisine": ["Vietnamese", "Vegan", "Gluten-Free"],
+  "url": "https://rolypolydanang.vn",
+  "menu": "https://rolypolydanang.vn/menu.html",
+  "hasMenu": {
+    "@type": "Menu",
+    "url": "https://rolypolydanang.vn/menu.html"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    }
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "TripAdvisor User"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "The best spring rolls in Da Nang!"
+    }
+  ],
+  "acceptsReservations": false,
+  "paymentAccepted": "Cash, Visa, Mastercard, Apple Pay, MoMo",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": 91
+  },
+  "sameAs": [
+    "https://www.facebook.com/rolypolydanang",
+    "https://www.instagram.com/rolypolydanang",
+    "https://www.tiktok.com/@rolypolydanang",
+    "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662-Reviews-Roly_Poly_Fresh_Spring_Rolls_Da_Nang",
+    "https://www.google.com/maps?cid=8457966646420358159"
+  ],
+  "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Pet friendly",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wheelchair accessible",
+      "value": true
+    }
+  ]
+}
+</script>
+
+
+
+
+
+
+
+ 
+
+<!-- Swiper.js Carousel Initialization -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+
+      // Close all other open items
+      document.querySelectorAll('.accordion-button').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.nextElementSibling.hidden = true;
+        btn.querySelector('.icon').textContent = '+';
+      });
+
+      // If not already expanded, open this one
+      if (!expanded) {
+        button.setAttribute('aria-expanded', 'true');
+        content.hidden = false;
+        button.querySelector('.icon').textContent = '–';
+      }
+    });
+  });
+</script>
