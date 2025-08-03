@@ -1,0 +1,488 @@
+/* === Base Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* === Focus Styles for Accessibility === */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #ff6a00;
+  outline-offset: 2px;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #ff6a00;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #e55b00;
+}
+
+.btn.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: white;
+  color: #333;
+  box-shadow: 0 0 0 2px #333 inset;
+}
+
+/* === Hero Section (shared) === */
+.hero {
+  background-color: #111;
+  color: white;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subheadline {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+/* === Contact Page Specific === */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.contact-box {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* === Info Section (Delivery & Payment) === */
+.info-section {
+  background: #fff;
+  padding: 3rem 1rem;
+}
+
+.info-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.info-box ul li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* === Contact Form === */
+.contact-form-section {
+  background: #f5f5f5;
+  padding: 3rem 1rem;
+}
+
+.contact-form-box {
+  background: white;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* === Map Section === */
+.map-section {
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.map-box {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-iframe-wrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+  aspect-ratio: 16 / 9;
+}
+
+@supports not (aspect-ratio: 16 / 9) {
+  .map-iframe-wrapper iframe {
+    height: 400px;
+  }
+}
+
+.map-iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* === Social Icons === */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff6a00;
+}
+
+/* === Footer === */
+footer {
+  background: #222;
+  color: #ddd;
+  padding: 3rem 1rem 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-col a {
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #aaa;
+}
+
+/* === Header Navigation === */
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6a00;
+  text-decoration: none;
+}
+
+.main-nav {
+  transition: all 0.3s ease;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #ff6a00;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+  }
+
+  .btn {
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  .contact-box {
+    padding: 1.5rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero p,
+  .about-philosophy ul li {
+    font-size: 0.95rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+/* === About Page Styles === */
+.about-hero {
+  background-color: #fefefe;
+  padding: 4rem 1rem 3rem;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.about-hero blockquote {
+  font-style: italic;
+  color: #666;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-left: 4px solid #ff6a00;
+  padding-left: 1rem;
+}
+
+.about-hero blockquote footer {
+  font-style: normal;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #999;
+}
+
+.about-philosophy {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about-philosophy h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about-philosophy ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.about-philosophy ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.about-philosophy ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff6a00;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+blockquote {
+  font-style: italic;
+  color: #666;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-left: 4px solid #ff6a00;
+  padding-left: 1rem;
+}
+
+figcaption {
+  font-style: normal;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #999;
+}
