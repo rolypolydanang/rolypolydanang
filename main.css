@@ -5,9 +5,10 @@
 }
 
 .swiper {
-  max-height: 360px;
-  overflow: hidden;
+  overflow: visible; /* let content extend naturally */
+  padding-bottom: 2rem; /* give space for dots + caption */
 }
+
 
 .swiper-wrapper {
   align-items: flex-start;
