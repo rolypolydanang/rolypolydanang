@@ -405,16 +405,17 @@ textarea {
   }
 }
 .social-icon-img {
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  filter: grayscale(100%) brightness(0.6);
-  transition: filter 0.3s ease;
-  vertical-align: middle;
+  width: 1.5rem;
+  height: auto;
+  filter: brightness(100) contrast(100%) grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 .social-icon-img:hover {
-  filter: brightness(1) grayscale(0);
+  filter: brightness(100%) contrast(100%) grayscale(0%);
+  opacity: 1;
 }
+
 
 
