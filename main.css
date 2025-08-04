@@ -1,7 +1,13 @@
 /* === Featured Carousel === */
 .featured-carousel {
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: #fff;
+  margin-bottom: 0;
+}
+
+.featured-carousel .swiper {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .swiper-slide {
@@ -11,7 +17,7 @@
 .swiper-slide img {
   max-width: 100%;
   height: auto;
-  max-height: 350px;
+  max-height: 320px;
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   margin: 0 auto;
@@ -21,21 +27,22 @@
 
 .carousel-caption {
   text-align: center;
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #333;
 }
 
 @media (max-width: 768px) {
   .swiper-slide img {
-    max-height: 220px;
+    max-height: 200px;
   }
 
   .carousel-caption h3 {
     font-size: 1rem;
   }
 }
+
 
 
 .different {
