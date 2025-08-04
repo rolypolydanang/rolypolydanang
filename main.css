@@ -412,15 +412,16 @@ textarea {
   display: inline-block;
   opacity: 0.7;
   filter: invert(1) grayscale(1) brightness(0.7) contrast(1.1);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
   vertical-align: middle;
-
+  transform: translate(-2px, -1px); /* ✅ shift left & up */
 }
 
 .social-links img.social-icon-img:hover {
   opacity: 1;
   filter: invert(0) grayscale(0) sepia(1) saturate(6) hue-rotate(-10deg) brightness(1.2);
 }
+
 
 
 
