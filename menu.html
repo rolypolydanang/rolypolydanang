@@ -512,13 +512,18 @@
 </script>
 
 
-    <script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Roly Poly Fresh Spring Rolls Da Nang",
-  "image": "https://rolypolydanang.vn/images/logo.jpg",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://rolypolydanang.vn/images/logo.jpg"
+  },
   "description": "Vietnamese café in Da Nang serving fresh spring rolls, ceremonial matcha lattes, Vietnamese coffee, and healthy juices. Vegan, gluten-free, and delivery options available near My Khe Beach.",
+  "url": "https://rolypolydanang.vn",
+  "telephone": "+84 327 306 076",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn",
@@ -531,17 +536,21 @@
     "latitude": 16.048690,
     "longitude": 108.244106
   },
-  "telephone": "+84 327 306 076",
-  "priceRange": "₫1–100,000",
   "servesCuisine": ["Vietnamese", "Vegan", "Gluten-Free"],
-  "url": "https://rolypolydanang.vn",
+  "priceRange": "₫₫",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "10:00",
+    "closes": "20:00"
+  }],
+  "paymentAccepted": ["Cash", "Visa", "Mastercard", "Apple Pay", "MoMo"],
+  "acceptsReservations": false,
   "menu": "https://rolypolydanang.vn/menu.html",
   "hasMenu": {
     "@type": "Menu",
     "url": "https://rolypolydanang.vn/menu.html"
   },
-  "openingHours": "Mo-Sa 10:00-20:00",
-  "acceptsReservations": false,
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
@@ -568,6 +577,7 @@
   ]
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
