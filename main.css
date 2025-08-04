@@ -406,19 +406,21 @@ textarea {
 }
 
 .social-links img.social-icon-img {
-  width: 2.0rem;
-  height: 2.0rem;
+  width: 1.5rem;
+  height: 1.5rem;
   object-fit: contain;
   display: inline-block;
+  vertical-align: middle;
   opacity: 0.6;
-  filter: grayscale(100%) brightness(95%);
-  transition: opacity 0.3s ease;
+  filter: invert(1) grayscale(100%) brightness(1.2);
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .social-links img.social-icon-img:hover {
   opacity: 1;
-  filter: grayscale(0%) brightness(110%);
+  filter: invert(0) grayscale(0%) brightness(1.1);
 }
+
 
 
 
