@@ -869,7 +869,7 @@ textarea {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
 }
 
-/* General Section Padding */
+/* Section Spacing */
 section[id^="spring-rolls"],
 section[id^="sauces"],
 section[id^="juices"],
@@ -901,6 +901,7 @@ ul.pricing li {
   margin-top: 2rem;
 }
 
+/* Cards */
 .roll, .drink {
   background: #fff;
   padding: 1rem;
@@ -916,17 +917,17 @@ ul.pricing li {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
+/* Image Styling */
 .roll img,
 .drink img {
   width: 100%;
-  height: auto;
-  object-fit: contain; /* Shows full image without cropping */
+  aspect-ratio: 4 / 3;
+  object-fit: cover; /* maintain visual consistency, gentle crop */
   border-radius: 6px;
   margin-bottom: 1rem;
-  aspect-ratio: auto; /* Let images retain their native shape */
 }
 
-
+/* Text Styling */
 .roll h4,
 .drink h4 {
   font-size: 1.1rem;
@@ -1009,32 +1010,7 @@ ul.pricing li {
   margin: 0.5rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .menu-hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .roll h4,
-  .drink h4 {
-    font-size: 1rem;
-  }
-
-  .roll p,
-  .drink p {
-    font-size: 0.9rem;
-  }
-
-  .roll-options-grid,
-  .drink-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-hero img {
-    max-width: 100%;
-  }
-}
-
+/* Sauce Section Box */
 #sauces img {
   max-width: 500px;
   width: 100%;
@@ -1089,13 +1065,56 @@ ul.pricing li {
   align-items: center;
   justify-content: center;
   background-color: #fafafa;
+  padding: 1rem;
 }
 
 .sauce-image img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
   border-radius: 0;
 }
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .menu-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .roll h4,
+  .drink h4 {
+    font-size: 1rem;
+  }
+
+  .roll p,
+  .drink p {
+    font-size: 0.9rem;
+  }
+
+  .roll-options-grid,
+  .drink-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-hero img {
+    max-width: 100%;
+  }
+
+  .sauce-text,
+  .sauce-image {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .sauce-text {
+    padding: 1.5rem 1rem;
+  }
+
+  .sauce-image {
+    padding: 1rem 0;
+  }
+}
+
 
 
 
