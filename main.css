@@ -921,11 +921,14 @@ ul.pricing li {
 .roll img,
 .drink img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover; /* maintain visual consistency, gentle crop */
+  height: auto;
+  max-height: 220px; /* optional limit to prevent very tall images */
+  object-fit: contain;
+  aspect-ratio: auto;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
+
 
 /* Text Styling */
 .roll h4,
