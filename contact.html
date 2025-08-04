@@ -80,106 +80,142 @@
   </header>
 
   <!-- Hero -->
-  <main>
-    <section class="hero contact-hero" id="contact">
-      <div class="hero-overlay"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>Contact Roly Poly Fresh Spring Rolls Da Nang</h1>
-          <p class="subheadline">Have questions or want to order? We’re located just minutes from Mỹ Khê Beach.</p>
-          <a class="btn" href="tel:+84327306076">Call Us Now</a>
-        </div>
+<main>
+  <section class="hero contact-hero" id="contact" aria-labelledby="contact-hero-heading">
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 id="contact-hero-heading">Contact Roly Poly Fresh Spring Rolls Da Nang</h1>
+        <p class="subheadline">Have questions or want to order? We’re just minutes from Mỹ Khê Beach.</p>
+        <a class="btn" href="tel:+84327306076" aria-label="Call Roly Poly Spring Rolls Da Nang">Call Us Now</a>
       </div>
-    </section>
+    </div>
+  </section>
+
 
     <!-- Contact Info -->
-    <section class="contact-details">
-      <div class="container contact-grid">
-        <div class="contact-box">
-          <h2>Visit Us</h2>
-          <address>
-            05 An Thượng 6, Bắc Mỹ Phú<br>
-            Ngũ Hành Sơn, Đà Nẵng 550000<br>
-            <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank">Open on Google Maps</a>
-          </address>
-        </div>
+   <section class="contact-details" aria-labelledby="contact-info-heading">
+  <div class="container contact-grid">
+    <h2 id="contact-info-heading" class="visually-hidden">Contact Information</h2>
 
-        <div class="contact-box">
-          <h2>Get in Touch</h2>
-          <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+84327306076">+84 327 306 076</a></p>
-          <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a></p>
-        </div>
+    <div class="contact-box">
+      <h3>Visit Us</h3>
+      <address>
+        05 An Thượng 6, Bắc Mỹ Phú<br>
+        Ngũ Hành Sơn, Đà Nẵng 550000<br>
+        <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer">
+          Open on Google Maps
+        </a>
+      </address>
+    </div>
 
-        <div class="contact-box">
-          <h2>Opening Hours</h2>
-          <p>Monday–Saturday: 10:00 AM – 8:00 PM</p>
-          <p>Closed Sundays</p>
-        </div>
-      </div>
-    </section>
+    <div class="contact-box">
+      <h3>Get in Touch</h3>
+      <p>
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <a href="tel:+84327306076">+84 327 306 076</a>
+      </p>
+      <p>
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Opening Hours</h3>
+      <p>Monday–Saturday: 10:00 AM – 8:00 PM</p>
+      <p>Closed Sundays</p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Delivery Info -->
-    <section class="info-section">
-      <div class="container info-box">
-        <h2>Delivery Info</h2>
-        <ul>
-          <li> Free delivery (within 3 km from store) in An Thuong, My An, and Bac My Phu</li>
-          <li> GrabFood available citywide</li>
-        </ul>
-        <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer">Order on GrabFood</a>
-      </div>
-    </section>
+<section class="info-section" aria-labelledby="delivery-heading">
+  <div class="container info-box">
+    <h2 id="delivery-heading">Delivery Info</h2>
+    <ul>
+      <li>
+        <strong>Free delivery</strong> within 3 km — covering An Thuong, My An, and Bac My Phu.
+        Call us directly for <strong>in-store prices</strong>.
+      </li>
+      <li>
+        Prefer online ordering? Get your food citywide via <strong>GrabFood</strong>.
+      </li>
+    </ul>
+    <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer">
+      Order on GrabFood
+    </a>
+  </div>
+</section>
 
-    <!-- Payment Info -->
-    <section class="info-section">
-      <div class="container info-box">
-        <h2>Payment Info</h2>
-        <ul>
-          <li> Cash, MoMo, Visa, Mastercard</li>
-          <li> +3% card fee</li>
-          <li> +10% on holidays, +20% during Tết</li>
-        </ul>
-      </div>
-    </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form-section">
-      <div class="container contact-form-box">
-        <h2>Send Us a Message</h2>
-        <form action="https://formspree.io/f/xwpqnwoy" method="POST">
-          <input type="hidden" name="_subject" value="New message from Roly Poly contact form">
-          <input type="hidden" name="_next" value="thank-you.html">
-          <input type="text" name="_gotcha" style="display:none">
-          <div class="form-row">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-          </div>
-          <div class="form-row">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-          <div class="form-row">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-    </section>
+   <!-- Payment Info -->
+<section class="info-section" aria-labelledby="payment-heading">
+  <div class="container info-box">
+    <h2 id="payment-heading">Payment Info</h2>
+    <ul>
+      <li><strong>Accepted:</strong> Cash, MoMo, Visa, Mastercard</li>
+      <li><strong>Card payments:</strong> +3% service fee</li>
+      <li><strong>Holiday pricing:</strong> +10% on holidays, +20% during Tết</li>
+    </ul>
+  </div>
+</section>
 
-    <!-- Map -->
-    <section class="map-section">
-      <div class="container map-box">
-        <h2>Find Us on Google Maps</h2>
-        <a href="https://www.google.com/maps?cid=8457966646420358159" class="btn small" target="_blank">Open in Google Maps</a>
-        <div class="map-iframe-wrapper" style="margin-top: 1.5rem;">
-          <iframe loading="lazy" style="border:0;" width="100%" height="100%" allowfullscreen 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.3205785797218!2d108.2450329!3d16.0488458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217b2c3b0fcad%3A0x7560bbda49fcc40f!2sRoly%20Poly%20Fresh%20Spring%20Rolls%20Da%20Nang!5e0!3m2!1svi!2s!4v1754224061817!5m2!1svi!2s">
-          </iframe>
-        </div>
+
+   <!-- Contact Form -->
+<section class="contact-form-section" aria-labelledby="contact-form-heading">
+  <div class="container contact-form-box">
+    <h2 id="contact-form-heading">Send Us a Message</h2>
+
+    <form action="https://formspree.io/f/xwpqnwoy" method="POST">
+      <input type="hidden" name="_subject" value="New message from Roly Poly contact form">
+      <input type="hidden" name="_next" value="thank-you.html">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-row">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
       </div>
-    </section>
-  </main>
+
+      <div class="form-row">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="form-row">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+   <!-- Map -->
+<section class="map-section" aria-labelledby="map-heading">
+  <div class="container map-box">
+    <h2 id="map-heading">Find Us on Google Maps</h2>
+    <a href="https://www.google.com/maps?cid=8457966646420358159" class="btn small" target="_blank" rel="noopener noreferrer">
+      Open in Google Maps
+    </a>
+    <div class="map-iframe-wrapper" style="margin-top: 1.5rem;">
+      <iframe
+        title="Roly Poly Fresh Spring Rolls Da Nang Location"
+        loading="lazy"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.3205785797218!2d108.2450329!3d16.0488458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217b2c3b0fcad%3A0x7560bbda49fcc40f!2sRoly%20Poly%20Fresh%20Spring%20Rolls%20Da%20Nang!5e0!3m2!1svi!2s!4v1754224061817!5m2!1svi!2s">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
