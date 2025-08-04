@@ -1,22 +1,25 @@
 /* === Featured Carousel === */
 .featured-carousel {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   background-color: #fff;
-  position: relative;
 }
 
 .featured-carousel .swiper {
-  height: auto; /* Let it shrink-wrap content */
+  height: auto; /* Ensure Swiper doesn't reserve unnecessary space */
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
+.swiper-wrapper {
+  align-items: flex-start; /* Fix vertical alignment issue */
+}
+
 .swiper-slide {
-  padding: 0 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: auto;
+  padding: 0 10px;
 }
 
 .swiper-slide img {
@@ -24,20 +27,21 @@
   height: auto;
   max-height: 300px;
   aspect-ratio: 4 / 3;
-  border-radius: 8px;
   object-fit: cover;
+  border-radius: 8px;
   display: block;
   margin: 0 auto;
 }
 
 .carousel-caption {
-  text-align: center;
   margin-top: 0.3rem;
+  text-align: center;
   font-size: 1rem;
   font-weight: 500;
   color: #333;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .swiper-slide img {
     max-height: 200px;
@@ -47,6 +51,7 @@
     font-size: 0.95rem;
   }
 }
+
 
 
 
