@@ -404,4 +404,16 @@ textarea {
     font-size: 1.8rem;
   }
 }
+.social-icon-img {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  filter: grayscale(100%) brightness(1);
+  transition: filter 0.3s ease;
+  border-radius: 50%;
+}
+
+.social-icon-img:hover {
+  filter: none;
+}
 
