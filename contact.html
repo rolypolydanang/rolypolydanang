@@ -264,6 +264,15 @@
     </div>
   </footer>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const year = new Date().getFullYear();
+    const el = document.getElementById("current-year");
+    if (el) el.textContent = year;
+  });
+</script>
+
+
  
 <!-- JS: Hamburger Menu Toggle -->
 <script>
@@ -279,6 +288,8 @@
     }
   });
 </script>
+
+  
 
   
 </body>
