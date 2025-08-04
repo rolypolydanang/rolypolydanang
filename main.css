@@ -410,7 +410,7 @@ textarea {
   height: 2.8rem;
   object-fit: contain;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: 0.2rem; /* adjusted to align visually */
   opacity: 0.7;
   filter: invert(1) grayscale(1) brightness(0.7) contrast(1.1);
   transition: opacity 0.3s ease, filter 0.3s ease;
@@ -421,9 +421,6 @@ textarea {
   filter: invert(0) grayscale(0) sepia(1) saturate(6) hue-rotate(-10deg) brightness(1.2);
 }
 
-.social-links img.social-icon-img {
-  vertical-align: 0.2rem; /* adjust as needed */
-}
 
 
 
