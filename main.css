@@ -406,23 +406,22 @@ textarea {
 }
 
 .social-links img.social-icon-img {
-  width: 2.8rem;
+  width: 2.8rem; /* match font-awesome icon size */
   height: 2.8rem;
   object-fit: contain;
   display: inline-block;
   vertical-align: middle;
   opacity: 0.6;
-  filter: grayscale(100%) brightness(95%);
+  filter: grayscale(100%) brightness(0.8);
   transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-
-
-}
-
 .social-links img.social-icon-img:hover {
-  filter: grayscale(0%) brightness(1) sepia(1) hue-rotate(-10deg) saturate(6) contrast(1.2);
+  opacity: 1;
+  filter: grayscale(0%) sepia(1) saturate(6) hue-rotate(-10deg) brightness(1.1);
 }
+
+
 
 
 
