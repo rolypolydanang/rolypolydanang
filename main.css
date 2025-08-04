@@ -6,7 +6,7 @@ body {
   scroll-behavior: smooth;
 }
 
-a {
+{
   text-decoration: none;
   color: inherit;
 }
@@ -410,10 +410,11 @@ textarea {
   height: 2.8rem;
   object-fit: contain;
   display: inline-block;
-  vertical-align: 0.1rem; /* adjusted to align visually */
   opacity: 0.7;
   filter: invert(1) grayscale(1) brightness(0.7) contrast(1.1);
   transition: opacity 0.3s ease, filter 0.3s ease;
+  vertical-align: middle;
+
 }
 
 .social-links img.social-icon-img:hover {
