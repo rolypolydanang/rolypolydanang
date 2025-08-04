@@ -5,10 +5,9 @@
 }
 
 .swiper {
-  overflow: visible; /* let content extend naturally */
-  padding-bottom: 2rem; /* give space for dots + caption */
+  position: relative;
+  overflow: hidden;
 }
-
 
 .swiper-wrapper {
   align-items: flex-start;
@@ -37,6 +36,7 @@
   border-radius: 8px;
   object-fit: cover;
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 /* Caption below images */
@@ -83,15 +83,18 @@
   outline-offset: 3px;
 }
 
-/* Pagination dots */
+/* Pagination dots inside image */
 .swiper-pagination {
-  position: static;
-  margin-top: 1rem;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
   text-align: center;
+  z-index: 10;
 }
 
 .swiper-pagination-bullet {
-  background: #ccc;
+  background: rgba(255, 255, 255, 0.7);
   opacity: 1;
   margin: 0 4px;
   width: 10px;
@@ -119,6 +122,7 @@
     min-height: 2rem;
   }
 }
+
 
 
 
