@@ -920,11 +920,12 @@ ul.pricing li {
 .drink img {
   width: 100%;
   height: auto;
-  max-height: 180px;
-  object-fit: cover;
+  object-fit: contain; /* Shows full image without cropping */
   border-radius: 6px;
   margin-bottom: 1rem;
+  aspect-ratio: auto; /* Let images retain their native shape */
 }
+
 
 .roll h4,
 .drink h4 {
