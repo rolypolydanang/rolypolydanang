@@ -1,48 +1,58 @@
 /* === Featured Carousel === */
 .featured-carousel {
-  padding: 1rem 0; /* Reduced vertical padding */
+  padding: 1rem 0; /* Reduce top/bottom space */
   background-color: #fff;
 }
 
 .swiper {
-  padding: 1rem 0; /* Optional inner padding to center controls better */
+  max-height: 280px; /* 👈 Limits entire carousel height */
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  align-items: start; /* Keep slides aligned to top */
 }
 
 .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Keeps image and caption at top */
+  justify-content: flex-start;
+  padding: 0 10px;
 }
 
 .swiper-slide img {
   max-width: 100%;
   height: auto;
-  max-height: 200px; /* Reduced from 350px */
-  border-radius: 8px;
-  display: block;
-  object-fit: cover;
+  max-height: 180px; /* 👈 Smaller image height */
   aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .carousel-caption {
   text-align: center;
   margin-top: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #333;
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  .swiper-slide img {
-    max-height: 160px;
+  .swiper {
+    max-height: 240px;
   }
 
-  .carousel-caption h3 {
-    font-size: 1rem;
+  .swiper-slide img {
+    max-height: 150px;
+  }
+
+  .carousel-caption {
+    font-size: 0.95rem;
   }
 }
+
 
 
 
