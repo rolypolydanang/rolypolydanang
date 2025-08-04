@@ -1,3 +1,35 @@
+/* === Hero Image Styling === */
+.hero img.hero-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .hero img.hero-img {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+  }
+}
+
+
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   color: #333;
