@@ -404,18 +404,22 @@ textarea {
     font-size: 1.8rem;
   }
 }
-.social-icon-img {
-  width: 1.5rem;
-  height: auto;
-  filter: brightness(100) contrast(100%) grayscale(100%);
+
+.social-links img.social-icon-img {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
   opacity: 0.6;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.social-icon-img:hover {
-  filter: brightness(100%) contrast(100%) grayscale(0%);
+.social-links img.social-icon-img:hover {
   opacity: 1;
 }
+.social-links img.social-icon-img {
+  vertical-align: middle;
+}
+
 
 
 
