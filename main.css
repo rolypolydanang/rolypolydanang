@@ -1,16 +1,16 @@
 /* === Featured Carousel === */
 .featured-carousel {
-  padding: 1rem 0; /* Reduce top/bottom space */
+  padding: 1.5rem 0;
   background-color: #fff;
 }
 
 .swiper {
-  max-height: 280px; /* 👈 Limits entire carousel height */
+  max-height: 320px; /* slightly taller than before */
   overflow: hidden;
 }
 
 .swiper-wrapper {
-  align-items: start; /* Keep slides aligned to top */
+  align-items: flex-start;
 }
 
 .swiper-slide {
@@ -24,34 +24,36 @@
 .swiper-slide img {
   max-width: 100%;
   height: auto;
-  max-height: 180px; /* 👈 Smaller image height */
+  max-height: 200px;
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 
 .carousel-caption {
   text-align: center;
-  margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: #333;
+  line-height: 1.3;
 }
 
-/* Mobile adjustments */
+/* Mobile tweaks */
 @media (max-width: 768px) {
   .swiper {
-    max-height: 240px;
+    max-height: 260px;
   }
 
   .swiper-slide img {
-    max-height: 150px;
+    max-height: 160px;
   }
 
   .carousel-caption {
     font-size: 0.95rem;
   }
 }
+
 
 
 
