@@ -412,7 +412,7 @@ textarea {
   display: inline-block;
   vertical-align: middle;
   opacity: 0.7;
-  filter: invert(1) grayscale(1) brightness(1.1) contrast(1.1);
+  filter: invert(1) grayscale(1) brightness(0.7) contrast(1.1);
   transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
@@ -422,7 +422,7 @@ textarea {
 }
 
 .social-links img.social-icon-img {
-  vertical-align: -0.2rem; /* adjust as needed */
+  vertical-align: 0.2rem; /* adjust as needed */
 }
 
 
