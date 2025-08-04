@@ -735,6 +735,11 @@ textarea {
 .accordion-item {
   border-bottom: 1px solid #ddd;
   padding: 1rem 0;
+  transition: background 0.3s ease;
+}
+
+.accordion-item:hover {
+  background-color: #fafafa;
 }
 
 .accordion-button {
@@ -752,7 +757,11 @@ textarea {
   transition: background 0.3s ease;
 }
 
-.accordion-button:hover,
+.accordion-button:focus {
+  outline: 2px solid #ff6a00;
+  outline-offset: 3px;
+}
+
 .accordion-button[aria-expanded="true"] {
   background-color: #f4f4f4;
 }
@@ -768,7 +777,7 @@ textarea {
 }
 
 .accordion-button[aria-expanded="true"] .icon {
-  transform: rotate(45deg); /* turns + into x */
+  transform: rotate(45deg); /* "+" becomes "×" */
 }
 
 .accordion-content {
@@ -785,9 +794,16 @@ textarea {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 
 
 
