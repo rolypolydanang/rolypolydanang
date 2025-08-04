@@ -410,7 +410,7 @@ textarea {
   height: 2.8rem;
   object-fit: contain;
   display: inline-block;
-  vertical-align: 0.2rem; /* adjusted to align visually */
+  vertical-align: 0.1rem; /* adjusted to align visually */
   opacity: 0.7;
   filter: invert(1) grayscale(1) brightness(0.7) contrast(1.1);
   transition: opacity 0.3s ease, filter 0.3s ease;
