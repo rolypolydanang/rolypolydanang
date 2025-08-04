@@ -1034,6 +1034,15 @@ ul.pricing li {
   }
 }
 
+#sauces img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
 
 
