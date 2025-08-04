@@ -685,7 +685,7 @@ textarea {
 
 /* 1. Better visual balance for TripAdvisor logo */
 .social-links img.social-icon-img {
-  transform: translate(-4px, -1.5px); /* Slight shift: left and up */
+  transform: translate(-4px, 0px); /* Slight shift: left and up */
 }
 
 /* 2. Brighter but balanced hover color */
