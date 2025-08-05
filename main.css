@@ -1118,6 +1118,202 @@ ul.pricing li {
   }
 }
 
+/* === Vintage Vietnamese Café Theme Variables === */
+:root {
+  --bg: #fef7e6;
+  --text: #3e2f1c;
+  --accent: #a6361f;
+  --secondary: #d9b382;
+  --hover: #7f1d1d;
+  --footer-bg: #3b2e2a;
+}
+
+/* === Base Styles === */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--hover);
+}
+
+.btn.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: white;
+  color: var(--text);
+  box-shadow: 0 0 0 2px var(--text) inset;
+}
+
+/* === Header === */
+.site-header {
+  background: var(--bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--accent);
+}
+
+/* === Carousel === */
+.featured-carousel {
+  padding: 2rem 0;
+  background-color: var(--bg);
+}
+
+.carousel-caption {
+  color: var(--text);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  outline: 2px solid var(--accent);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+
+/* === Features & Cards === */
+.feature, .drink, .roll, .philosophy-item {
+  background: #fff8ed;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* === Footer === */
+footer {
+  background: var(--footer-bg);
+  color: #f0e8dc;
+}
+
+.footer-col h3, .footer-col h4 {
+  color: #fff;
+}
+
+.footer-col a {
+  color: #f0e8dc;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+/* === Accents in UI === */
+blockquote {
+  border-left: 4px solid var(--accent);
+}
+
+.about-philosophy ul li::before {
+  color: var(--accent);
+}
+
+.accordion-button:focus {
+  outline: 2px solid var(--accent);
+}
+
+.accordion-button[aria-expanded="true"] {
+  background-color: #f4e4d4;
+}
+
+.philosophy-item i {
+  color: var(--accent);
+}
+
+/* === Menu Hero === */
+.menu-hero {
+  background-color: #fef3e2;
+  color: var(--text);
+}
+
+.menu-hero h1 {
+  color: var(--text);
+}
+
+.menu-hero p {
+  color: #5b4432;
+}
+
+/* === Info Sections === */
+.info-section {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.contact-box,
+.contact-form-box,
+.sauce-box {
+  background: #fff8ed;
+  color: var(--text);
+}
+
+/* === Optional Typography Touch === */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* End of Theme Overrides */
+
+
 
 
 
