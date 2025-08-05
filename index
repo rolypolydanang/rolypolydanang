@@ -7,7 +7,7 @@
   <title>About Us | Roly Poly Fresh Spring Rolls Da Nang</title>
   <meta name="description" content="Learn how Roly Poly Fresh Spring Rolls Da Nang started — our story, philosophy, and passion for fresh Vietnamese food in the heart of An Thuong." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://rolypolydanang.vn/about.html" />
+  <link rel="canonical" href="https://www.rolypolydanang.vn/about.html" />
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -25,8 +25,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="About Us | Roly Poly Fresh Spring Rolls Da Nang" />
   <meta property="og:description" content="Learn how Roly Poly Fresh Spring Rolls Da Nang started — our story, philosophy, and passion for fresh Vietnamese food in the heart of An Thuong." />
-  <meta property="og:image" content="https://rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png" />
-  <meta property="og:url" content="https://rolypolydanang.vn/about.html" />
+  <meta property="og:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png" />
+  <meta property="og:url" content="https://www.rolypolydanang.vn/about.html" />
   <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls Da Nang" />
   <meta property="og:locale" content="en_VN" />
 
@@ -34,7 +34,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About | Roly Poly Fresh Spring Rolls Da Nang" />
   <meta name="twitter:description" content="Learn how Roly Poly Fresh Spring Rolls Da Nang started — our story, philosophy, and passion for fresh Vietnamese food in the heart of An Thuong." />
-  <meta name="twitter:image" content="https://rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png" />
+  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png" />
   <meta name="twitter:site" content="@rolypolydanang" />
 </head>
 
@@ -47,13 +47,13 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">Roly Poly Fresh Spring Rolls Da Nang</a>
+      <a href="https://www.rolypolydanang.vn/" class="logo">Roly Poly Fresh Spring Rolls Da Nang</a>
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html" class="active" aria-current="page">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.rolypolydanang.vn/">Home</a></li>
+          <li><a href="https://www.rolypolydanang.vn/menu.html">Menu</a></li>
+          <li><a href="https://www.rolypolydanang.vn/about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="https://www.rolypolydanang.vn/contact.html">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
@@ -89,7 +89,7 @@
 
     <p>We’re proud to support the <strong>local Da Nang community</strong> by sourcing ingredients from nearby farmers and suppliers whenever possible. <strong>Great food, great coffee, and warm, friendly service</strong> — that’s the Roly Poly promise.</p>
 
-    <a class="btn" href="menu.html">Explore Our Menu</a>
+    <a class="btn" href="https://www.rolypolydanang.vn/menu.html">Explore Our Menu</a>
   </div>
 </section>
 
@@ -150,7 +150,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3><a href="index.html">Roly Poly Fresh Spring Rolls Da Nang</a></h3>
+          <h3><a href="https://www.rolypolydanang.vn/">Roly Poly Fresh Spring Rolls Da Nang</a></h3>
           <address>
             05 An Thượng 6, Bắc Mỹ Phú,<br>Ngũ Hành Sơn, Đà Nẵng 550000<br>
             <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer">Google Maps</a><br>
@@ -162,10 +162,10 @@
         <nav class="footer-col" aria-label="Footer navigation">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.rolypolydanang.vn/">Home</a></li>
+            <li><a href="https://www.rolypolydanang.vn/menu.html">Menu</a></li>
+            <li><a href="https://www.rolypolydanang.vn/about.html">About</a></li>
+            <li><a href="https://www.rolypolydanang.vn/contact.html">Contact</a></li>
           </ul>
         </nav>
 
@@ -198,10 +198,10 @@
   "name": "Roly Poly Fresh Spring Rolls Da Nang",
   "image": {
     "@type": "ImageObject",
-    "url": "https://rolypolydanang.vn/images/logo.jpg"
+    "url": "https://www.rolypolydanang.vn/images/logo.jpg"
   },
   "description": "Our story at Roly Poly Da Nang — fresh Vietnamese food, community focus, and cozy café vibes in An Thuong.",
-  "url": "https://rolypolydanang.vn",
+  "url": "https://www.rolypolydanang.vn",
   "telephone": "+84 327 306 076",
   "address": {
     "@type": "PostalAddress",
@@ -223,10 +223,10 @@
     "closes": "20:00"
   }],
   "paymentAccepted": ["Cash", "Visa", "Mastercard", "Apple Pay", "MoMo"],
-  "menu": "https://rolypolydanang.vn/menu.html",
+  "menu": "https://www.rolypolydanang.vn/menu.html",
   "hasMenu": {
     "@type": "Menu",
-    "url": "https://rolypolydanang.vn/menu.html"
+    "url": "https://www.rolypolydanang.vn/menu.html"
   },
   "sameAs": [
     "https://www.facebook.com/rolypolydanang",
