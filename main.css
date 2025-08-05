@@ -1306,10 +1306,7 @@ blockquote {
   color: var(--text);
 }
 
-/* === Optional Typography Touch === */
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-}
+
 
 /* End of Theme Overrides */
 
