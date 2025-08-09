@@ -1207,6 +1207,52 @@ ul.pricing li {
 .hero-buttons .btn.secondary:nth-of-type(3) { background-color: #3b82f6; } /* blue for Call Now */
 .hero-buttons .btn.secondary:nth-of-type(4) { background-color: #6b7280; } /* grey for Get Directions */
 
+/* === Unified hero button styling === */
+.hero-buttons .btn {
+  display: inline-flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  background-color: #ff6a00; /* default fill */
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  min-width: 140px;
+  text-align: center;
+  height: 48px; /* ensures equal height for all */
+}
+
+/* Hover effect for all */
+.hero-buttons .btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Individual colors */
+.hero-buttons .btn.primary { background-color: #ff6a00; } /* orange */
+.hero-buttons .btn.accent  { background-color: #16a34a; } /* green */
+.hero-buttons .btn.secondary:nth-of-type(3) { background-color: #3b82f6; } /* blue for Call */
+.hero-buttons .btn.secondary:nth-of-type(4) { background-color: #6b7280; } /* grey for Directions */
+
+/* Remove old secondary outline style just for hero */
+.hero .btn.secondary {
+  border: none;
+  color: #fff;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
 
 
 
