@@ -1255,6 +1255,54 @@ ul.pricing li {
 }
 
 
+/* Sticky mobile action bar */
+.sticky-actions{
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+  display: none;                 /* show only on small screens */
+  gap: .6rem;
+  padding: .6rem;
+  padding-bottom: calc(.6rem + env(safe-area-inset-bottom)); /* iOS safe area */
+  background: rgba(17,17,17,.9); /* matches dark hero vibe */
+  backdrop-filter: saturate(140%) blur(8px);
+  border-top: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 -6px 20px rgba(0,0,0,.25);
+}
+
+/* Make buttons fill evenly */
+.sticky-actions .btn{
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* Colors to match hero style */
+.sticky-actions .btn.accent{ background:#16a34a; color:#fff; }   /* Order */
+.sticky-actions .btn{ background:#3b82f6; color:#fff; }          /* Call */
+
+/* Hover/tap feedback */
+.sticky-actions .btn:hover{ opacity:.9; transform: translateY(-1px); }
+.sticky-actions .btn:active{ transform: translateY(0); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .sticky-actions .btn,
+  .sticky-actions .btn:hover{ transform:none; }
+}
+
+/* Only show on small screens, add body bottom space */
+@media (max-width: 768px){
+  .sticky-actions{ display:flex; }
+  body{ padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+}
+
+
+
 
 
 
