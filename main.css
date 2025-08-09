@@ -1306,6 +1306,22 @@ ul.pricing li {
 
 
 
+/* === Fix hero overlay blocking clicks === */
+.hero { position: relative; }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;               /* behind content */
+  pointer-events: none;     /* allow clicks to pass through */
+}
+
+.hero-content,
+.hero-buttons {
+  position: relative;
+  z-index: 2;               /* above overlay */
+}
 
 
 
