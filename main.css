@@ -270,17 +270,7 @@ body {
   font-size: 0.9rem;
 }
 
-.btn.secondary {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-}
 
-.btn.secondary:hover {
-  background: white;
-  color: #333;
-  box-shadow: 0 0 0 2px #333 inset;
-}
 
 
 .site-header {
@@ -1133,35 +1123,7 @@ ul.pricing li {
   margin-top: 1rem;
 }
 
-/* Primary = brand orange (keeps your current .btn look) */
-.btn.primary {
-  background: #ff6a00;
-  color: #fff;
-}
-.btn.primary:hover {
-  background: #e55b00;
-}
 
-/* Accent = high-contrast for "Order Now" (green pairs well with orange) */
-.btn.accent {
-  background: #16a34a;      /* green */
-  color: #fff;
-}
-.btn.accent:hover {
-  background: #15803d;
-}
-
-/* Secondary already exists, but ensure it reads well on the dark hero */
-.hero .btn.secondary {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-.hero .btn.secondary:hover {
-  background: #fff;
-  color: #333;
-  box-shadow: 0 0 0 2px #333 inset;
-}
 
 /* Accessibility & tap targets */
 .btn { 
@@ -1182,18 +1144,7 @@ ul.pricing li {
   }
 }
 
-/* Make all hero buttons solid-filled, consistent size */
-.hero-buttons .btn {
-  background-color: #ff6a00; /* default orange fill */
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 0.6rem 1.4rem;
-  font-size: 1rem;
-  font-weight: 600;
-  min-width: 140px;
-  text-align: center;
-}
+
 
 /* Hover effect for all buttons */
 .hero-buttons .btn:hover {
@@ -1201,40 +1152,9 @@ ul.pricing li {
   transform: translateY(-1px);
 }
 
-/* Specific colors */
-.hero-buttons .btn.primary { background-color: #ff6a00; } /* orange */
-.hero-buttons .btn.accent  { background-color: #16a34a; } /* green */
-.hero-buttons .btn.secondary:nth-of-type(3) { background-color: #3b82f6; } /* blue for Call Now */
-.hero-buttons .btn.secondary:nth-of-type(4) { background-color: #6b7280; } /* grey for Get Directions */
 
-/* === Unified hero button styling === */
-.hero-buttons .btn {
-  display: inline-flex;
-  align-items: center;   /* vertical center */
-  justify-content: center; /* horizontal center */
-  background-color: #ff6a00; /* default fill */
-  color: #fff;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  min-width: 140px;
-  text-align: center;
-  height: 48px; /* ensures equal height for all */
-}
 
-/* Hover effect for all */
-.hero-buttons .btn:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-}
 
-/* Individual colors */
-.hero-buttons .btn.primary { background-color: #ff6a00; } /* orange */
-.hero-buttons .btn.accent  { background-color: #16a34a; } /* green */
-.hero-buttons .btn.secondary:nth-of-type(3) { background-color: #3b82f6; } /* blue for Call */
-.hero-buttons .btn.secondary:nth-of-type(4) { background-color: #6b7280; } /* grey for Directions */
 
 /* Remove old secondary outline style just for hero */
 .hero .btn.secondary {
@@ -1281,9 +1201,7 @@ ul.pricing li {
   border-radius: 10px;
 }
 
-/* Colors to match hero style */
-.sticky-actions .btn.accent{ background:#16a34a; color:#fff; }   /* Order */
-.sticky-actions .btn{ background:#3b82f6; color:#fff; }          /* Call */
+
 
 /* Hover/tap feedback */
 .sticky-actions .btn:hover{ opacity:.9; transform: translateY(-1px); }
@@ -1432,6 +1350,125 @@ ul.pricing li {
   }
 }
 
+/* === Fix hero overlay blocking clicks === */
+.hero {
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;               /* behind content */
+  pointer-events: none;     /* allow clicks to pass through */
+}
+
+.hero-content,
+.hero-buttons {
+  position: relative;
+  z-index: 2;               /* above overlay */
+}
+
+/* === All Hero Buttons Orange === */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.hero-buttons .btn {
+  background-color: #ff6a00; /* orange */
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  min-width: 140px;
+  text-align: center;
+  height: 48px;
+  transition: transform .2s ease, background-color .2s ease, opacity .2s ease;
+}
+
+.hero-buttons .btn:hover {
+  background-color: #e55b00; /* darker orange */
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* === Fix hero overlay blocking clicks === */
+.hero {
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-content,
+.hero-buttons {
+  position: relative;
+  z-index: 2;
+}
+
+/* === All Hero Buttons Orange === */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.hero-buttons .btn {
+  background-color: #ff6a00;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  min-width: 140px;
+  text-align: center;
+  height: 48px;
+  transition: transform .2s ease, background-color .2s ease, opacity .2s ease;
+}
+.hero-buttons .btn:hover {
+  background-color: #e55b00;
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Sticky action bar also orange */
+.sticky-actions .btn { background:#ff6a00; color:#fff; }
+.sticky-actions .btn:hover { background:#e55b00; }
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .hero-buttons .btn { width: 100%; max-width: 280px; }
+}
 
 
 
