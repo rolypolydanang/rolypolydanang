@@ -1182,6 +1182,31 @@ ul.pricing li {
   }
 }
 
+/* Make all hero buttons solid-filled, consistent size */
+.hero-buttons .btn {
+  background-color: #ff6a00; /* default orange fill */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 140px;
+  text-align: center;
+}
+
+/* Hover effect for all buttons */
+.hero-buttons .btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Specific colors */
+.hero-buttons .btn.primary { background-color: #ff6a00; } /* orange */
+.hero-buttons .btn.accent  { background-color: #16a34a; } /* green */
+.hero-buttons .btn.secondary:nth-of-type(3) { background-color: #3b82f6; } /* blue for Call Now */
+.hero-buttons .btn.secondary:nth-of-type(4) { background-color: #6b7280; } /* grey for Get Directions */
+
 
 
 
