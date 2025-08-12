@@ -304,4 +304,30 @@ main{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 /* Important: remove any global bottom padding that fights this */
 html, body { padding-bottom: 0 !important; }
 
+.social-links img.social-icon-img {
+  width: 28px;    /* up from ~22px */
+  height: 28px;
+  object-fit: contain;
+  opacity: .85;
+  filter: invert(1) grayscale(1) brightness(.85) contrast(1.05);
+  transition: opacity .3s, filter .3s;
+}
+
+.social-links img.social-icon-img:hover {
+  opacity: 1;
+  filter: invert(1) sepia(1) saturate(4) hue-rotate(-10deg) brightness(1.05) contrast(1.1);
+}
+
+.footer-col address a.map-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.footer-col address a.map-link:hover {
+  color: var(--brand);
+}
+
+
 
