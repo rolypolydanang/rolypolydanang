@@ -9,6 +9,15 @@
   --bg-2:#f9f9f9;
 }
 
+/* ====== A11y Utility ====== */
+.visually-hidden{
+  position:absolute!important;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);
+  white-space:nowrap;border:0;
+}
+
 /* ====== Base ====== */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -17,7 +26,6 @@ img{max-width:100%;height:auto;display:block}
 a{color:var(--brand);text-decoration:none}
 a:hover{color:#128764}
 :focus-visible{outline:3px solid #1aa37a;outline-offset:2px}
-
 .container{max-width:1200px;margin:0 auto;padding:0 1rem}
 
 /* ====== Header / Nav ====== */
@@ -28,10 +36,28 @@ a:hover{color:#128764}
 .main-nav ul{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0}
 .main-nav a{color:var(--ink);font-weight:500;transition:color .3s}
 .main-nav a:hover,.main-nav a.active{color:var(--brand)}
-.nav-toggle{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer;color:var(--ink)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
+.nav-toggle {display:inline-flex;flex-direction:column;gap:6px;padding:8px}
+.nav-toggle-bar{width:26px;height:2.5px;background:#333;border-radius:2px;display:block}
+
+/* Mobile nav behavior */
+@media (max-width:768px){
+  .nav-toggle{display:inline-flex}
+  .main-nav{display:none;flex-direction:column;background:#fff;position:absolute;top:100%;left:0;right:0;padding:1rem;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:999}
+  .main-nav.open{display:flex}
+  .main-nav ul{flex-direction:column;gap:1rem}
+}
+@media (min-width:769px){
+  .nav-toggle{display:none}
+}
 
 /* ====== Buttons ====== */
-.btn{display:inline-block;background:var(--brand);color:#fff;padding:.6rem 1.4rem;border-radius:6px;font-size:1rem;font-weight:600;transition:background .2s ease,transform .2s ease,opacity .2s ease;text-align:center;min-width:140px;min-height:44px}
+.btn{
+  display:inline-block;background:var(--brand);color:#fff;
+  padding:.6rem 1.4rem;border-radius:6px;font-size:1rem;font-weight:600;
+  transition:background .2s ease,transform .2s ease,opacity .2s ease;
+  text-align:center;min-width:140px;min-height:44px
+}
 .btn.small{padding:.4rem 1rem;font-size:.9rem;min-width:auto}
 .btn:hover{background:var(--brand-d);opacity:.95;transform:translateY(-1px)}
 .btn:focus-visible{outline:3px solid rgba(255,255,255,.7);outline-offset:2px}
@@ -43,46 +69,61 @@ a:hover{color:#128764}
 .hero h1{font-size:2.5rem;margin-bottom:1rem}
 .hero img.hero-img{max-width:600px;width:100%;height:auto;margin:1.2rem auto;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
 .subheadline{font-size:1.1rem;max-width:800px;margin:0 auto 1.5rem}
-
 .hero-buttons{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1rem}
-.hero .btn.secondary{border:none;color:#fff} /* unify button look in hero */
+.hero .btn.secondary{border:none;color:#fff}
+@media (max-width:768px){
+  .hero h1{font-size:2rem}
+  .hero img.hero-img{max-width:90%;margin:1rem auto}
+  .subheadline{font-size:1rem}
+  .hero-buttons{flex-direction:column;align-items:center}
+  .hero-buttons .btn{width:100%;max-width:280px}
+}
 
 /* ====== Featured Carousel (Swiper) ====== */
 .featured-carousel{padding:2rem 0;background:#fff}
-.swiper{position:relative;height:320px;max-height:320px;overflow:hidden;display:flex;align-items:center;will-change:transform}
+/* Let the carousel height adapt to image height and avoid cropping */
+.swiper{position:relative;height:auto;max-height:none;overflow:hidden;display:flex;align-items:center;will-change:transform}
 .swiper-wrapper{align-items:center}
-.swiper-slide{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:0 10px;height:100%}
-.swiper-slide img{max-width:100%;height:auto;max-height:320px;aspect-ratio:4/3;border-radius:8px;object-fit:cover;margin-bottom:.5rem}
-.carousel-caption{text-align:center;font-size:1.05rem;font-weight:600;color:#333;line-height:1.3;min-height:2.5rem}
-.swiper-button-prev,.swiper-button-next{color:var(--brand);width:32px;height:32px;font-size:1.8rem;background:rgba(255,255,255,.9);border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.1);top:50%;transform:translateY(-50%)}
+.swiper-slide{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:0 10px}
+.swiper-slide img{
+  max-width:100%;height:auto;object-fit:contain;aspect-ratio:auto;border-radius:8px;margin-bottom:.5rem
+}
+.carousel-caption{text-align:center;font-size:1.05rem;font-weight:600;color:#333;line-height:1.3;min-height:2rem}
+.swiper-button-prev,.swiper-button-next{
+  color:var(--brand);width:32px;height:32px;font-size:1.8rem;background:rgba(255,255,255,.9);
+  border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.1);top:50%;transform:translateY(-50%)
+}
 .swiper-button-prev:hover,.swiper-button-next:hover{background:var(--brand);color:#fff}
 .swiper-button-prev:focus,.swiper-button-next:focus{outline:2px solid var(--brand);outline-offset:3px}
 /* Keep dots below content to avoid overlap */
 .swiper-pagination{position:static;margin-top:1rem;text-align:center;min-height:24px}
-.swiper-pagination-bullet{background:#ccc;opacity:1;margin:0 4px;width:10px;height:10px;border-radius:50%;transition:background .3s ease}
+.swiper-pagination-bullet{background:#ccc;opacity:1;margin:0 4px;width:10px;height:10px;border-radius:50%;transition:background .3s}
 .swiper-pagination-bullet-active{background:var(--brand)}
+@media (max-width:768px){
+  .carousel-caption{font-size:.95rem}
+}
 
 /* ====== About / Why-Us ====== */
 .about-snippet h2,.different h2{text-align:center;margin-bottom:1.5rem}
 .different{background:var(--bg-2);padding:3rem 1rem}
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:2rem}
-.feature{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.05);text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+.feature{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.05);text-align:center;transition:transform .3s,box-shadow .3s}
 .feature:hover{transform:translateY(-4px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
 
 /* ====== Gallery (generic) ====== */
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
-.gallery-grid img{border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05);transition:transform .3s ease}
+.gallery-grid img{border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05);transition:transform .3s}
 .gallery-grid img:hover{transform:scale(1.03)}
 
 /* ====== Accordion (FAQ) ====== */
 .accordion{background:#fff;padding:3rem 1rem;max-width:800px;margin:0 auto}
-.accordion-item{border-bottom:1px solid #ddd;padding:1rem 0;transition:background .3s ease}
+.accordion-item{border-bottom:1px solid #ddd;padding:1rem 0;transition:background .3s}
 .accordion-item:hover{background:#fafafa}
-.accordion-button{background:none;border:0;width:100%;text-align:left;padding:.75rem 1rem;font-size:1.1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .3s ease}
+.accordion-button{background:none;border:0;width:100%;text-align:left;padding:.75rem 1rem;font-size:1.1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .3s}
 .accordion-button:focus{outline:2px solid var(--brand);outline-offset:3px}
 .accordion-button[aria-expanded="true"]{background:#f4f4f4}
 .accordion-title{flex:1}
-.accordion-button .icon{font-size:1.2rem;margin-left:1rem;transition:transform .3s ease}
+.accordion-button .icon{font-size:1.2rem;margin-left:1rem;transition:transform .3s}
 .accordion-button[aria-expanded="true"] .icon{transform:rotate(45deg)}
 .accordion-content{padding:0 1rem 1rem;font-size:1rem;line-height:1.6;color:#444;animation:fadeIn .3s ease-in-out}
 .accordion-content a.btn.small{display:inline-block;margin-top:.75rem}
@@ -94,10 +135,12 @@ footer{background:#222;color:#ddd;padding:3rem 1rem 1rem}
 .footer-col h3,.footer-col h4{margin-bottom:1rem;color:#fff}
 .footer-col a{color:#ddd;transition:color .3s}
 .footer-col a:hover{color:#fff}
-.social-links{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem}
-.social-links i{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;color:#666;font-size:1.5rem;transition:color .3s}
+.footer-col[aria-labelledby="footer-social"]{text-align:left}
+.social-links{display:flex;justify-content:flex-start;align-items:center;gap:.75rem;margin-top:.5rem}
+.social-links a{display:inline-flex;align-items:center;line-height:1}
+.social-links i{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;color:#666;font-size:1.4rem;transition:color .3s}
 .social-links a:hover i{color:var(--brand)}
-.social-links img.social-icon-img{width:2.8rem;height:2.8rem;object-fit:contain;display:inline-block;opacity:.7;filter:invert(1) grayscale(1) brightness(.7) contrast(1.1);transition:opacity .3s,filter .3s,transform .3s;vertical-align:middle;transform:translate(-4px,0)}
+.social-links img.social-icon-img{width:1.4rem;height:1.4rem;object-fit:contain;display:inline-block;opacity:.85;filter:invert(1) grayscale(1) brightness(.85) contrast(1.05);transition:opacity .3s,filter .3s}
 .social-links img.social-icon-img:hover{opacity:1;filter:invert(1) sepia(1) saturate(4) hue-rotate(-10deg) brightness(1.05) contrast(1.1)}
 .copyright{text-align:center;font-size:.9rem;margin-top:1rem;color:#aaa}
 
@@ -124,7 +167,7 @@ section[id^="spring-rolls"],section[id^="sauces"],section[id^="juices"],section[
 ul.pricing{list-style:none;padding:0;margin:1rem 0 2rem;font-weight:600}
 ul.pricing li{margin-bottom:.4rem}
 .roll-options-grid,.drink-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;margin-top:2rem}
-.roll,.drink{background:#fff;padding:1rem;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:transform .25s ease,box-shadow .25s ease}
+.roll,.drink{background:#fff;padding:1rem;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:transform .25s,box-shadow .25s}
 .roll:hover,.drink:hover{transform:translateY(-4px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
 .roll img,.drink img{width:100%;height:auto;max-height:220px;object-fit:contain;border-radius:6px;margin-bottom:1rem}
 .roll h4,.drink h4{font-size:1.1rem;color:#222;margin-bottom:.3rem}
@@ -150,34 +193,7 @@ ul.pricing li{margin-bottom:.4rem}
 .sauce-text span{font-weight:400;font-size:.9rem;color:#666;margin-left:.3rem}
 .sauce-image{flex:1 1 300px;display:flex;align-items:center;justify-content:center;background:#fafafa;padding:1rem}
 .sauce-image img{max-width:100%;height:auto;object-fit:contain;border-radius:0}
-
-/* ====== Sticky Mobile Action Bar ====== */
-.sticky-actions{position:fixed;left:0;right:0;bottom:0;z-index:1000;display:none;gap:.6rem;padding:.6rem;padding-bottom:calc(.6rem + env(safe-area-inset-bottom));background:rgba(17,17,17,.9);backdrop-filter:saturate(140%) blur(8px);border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -6px 20px rgba(0,0,0,.25)}
-.sticky-actions .btn{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;height:48px;font-weight:700;border-radius:10px;background:var(--brand);color:#fff}
-.sticky-actions .btn:hover{background:var(--brand-d);opacity:.95;transform:translateY(-1px)}
-@media (prefers-reduced-motion: reduce){
-  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-  .sticky-actions .btn,.sticky-actions .btn:hover{transform:none}
-}
-
-/* ====== Responsive ====== */
 @media (max-width:768px){
-  .hero h1{font-size:2rem}
-  .hero img.hero-img{max-width:90%;margin:1rem auto}
-  .subheadline{font-size:1rem}
-
-  .nav-toggle{display:block}
-  .main-nav{display:none;flex-direction:column;background:#fff;position:absolute;top:100%;left:0;right:0;padding:1rem;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:999}
-  .main-nav.open{display:flex}
-  .main-nav ul{flex-direction:column;gap:1rem}
-
-  .swiper{height:260px;max-height:260px}
-  .swiper-slide img{max-height:200px}
-  .carousel-caption{font-size:.95rem;min-height:2rem}
-
-  .gallery-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-  .contact-box{padding:1.5rem}
-
   .menu-hero h1{font-size:1.8rem}
   .roll h4,.drink h4{font-size:1rem}
   .roll p,.drink p{font-size:.9rem}
@@ -186,126 +202,33 @@ ul.pricing li{margin-bottom:.4rem}
   .sauce-text,.sauce-image{flex:1 1 100%;text-align:center}
   .sauce-text{padding:1.5rem 1rem}
   .sauce-image{padding:1rem 0}
-
-  .hero-buttons{flex-direction:column;align-items:center}
-  .hero-buttons .btn{width:100%;max-width:280px}
-
-  .sticky-actions{display:flex}
-  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 }
 
-/* HAMBURGER BARS */
-.nav-toggle { display:inline-flex; flex-direction:column; gap:6px; padding:8px; }
-.nav-toggle-bar { width:26px; height:2.5px; background:#333; border-radius:2px; display:block; }
-
-/* Only show hamburger on small screens, show full nav otherwise */
-@media (max-width:768px){
-  .nav-toggle{ display:inline-flex; }
-  .main-nav{ display:none; }
-  .main-nav.open{ display:flex; }
-}
-@media (min-width:769px){
-  .nav-toggle{ display:none; } /* keep desktop links visible, no hamburger */
-}
-
-/* Let images fit without cropping */
-.swiper-slide img{
-  object-fit: contain !important;
-  aspect-ratio: auto !important;
-  max-height: none !important;
-  height: auto !important;
-}
-
-/* Allow the carousel to grow with image height */
-.swiper{ height: auto !important; max-height:none !important; }
-
-
-/* Align icons with the heading */
-.footer-col#footer-social,
-.footer-col[aria-labelledby="footer-social"] { text-align: left; }
-
-.social-links{
-  justify-content: flex-start !important;
-  align-items: center;
-  gap: .75rem;
-  margin-top: .5rem;
-}
-
-/* Make FA icons and the TripAdvisor png share a baseline */
-.social-links a{ line-height:1; display:inline-flex; align-items:center; }
-.social-links i{ font-size:1.4rem; }
-.social-links img.social-icon-img{
-  width:1.4rem; height:1.4rem; margin-top:0; transform:none; /* remove previous shifts */
-  filter: invert(1) grayscale(1) brightness(.8) contrast(1.05);
-}
-
-/* Default: off everywhere */
-.sticky-actions { display: none; }
-
-/* Mobile only */
-@media (max-width: 768px) {
-  .sticky-actions{
-    position: fixed;
-    left: 0; right: 0; bottom: 0;
-    z-index: 1000;
-    display: flex;              /* shows only on mobile */
-    gap: .6rem;
-    padding: .6rem;
-    padding-bottom: calc(.6rem + env(safe-area-inset-bottom)); /* iOS safe area */
-    background: rgba(17,17,17,.9);
-    backdrop-filter: saturate(140%) blur(8px);
-    border-top: 1px solid rgba(255,255,255,.12);
-    box-shadow: 0 -6px 20px rgba(0,0,0,.25);
-  }
-
-  /* Make room for it so it doesn't cover content */
-  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
-
-  /* Hide sticky bar when mobile menu is open */
-  body.menu-open .sticky-actions { display: none; }
-}
-
-/* === Sticky action bar: bottom on all screens, never in header === */
+/* ====== Sticky Action Bar (bottom, all screens) ====== */
 .sticky-actions{
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;                              /* always at the bottom */
-  z-index: 1100;                          /* above the sticky header */
-  display: flex;
-  gap: .6rem;
-  padding: .6rem;
-  padding-bottom: calc(.6rem + env(safe-area-inset-bottom));
-  background: rgba(17,17,17,.9);
-  backdrop-filter: saturate(140%) blur(8px);
-  border-top: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 -6px 20px rgba(0,0,0,.25);
+  position:fixed;left:0;right:0;bottom:0;z-index:1100;
+  display:flex;gap:.6rem;padding:.6rem;
+  padding-bottom:calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(17,17,17,.9);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-top:1px solid rgba(255,255,255,.12);
+  box-shadow:0 -6px 20px rgba(0,0,0,.25)
 }
-
 .sticky-actions .btn{
-  flex: 1 1 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  font-weight: 700;
-  border-radius: 10px;
-  background:#ff6a00; 
-  color:#fff;
+  flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;
+  height:48px;font-weight:700;border-radius:10px;background:var(--brand);color:#fff
 }
-.sticky-actions .btn:hover{ background:#e55b00; }
+.sticky-actions .btn:hover{background:var(--brand-d);opacity:.95;transform:translateY(-1px)}
+/* Make room so it never covers content */
+html,body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 
-/* Add bottom padding so content isn't hidden behind the bar */
-html, body{
-  /* 64px ≈ bar height incl. padding; adjust if your bar is taller */
-  padding-bottom: calc(64px + env(safe-area-inset-bottom));
+/* OPTIONAL: hide sticky bar when mobile menu open (body.menu-open set by JS) */
+@media (max-width:768px){
+  body.menu-open .sticky-actions{display:none}
 }
 
-/* IMPORTANT: remove any “mobile-only” display rule from earlier CSS */
-@media (max-width: 768px){
-  /* if you had: .sticky-actions{display:flex;} — delete it */
+/* ====== Reduced motion ====== */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .sticky-actions .btn,.sticky-actions .btn:hover{transform:none}
 }
-/* And remove any earlier `.sticky-actions{ display:none; }` */
-
-
-
