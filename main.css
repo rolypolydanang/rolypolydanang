@@ -248,3 +248,37 @@ main{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .sticky-actions .btn,.sticky-actions .btn:hover{transform:none}
 }
+
+/* Footer: make columns align consistently on desktop */
+.footer-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr; /* left a bit wider, cols flush */
+  column-gap: 2rem;
+  row-gap: 2rem;
+  align-items: start; /* headings + content start at the same top line */
+}
+
+/* Ensure zero unintended indents inside columns */
+.footer-col{ margin:0; padding:0; text-align:left; }
+.footer-col h3,
+.footer-col h4{ margin:0 0 1rem 0; }
+
+/* Quick Links list: no left indent */
+.footer-links{ list-style:none; padding:0; margin:0; }
+.footer-links li{ margin:.4rem 0; }
+
+/* Socials row aligns left, icons baseline with text */
+.social-links{ justify-content:flex-start; align-items:center; gap:.75rem; margin-top:.5rem; }
+.social-links a{ display:inline-flex; align-items:center; line-height:1; }
+.social-links i{ font-size:1.4rem; line-height:1; }
+.social-links img.social-icon-img{ width:1.4rem; height:1.4rem; object-fit:contain; }
+
+/* Responsive: stack nicely below ~992px */
+@media (max-width: 992px){
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+  .footer-col[aria-labelledby="footer-social"]{ grid-column: 1 / -1; } /* Socials full width on its own row */
+}
+@media (max-width: 640px){
+  .footer-grid{ grid-template-columns: 1fr; }
+}
+
