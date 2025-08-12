@@ -282,3 +282,26 @@ main{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
   .footer-grid{ grid-template-columns: 1fr; }
 }
 
+/* 1) Set a single sticky height token */
+:root { --sticky-h: 64px; }  /* match your sticky bar (~48px btn + padding) */
+
+/* 2) Make the sticky actually use it (optional but nice) */
+.sticky-actions{
+  min-height: var(--sticky-h);
+  padding-bottom: calc(.6rem + env(safe-area-inset-bottom));
+}
+
+/* 3) Reserve space for the sticky so content/footer aren’t covered */
+@media (max-width: 768px){
+  main{ 
+    padding-bottom: calc(var(--sticky-h) + env(safe-area-inset-bottom));
+  }
+  .site-footer{
+    padding-bottom: calc(1rem + var(--sticky-h) + env(safe-area-inset-bottom));
+  }
+}
+
+/* Important: remove any global bottom padding that fights this */
+html, body { padding-bottom: 0 !important; }
+
+
