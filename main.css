@@ -335,3 +335,9 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   *{ animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; scroll-behavior:auto!important }
   .sticky-actions .btn,.sticky-actions .btn:hover{ transform:none }
 }
+
+/* Make hero buttons all have the same hover color */
+.hero .btn:hover {
+  background: var(--brand-d);
+  color: #fff;
+}
