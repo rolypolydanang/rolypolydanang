@@ -193,3 +193,49 @@ ul.pricing li{margin-bottom:.4rem}
   .sticky-actions{display:flex}
   body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 }
+
+/* HAMBURGER BARS */
+.nav-toggle { display:inline-flex; flex-direction:column; gap:6px; padding:8px; }
+.nav-toggle-bar { width:26px; height:2.5px; background:#333; border-radius:2px; display:block; }
+
+/* Only show hamburger on small screens, show full nav otherwise */
+@media (max-width:768px){
+  .nav-toggle{ display:inline-flex; }
+  .main-nav{ display:none; }
+  .main-nav.open{ display:flex; }
+}
+@media (min-width:769px){
+  .nav-toggle{ display:none; } /* keep desktop links visible, no hamburger */
+}
+
+/* Let images fit without cropping */
+.swiper-slide img{
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+/* Allow the carousel to grow with image height */
+.swiper{ height: auto !important; max-height:none !important; }
+
+
+/* Align icons with the heading */
+.footer-col#footer-social,
+.footer-col[aria-labelledby="footer-social"] { text-align: left; }
+
+.social-links{
+  justify-content: flex-start !important;
+  align-items: center;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+
+/* Make FA icons and the TripAdvisor png share a baseline */
+.social-links a{ line-height:1; display:inline-flex; align-items:center; }
+.social-links i{ font-size:1.4rem; }
+.social-links img.social-icon-img{
+  width:1.4rem; height:1.4rem; margin-top:0; transform:none; /* remove previous shifts */
+  filter: invert(1) grayscale(1) brightness(.8) contrast(1.05);
+}
+
