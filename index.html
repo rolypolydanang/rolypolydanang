@@ -732,6 +732,21 @@
      aria-label="Call Roly Poly Da Nang">Call</a>
 </nav>
 
+  <script>
+  (function() {
+    function setStickySpace(){
+      var bar = document.querySelector('.sticky-actions');
+      if(!bar) return;
+      var h = bar.offsetHeight || 0;
+      document.documentElement.style.setProperty('--sticky-h', h + 'px');
+    }
+    window.addEventListener('load', setStickySpace, { once:true });
+    window.addEventListener('resize', setStickySpace);
+    setStickySpace();
+  })();
+</script>
+
+
 
 </body>
 </html>
