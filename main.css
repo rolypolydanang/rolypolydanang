@@ -232,3 +232,39 @@ html,body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .sticky-actions .btn,.sticky-actions .btn:hover{transform:none}
 }
+
+/* REMOVE this earlier rule if present */
+/* html, body{ padding-bottom: calc(64px + env(safe-area-inset-bottom)); } */
+
+/* Add safe space just for content & footer so the sticky doesn't overlap */
+main{ padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+footer{ padding-bottom: calc(1rem + 64px + env(safe-area-inset-bottom)); }
+
+footer address{ font-style: normal; }
+
+
+/* Desktop sizing for the carousel */
+@media (min-width: 1024px){
+  .swiper{
+    height: 420px;          /* cap overall height */
+    max-height: 420px;
+  }
+  .swiper-slide{
+    justify-content: center; /* vertically center slide content */
+  }
+  .swiper-slide img{
+    max-height: 360px;       /* cap image height inside */
+    object-fit: contain;
+  }
+  .carousel-caption{
+    min-height: 0;           /* let caption size naturally */
+    margin-top: .25rem;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px){
+  .swiper{ height: 340px; max-height: 340px; }
+  .swiper-slide img{ max-height: 280px; }
+}
+
