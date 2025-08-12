@@ -268,3 +268,9 @@ footer address{ font-style: normal; }
   .swiper-slide img{ max-height: 280px; }
 }
 
+/* --- Fix extra white space after footer --- */
+html, body { padding-bottom: 0 !important; }     /* kill the global padding */
+main { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }  /* only content avoids overlap */
+footer { padding-bottom: 1rem; }                  /* normal footer padding, no extra space */
+
+
