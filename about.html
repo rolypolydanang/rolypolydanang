@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <!-- Charset & viewport -->
   <meta charset="UTF-8" />
@@ -37,7 +39,6 @@
   <meta name="twitter:description" content="Our story, ingredients, and values — fresh gỏi cuốn, Vietnamese coffee, matcha & juices near Mỹ Khê Beach." />
   <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" />
   <meta name="twitter:image:alt" content="Fresh Vietnamese spring rolls on a platter with sauces at Roly Poly Da Nang" />
-  <!-- <meta name="twitter:site" content="@rolypolydanang" /> -->
 
   <!-- Icons & PWA -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -87,44 +88,35 @@
   </script>
 </head>
 
-
-
-
-  
-  
-
-
 <body>
- 
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- Header -->
-
 <header class="site-header" id="site-header" role="banner">
   <div class="container nav-container">
-    <!-- BRAND: root-relative URL, no lazy on logo -->
+    <!-- Brand -->
     <a href="/" class="logo" aria-label="Roly Poly Fresh Spring Rolls Da Nang — Home">
       <img
         src="/images/logo.jpg"
         alt="Roly Poly Fresh Spring Rolls Da Nang"
         class="logo-img"
-        width="160"
-        height="48"
+        width="160" height="48"
         decoding="async"
-        fetchpriority="high"  <!-- If your hero also uses fetchpriority="high", change this to "auto" -->
+        fetchpriority="auto"
       />
     </a>
 
-    <!-- NAV -->
+    <!-- Nav -->
     <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary">
       <ul class="nav-list">
         <li><a href="/">Home</a></li>
-        <li><a href="/menu" title="View Menu">Menu</a></li>
-        <li><a href="/about" class="active" aria-current="page" title="About Roly Poly Fresh Spring Rolls Da Nang">About</a></li>
-        <li><a href="/contact" title="Contact & Location">Contact</a></li>
+        <li><a href="/menu" title="View spring rolls & drinks">Menu — Spring Rolls &amp; Drinks</a></li>
+        <li><a href="/about" class="active" aria-current="page" title="About Roly Poly Fresh Spring Rolls Da Nang">About Roly Poly</a></li>
+        <li><a href="/contact" title="Map, hours & phone">Contact &amp; Location</a></li>
       </ul>
     </nav>
 
-    <!-- MOBILE MENU TOGGLER -->
+    <!-- Mobile toggler -->
     <button class="nav-toggle"
             aria-controls="main-nav"
             aria-expanded="false"
@@ -136,25 +128,29 @@
   </div>
 </header>
 
-
 <script>
+  // Accessible nav toggle
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('main-nav');
-    const setState = open => {
+    const setA11y = (open) => {
       toggle.setAttribute('aria-expanded', open);
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     };
-    toggle?.addEventListener('click', () => setState(nav.classList.toggle('open')));
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); setState(false); }));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') { nav.classList.remove('open'); setState(false); }});
+    toggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      setA11y(open);
+    });
+    nav.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => { nav.classList.remove('open'); setA11y(false); })
+    );
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { nav.classList.remove('open'); setA11y(false); }
+    });
   });
 </script>
 
-
-
-
-  <!-- Main Content -->
+<!-- Main Content -->
 <main id="main" role="main">
   <!-- Optional visible breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -174,7 +170,7 @@
         An Thượng café near Mỹ Khê Beach — house-made sauces, Vietnamese coffee &amp; ceremonial matcha
       </h2>
 
-      <!-- Match the preloaded image in <head> -->
+      <!-- Hero image (preloaded) -->
       <img
         src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
         alt="Platter of fresh Vietnamese spring rolls (gỏi cuốn) with house-made sauces at Roly Poly Da Nang"
@@ -211,180 +207,174 @@
     </div>
   </section>
 
-
   <!-- Story Section -->
-<section class="info-section" id="our-story" aria-labelledby="our-story-title">
-  <div class="container info-box">
-    <h2 id="our-story-title">Our Story — Fresh Vietnamese Spring Rolls (Gỏi cuốn) in Đà Nẵng</h2>
+  <section class="info-section" id="our-story" aria-labelledby="our-story-title">
+    <div class="container info-box">
+      <h2 id="our-story-title">Our Story — Fresh Vietnamese Spring Rolls (Gỏi cuốn) in Đà Nẵng</h2>
 
-    <p><strong>Roly Poly Fresh Spring Rolls Da Nang</strong> is a specialty <strong>fresh spring roll restaurant & Vietnamese café</strong> in the heart of <strong>An Thượng</strong>, a beachside neighborhood near <strong>Mỹ Khê Beach</strong>. We hand-roll <strong>gỏi cuốn to order</strong> with <strong>locally sourced herbs and vegetables</strong>, quality proteins, and <a href="/menu#sauces" class="text-link">house-made dipping sauces</a>.</p>
+      <p><strong>Roly Poly Fresh Spring Rolls Da Nang</strong> is a specialty <strong>fresh spring roll restaurant &amp; Vietnamese café</strong> in the heart of <strong>An Thượng</strong>, a beachside neighborhood near <strong>Mỹ Khê Beach</strong>. We hand-roll <strong>gỏi cuốn to order</strong> with <strong>locally sourced herbs and vegetables</strong>, quality proteins, and <a href="/menu#sauces" class="text-link">house-made dipping sauces</a>.</p>
 
-    <p>We started Roly Poly from a love of authentic <strong>Vietnamese street food</strong> and a simple idea: healthy, flavorful food that travels well — whether you’re grabbing lunch, taking rolls to the beach, or dining in our cozy, vintage-inspired café. Explore our <a href="/menu#spring-rolls" class="text-link">spring roll fillings</a> and <a href="/menu#coffee" class="text-link">Vietnamese coffee & matcha</a>.</p>
+      <p>We started Roly Poly from a love of authentic <strong>Vietnamese street food</strong> and a simple idea: healthy, flavorful food that travels well — whether you’re grabbing lunch, taking rolls to the beach, or dining in our cozy, vintage-inspired café. Explore our <a href="/menu#spring-rolls" class="text-link">spring roll fillings</a> and <a href="/menu#coffee" class="text-link">Vietnamese coffee &amp; matcha</a>.</p>
 
-    <p>Each rice-paper roll is layered with <strong>rice vermicelli, crisp lettuce, carrot, cucumber, fresh mint, and coriander</strong>, then finished with proteins like <em>garlic prawn</em>, <em>lemongrass beef</em>, or <em>tofu, mushroom & avocado</em> (<strong>vegan & gluten-free</strong>). Pair with our <strong>peanut</strong>, <strong>toasted sesame</strong>, or classic <strong>nước chấm</strong> sauces.</p>
+      <p>Each rice-paper roll is layered with <strong>rice vermicelli, crisp lettuce, carrot, cucumber, fresh mint, and coriander</strong>, then finished with proteins like <em>garlic prawn</em>, <em>lemongrass beef</em>, or <em>tofu, mushroom &amp; avocado</em> (<strong>vegan &amp; gluten-free</strong>). Pair with our <strong>peanut</strong>, <strong>toasted sesame</strong>, or classic <strong>nước chấm</strong> sauces.</p>
 
-    <figure class="testimonial">
-      <blockquote cite="/about#our-story">
-        “Roly Poly is a great example of simple done right. Thoughtfully made, honest food with a cozy, local charm — no gimmicks, just really solid food that speaks for itself.”
-      </blockquote>
-      <figcaption>— <span class="testimonial-name">Mark</span></figcaption>
-    </figure>
-
-    <p>We’re proud to support the <strong>Đà Nẵng</strong> community by buying from nearby growers whenever possible. Come for friendly service, <a href="/menu#juices" class="text-link">fresh tropical juices</a>, and your new favorite rolls — or opt for <a href="/menu#delivery-cta" class="text-link">free delivery within 3&nbsp;km</a>.</p>
-
-    <a class="btn" href="/menu" aria-label="See the full menu of spring rolls, sauces, coffee and drinks">Explore Our Menu</a>
-  </div>
-</section>
-
-
- <!-- Philosophy Section -->
-<section class="about-philosophy" aria-labelledby="philosophy-title">
-  <div class="container">
-    <h2 id="philosophy-title">Our Philosophy — Fresh, Local Vietnamese Café in Đà Nẵng</h2>
-    <ul class="philosophy-grid" role="list">
-      <li class="philosophy-item">
-        <i class="fas fa-leaf" aria-hidden="true"></i>
-        <p>Made-to-order <strong>Vietnamese spring rolls (gỏi cuốn)</strong> with high-quality ingredients —
-          <a href="/menu#spring-rolls" class="text-link" aria-label="See our fresh spring rolls menu">see fillings & pricing</a>.
-        </p>
-      </li>
-      <li class="philosophy-item">
-        <i class="fas fa-utensils" aria-hidden="true"></i>
-        <p><strong>House-made sauces</strong> crafted to complement every roll —
-          <a href="/menu#sauces" class="text-link" aria-label="View our dipping sauces">peanut, toasted sesame & nước chấm</a>.
-        </p>
-      </li>
-      <li class="philosophy-item">
-        <i class="fas fa-mug-hot" aria-hidden="true"></i>
-        <p>Specialty <strong>Vietnamese coffee</strong>, <strong>premium matcha</strong> & <strong>fresh juices</strong> —
-          explore <a href="/menu#coffee" class="text-link" aria-label="Vietnamese coffee and matcha menu">coffee & matcha</a> and
-          <a href="/menu#juices" class="text-link" aria-label="Fresh juices menu">juices</a>.
-        </p>
-      </li>
-      <li class="philosophy-item">
-        <i class="fas fa-seedling" aria-hidden="true"></i>
-        <p><strong>Locally sourced produce</strong> from Đà Nẵng & Quảng Nam whenever possible — fresher flavor, lower food miles.</p>
-      </li>
-      <li class="philosophy-item">
-        <i class="fas fa-heart" aria-hidden="true"></i>
-        <p>Friendly service in our cozy, vintage café in <strong>An Thượng</strong>, near <strong>Mỹ Khê Beach</strong> —
-          dine-in, takeaway, or <a href="/menu#delivery-cta" class="text-link" aria-label="See delivery information">free delivery within 3&nbsp;km</a>.
-        </p>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
- <!-- Gallery Section -->
-<section class="info-section" aria-labelledby="gallery-heading">
-  <div class="container">
-    <h2 id="gallery-heading">Photo Gallery — Spring Rolls, Sauces & Drinks in Đà Nẵng</h2>
-
-    <div class="gallery-grid" role="list">
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="See fresh spring rolls menu">
-          <img src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
-               alt="Assorted fresh Vietnamese spring rolls with house-made sauces at Roly Poly, Đà Nẵng"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Fresh spring rolls — <a href="/menu#spring-rolls">see fillings & prices</a></figcaption>
+      <figure class="testimonial">
+        <blockquote cite="/about#our-story">
+          “Roly Poly is a great example of simple done right. Thoughtfully made, honest food with a cozy, local charm — no gimmicks, just really solid food that speaks for itself.”
+        </blockquote>
+        <figcaption>— <span class="testimonial-name">Mark</span></figcaption>
       </figure>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="Garlic prawn spring rolls">
-          <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp"
-               alt="Garlic prawn spring roll with herbs and vermicelli in Đà Nẵng"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Garlic prawn — <a href="/menu#spring-rolls">popular filling</a></figcaption>
-      </figure>
+      <p>We’re proud to support the <strong>Đà Nẵng</strong> community by buying from nearby growers whenever possible. Come for friendly service, <a href="/menu#juices" class="text-link">fresh tropical juices</a>, and your new favorite rolls — or opt for <a href="/menu#delivery-cta" class="text-link">free delivery within 3&nbsp;km</a>.</p>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="Lemongrass beef spring rolls">
-          <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp"
-               alt="Lemongrass beef spring roll with dipping sauce at Roly Poly"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Lemongrass beef — <a href="/menu#spring-rolls">see all options</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="Soy glazed pork belly spring rolls">
-          <img src="/images/soy-glazed-pork-belly-spring-roll-roly-poly-da-nang.webp"
-               alt="Soy glazed pork belly spring roll with rice noodles and herbs"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Soy glazed pork belly — <a href="/menu#spring-rolls">build a set</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#sauces" aria-label="See dipping sauces">
-          <img src="/images/trio-of-sauces-roly-poly-da-nang.webp"
-               alt="Peanut, toasted sesame, and nước chấm fish sauce — house-made dips"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>House-made sauces — <a href="/menu#sauces">peanut, sesame & nước chấm</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#juices" aria-label="See fresh juices">
-          <img src="/images/my-khe-sunrise-juice-roly-poly-da-nang.webp"
-               alt="Mỹ Khê Sunrise juice with pineapple, watermelon and lime"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Fresh juices — <a href="/menu#juices">view the juice menu</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#coffee" aria-label="See matcha and coffee">
-          <img src="/images/iced-strawberry-matcha-latte-roly-poly-da-nang.webp"
-               alt="Iced strawberry matcha latte with layered matcha and cream"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Premium matcha — <a href="/menu#coffee">see matcha lattes</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#coffee" aria-label="See coconut coffee">
-          <img src="/images/iced-coconut-coffee-roly-poly-da-nang.webp"
-               alt="Creamy iced coconut coffee at Roly Poly Đà Nẵng"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Coconut coffee — <a href="/menu#coffee">coffee & specials</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#coffee" aria-label="See salted coffee">
-          <img src="/images/iced-salted-coffee-roly-poly-da-nang.webp"
-               alt="Vietnamese iced salted coffee with silky cream foam"
-               width="600" height="450" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Salted coffee — <a href="/menu#coffee">Vietnamese coffee</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/contact" aria-label="See contact & location">
-          <img src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
-               alt="Roly Poly Fresh Spring Rolls Đà Nẵng — vintage shopfront in An Thượng"
-               width="1600" height="900" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>Visit us in An Thượng — <a href="/contact">contact & location</a></figcaption>
-      </figure>
+      <a class="btn" href="/menu" aria-label="See the full menu of spring rolls, sauces, coffee and drinks">Explore Our Menu</a>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Philosophy Section -->
+  <section class="about-philosophy" aria-labelledby="philosophy-title">
+    <div class="container">
+      <h2 id="philosophy-title">Our Philosophy — Fresh, Local Vietnamese Café in Đà Nẵng</h2>
+      <ul class="philosophy-grid" role="list">
+        <li class="philosophy-item">
+          <i class="fas fa-leaf" aria-hidden="true"></i>
+          <p>Made-to-order <strong>Vietnamese spring rolls (gỏi cuốn)</strong> with high-quality ingredients —
+            <a href="/menu#spring-rolls" class="text-link" aria-label="See our fresh spring rolls menu">see fillings &amp; pricing</a>.
+          </p>
+        </li>
+        <li class="philosophy-item">
+          <i class="fas fa-utensils" aria-hidden="true"></i>
+          <p><strong>House-made sauces</strong> crafted to complement every roll —
+            <a href="/menu#sauces" class="text-link" aria-label="View our dipping sauces">peanut, toasted sesame &amp; nước chấm</a>.
+          </p>
+        </li>
+        <li class="philosophy-item">
+          <i class="fas fa-mug-hot" aria-hidden="true"></i>
+          <p>Specialty <strong>Vietnamese coffee</strong>, <strong>premium matcha</strong> &amp; <strong>fresh juices</strong> —
+            explore <a href="/menu#coffee" class="text-link" aria-label="Vietnamese coffee and matcha menu">coffee &amp; matcha</a> and
+            <a href="/menu#juices" class="text-link" aria-label="Fresh juices menu">juices</a>.
+          </p>
+        </li>
+        <li class="philosophy-item">
+          <i class="fas fa-seedling" aria-hidden="true"></i>
+          <p><strong>Locally sourced produce</strong> from Đà Nẵng &amp; Quảng Nam whenever possible — fresher flavor, lower food miles.</p>
+        </li>
+        <li class="philosophy-item">
+          <i class="fas fa-heart" aria-hidden="true"></i>
+          <p>Friendly service in our cozy, vintage café in <strong>An Thượng</strong>, near <strong>Mỹ Khê Beach</strong> —
+            dine-in, takeaway, or <a href="/menu#delivery-cta" class="text-link" aria-label="See delivery information">free delivery within 3&nbsp;km</a>.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="info-section" aria-labelledby="gallery-heading">
+    <div class="container">
+      <h2 id="gallery-heading">Photo Gallery — Spring Rolls, Sauces &amp; Drinks in Đà Nẵng</h2>
+
+      <div class="gallery-grid" role="list">
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#spring-rolls" aria-label="See fresh spring rolls menu">
+            <img src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
+                 alt="Assorted fresh Vietnamese spring rolls with house-made sauces at Roly Poly, Đà Nẵng"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Fresh spring rolls — <a href="/menu#spring-rolls">see fillings &amp; prices</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#spring-rolls" aria-label="Garlic prawn spring rolls">
+            <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp"
+                 alt="Garlic prawn spring roll with herbs and vermicelli in Đà Nẵng"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Garlic prawn — <a href="/menu#spring-rolls">popular filling</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#spring-rolls" aria-label="Lemongrass beef spring rolls">
+            <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp"
+                 alt="Lemongrass beef spring roll with dipping sauce at Roly Poly"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Lemongrass beef — <a href="/menu#spring-rolls">see all options</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#spring-rolls" aria-label="Soy glazed pork belly spring rolls">
+            <img src="/images/soy-glazed-pork-belly-spring-roll-roly-poly-da-nang.webp"
+                 alt="Soy glazed pork belly spring roll with rice noodles and herbs"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Soy glazed pork belly — <a href="/menu#spring-rolls">build a set</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#sauces" aria-label="See dipping sauces">
+            <img src="/images/trio-of-sauces-roly-poly-da-nang.webp"
+                 alt="Peanut, toasted sesame, and nước chấm fish sauce — house-made dips"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>House-made sauces — <a href="/menu#sauces">peanut, sesame &amp; nước chấm</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#juices" aria-label="See fresh juices">
+            <img src="/images/my-khe-sunrise-juice-roly-poly-da-nang.webp"
+                 alt="Mỹ Khê Sunrise juice with pineapple, watermelon and lime"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Fresh juices — <a href="/menu#juices">view the juice menu</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#coffee" aria-label="See matcha and coffee">
+            <img src="/images/iced-strawberry-matcha-latte-roly-poly-da-nang.webp"
+                 alt="Iced strawberry matcha latte with layered matcha and cream"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Premium matcha — <a href="/menu#coffee">see matcha lattes</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#coffee" aria-label="See coconut coffee">
+            <img src="/images/iced-coconut-coffee-roly-poly-da-nang.webp"
+                 alt="Creamy iced coconut coffee at Roly Poly Đà Nẵng"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Coconut coffee — <a href="/menu#coffee">coffee &amp; specials</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/menu#coffee" aria-label="See salted coffee">
+            <img src="/images/iced-salted-coffee-roly-poly-da-nang.webp"
+                 alt="Vietnamese iced salted coffee with silky cream foam"
+                 width="600" height="450" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Salted coffee — <a href="/menu#coffee">Vietnamese coffee</a></figcaption>
+        </figure>
+
+        <figure class="gallery-item" role="listitem">
+          <a href="/contact" aria-label="See contact & location">
+            <img src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
+                 alt="Roly Poly Fresh Spring Rolls Đà Nẵng — vintage shopfront in An Thượng"
+                 width="1600" height="900" loading="lazy" decoding="async" />
+          </a>
+          <figcaption>Visit us in An Thượng — <a href="/contact">contact &amp; location</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 </main>
 
-
-  <!-- FOOTER -->
+<!-- Footer -->
 <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
   <div class="container">
     <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls Da Nang — Footer</h2>
 
     <div class="footer-grid">
-
       <!-- Column 1: Address & Hours -->
       <section class="footer-col" aria-labelledby="footer-brand">
         <h3 id="footer-brand">
@@ -393,7 +383,6 @@
           </a>
         </h3>
 
-        <!-- brief locality/tagline helps tourist SEO -->
         <p class="footer-tagline">Vietnamese spring rolls café in <strong>An Thuong</strong>, near <strong>My Khe Beach</strong>, Da Nang.</p>
 
         <address>
@@ -456,18 +445,17 @@
   </div>
 </footer>
 
-  <!-- Scripts -->
- <script type="application/ld+json">
+<!-- Structured Data: Restaurant (unified entity) -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "@id": "https://www.rolypolydanang.vn/#restaurant",
   "name": "Roly Poly Fresh Spring Rolls Da Nang",
   "url": "https://www.rolypolydanang.vn/",
   "logo": "https://www.rolypolydanang.vn/images/logo.jpg",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://www.rolypolydanang.vn/images/logo.jpg"
-  },
+  "image": { "@type": "ImageObject", "url": "https://www.rolypolydanang.vn/images/logo.jpg" },
+  "priceRange": "₫₫",
   "description": "Our story at Roly Poly Da Nang — fresh Vietnamese food, community focus, and cozy café vibes in An Thuong.",
   "telephone": "+84 327 306 076",
   "address": {
@@ -499,12 +487,13 @@
 }
 </script>
 
+<!-- Utilities -->
+<script>
+  // Footer year
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 
-
-  
-  
-
-  <!-- Sticky Actions - Contact Page -->
+<!-- Sticky Actions -->
 <div class="sticky-actions">
   <a href="https://www.google.com/maps?cid=8457966646420358159"
      class="btn accent"
@@ -514,7 +503,5 @@
     Get Directions
   </a>
 </div>
-
-
 </body>
 </html>
