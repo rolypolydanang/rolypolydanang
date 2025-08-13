@@ -98,36 +98,37 @@
  
 
 <!-- Header -->
+
 <header class="site-header" id="site-header" role="banner">
   <div class="container nav-container">
-    <!-- Brand -->
+    <!-- BRAND: root-relative URL, no lazy on logo -->
     <a href="/" class="logo" aria-label="Roly Poly Fresh Spring Rolls Da Nang — Home">
       <img
         src="/images/logo.jpg"
         alt="Roly Poly Fresh Spring Rolls Da Nang"
         class="logo-img"
-        width="160" height="48"
+        width="160"
+        height="48"
         decoding="async"
-        loading="eager"
+        fetchpriority="high"  <!-- If your hero also uses fetchpriority="high", change this to "auto" -->
       />
     </a>
 
-    <!-- Nav -->
+    <!-- NAV -->
     <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary">
       <ul class="nav-list">
         <li><a href="/">Home</a></li>
-        <li><a href="/menu" title="View spring rolls & drinks">Menu — Spring Rolls &amp; Drinks</a></li>
-        <li><a href="/about" class="active" aria-current="page">About Roly Poly</a></li>
-        <li><a href="/contact" title="Map, hours & phone">Contact &amp; Location</a></li>
+        <li><a href="/menu" title="View Menu">Menu</a></li>
+        <li><a href="/about" class="active" aria-current="page" title="About Roly Poly Fresh Spring Rolls Da Nang">About</a></li>
+        <li><a href="/contact" title="Contact & Location">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Mobile toggler -->
-    <button
-      class="nav-toggle"
-      aria-controls="main-nav"
-      aria-expanded="false"
-      aria-label="Open menu">
+    <!-- MOBILE MENU TOGGLER -->
+    <button class="nav-toggle"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Open menu">
       <span class="nav-toggle-bar" aria-hidden="true"></span>
       <span class="nav-toggle-bar" aria-hidden="true"></span>
       <span class="nav-toggle-bar" aria-hidden="true"></span>
@@ -135,30 +136,21 @@
   </div>
 </header>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('main-nav');
-
-    const setA11y = (open) => {
+    const setState = open => {
       toggle.setAttribute('aria-expanded', open);
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     };
-
-    toggle?.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      setA11y(open);
-    });
-
-    // Close on link click & Esc
-    nav.querySelectorAll('a').forEach(a =>
-      a.addEventListener('click', () => { nav.classList.remove('open'); setA11y(false); })
-    );
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { nav.classList.remove('open'); setA11y(false); }
-    });
+    toggle?.addEventListener('click', () => setState(nav.classList.toggle('open')));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); setState(false); }));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { nav.classList.remove('open'); setState(false); }});
   });
 </script>
+
 
 
 
