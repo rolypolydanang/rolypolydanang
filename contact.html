@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"></noscript>
+  <!-- Preload hero image used below -->
   <link rel="preload" as="image" href="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" type="image/webp">
-
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -92,7 +92,7 @@
           class="logo-img"
           width="160" height="48"
           decoding="async"
-          fetchpriority="high"
+          fetchpriority="auto"
         />
       </a>
 
@@ -132,258 +132,257 @@
     });
   </script>
 
- <!-- Main -->
-<main id="main" role="main">
-  <!-- Hero -->
-  <section class="hero hero--contact" id="contact" aria-labelledby="contact-hero-heading">
-  <div class="hero-overlay" aria-hidden="true"></div>
-  <div class="container hero-content">
-    <h1 id="contact-hero-heading">Contact Roly Poly — Location, Hours & Delivery in Đà Nẵng</h1>
+  <!-- Main -->
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="hero hero--contact" id="contact" aria-labelledby="contact-hero-heading">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <h1 id="contact-hero-heading">Contact Roly Poly — Location, Hours & Delivery in Đà Nẵng</h1>
 
-    <h2 class="hero-subtitle">
-      In An Thượng near Mỹ Khê Beach — call, get directions, or order delivery
-    </h2>
+        <h2 class="hero-subtitle">
+          In An Thượng near Mỹ Khê Beach — call, get directions, or order delivery
+        </h2>
 
-    <!-- Storefront hero image (matches preload) -->
-    <img
-      src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
-      alt="Roly Poly Fresh Spring Rolls Đà Nẵng storefront in An Thượng, near Mỹ Khê Beach"
-      class="hero-img"
-      width="1600" height="900"
-      decoding="async"
-      fetchpriority="high"
-    />
+        <!-- Storefront hero image (matches preload) -->
+        <img
+          src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
+          alt="Roly Poly Fresh Spring Rolls Đà Nẵng storefront in An Thượng, near Mỹ Khê Beach"
+          class="hero-img"
+          width="1600" height="900"
+          decoding="async"
+          fetchpriority="high"
+          sizes="100vw"
+        />
 
-    <p class="subheadline">
-      Open <strong>Mon–Sat, 10:00–20:00</strong>. Spring rolls (<strong>gỏi cuốn</strong>) made to order — dine-in, takeaway, or delivery.
-    </p>
+        <p class="subheadline">
+          Open <strong>Mon–Sat, 10:00–20:00</strong>. Spring rolls (<strong>gỏi cuốn</strong>) made to order — dine-in, takeaway, or delivery.
+        </p>
 
-    <div class="hero-buttons" role="group" aria-label="Primary actions">
-      <a href="tel:+84327306076" class="btn primary" aria-label="Call Roly Poly Da Nang">Call Now</a>
-      <a href="https://www.google.com/maps?cid=8457966646420358159"
-         class="btn accent"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Get directions to Roly Poly">Get Directions</a>
-      <a href="/menu" class="btn secondary" aria-label="View menu">View Menu</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Contact Info -->
-  <section class="contact-details" aria-labelledby="contact-info-heading">
-    <div class="container contact-grid">
-      <h2 id="contact-info-heading">Address, Phone & Hours</h2>
-
-      <div class="contact-box">
-        <h3>Visit Us</h3>
-        <address>
-          05 An Thượng 6, Bắc Mỹ Phú<br>
-          Ngũ Hành Sơn, Đà Nẵng 550000<br>
-          <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer">Open on Google Maps</a>
-        </address>
-        <p class="small">Near Mỹ Khê Beach • Easy walk from the An Thượng night market</p>
+        <div class="hero-buttons" role="group" aria-label="Primary actions">
+          <a href="tel:+84327306076" class="btn primary" aria-label="Call Roly Poly Da Nang">Call Now</a>
+          <a href="https://www.google.com/maps?cid=8457966646420358159"
+             class="btn accent"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Get directions to Roly Poly">Get Directions</a>
+          <a href="/menu" class="btn secondary" aria-label="View menu">View Menu</a>
+        </div>
       </div>
+    </section>
 
-      <div class="contact-box">
-        <h3>Get in Touch</h3>
-        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+84327306076">+84 327 306 076</a></p>
-        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a></p>
-        <p class="small">Questions about our rolls or sauces? See the <a href="/menu">menu</a> or <a href="/about">About</a> page.</p>
-      </div>
+    <!-- Contact Info -->
+    <section class="contact-details" aria-labelledby="contact-info-heading">
+      <div class="container contact-grid">
+        <h2 id="contact-info-heading">Address, Phone & Hours</h2>
 
-      <div class="contact-box">
-        <h3>Opening Hours</h3>
-        <p>Monday–Saturday: 10:00–20:00</p>
-        <p>Closed Sunday</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Delivery Info -->
-  <section class="info-section" aria-labelledby="delivery-heading">
-    <div class="container info-box">
-      <h2 id="delivery-heading">Delivery in Đà Nẵng</h2>
-      <ul>
-        <li><strong>Free delivery</strong> within <strong>3 km</strong> during opening hours — An Thượng, Mỹ An &amp; Bắc Mỹ Phú. Call for <strong>in-store prices</strong>.</li>
-        <li>Prefer an app? Order citywide via <strong>GrabFood</strong>.</li>
-      </ul>
-      <div class="hero-buttons" role="group" aria-label="Delivery actions">
-        <a class="btn" href="tel:+84327306076" aria-label="Call Roly Poly Da Nang for delivery">Call for Delivery</a>
-        <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer" aria-label="Order Roly Poly on GrabFood">Order on GrabFood</a>
-        <a class="btn" href="/menu#spring-rolls" aria-label="See spring rolls menu with fillings and prices">See Spring Rolls &amp; Prices</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Payment Info -->
-  <section class="info-section" aria-labelledby="payment-heading">
-    <div class="container info-box">
-      <h2 id="payment-heading">Payments</h2>
-      <ul>
-        <li><strong>Accepted:</strong> Cash, MoMo, Visa, Mastercard, Apple Pay</li>
-        <li><strong>Card payments:</strong> +3% service fee</li>
-        <li><strong>Holiday pricing:</strong> +10% on holidays, +20% during Tết</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact-form-section" aria-labelledby="contact-form-heading">
-    <div class="container contact-form-box">
-      <h2 id="contact-form-heading">Send Us a Message</h2>
-
-      <form action="https://formspree.io/f/xwpqnwoy" method="POST">
-        <input type="hidden" name="_subject" value="New message from Roly Poly contact form">
-        <input type="hidden" name="_next" value="/thank-you.html">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-        <div class="form-row">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required autocomplete="name">
+        <div class="contact-box">
+          <h3>Visit Us</h3>
+          <address>
+            05 An Thượng 6, Bắc Mỹ Phú<br>
+            Ngũ Hành Sơn, Đà Nẵng 550000<br>
+            <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer">Open on Google Maps</a>
+          </address>
+          <p class="small">Fresh Vietnamese spring rolls (gỏi cuốn) in An Thượng, Đà Nẵng — near Mỹ Khê Beach.</p>
         </div>
 
-        <div class="form-row">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required autocomplete="email">
+        <div class="contact-box">
+          <h3>Get in Touch</h3>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+84327306076">+84 327 306 076</a></p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a></p>
+          <p class="small">Questions about our rolls or sauces? See the <a href="/menu">menu</a> or <a href="/about">About</a> page.</p>
         </div>
 
-        <div class="form-row">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+        <div class="contact-box">
+          <h3>Opening Hours</h3>
+          <p>Monday–Saturday: 10:00–20:00</p>
+          <p>Closed Sunday</p>
         </div>
-
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-      <p class="small">We usually reply the same day during opening hours.</p>
-    </div>
-  </section>
-
-  <!-- Map -->
-  <section class="map-section" aria-labelledby="map-heading">
-    <div class="container map-box">
-      <h2 id="map-heading">Find Us on Google Maps</h2>
-      <a href="https://www.google.com/maps?cid=8457966646420358159" class="btn small" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
-      <div class="map-iframe-wrapper" style="margin-top:1.5rem; aspect-ratio: 16 / 9;">
-        <iframe
-          title="Roly Poly Fresh Spring Rolls Da Nang Location"
-          loading="lazy"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.3205785797218!2d108.2450329!3d16.0488458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217b2c3b0fcad%3A0x7560bbda49fcc40f!2sRoly%20Poly%20Fresh%20Spring%20Rolls%20Da%20Nang!5e0!3m2!1svi!2s!4v1754224061817!5m2!1svi!2s">
-        </iframe>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ: adds long-tail coverage -->
-  <section class="info-section" aria-labelledby="faq-heading">
-    <div class="container info-box">
-      <h2 id="faq-heading">FAQs — Visiting &amp; Ordering</h2>
+    <!-- Delivery Info -->
+    <section class="info-section" aria-labelledby="delivery-heading">
+      <div class="container info-box">
+        <h2 id="delivery-heading">Delivery in Đà Nẵng</h2>
+        <ul>
+          <li><strong>Free delivery</strong> within <strong>3 km</strong> during opening hours — An Thượng, Mỹ An &amp; Bắc Mỹ Phú. Call for <strong>in-store prices</strong>.</li>
+          <li>Prefer an app? Order citywide via <strong>GrabFood</strong>.</li>
+        </ul>
+        <div class="hero-buttons" role="group" aria-label="Delivery actions">
+          <a class="btn" href="tel:+84327306076" aria-label="Call Roly Poly Da Nang for delivery">Call for Delivery</a>
+          <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer" aria-label="Order Roly Poly on GrabFood">Order on GrabFood</a>
+          <a class="btn" href="/menu#spring-rolls" aria-label="See spring rolls menu with fillings and prices">See Spring Rolls &amp; Prices</a>
+        </div>
+      </div>
+    </section>
 
-      <details>
-        <summary>Do you have vegan or gluten-free spring rolls?</summary>
-        <p>Yes. We offer vegan fillings and gluten-free options — see the <a href="/menu#spring-rolls">spring rolls menu</a>.</p>
-      </details>
+    <!-- Payment Info -->
+    <section class="info-section" aria-labelledby="payment-heading">
+      <div class="container info-box">
+        <h2 id="payment-heading">Payments</h2>
+        <ul>
+          <li><strong>Accepted:</strong> Cash, MoMo, Visa, Mastercard, Apple Pay</li>
+          <li><strong>Card payments:</strong> +3% service fee</li>
+          <li><strong>Holiday pricing:</strong> +10% on holidays, +20% during Tết</li>
+        </ul>
+      </div>
+    </section>
 
-      <details>
-        <summary>What areas do you deliver to?</summary>
-        <p>Free delivery within 3&nbsp;km (An Thượng, Mỹ An, Bắc Mỹ Phú) during opening hours. Call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> for details.</p>
-      </details>
+    <!-- Contact Form -->
+    <section class="contact-form-section" aria-labelledby="contact-form-heading">
+      <div class="container contact-form-box">
+        <h2 id="contact-form-heading">Send Us a Message</h2>
 
-      <details>
-        <summary>Do you take card or Apple Pay?</summary>
-        <p>Yes — Visa, Mastercard, Apple Pay, and MoMo are accepted. Card payments incur a 3% service fee.</p>
-      </details>
+        <form action="https://formspree.io/f/xwpqnwoy" method="POST">
+          <input type="hidden" name="_subject" value="New message from Roly Poly contact form">
+          <input type="hidden" name="_next" value="/thank-you.html">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-      <details>
-        <summary>Where exactly are you located?</summary>
-        <p>We’re at 05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng — a short walk from <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener">Mỹ Khê Beach</a>.</p>
-      </details>
-    </div>
-  </section>
-</main>
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
 
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-row">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p class="small">We usually reply the same day during opening hours.</p>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section" aria-labelledby="map-heading">
+      <div class="container map-box">
+        <h2 id="map-heading">Find Us on Google Maps</h2>
+        <a href="https://www.google.com/maps?cid=8457966646420358159" class="btn small" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+        <div class="map-iframe-wrapper" style="margin-top:1.5rem; aspect-ratio: 16 / 9;">
+          <iframe
+            title="Roly Poly Fresh Spring Rolls Da Nang Location"
+            loading="lazy"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.3205785797218!2d108.2450329!3d16.0488458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217b2c3b0fcad%3A0x7560bbda49fcc40f!2sRoly%20Poly%20Fresh%20Spring%20Rolls%20Da%20Nang!5e0!3m2!1svi!2s!4v1754224061817!5m2!1svi!2s&hl=en">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="info-section" aria-labelledby="faq-heading">
+      <div class="container info-box">
+        <h2 id="faq-heading">FAQs — Visiting &amp; Ordering</h2>
+
+        <details>
+          <summary>Do you have vegan or gluten-free spring rolls?</summary>
+          <p>Yes. We offer vegan fillings and gluten-free options — see the <a href="/menu#spring-rolls">spring rolls menu</a>.</p>
+        </details>
+
+        <details>
+          <summary>What areas do you deliver to?</summary>
+          <p>Free delivery within 3&nbsp;km (An Thượng, Mỹ An, Bắc Mỹ Phú) during opening hours. Call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> for details.</p>
+        </details>
+
+        <details>
+          <summary>Do you take card or Apple Pay?</summary>
+          <p>Yes — Visa, Mastercard, Apple Pay, and MoMo are accepted. Card payments incur a 3% service fee.</p>
+        </details>
+
+        <details>
+          <summary>Where exactly are you located?</summary>
+          <p>We’re at 05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng — a short walk from <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener">Mỹ Khê Beach</a>.</p>
+        </details>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-<footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
-  <div class="container">
-    <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls Da Nang — Footer</h2>
+  <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
+    <div class="container">
+      <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls Da Nang — Footer</h2>
 
-    <div class="footer-grid">
-      <!-- Column 1: Address & Hours -->
-      <section class="footer-col" aria-labelledby="footer-brand">
-        <h3 id="footer-brand">
-          <a href="/" aria-label="Roly Poly Fresh Spring Rolls Da Nang — Home">
-            Roly Poly Fresh Spring Rolls Da Nang
-          </a>
-        </h3>
+      <div class="footer-grid">
+        <!-- Column 1: Address & Hours -->
+        <section class="footer-col" aria-labelledby="footer-brand">
+          <h3 id="footer-brand">
+            <a href="/" aria-label="Roly Poly Fresh Spring Rolls Da Nang — Home">
+              Roly Poly Fresh Spring Rolls Da Nang
+            </a>
+          </h3>
 
-        <p class="footer-tagline">Vietnamese spring rolls café in <strong>An Thuong</strong>, near <strong>My Khe Beach</strong>, Da Nang.</p>
+          <p class="footer-tagline">Vietnamese spring rolls café in <strong>An Thuong</strong>, near <strong>My Khe Beach</strong>, Da Nang.</p>
 
-        <address>
-          05 An Thượng 6, Bắc Mỹ Phú,<br>
-          Ngũ Hành Sơn, Đà Nẵng 550000<br>
-          <a href="https://www.google.com/maps?cid=8457966646420358159"
-             class="map-link"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Directions to Roly Poly Fresh Spring Rolls Da Nang on Google Maps">
-             Directions (Google Maps)
-          </a><br>
-          <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls Da Nang">+84 327 306 076</a>
-        </address>
+          <address>
+            05 An Thượng 6, Bắc Mỹ Phú,<br>
+            Ngũ Hành Sơn, Đà Nẵng 550000<br>
+            <a href="https://www.google.com/maps?cid=8457966646420358159"
+               class="map-link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Directions to Roly Poly Fresh Spring Rolls Da Nang on Google Maps">
+               Directions (Google Maps)
+            </a><br>
+            <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls Da Nang">+84 327 306 076</a>
+          </address>
 
-        <p>
-          <strong>Open:</strong> Mon–Sat, 10:00–20:00<br>
-          <strong>Closed:</strong> Sunday
-        </p>
-      </section>
+          <p>
+            <strong>Open:</strong> Mon–Sat, 10:00–20:00<br>
+            <strong>Closed:</strong> Sunday
+          </p>
+        </section>
 
-      <!-- Column 2: Quick Links -->
-      <nav class="footer-col" aria-labelledby="footer-links">
-        <h4 id="footer-links">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/menu">Menu — Spring Rolls &amp; Drinks</a></li>
-          <li><a href="/about">About Roly Poly Da Nang</a></li>
-          <li><a href="/contact">Contact &amp; Location</a></li>
-        </ul>
-      </nav>
+        <!-- Column 2: Quick Links -->
+        <nav class="footer-col" aria-labelledby="footer-links">
+          <h4 id="footer-links">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">Menu — Spring Rolls &amp; Drinks</a></li>
+            <li><a href="/about">About Roly Poly Da Nang</a></li>
+            <li><a href="/contact">Contact &amp; Location</a></li>
+          </ul>
+        </nav>
 
-      <!-- Column 3: Socials -->
-      <section class="footer-col" aria-labelledby="footer-social">
-        <h4 id="footer-social">Socials</h4>
-        <div class="social-links" role="group" aria-label="Social media">
-          <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Instagram">
-            <i class="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on TikTok">
-            <i class="fab fa-tiktok" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Facebook">
-            <i class="fab fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662"
-             target="_blank" rel="noopener noreferrer" aria-label="Roly Poly Da Nang on Tripadvisor">
-            <img src="/images/trip-adv.png"
-                 alt="Tripadvisor"
-                 class="social-icon-img"
-                 width="32" height="32"
-                 loading="lazy" decoding="async">
-          </a>
-        </div>
-      </section>
+        <!-- Column 3: Socials -->
+        <section class="footer-col" aria-labelledby="footer-social">
+          <h4 id="footer-social">Socials</h4>
+          <div class="social-links" role="group" aria-label="Social media">
+            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on TikTok">
+              <i class="fab fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Facebook">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662"
+               target="_blank" rel="noopener noreferrer" aria-label="Roly Poly Da Nang on Tripadvisor">
+              <img src="/images/trip-adv.png"
+                   alt="Tripadvisor"
+                   class="social-icon-img"
+                   width="32" height="32"
+                   loading="lazy" decoding="async">
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer-meta">
+        <p>© <span id="current-year">2025</span> Roly Poly Fresh Spring Rolls Da Nang. All rights reserved.</p>
+      </div>
     </div>
-
-    <div class="footer-meta">
-      <p>© <span id="current-year">2025</span> Roly Poly Fresh Spring Rolls Da Nang. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Structured Data: Restaurant (unified) -->
   <script type="application/ld+json">
@@ -434,8 +433,51 @@
   }
   </script>
 
+  <!-- FAQPage JSON-LD (matches on-page FAQs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you have vegan or gluten-free spring rolls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer vegan fillings and gluten-free options — see the spring rolls menu at https://www.rolypolydanang.vn/menu#spring-rolls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you deliver to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We deliver free within 3 km (An Thượng, Mỹ An, Bắc Mỹ Phú) during opening hours. Call +84 327 306 076 for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you take card or Apple Pay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — Visa, Mastercard, Apple Pay, and MoMo are accepted. Card payments incur a 3% service fee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where exactly are you located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We’re at 05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng — a short walk from Mỹ Khê Beach. Map: https://www.google.com/maps?cid=8457966646420358159"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Utilities -->
   <script>
+    // Footer year
     document.getElementById("current-year").textContent = new Date().getFullYear();
   </script>
 
