@@ -17,6 +17,8 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"></noscript>
+  <link rel="preload" as="image" href="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" type="image/webp">
+
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -134,21 +136,40 @@
 <main id="main" role="main">
   <!-- Hero -->
   <section class="hero hero--contact" id="contact" aria-labelledby="contact-hero-heading">
-    <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="container hero-content">
-      <h1 id="contact-hero-heading">Contact Roly Poly — Location, Hours & Delivery in Đà Nẵng</h1>
-      <p class="subheadline">
-        Vietnamese spring rolls (<strong>gỏi cuốn</strong>) café in <strong>An Thượng</strong>, a short walk from
-        <strong>Mỹ Khê Beach</strong> (My Khe). Call, get directions, or order delivery.
-      </p>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <h1 id="contact-hero-heading">Contact Roly Poly — Location, Hours & Delivery in Đà Nẵng</h1>
 
-      <div class="hero-buttons" role="group" aria-label="Primary actions">
-        <a href="tel:+84327306076" class="btn primary" aria-label="Call Roly Poly Da Nang">Call Now</a>
-        <a href="https://www.google.com/maps?cid=8457966646420358159" class="btn accent" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Roly Poly">Get Directions</a>
-        <a href="/menu" class="btn secondary" aria-label="View menu">View Menu</a>
-      </div>
+    <h2 class="hero-subtitle">
+      In An Thượng near Mỹ Khê Beach — call, get directions, or order delivery
+    </h2>
+
+    <!-- Storefront hero image (matches preload) -->
+    <img
+      src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
+      alt="Roly Poly Fresh Spring Rolls Đà Nẵng storefront in An Thượng, near Mỹ Khê Beach"
+      class="hero-img"
+      width="1600" height="900"
+      decoding="async"
+      fetchpriority="high"
+    />
+
+    <p class="subheadline">
+      Open <strong>Mon–Sat, 10:00–20:00</strong>. Spring rolls (<strong>gỏi cuốn</strong>) made to order — dine-in, takeaway, or delivery.
+    </p>
+
+    <div class="hero-buttons" role="group" aria-label="Primary actions">
+      <a href="tel:+84327306076" class="btn primary" aria-label="Call Roly Poly Da Nang">Call Now</a>
+      <a href="https://www.google.com/maps?cid=8457966646420358159"
+         class="btn accent"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Get directions to Roly Poly">Get Directions</a>
+      <a href="/menu" class="btn secondary" aria-label="View menu">View Menu</a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Contact Info -->
   <section class="contact-details" aria-labelledby="contact-info-heading">
