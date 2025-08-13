@@ -86,6 +86,7 @@
     }
   }
   </script>
+  
 </head>
 
 <body>
@@ -127,133 +128,182 @@
   </header>
 
   <main id="main" role="main">
-    <!-- HERO -->
-    <section class="hero hero--menu" id="menu-hero" aria-labelledby="menu-hero-title">
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1 id="menu-hero-title">Menu: Vietnamese Spring Rolls & Drinks in Da Nang</h1>
-          <h2>Fresh Vietnamese spring rolls (Gỏi Cuốn) in An Thuong near My Khe Beach — vegan & gluten-free options</h2>
+   <!-- HERO -->
+<section class="hero hero--menu" id="menu-hero" aria-labelledby="menu-hero-title">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <!-- H1 matches <title> focus -->
+      <h1 id="menu-hero-title">Menu: Vietnamese Spring Rolls & Drinks in Da Nang</h1>
 
-          <!-- Single hero image (matches preload) -->
-          <img
-            src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
-            alt="Platter of Vietnamese spring rolls with house-made sauces at Roly Poly Da Nang"
-            class="hero-img"
-            width="1600" height="900"
-            decoding="async"
-            fetchpriority="high"
-          />
+      <!-- Query-matching H2 with bilingual term + locality -->
+      <h2>Best Vietnamese spring rolls (Gỏi cuốn) in An Thượng near Mỹ Khê Beach — vegan & gluten-free options</h2>
 
-          <p class="subheadline">
-            Explore handmade <strong>gỏi cuốn</strong> with <strong>house-made sauces</strong>, plus <strong>Vietnamese salted coffee</strong>, <strong>coconut coffee</strong>, ceremonial-grade <strong>matcha</strong>, and fresh tropical juices. <strong>Free delivery within 3&nbsp;km</strong>.
-          </p>
+      <!-- Single hero image (matches preload) -->
+      <img
+        src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
+        alt="Platter of Vietnamese spring rolls (gỏi cuốn) with house-made sauces at Roly Poly, An Thượng, Đà Nẵng"
+        class="hero-img"
+        width="1600" height="900"
+        decoding="async"
+        fetchpriority="high"
+      />
 
-          <div class="hero-buttons" role="group" aria-label="Primary actions">
-            <a href="#spring-rolls" class="btn primary" aria-label="Jump to spring rolls">Spring Rolls</a>
-            <a href="#drinks" class="btn secondary" aria-label="Jump to drinks">Drinks</a>
-            <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn accent" target="_blank" rel="noopener noreferrer" aria-label="Order Roly Poly on GrabFood">Order Delivery</a>
-            <a href="tel:+84327306076" class="btn secondary" aria-label="Call Roly Poly Da Nang">Call Us</a>
-            <a href="https://www.google.com/maps?cid=8457966646420358159" class="btn secondary" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Roly Poly">Get Directions</a>
-            <a href="/roly-poly-fresh-spring-rolls-da-nang-menu.pdf" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Download our menu as PDF">Download Menu (PDF)</a>
-          </div>
-        </div>
+      <!-- Benefit-rich subheadline with delivery + keywords -->
+      <p class="subheadline">
+        Handmade <strong>gỏi cuốn</strong> with <strong>house-made sauces</strong>, plus <strong>Vietnamese salted coffee</strong>, <strong>coconut coffee</strong>, ceremonial-grade <strong>matcha</strong>, and fresh tropical juices. <strong>Free delivery within 3&nbsp;km</strong>.
+      </p>
+
+      <!-- Local intent blurb to win “near me” searches -->
+      <p class="local-seo">
+        Visiting <strong>Mỹ Khê Beach</strong> or staying in <strong>An Thượng</strong>? We’re a 3-minute walk from An Thượng Night Market and 8 minutes from Võ Nguyên Giáp. Dine-in, takeaway, or free delivery within 3&nbsp;km.
+      </p>
+
+      <!-- Quick value props (scan-friendly) -->
+      <ul class="value-props">
+        <li>Made-to-order spring rolls with crisp herbs & house sauces</li>
+        <li>Vegan & gluten-free options, specialty Vietnamese coffee & matcha</li>
+      </ul>
+
+      <!-- Primary actions with internal cross-links -->
+      <div class="hero-buttons" role="group" aria-label="Primary actions">
+        <a href="#spring-rolls" class="btn primary" aria-label="Jump to spring rolls">Spring Rolls</a>
+        <a href="#drinks" class="btn secondary" aria-label="Jump to drinks">Drinks</a>
+        <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn accent" target="_blank" rel="noopener noreferrer" aria-label="Order Roly Poly on GrabFood">Order Delivery</a>
+        <a href="tel:+84327306076" class="btn secondary" aria-label="Call Roly Poly Da Nang">Call Us</a>
+        <a href="https://www.google.com/maps?cid=8457966646420358159" class="btn secondary" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Roly Poly">Get Directions</a>
+        <a href="/roly-poly-fresh-spring-rolls-da-nang-menu.pdf" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Download our menu as PDF">Download Menu (PDF)</a>
+        <a href="/about" class="btn secondary" aria-label="Learn about our spring rolls">About Our Spring Rolls</a>
+        <a href="/contact" class="btn secondary" aria-label="View contact and location">Contact & Location</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- SPRING ROLLS -->
     <section id="spring-rolls" class="menu-section" aria-labelledby="spring-rolls-title">
-      <div class="container">
-        <h2 id="spring-rolls-title">Mix &amp; Match Fresh Spring Rolls</h2>
-        <p>
-          <strong>Included in every roll:</strong> rice vermicelli, crisp lettuce, carrot, cucumber, fresh mint, coriander, and crispy shallots — wrapped in soft rice paper and served with your choice of <a href="#sauces" class="text-link">house-made dipping sauce</a>.
-        </p>
+  <div class="container">
+    <!-- H2 now keyword-rich for search intent -->
+    <h2 id="spring-rolls-title">Mix &amp; Match Fresh Vietnamese Spring Rolls (Gỏi Cuốn) — Đà Nẵng</h2>
 
-        <ul class="pricing" aria-label="Spring roll set pricing">
-          <li><span aria-label="three rolls">3</span> Fresh Spring Rolls — <strong>105k</strong></li>
-          <li><span aria-label="four rolls">4</span> Fresh Spring Rolls — <strong>140k</strong></li>
-          <li><span aria-label="five rolls">5</span> Fresh Spring Rolls — <strong>175k</strong></li>
-          <li><span aria-label="six rolls">6</span> Fresh Spring Rolls — <strong>210k</strong></li>
+    <p>
+      <strong>Every roll includes:</strong> rice vermicelli, crisp lettuce, carrot, cucumber, fresh mint, coriander, and crispy shallots — wrapped in soft rice paper and served with your choice of <a href="#sauces" class="text-link">house-made dipping sauce</a>.
+    </p>
+
+    <!-- Set pricing -->
+    <ul class="pricing" aria-label="Spring roll set pricing">
+      <li>3 Fresh Spring Rolls — <strong>105k</strong></li>
+      <li>4 Fresh Spring Rolls — <strong>140k</strong></li>
+      <li>5 Fresh Spring Rolls — <strong>175k</strong></li>
+      <li>6 Fresh Spring Rolls — <strong>210k</strong></li>
+    </ul>
+
+    <h3>Choose Your Protein or Vegan Filling</h3>
+
+    <div class="roll-options-grid" role="list">
+      <!-- Garlic Prawn -->
+      <article class="roll" role="listitem">
+        <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" 
+             alt="Garlic prawn Vietnamese spring roll (gỏi cuốn) with fresh herbs, rice noodles, and house dipping sauce — Roly Poly Đà Nẵng" 
+             loading="lazy" width="600" height="450" />
+        <h4>Garlic Prawn <span>(+10k)</span></h4>
+        <p>Juicy garlic-marinated prawns with rice noodles and herbs. <em>Gluten-free</em>.</p>
+      </article>
+
+      <!-- Smoked Goose -->
+      <article class="roll" role="listitem">
+        <img src="/images/smoked-goose-spring-roll-roly-poly-da-nang.webp" 
+             alt="Smoked goose Vietnamese spring roll with fresh vegetables, rice paper wrap, and dipping sauce — Đà Nẵng" 
+             loading="lazy" width="600" height="450" />
+        <h4>Smoked Goose <span>(+5k)</span></h4>
+        <p>Tender smoked goose with fresh veggies in a light rice wrap. <em>Gluten-free</em>.</p>
+      </article>
+
+      <!-- Lemongrass Beef -->
+      <article class="roll" role="listitem">
+        <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp" 
+             alt="Grilled lemongrass beef Vietnamese spring roll with fresh herbs and rice vermicelli — Đà Nẵng" 
+             loading="lazy" width="600" height="450" />
+        <h4>Lemongrass Beef <span>(+5k)</span></h4>
+        <p>Grilled beef infused with lemongrass, garlic, and fresh herbs.</p>
+      </article>
+
+      <!-- Soy Glazed Pork Belly -->
+      <article class="roll" role="listitem">
+        <img src="/images/soy-glazed-pork-belly-spring-roll-roly-poly-da-nang.webp" 
+             alt="Soy glazed pork belly Vietnamese rice paper roll with noodles and greens — Đà Nẵng" 
+             loading="lazy" width="600" height="450" />
+        <h4>Soy Glazed Pork Belly</h4>
+        <p>Sticky-sweet pork belly with a savory soy glaze.</p>
+      </article>
+
+      <!-- Satay Chicken -->
+      <article class="roll" role="listitem">
+        <img src="/images/satay-chicken-spring-roll-roly-poly-da-nang.webp" 
+             alt="Satay chicken Vietnamese spring roll with peanut sauce and herbs — gluten-free option" 
+             loading="lazy" width="600" height="450" />
+        <h4>Satay Chicken</h4>
+        <p>Nutty, savory grilled chicken with a satay-style twist. <em>Contains peanuts; gluten-free</em>.</p>
+      </article>
+
+      <!-- Poached Chicken & Avocado -->
+      <article class="roll" role="listitem">
+        <img src="/images/poached-chicken-avocado-spring-roll-roly-poly-da-nang.webp" 
+             alt="Poached chicken and avocado Vietnamese spring roll with fresh herbs — gluten-free" 
+             loading="lazy" width="600" height="450" />
+        <h4>Poached Chicken &amp; Avocado</h4>
+        <p>Fresh poached chicken paired with creamy ripe avocado. <em>Gluten-free</em>.</p>
+      </article>
+
+      <!-- Vegan -->
+      <article class="roll" role="listitem">
+        <img src="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp" 
+             alt="Vegan Vietnamese spring roll (gỏi cuốn) with tofu, mushroom, avocado, fresh herbs, and rice noodles — gluten-free" 
+             loading="lazy" width="600" height="450" />
+        <h4>Tofu, Mushroom &amp; Avocado <span>(Vegan)</span></h4>
+        <p>Plant-based roll with tofu, mushroom, and avocado. <em>Vegan, gluten-free</em>.</p>
+      </article>
+    </div>
+
+    <p><strong>Single Fresh Spring Rolls:</strong> 40k each — add +10k for Garlic Prawn or +5k for Smoked Goose or Lemongrass Beef.</p>
+  </div>
+</section>
+
+
+  <!-- SAUCES -->
+<section id="sauces" class="menu-section" aria-labelledby="sauces-title">
+  <div class="container">
+    <!-- Added keyword-rich H2 -->
+    <h2 id="sauces-title">House-Made Spring Roll Dipping Sauces — Roly Poly Đà Nẵng</h2>
+
+    <div class="sauce-box">
+      <div class="sauce-text">
+        <!-- Added context in H3 -->
+        <h3>Trio of Signature Vietnamese Sauces</h3>
+        <ul>
+          <li>
+            <strong>Peanut Sauce</strong> <span>(Vegan)</span> — Creamy, rich, and slightly sweet; made with roasted peanuts and coconut milk for an authentic <em>Vietnamese gỏi cuốn</em> dip.
+          </li>
+          <li>
+            <strong>Toasted Sesame Sauce</strong> <span>(Vegan)</span> — Deep nutty flavor with a smooth, savory finish, perfect for pairing with fresh herbs and rice paper rolls.
+          </li>
+          <li>
+            <strong>Vietnamese Fish Sauce</strong> <span>(Gluten-free)</span> — Classic <em>nước chấm</em> with a balance of sweet, tangy, and umami-rich flavors from garlic, lime, and chili.
+          </li>
         </ul>
-
-        <h3>Choose Your Protein or Vegan Filling</h3>
-
-        <div class="roll-options-grid" role="list">
-          <!-- Garlic Prawn -->
-          <article class="roll" role="listitem">
-            <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" alt="Garlic prawn Vietnamese spring roll with fresh herbs and vermicelli" loading="lazy" width="600" height="450" />
-            <h4>Garlic Prawn <span>(+10k)</span></h4>
-            <p>Juicy garlic-marinated prawns with rice noodles and herbs. <em>Gluten-free</em>.</p>
-          </article>
-
-          <!-- Smoked Goose -->
-          <article class="roll" role="listitem">
-            <img src="/images/smoked-goose-spring-roll-roly-poly-da-nang.webp" alt="Smoked goose spring roll with Vietnamese vegetables and rice paper wrap" loading="lazy" width="600" height="450" />
-            <h4>Smoked Goose <span>(+5k)</span></h4>
-            <p>Tender smoked goose with fresh veggies in a light rice wrap. <em>Gluten-free</em>.</p>
-          </article>
-
-          <!-- Lemongrass Beef -->
-          <article class="roll" role="listitem">
-            <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp" alt="Lemongrass beef fresh spring roll" loading="lazy" width="600" height="450" />
-            <h4>Lemongrass Beef <span>(+5k)</span></h4>
-            <p>Grilled beef infused with lemongrass, garlic, and fresh herbs.</p>
-          </article>
-
-          <!-- Soy Glazed Pork Belly -->
-          <article class="roll" role="listitem">
-            <img src="/images/soy-glazed-pork-belly-spring-roll-roly-poly-da-nang.webp" alt="Soy glazed pork belly rice paper roll with noodles and greens" loading="lazy" width="600" height="450" />
-            <h4>Soy Glazed Pork Belly</h4>
-            <p>Sticky-sweet pork belly with a savory soy glaze.</p>
-          </article>
-
-          <!-- Satay Chicken -->
-          <article class="roll" role="listitem">
-            <img src="/images/satay-chicken-spring-roll-roly-poly-da-nang.webp" alt="Satay chicken spring roll with peanut sauce" loading="lazy" width="600" height="450" />
-            <h4>Satay Chicken</h4>
-            <p>Nutty, savory grilled chicken with a satay-style twist. <em>Contains peanuts; gluten-free</em>.</p>
-          </article>
-
-          <!-- Poached Chicken & Avocado -->
-          <article class="roll" role="listitem">
-            <img src="/images/poached-chicken-avocado-spring-roll-roly-poly-da-nang.webp" alt="Poached chicken and avocado Vietnamese spring roll" loading="lazy" width="600" height="450" />
-            <h4>Poached Chicken &amp; Avocado</h4>
-            <p>Fresh poached chicken paired with creamy ripe avocado. <em>Gluten-free</em>.</p>
-          </article>
-
-          <!-- Vegan -->
-          <article class="roll" role="listitem">
-            <img src="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp" alt="Vegan spring roll with tofu, mushroom, and avocado" loading="lazy" width="600" height="450" />
-            <h4>Tofu, Mushroom &amp; Avocado <span>(Vegan)</span></h4>
-            <p>Plant-based roll with tofu, mushroom, and avocado. <em>Vegan, gluten-free</em>.</p>
-          </article>
-        </div>
-
-        <p><strong>Single Fresh Spring Rolls:</strong> 40k each — add +10k for Garlic Prawn or +5k for Smoked Goose or Lemongrass Beef.</p>
+        <p class="sauce-note"><em>All dipping sauces are made fresh in-house daily for maximum flavor and quality.</em></p>
       </div>
-    </section>
-
-    <!-- SAUCES -->
-    <section id="sauces" class="menu-section" aria-labelledby="sauces-title">
-      <div class="container">
-        <h2 id="sauces-title">House-Made Dipping Sauces</h2>
-
-        <div class="sauce-box">
-          <div class="sauce-text">
-            <h3>Trio of Signature Sauces</h3>
-            <ul>
-              <li><strong>Peanut Sauce</strong> <span>(Vegan)</span> — Creamy, rich, and slightly sweet. A house favorite.</li>
-              <li><strong>Toasted Sesame Sauce</strong> <span>(Vegan)</span> — Deep nutty flavor with a smooth, savory finish.</li>
-              <li><strong>Vietnamese Fish Sauce</strong> <span>(Gluten-free)</span> — Sweet, tangy, and umami-rich with garlic and fresh lime.</li>
-            </ul>
-            <p class="sauce-note"><em>All sauces are made in-house for maximum freshness and flavor.</em></p>
-          </div>
-          <div class="sauce-image">
-            <img src="/images/trio-of-sauces-roly-poly-da-nang.webp" alt="Trio of house-made dipping sauces: peanut, sesame, and Vietnamese fish sauce" loading="lazy" width="600" height="450" />
-          </div>
-        </div>
+      <div class="sauce-image">
+        <img 
+          src="/images/trio-of-sauces-roly-poly-da-nang.webp" 
+          alt="Trio of Vietnamese spring roll dipping sauces — peanut sauce, toasted sesame sauce, and traditional nước chấm fish sauce — Roly Poly Đà Nẵng" 
+          loading="lazy" width="600" height="450" />
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- DRINKS WRAPPER -->
     <section id="drinks" aria-labelledby="drinks-title">
@@ -262,136 +312,163 @@
       </div>
     </section>
 
-    <!-- JUICES -->
-    <section id="juices" class="menu-section" aria-labelledby="juices-title">
-      <div class="container">
-        <h3 id="juices-title">Fresh Juices — Healthy &amp; Natural</h3>
-        <p>Made to order with no added sugar. Served over ice (250 mL).</p>
+   <!-- JUICES -->
+<section id="juices" class="menu-section" aria-labelledby="juices-title">
+  <div class="container">
+    <h3 id="juices-title">Fresh Juices in Đà Nẵng — Healthy &amp; Natural</h3>
+    <p>
+      Made to order with <strong>no added sugar</strong> and served over ice (250 mL). Perfect after the beach at
+      <strong>Mỹ Khê</strong> or a stroll around <strong>An Thượng</strong>. Pair one with our
+      <a href="#spring-rolls" class="text-link">fresh spring rolls</a>.
+    </p>
 
-        <h4>Signature Juices — 55k</h4>
-        <div class="drink-grid" role="list">
-          <article class="drink" role="listitem">
-            <img src="/images/my-khe-sunrise-juice-roly-poly-da-nang.webp" alt="Mỹ Khê Sunrise juice with pineapple, watermelon, and lime" loading="lazy" width="600" height="450" />
-            <h5>Mỹ Khê Sunrise</h5>
-            <p>A tropical blend of pineapple, watermelon, and lime — crisp and energizing.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/along-the-han-juice-roly-poly-da-nang.webp" alt="Along the Hàn juice with watermelon, cucumber, and lime" loading="lazy" width="600" height="450" />
-            <h5>Along the Hàn</h5>
-            <p>Light and hydrating with cucumber, lime, and sweet watermelon.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/lantern-in-hoi-an-juice-roly-poly-da-nang.webp" alt="Lantern in Hội An juice with orange, passionfruit, and lime" loading="lazy" width="600" height="450" />
-            <h5>Lantern in Hội An</h5>
-            <p>Citrusy and bright with a tropical twist of passionfruit, orange, and lime.</p>
-          </article>
-        </div>
+    <h4>Signature Juices — 55k</h4>
+    <div class="drink-grid" role="list">
+      <article class="drink" role="listitem">
+        <img src="/images/my-khe-sunrise-juice-roly-poly-da-nang.webp"
+             alt="Mỹ Khê Sunrise — pineapple, watermelon and lime fresh juice in Đà Nẵng at Roly Poly" loading="lazy" width="600" height="450" />
+        <h5>Mỹ Khê Sunrise</h5>
+        <p>A tropical blend of <strong>pineapple</strong>, <strong>watermelon</strong> and <strong>lime</strong> — crisp and energizing.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/along-the-han-juice-roly-poly-da-nang.webp"
+             alt="Along the Hàn — watermelon, cucumber and lime fresh juice in Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Along the Hàn</h5>
+        <p>Light and hydrating with <strong>cucumber</strong>, lime and sweet watermelon.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/lantern-in-hoi-an-juice-roly-poly-da-nang.webp"
+             alt="Lantern in Hội An — orange, passionfruit and lime juice near Mỹ Khê Beach" loading="lazy" width="600" height="450" />
+        <h5>Lantern in Hội An</h5>
+        <p>Citrusy and bright with a tropical twist of <strong>passionfruit</strong>, orange and lime.</p>
+      </article>
+    </div>
 
-        <h4>Solo Juices — 50k</h4>
-        <div class="drink-grid" role="list">
-          <article class="drink" role="listitem">
-            <img src="/images/orange-juice-roly-poly-da-nang.webp" alt="Fresh-squeezed orange juice" loading="lazy" width="600" height="450" />
-            <h5>Orange Juice</h5>
-            <p>Fresh-squeezed and naturally sweet — packed with vitamin C.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/watermelon-juice-roly-poly-da-nang.webp" alt="Chilled watermelon juice with no added sugar" loading="lazy" width="600" height="450" />
-            <h5>Watermelon Juice</h5>
-            <p>Cool, crisp, and hydrating — perfect for hot Da Nang days.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/pineapple-juice-roly-poly-da-nang.webp" alt="Fresh pineapple juice with tangy tropical flavor" loading="lazy" width="600" height="450" />
-            <h5>Pineapple Juice</h5>
-            <p>Bright and zesty — pure tropical refreshment.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/passionfruit-juice-roly-poly-da-nang.webp" alt="Tangy passionfruit juice" loading="lazy" width="600" height="450" />
-            <h5>Passionfruit Juice</h5>
-            <p>Zingy and full of tropical flair.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <h4>Solo Juices — 50k</h4>
+    <div class="drink-grid" role="list">
+      <article class="drink" role="listitem">
+        <img src="/images/orange-juice-roly-poly-da-nang.webp"
+             alt="Fresh-squeezed orange juice in Đà Nẵng — vitamin C boost" loading="lazy" width="600" height="450" />
+        <h5>Orange Juice</h5>
+        <p>Fresh-squeezed and naturally sweet — packed with vitamin C.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/watermelon-juice-roly-poly-da-nang.webp"
+             alt="Chilled watermelon juice with no added sugar at Roly Poly Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Watermelon Juice</h5>
+        <p>Cool, crisp and ultra-hydrating — perfect for hot Đà Nẵng days.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/pineapple-juice-roly-poly-da-nang.webp"
+             alt="Fresh pineapple juice — tangy tropical refreshment in Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Pineapple Juice</h5>
+        <p>Bright and zesty — pure tropical refreshment.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/passionfruit-juice-roly-poly-da-nang.webp"
+             alt="Tangy passionfruit juice made to order near An Thượng" loading="lazy" width="600" height="450" />
+        <h5>Passionfruit Juice</h5>
+        <p>Zingy and full of tropical flair.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- COFFEE & MATCHA -->
-    <section id="coffee" class="menu-section" aria-labelledby="coffee-title">
-      <div class="container">
-        <h3 id="coffee-title">Vietnamese Coffee &amp; Matcha</h3>
-        <p>Traditional drip-filtered coffee, served black or with condensed milk. Specialty options include <strong>salted coffee</strong> and <strong>iced coconut coffee</strong>. Ceremonial-grade matcha lattes are made with oat milk.</p>
 
-        <h4>Vietnamese Coffee</h4>
-        <div class="drink-grid" role="list">
-          <article class="drink" role="listitem">
-            <img src="/images/iced-milk-coffee-roly-poly-da-nang.webp" alt="Iced milk coffee with condensed milk" loading="lazy" width="600" height="450" />
-            <h5>Iced Milk Coffee — 35k</h5>
-            <p>Vietnam’s classic <em>cà phê sữa đá</em> — rich, sweet, and deeply caffeinated.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/iced-black-coffee-roly-poly-da-nang.webp" alt="Iced black Vietnamese drip coffee" loading="lazy" width="600" height="450" />
-            <h5>Iced Black Coffee — 30k</h5>
-            <p>Bold, smooth drip coffee served over ice — no sugar, no milk.</p>
-          </article>
-        </div>
+   <!-- COFFEE & MATCHA -->
+<section id="coffee" class="menu-section" aria-labelledby="coffee-title">
+  <div class="container">
+    <h3 id="coffee-title">Vietnamese Coffee &amp; Ceremonial Matcha in Đà Nẵng</h3>
+    <p>
+      Traditional <strong>phin drip coffee</strong> (black or with condensed milk), plus local favorites like
+      <strong>salted coffee</strong> and <strong>iced coconut coffee</strong>. Our ceremonial-grade matcha lattes are made with oat milk.
+    </p>
 
-        <h4>Specialty Coffee</h4>
-        <div class="drink-grid" role="list">
-          <article class="drink" role="listitem">
-            <img src="/images/iced-salted-coffee-roly-poly-da-nang.webp" alt="Iced salted coffee with cream and Vietnamese drip base" loading="lazy" width="600" height="450" />
-            <h5>Iced Salted Coffee — 50k</h5>
-            <p>Vietnamese drip coffee topped with salted cream foam — sweet, savory, and silky-smooth.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/iced-coconut-coffee-roly-poly-da-nang.webp" alt="Blended iced coconut coffee" loading="lazy" width="600" height="450" />
-            <h5>Iced Coconut Coffee — 55k</h5>
-            <p>Chilled blend of coconut cream and dark coffee — a tropical pick-me-up.</p>
-          </article>
-        </div>
+    <h4>Vietnamese Coffee</h4>
+    <div class="drink-grid" role="list">
+      <article class="drink" role="listitem">
+        <img src="/images/iced-milk-coffee-roly-poly-da-nang.webp"
+             alt="Iced milk coffee (cà phê sữa đá) — Vietnamese phin coffee with condensed milk in Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Iced Milk Coffee — 35k</h5>
+        <p>Vietnam’s classic <em>cà phê sữa đá</em> — rich, sweet and deeply caffeinated.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/iced-black-coffee-roly-poly-da-nang.webp"
+             alt="Iced black Vietnamese phin coffee — no sugar, no milk" loading="lazy" width="600" height="450" />
+        <h5>Iced Black Coffee — 30k</h5>
+        <p>Bold, smooth phin coffee served over ice — no sugar, no milk.</p>
+      </article>
+    </div>
 
-        <h4>Matcha Latte — Ceremonial-Grade</h4>
-        <div class="drink-grid" role="list">
-          <article class="drink" role="listitem">
-            <img src="/images/iced-matcha-latte-roly-poly-da-nang.webp" alt="Iced ceremonial-grade matcha latte with oat milk" loading="lazy" width="600" height="450" />
-            <h5>Iced Matcha Latte — 65k</h5>
-            <p>Smooth, creamy, and lightly sweetened — made with ceremonial-grade matcha from Shizuoka, oat milk, and vanilla bean syrup.</p>
-          </article>
-          <article class="drink" role="listitem">
-            <img src="/images/iced-strawberry-matcha-latte-roly-poly-da-nang.webp" alt="Layered strawberry and matcha oat milk latte" loading="lazy" width="600" height="450" />
-            <h5>Iced Strawberry Matcha Latte — 75k</h5>
-            <p>Earthy, fruity, and just sweet enough — ceremonial matcha layered with light strawberry cream and oat milk.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <h4>Specialty Coffee</h4>
+    <div class="drink-grid" role="list">
+      <article class="drink" role="listitem">
+        <img src="/images/iced-salted-coffee-roly-poly-da-nang.webp"
+             alt="Vietnamese salted coffee topped with creamy salted foam in Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Iced Salted Coffee — 50k</h5>
+        <p>Phin coffee with a silky salted cream foam — sweet, savory and smooth.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/iced-coconut-coffee-roly-poly-da-nang.webp"
+             alt="Iced coconut coffee blended with coconut cream at Roly Poly Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Iced Coconut Coffee — 55k</h5>
+        <p>Chilled blend of coconut cream and dark coffee — a tropical pick-me-up.</p>
+      </article>
+    </div>
 
-    <!-- OTHER DRINKS & BEER -->
-    <section id="other-drinks" class="menu-section" aria-labelledby="other-drinks-title">
-      <div class="container">
-        <h3 id="other-drinks-title">Other Drinks &amp; Beer</h3>
+    <h4>Matcha Latte — Ceremonial-Grade</h4>
+    <div class="drink-grid" role="list">
+      <article class="drink" role="listitem">
+        <img src="/images/iced-matcha-latte-roly-poly-da-nang.webp"
+             alt="Iced ceremonial-grade matcha latte with oat milk near Mỹ Khê Beach" loading="lazy" width="600" height="450" />
+        <h5>Iced Matcha Latte — 65k</h5>
+        <p>Smooth, creamy and lightly sweet — ceremonial-grade matcha from Shizuoka with oat milk.</p>
+      </article>
+      <article class="drink" role="listitem">
+        <img src="/images/iced-strawberry-matcha-latte-roly-poly-da-nang.webp"
+             alt="Iced strawberry matcha latte — layered matcha and strawberry cream in Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Iced Strawberry Matcha Latte — 75k</h5>
+        <p>Earthy, fruity and just sweet enough — matcha layered with light strawberry cream and oat milk.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-        <h4>Non-Alcoholic Beverages</h4>
-        <p>Beyond juices and coffee, we offer frosty lime slushies, classic soft drinks, bottled water, and local Vietnamese beers — perfect with your spring rolls or after the beach.</p>
 
-        <div class="drink-grid" role="list">
-          <article class="drink" role="listitem">
-            <img src="/images/snowy-lime-slushie-roly-poly-da-nang.webp" alt="Snowy lime slushie" loading="lazy" width="600" height="450" />
-            <h5>Snowy Lime Slushie — 50k</h5>
-            <p>Frosty and tart lime blend — cool, refreshing, and crave-worthy.</p>
-          </article>
-        </div>
+   <!-- OTHER DRINKS & BEER -->
+<section id="other-drinks" class="menu-section" aria-labelledby="other-drinks-title">
+  <div class="container">
+    <h3 id="other-drinks-title">Other Drinks &amp; Local Beer — Đà Nẵng</h3>
 
-        <ul class="drink-list" aria-label="Non-alcoholic price list">
-          <li><strong>Soft Drinks</strong> — 25k <p>Coke, Sprite, Fanta, soda water.</p></li>
-          <li><strong>Bottled Water</strong> — 20k <p>Cold, filtered bottled water.</p></li>
-        </ul>
+    <h4>Non-Alcoholic Beverages</h4>
+    <p>
+      Beyond juices and coffee, we offer frosty lime slushies, classic soft drinks and bottled water — great with
+      <a href="#spring-rolls" class="text-link">spring rolls</a> after the beach.
+    </p>
 
-        <h4>Vietnamese Beer</h4>
-        <ul class="drink-list" aria-label="Beer price list">
-          <li><strong>Huda</strong> — 25k <p>Light, crisp lager from Central Vietnam.</p></li>
-          <li><strong>Larue</strong> — 25k <p>Smooth and easy-drinking, brewed in Da Nang.</p></li>
-          <li><strong>Tiger</strong> — 30k <p>Bold and refreshing international lager.</p></li>
-        </ul>
-      </div>
-    </section>
+    <div class="drink-grid" role="list">
+      <article class="drink" role="listitem">
+        <img src="/images/snowy-lime-slushie-roly-poly-da-nang.webp"
+             alt="Snowy lime slushie — tart, icy lime drink at Roly Poly Đà Nẵng" loading="lazy" width="600" height="450" />
+        <h5>Snowy Lime Slushie — 50k</h5>
+        <p>Frosty and tart lime blend — cool, refreshing and crave-worthy.</p>
+      </article>
+    </div>
+
+    <ul class="drink-list" aria-label="Non-alcoholic price list">
+      <li><strong>Soft Drinks</strong> — 25k <p>Coke, Sprite, Fanta, soda water.</p></li>
+      <li><strong>Bottled Water</strong> — 20k <p>Cold, filtered bottled water.</p></li>
+    </ul>
+
+    <h4>Vietnamese Beer</h4>
+    <ul class="drink-list" aria-label="Beer price list">
+      <li><strong>Huda</strong> — 25k <p>Light, crisp lager from Central Vietnam.</p></li>
+      <li><strong>Larue</strong> — 25k <p>Smooth and easy-drinking, brewed in Đà Nẵng.</p></li>
+      <li><strong>Tiger</strong> — 30k <p>Bold and refreshing international lager.</p></li>
+    </ul>
+  </div>
+</section>
+
 
     <!-- ALLERGENS -->
     <section id="allergens" class="menu-section" aria-labelledby="allergens-title">
@@ -412,6 +489,34 @@
         </div>
       </div>
     </section>
+
+  <section id="faq" class="faq-section" aria-labelledby="faq-title">
+  <div class="container">
+    <h2 id="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>Do you serve Vietnamese salted coffee in Đà Nẵng?</h3>
+      <p>Yes! Our iced salted coffee is made with traditional Vietnamese phin drip coffee and topped with silky salted cream foam. It’s sweet, savory, and a local favorite near Mỹ Khê Beach.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you have vegan drink options?</h3>
+      <p>Absolutely. Our fresh juices are 100% vegan, and we use oat milk for all matcha lattes. We also offer plant-based syrups for flavoring.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you offer delivery in Đà Nẵng?</h3>
+      <p>Yes, we deliver within Đà Nẵng including Mỹ Khê and An Thượng. Order directly or through GrabFood for fast service.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Where are you located?</h3>
+      <p>We’re in the An Thượng area of Đà Nẵng, just a short walk from Mỹ Khê Beach. Perfect for a coffee or juice stop after the beach.</p>
+    </div>
+  </div>
+</section>
+
+  
   </main>
 
   <!-- FOOTER -->
@@ -667,5 +772,48 @@
        target="_blank" rel="noopener"
        aria-label="Order Roly Poly on GrabFood">Order</a>
   </nav>
+
+  <!-- FAQ Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you serve Vietnamese salted coffee in Đà Nẵng?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Our iced salted coffee is made with traditional Vietnamese phin drip coffee and topped with silky salted cream foam. It’s sweet, savory, and a local favorite near Mỹ Khê Beach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have vegan drink options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Our fresh juices are 100% vegan, and we use oat milk for all matcha lattes. We also offer plant-based syrups for flavoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer delivery in Đà Nẵng?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we deliver within Đà Nẵng including Mỹ Khê and An Thượng. Order directly or through GrabFood for fast service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are you located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We’re in the An Thượng area of Đà Nẵng, just a short walk from Mỹ Khê Beach. Perfect for a coffee or juice stop after the beach."
+      }
+    }
+  ]
+}
+</script>
+
 </body>
 </html>
