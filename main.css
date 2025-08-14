@@ -512,6 +512,28 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   .philosophy-grid{ grid-template-columns: repeat(3, 1fr); }
 }
 
+/* About page gallery — simplest drop-in */
+.about-gallery .gallery-grid{
+  --tile: 280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile), 1fr));
+  gap: 12px;
+}
+.about-gallery .gallery-grid img{
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;    /* consistent rows; remove if you want natural heights */
+  object-fit: cover;       /* change to 'contain' for zero crop */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+/* Wider tiles on big screens (optional) */
+@media (min-width: 1100px){
+  .about-gallery .gallery-grid{ --tile: 320px; }
+}
+
+
 
 
 
