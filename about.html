@@ -269,25 +269,6 @@
   </div>
 </footer>
 
-<!-- AboutPage + Breadcrumb JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"AboutPage",
-    "@id":"https://www.rolypolydanang.vn/about#webpage",
-    "name":"About Roly Poly — Vietnamese Restaurant & Café in Da Nang",
-    "description":"Our story, ingredients, and values at Roly Poly — fresh gỏi cuốn, house-made sauces, Vietnamese coffee & matcha near Mỹ Khê Beach.",
-    "url":"https://www.rolypolydanang.vn/about",
-    "inLanguage":"en",
-    "isPartOf":{"@type":"WebSite","@id":"https://www.rolypolydanang.vn/#website","name":"Roly Poly Fresh Spring Rolls Da Nang","url":"https://www.rolypolydanang.vn/"},
-    "primaryImageOfPage":"https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp",
-    "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.rolypolydanang.vn/"},
-      {"@type":"ListItem","position":2,"name":"About","item":"https://www.rolypolydanang.vn/about"}
-    ]}
-  }
-  </script>
-
 <!-- WebSite (global; identical on all pages) -->
 <script type="application/ld+json">
 {
@@ -349,7 +330,7 @@
 }
 </script>
 
-<!-- AboutPage (your page-specific object; now links to #restaurant) -->
+<!-- AboutPage (page-specific; includes breadcrumb and links to #restaurant) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -371,6 +352,7 @@
   }
 }
 </script>
+
 
 <script>document.getElementById('current-year').textContent=new Date().getFullYear();</script>
 
