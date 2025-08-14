@@ -429,5 +429,42 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   font-size:.9rem; color:#666; margin:.25rem 0 0;
 }
 
+/* ===== Desktop fix: center & cap single-column items (sauce, slushie) ===== */
+:root { --card-max: 460px; }  /* tweak 420–520px to taste */
+
+/* Keep grid tracks from stretching to full width; center leftover space */
+@media (min-width: 992px){
+  .roll-options-grid,
+  .drink-grid{
+    grid-template-columns: repeat(auto-fit, minmax(280px, var(--card-max)));
+    justify-content: center;      /* center the tracks as a group */
+  }
+
+  /* Cap each card and center it within its track */
+  .roll,
+  .drink{
+    max-width: var(--card-max);
+    width: 100%;
+    justify-self: center;         /* centers the item inside its grid cell */
+  }
+
+  /* If your sauces section is a standalone card, cap & center it too */
+  #sauces .sauce-box{
+    max-width: var(--card-max);
+    margin-inline: auto;
+  }
+}
+
+/* If the sauces image was picking up section-wide styles, neutralize them */
+#sauces .sauce-image img{
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+
 
 
