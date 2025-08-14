@@ -14,6 +14,7 @@
 
   <!-- Performance -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <!-- Preload LCP hero image -->
   <link rel="preload" as="image" href="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" type="image/webp">
@@ -36,6 +37,7 @@
   <meta name="twitter:title" content="Menu | Spring Rolls, Coffee, Matcha & Fresh Juices – Roly Poly Da Nang" />
   <meta name="twitter:description" content="Gỏi cuốn made to order, vegan & gluten-free options, Vietnamese phin coffee, matcha, and fresh juices near Mỹ Khê Beach." />
   <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png" />
+  <meta name="twitter:image:alt" content="Assorted fresh Vietnamese spring rolls platter with sauces at Roly Poly Da Nang" />
 
   <!-- Icons & PWA -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -402,13 +404,11 @@
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('main-nav');
-
     const setA11y = (open) => {
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       nav.classList.toggle('open', open);
     };
-
     toggle?.addEventListener('click', () => setA11y(!nav.classList.contains('open')));
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setA11y(false)));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setA11y(false); });
@@ -424,6 +424,21 @@
     {"@type": "ListItem","position": 1,"name": "Home","item": "https://www.rolypolydanang.vn/"},
     {"@type": "ListItem","position": 2,"name": "Menu","item": "https://www.rolypolydanang.vn/menu"}
   ]
+}
+</script>
+
+<!-- JSON-LD: WebPage (Menu) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://www.rolypolydanang.vn/menu#webpage",
+  "url":"https://www.rolypolydanang.vn/menu",
+  "name":"Menu | Vietnamese Restaurant & Café in Da Nang – Spring Rolls, Coffee, Matcha & Fresh Juices | Roly Poly",
+  "description":"Menu for Roly Poly Vietnamese restaurant & café in Da Nang: fresh spring rolls, vegan & gluten-free options, sauces, coffee, matcha & juices.",
+  "inLanguage":"en",
+  "primaryImageOfPage":"https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp",
+  "isPartOf":{"@id":"https://www.rolypolydanang.vn/#website"}
 }
 </script>
 
@@ -482,6 +497,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Menu",
+  "@id": "https://www.rolypolydanang.vn/menu#menu",
+  "inLanguage":"en",
   "name": "Roly Poly Fresh Spring Rolls Menu",
   "url": "https://www.rolypolydanang.vn/menu",
   "hasMenuSection": [
