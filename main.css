@@ -465,6 +465,44 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   border-radius: 0 !important;
 }
 
+/* === Philosophy cards (box style) === */
+.about-philosophy{ background: var(--bg-2, #f9f9f9); padding: 3rem 1rem; }
+
+.philosophy-grid{
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.philosophy-item{
+  background: #fff;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  padding: 1rem 1.25rem;
+  display: grid;
+  grid-template-columns: 40px 1fr; /* icon + text */
+  gap: .75rem;
+  align-items: start;
+}
+
+.philosophy-item i{
+  width: 40px; height: 40px;
+  border-radius: 999px;
+  display: grid; place-items: center;
+  background: rgba(255,106,0,.12);   /* brand tint */
+  color: var(--brand, #ff6a00);
+  font-size: 1.05rem;
+}
+
+.philosophy-item p{ margin: 0; color: var(--ink-2, #555); }
+.philosophy-item p strong{ color: var(--ink, #333); }
+.text-link{ text-decoration: underline; text-underline-offset: 3px; }
+.text-link:hover{ color: var(--brand-d, #e55b00); }
+
 
 
 
