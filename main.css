@@ -341,3 +341,46 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   background: var(--brand-d);
   color: #fff;
 }
+
+/* Sticky bar layout */
+.sticky-actions{
+  position: fixed;
+  inset: auto 0 0 0;          /* left/right/bottom pinned */
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  padding: .5rem .75rem calc(.5rem + env(safe-area-inset-bottom)) .75rem;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -6px 18px rgba(0,0,0,.08);
+  box-sizing: border-box;
+}
+
+/* Buttons behave nicely in tight space */
+.sticky-actions .btn{
+  min-width: 0;               /* allow shrinking */
+  width: 100%;                /* equal columns */
+  text-align: center;
+  white-space: normal;        /* allow wrap */
+  line-height: 1.15;
+  padding: .7rem .6rem;
+  font-size: .95rem;
+}
+
+/* Ultra-small screens: auto-swap to shorter labels */
+@media (max-width: 360px){
+  .sticky-actions .btn .label--full{ display: none; }
+  .sticky-actions .btn .label--short{ display: inline; }
+  .sticky-actions .btn{ font-size: .9rem; padding: .65rem .5rem; }
+}
+
+/* If you’d rather stack (2 rows) on very narrow screens, use this instead of the 360px rules: */
+/*
+@media (max-width: 360px){
+  .sticky-actions{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+*/
+
