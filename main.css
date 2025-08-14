@@ -402,4 +402,14 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   gap: 1.25rem;
 }
 
+/* put this at the very bottom */
+.roll img,
+.drink img{
+  aspect-ratio: auto !important;     /* or just remove the property */
+  object-fit: contain !important;     /* fit inside without cutting */
+  width: 100% !important;
+  height: auto !important;
+  background: #fff;                   /* optional: avoids gray bars look */
+}
+
 
