@@ -341,3 +341,38 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   background: var(--brand-d);
   color: #fff;
 }
+
+/* === OVERRIDES: bigger hero + menu item images fill card === */
+
+/* 1) Raise the hero image cap (desktop), keep responsive on mobile */
+.hero img.hero-img{
+  max-width: clamp(680px, 80vw, 1100px);
+  width: 100%;
+  height: auto;
+}
+
+/* 2) Make dish images fill their cards on the Menu page */
+.roll-options-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.roll img{
+  /* overrides width/height attributes in HTML */
+  width: 100% !important;
+  height: auto !important;
+  display: block;           /* removes baseline gap */
+  aspect-ratio: 4 / 3;      /* keep cards even height; remove if not desired */
+  object-fit: cover;        /* fills the box nicely */
+  border-radius: 8px;
+}
+
+/* optional: a little structure for each card */
+.roll{
+  background: #fff;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
