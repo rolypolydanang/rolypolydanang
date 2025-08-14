@@ -376,3 +376,30 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   padding: 1rem;
 }
 
+/* --- FIX: Menu hero image cap --- */
+.menu-hero img{
+  max-width: clamp(680px, 80vw, 1100px) !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* --- FIX: Item images were capped at 220px --- */
+.roll img,
+.drink img{
+  max-height: none !important;   /* remove the 220px ceiling */
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  aspect-ratio: 4 / 3;           /* consistent card height; delete if undesired */
+  object-fit: cover;             /* fills the box; swap to 'contain' for no crop */
+  border-radius: 8px;
+}
+
+/* Optional: give cards a bit more room on desktop */
+.roll-options-grid,
+.drink-grid{
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+
