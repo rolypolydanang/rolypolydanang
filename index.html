@@ -418,12 +418,7 @@
     "https://www.tiktok.com/@rolypolydanang",
     "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662-Reviews-Roly_Poly_Fresh_Spring_Rolls_Da_Nang",
     "https://www.google.com/maps?cid=8457966646420358159"
-  ],
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.rolypolydanang.vn/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  ]
 }
 </script>
 
@@ -448,11 +443,10 @@
 }
 </script>
 
-
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Restaurant",
+  "@type":["Restaurant","CafeOrCoffeeShop"],
   "@id":"https://www.rolypolydanang.vn/#restaurant",
   "name":"Roly Poly Fresh Spring Rolls Da Nang",
   "url":"https://www.rolypolydanang.vn/",
@@ -490,57 +484,30 @@
 }
 </script>
 
-  
-
-<!-- JSON-LD: FAQPage (matches on-page FAQ content) -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
     {
-      "@type": "Question",
-      "name": "What makes your Vietnamese spring rolls special in Da Nang?",
-      "acceptedAnswer": {"@type": "Answer","text": "Our gỏi cuốn (Vietnamese spring rolls) are handmade fresh to order — never pre-made — right here in Da Nang. Choose from seven fillings, including vegan-friendly and gluten-free choices, paired with our three house-made sauces: Vietnamese fish sauce, toasted sesame, and peanut."}
+      "@type":"Question",
+      "name":"Do you have vegan options?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes, we have vegan and gluten-free spring roll options."}
     },
     {
-      "@type": "Question",
-      "name": "Do you have vegan and gluten-free spring rolls?",
-      "acceptedAnswer": {"@type": "Answer","text": "Yes. We offer several vegan and gluten-free options, including Tofu, Mushroom & Avocado (Vegan). All rolls are wrapped in rice paper and made fresh to order. Our fish sauce is gluten-free; our peanut and sesame sauces are vegan — please inform staff of any allergies."}
+      "@type":"Question",
+      "name":"Where are you located?",
+      "acceptedAnswer":{"@type":"Answer","text":"We are located at 05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng, Vietnam."}
     },
     {
-      "@type": "Question",
-      "name": "Do you serve Vietnamese coffee and matcha drinks?",
-      "acceptedAnswer": {"@type": "Answer","text": "Yes. We serve authentic Vietnamese phin coffee including salted coffee and coconut coffee, plus matcha lattes like our dairy-free Iced Strawberry Matcha Latte. All drinks are made in-house using quality ingredients — perfect for cooling off after visiting Mỹ Khê Beach or exploring An Thượng."}
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer food delivery in Da Nang?",
-      "acceptedAnswer": {"@type": "Answer","text": "Yes! We offer free delivery within 3 km of our café, including An Thượng and nearby tourist areas, when you order by phone — in-store prices, no extra fees. We’re also on GrabFood for convenient online ordering."}
-    },
-    {
-      "@type": "Question",
-      "name": "What are your opening hours?",
-      "acceptedAnswer": {"@type": "Answer","text": "We’re open Monday to Saturday, 10:00–20:00, and closed on Sundays. Perfect for lunch, dinner, or a post-beach snack after visiting Mỹ Khê Beach."}
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a reservation?",
-      "acceptedAnswer": {"@type": "Answer","text": "No reservation needed — we’re a walk-in friendly Vietnamese restaurant & café in An Thượng, Da Nang. Tourists and locals are always welcome."}
-    },
-    {
-      "@type": "Question",
-      "name": "What payment methods do you accept?",
-      "acceptedAnswer": {"@type": "Answer","text": "We accept cash, MoMo transfer, and bank cards (Visa, Mastercard) as well as Apple Pay. A small surcharge (3%) applies to card and digital wallet payments. Most international cards are welcome, making it easy for travelers to pay."}
-    },
-    {
-      "@type": "Question",
-      "name": "Are you open during Vietnamese holidays?",
-      "acceptedAnswer": {"@type": "Answer","text": "Hours may change during Vietnamese public holidays, including Tet (Lunar New Year). For the latest updates, check our Instagram or Facebook before visiting."}
+      "@type":"Question",
+      "name":"What are your opening hours?",
+      "acceptedAnswer":{"@type":"Answer","text":"We are open Monday to Saturday from 10:00 to 20:00."}
     }
   ]
 }
 </script>
+
 
 <!-- Swiper.js Carousel + Nav/Accordion -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
