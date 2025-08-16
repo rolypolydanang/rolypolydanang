@@ -12,7 +12,7 @@
   <link rel="canonical" href="https://www.rolypolydanang.vn/blog" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-  <!-- Performance (matches other pages) -->
+  <!-- Performance -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -20,7 +20,7 @@
   <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"></noscript>
 
-  <!-- Open Graph / Twitter (mirrors your style) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Blog | Roly Poly Fresh Spring Rolls Da Nang" />
   <meta property="og:description" content="News, specials, and stories from our spring rolls café near Mỹ Khê Beach." />
@@ -45,10 +45,10 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- External libs (as used elsewhere) -->
+  <!-- External libs -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- GA4 (same ID as existing pages) -->
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
   <script>
     window.dataLayer=window.dataLayer||[];
@@ -212,15 +212,46 @@
 
     <!-- Add more .post-card entries here -->
 
-    <!-- Pagination (optional when you have >10 posts) -->
+    <!-- Pagination (optional when you have many posts) -->
     <nav class="pagination" aria-label="Pagination">
       <!-- <a class="prev" href="/blog/page/2" rel="next">Older posts</a> -->
     </nav>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h3>Visit Us</h3>
+      <address>
+        05 An Thượng 6, Bắc Mỹ Phú,<br>Ngũ Hành Sơn, Đà Nẵng 550000<br>
+        <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer" aria-label="Open Roly Poly on Google Maps">Open on Google Maps</a>
+      </address>
+    </div>
+
+    <div class="footer-column">
+      <h3>Hours</h3>
+      <p>Mon–Sat: 10:00–20:00<br>Sunday: Closed</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p><a href="tel:+84327306076">+84 327 306 076</a></p>
+      <p><a href="/menu">Menu & Prices</a> · <a href="/contact">Contact & Directions</a></p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Follow</h3>
+      <p class="social-links">
+        <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a><br>
+        <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a><br>
+        <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i> TikTok</a><br>
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662-Reviews-Roly_Poly_Fresh_Spring_Rolls_Da_Nang" target="_blank" rel="noopener" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i> TripAdvisor</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
     <p>&copy; <span id="y"></span> Roly Poly Fresh Spring Rolls Da Nang • <a href="/contact">Contact & Hours</a> • <a href="/menu">Menu</a></p>
   </div>
 </footer>
