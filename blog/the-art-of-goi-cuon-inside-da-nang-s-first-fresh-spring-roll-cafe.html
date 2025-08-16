@@ -16,7 +16,8 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" as="image" href="/images/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe-hero.jpg" type="image/jpeg">
+  <!-- Preload hero image (WebP for modern browsers) -->
+  <link rel="preload" as="image" href="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" type="image/webp">
   <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"></noscript>
 
@@ -25,8 +26,9 @@
   <meta property="og:title" content="The Art of Goi Cuon: Inside Da Nang’s First Fresh Spring Roll Café | Roly Poly" />
   <meta property="og:description" content="Go behind the scenes at Roly Poly, Da Nang’s first fresh spring roll café. See how we roll gỏi cuốn to order and what makes our sauces and fillings special." />
   <meta property="og:url" content="https://www.rolypolydanang.vn/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe" />
-  <meta property="og:image" content="https://www.rolypolydanang.vn/images/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe-hero.jpg" />
-  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe-hero.jpg" />
+  <!-- Use JPG for broad sharing compatibility -->
+  <meta property="og:image" content="https://www.rolypolydanang.vn/images/garlic-prawn-spring-roll-roly-poly-da-nang.jpg" />
+  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/garlic-prawn-spring-roll-roly-poly-da-nang.jpg" />
   <meta property="og:image:alt" content="Garlic prawn Vietnamese rice paper roll dipped into nước chấm at Roly Poly Fresh Spring Rolls Da Nang" />
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="900" />
@@ -35,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Art of Goi Cuon: Inside Da Nang’s First Fresh Spring Roll Café | Roly Poly" />
   <meta name="twitter:description" content="Go behind the scenes at Roly Poly, Da Nang’s first fresh spring roll café. See how we roll gỏi cuốn to order and what makes our sauces and fillings special." />
-  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe-hero.jpg" />
+  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/garlic-prawn-spring-roll-roly-poly-da-nang.jpg" />
 
   <!-- Icons & PWA -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -52,7 +54,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
   <script>
     window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js',new Date());
     gtag('config','G-BLRTTJDJYL');
   </script>
@@ -126,7 +128,7 @@
     "@id": "https://www.rolypolydanang.vn/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe#article",
     "headline": "The Art of Goi Cuon: Inside Da Nang’s First Fresh Spring Roll Café | Roly Poly",
     "description": "Go behind the scenes at Roly Poly, Da Nang’s first fresh spring roll café. See how we roll gỏi cuốn to order and what makes our sauces and fillings special.",
-    "image": "https://www.rolypolydanang.vn/images/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe-hero.jpg",
+    "image": "https://www.rolypolydanang.vn/images/garlic-prawn-spring-roll-roly-poly-da-nang.jpg",
     "author": {"@type": "Organization","name": "Roly Poly Fresh Spring Rolls Da Nang"},
     "publisher": {"@type": "Organization","name": "Roly Poly Fresh Spring Rolls Da Nang","logo": {"@type": "ImageObject","url": "https://www.rolypolydanang.vn/images/logo.jpg"}},
     "datePublished": "2025-08-15",
@@ -193,9 +195,12 @@
         </span>
       </p>
       <figure class="post-hero">
-        <img src="/images/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe-hero.jpg"
-             alt="Garlic prawn Vietnamese rice paper roll dipped into nước chấm at Roly Poly Fresh Spring Rolls Da Nang"
-             class="hero-img" width="1600" height="900" decoding="async" fetchpriority="high" sizes="100vw" itemprop="image" />
+        <picture>
+          <source type="image/webp" srcset="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" />
+          <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.jpg"
+               alt="Garlic prawn Vietnamese rice paper roll dipped into nước chấm at Roly Poly Fresh Spring Rolls Da Nang"
+               class="hero-img" width="1600" height="900" decoding="async" fetchpriority="high" sizes="100vw" itemprop="image" />
+        </picture>
       </figure>
     </header>
 
@@ -262,7 +267,7 @@
     <div class="footer-grid">
       <section class="footer-col" aria-labelledby="footer-brand">
         <h3 id="footer-brand"><a href="/" aria-label="Roly Poly Fresh Spring Rolls Da Nang — Home">Roly Poly Fresh Spring Rolls Da Nang</a></h3>
-        <p class="footer-tagline">Vietnamese restaurant & café in <strong>An Thượng</strong>, near <strong>Mỹ Khê Beach</strong>, Da Nang.</p>
+        <p class="footer-tagline">Vietnamese restaurant &amp; café in <strong>An Thượng</strong>, near <strong>Mỹ Khê Beach</strong>, Da Nang.</p>
         <address>
           05 An Thượng 6, Bắc Mỹ Phú,<br>
           Ngũ Hành Sơn, Đà Nẵng 550000<br>
