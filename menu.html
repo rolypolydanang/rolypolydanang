@@ -106,42 +106,57 @@
 <!-- JSON-LD: Restaurant -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":["Restaurant","CafeOrCoffeeShop"],
-  "@id":"https://www.rolypolydanang.vn/#restaurant",
-  "name":"Roly Poly Fresh Spring Rolls Da Nang",
-  "url":"https://www.rolypolydanang.vn/",
-  "image":[
+  "@context": "https://schema.org",
+  "@type": [
+    "Restaurant",
+    "CafeOrCoffeeShop"
+  ],
+  "@id": "https://www.rolypolydanang.vn/#restaurant",
+  "name": "Roly Poly Fresh Spring Rolls Da Nang",
+  "url": "https://www.rolypolydanang.vn/",
+  "image": [
     "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
     "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
   ],
-  "logo":"https://www.rolypolydanang.vn/images/logo.jpg",
-  "description":"Fresh Vietnamese spring rolls café in An Thượng, near Mỹ Khê Beach — coffee, matcha, juices, vegan & gluten-free options.",
-  "servesCuisine":["Vietnamese","Cafe"],
-  "priceRange":"$$",
-  "telephone":"+84 327 306 076",
-  "address":{
-    "@type":"PostalAddress",
-    "streetAddress":"05 An Thượng 6, Bắc Mỹ Phú",
-    "addressLocality":"Ngũ Hành Sơn",
-    "addressRegion":"Đà Nẵng",
-    "postalCode":"550000",
-    "addressCountry":"VN"
+  "logo": "https://www.rolypolydanang.vn/images/logo.jpg",
+  "description": "Fresh Vietnamese spring rolls café in An Thượng, near Mỹ Khê Beach — coffee, matcha, juices, vegan & gluten-free options.",
+  "servesCuisine": [
+    "Vietnamese",
+    "Cafe",
+    "Coffee",
+    "Tea"
+  ],
+  "priceRange": "$$",
+  "telephone": "+84 327 306 076",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
+    "addressLocality": "Ngũ Hành Sơn",
+    "addressRegion": "Đà Nẵng",
+    "postalCode": "550000",
+    "addressCountry": "VN"
   },
-  "geo":{"@type":"GeoCoordinates","latitude":16.04869,"longitude":108.244106},
-  "openingHours":["Mo-Sa 10:00-20:00"],
-  "hasMenu":"https://www.rolypolydanang.vn/menu",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 16.04869,
+    "longitude": 108.244106
+  },
+  "openingHours": [
+    "Mo-Sa 10:00-20:00"
+  ],
+  "hasMenu": "https://www.rolypolydanang.vn/menu",
   "acceptsReservations": false,
-  "paymentAccepted":"Cash, Visa, Mastercard, Apple Pay, MoMo",
-  "currenciesAccepted":"VND",
-  "sameAs":[
+  "paymentAccepted": "Cash, Visa, Mastercard, Apple Pay, MoMo",
+  "currenciesAccepted": "VND",
+  "sameAs": [
     "https://www.facebook.com/rolypolydanang",
     "https://www.instagram.com/rolypolydanang",
     "https://www.tiktok.com/@rolypolydanang",
     "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662-Reviews-Roly_Poly_Fresh_Spring_Rolls_Da_Nang",
     "https://www.google.com/maps?cid=8457966646420358159"
   ],
-  "hasMap":"https://www.google.com/maps?cid=8457966646420358159"
+  "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
+  "keywords": "coffee, coffee shop, cafe, spring rolls, Da Nang"
 }
 </script>
 
@@ -256,7 +271,9 @@
         <li><a href="/menu" aria-current="page" title="View Menu">Menu</a></li>
         <li><a href="/about" title="About Roly Poly Fresh Spring Rolls Da Nang">About</a></li>
         <li><a href="/contact" title="Contact & Location">Contact</a></li>
-      </ul>
+      
+    <li><a href="/blog">Blog</a></li>
+</ul>
     </nav>
     <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
       <span class="nav-toggle-bar" aria-hidden="true"></span>
@@ -569,7 +586,9 @@
           <li><a href="/menu">Menu — Spring Rolls &amp; Drinks</a></li>
           <li><a href="/about">About Roly Poly Da Nang</a></li>
           <li><a href="/contact">Contact &amp; Location</a></li>
-        </ul>
+        
+    <li><a href="/blog">Blog</a></li>
+</ul>
       </nav>
 
       <section class="footer-col" aria-labelledby="footer-social">
