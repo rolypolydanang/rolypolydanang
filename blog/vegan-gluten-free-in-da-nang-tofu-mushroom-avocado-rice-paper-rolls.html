@@ -16,7 +16,9 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" as="image" href="/images/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls-hero.jpg" type="image/jpeg">
+  <!-- Preload WebP (primary) + JPG (fallback) -->
+  <link rel="preload" as="image" href="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp" type="image/webp">
+  <link rel="preload" as="image" href="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.jpg" type="image/jpeg">
   <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"></noscript>
 
@@ -25,17 +27,20 @@
   <meta property="og:title" content="Vegan & Gluten-Free in Da Nang: Tofu, Mushroom & Avocado Rice Paper Rolls | Roly Poly" />
   <meta property="og:description" content="Vegan and gluten-free friendly café in An Thượng: try our Tofu, Mushroom & Avocado rice paper rolls with house-made sauces." />
   <meta property="og:url" content="https://www.rolypolydanang.vn/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls" />
-  <meta property="og:image" content="https://www.rolypolydanang.vn/images/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls-hero.jpg" />
-  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls-hero.jpg" />
+  <meta property="og:image" content="https://www.rolypolydanang.vn/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.jpg" />
+  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.jpg" />
   <meta property="og:image:alt" content="Tofu, mushroom & avocado Vietnamese fresh spring rolls with sesame dipping sauce at Roly Poly Da Nang" />
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="900" />
   <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls Da Nang" />
   <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2025-08-15" />
+  <meta property="article:modified_time" content="2025-08-15" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Vegan & Gluten-Free in Da Nang: Tofu, Mushroom & Avocado Rice Paper Rolls | Roly Poly" />
   <meta name="twitter:description" content="Vegan and gluten-free friendly café in An Thượng: try our Tofu, Mushroom & Avocado rice paper rolls with house-made sauces." />
-  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls-hero.jpg" />
+  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.jpg" />
+  <meta name="twitter:image:alt" content="Tofu, mushroom & avocado Vietnamese fresh spring rolls with sesame dipping sauce at Roly Poly Da Nang" />
 
   <!-- Icons & PWA -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -126,11 +131,19 @@
     "@id": "https://www.rolypolydanang.vn/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls#article",
     "headline": "Vegan & Gluten-Free in Da Nang: Tofu, Mushroom & Avocado Rice Paper Rolls | Roly Poly",
     "description": "Looking for vegan and gluten-free food in Da Nang? Try our Tofu, Mushroom & Avocado rice paper rolls with house-made vegan sauces at Roly Poly Fresh Spring Rolls.",
-    "image": "https://www.rolypolydanang.vn/images/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls-hero.jpg",
+    "inLanguage": "en",
+    "isPartOf": { "@id": "https://www.rolypolydanang.vn/#website" },
+    "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+    "image": [
+      { "@type": "ImageObject", "url": "https://www.rolypolydanang.vn/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.jpg", "width": 1600, "height": 900 },
+      { "@type": "ImageObject", "url": "https://www.rolypolydanang.vn/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp", "width": 1600, "height": 900 }
+    ],
     "author": {"@type": "Organization","name": "Roly Poly Fresh Spring Rolls Da Nang"},
     "publisher": {"@type": "Organization","name": "Roly Poly Fresh Spring Rolls Da Nang","logo": {"@type": "ImageObject","url": "https://www.rolypolydanang.vn/images/logo.jpg"}},
     "datePublished": "2025-08-15",
-    "mainEntityOfPage": {"@type": "WebPage","@id": "https://www.rolypolydanang.vn/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls"}
+    "dateModified": "2025-08-15",
+    "mainEntityOfPage": {"@type": "WebPage","@id": "https://www.rolypolydanang.vn/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls"},
+    "articleSection": "Vegan & Gluten-Free"
   }
   </script>
   <script type="application/ld+json">
@@ -145,6 +158,8 @@
     ]
   }
   </script>
+
+  <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
 </head>
 
 <body>
@@ -193,9 +208,15 @@
         </span>
       </p>
       <figure class="post-hero">
-        <img src="/images/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls-hero.jpg"
-             alt="Tofu, mushroom & avocado Vietnamese fresh spring rolls with sesame dipping sauce at Roly Poly Da Nang"
-             class="hero-img" width="1600" height="900" decoding="async" fetchpriority="high" sizes="100vw" itemprop="image" />
+        <picture>
+          <source srcset="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp" type="image/webp">
+          <source srcset="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.jpg" type="image/jpeg">
+          <img
+            src="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.jpg"
+            alt="Tofu, mushroom & avocado Vietnamese fresh spring rolls with sesame dipping sauce at Roly Poly Da Nang"
+            class="hero-img" width="1600" height="900"
+            decoding="async" fetchpriority="high" sizes="100vw" itemprop="image">
+        </picture>
       </figure>
     </header>
 
