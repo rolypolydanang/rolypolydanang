@@ -16,12 +16,17 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
   <link rel="preload" as="image" href="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" type="image/webp" />
 
   <!-- Styles -->
   <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"></noscript>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
 
   <!-- Icons & PWA -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -301,14 +306,68 @@
   </section>
 
   <!-- FAQ (on-page content to match schema) -->
-  <section class="accordion" id="faq" aria-labelledby="faq-heading">
-    <div class="container">
-      <h2 id="faq-heading">Frequently Asked Questions</h2>
-      <details><summary>Do you have vegan or gluten-free rolls?</summary><p>Yes — try Tofu, Mushroom & Avocado (vegan, GF). Our fish sauce is gluten-free; peanut & sesame sauces are vegan.</p></details>
-      <details><summary>Do you offer delivery?</summary><p>Free delivery within 3 km when ordering by phone (+84 327 306 076). We’re also on GrabFood.</p></details>
-      <details><summary>What are your hours?</summary><p>Mon–Sat 10:00–20:00. Closed Sunday.</p></details>
-    </div>
-  </section>
+  <section class="faq" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+    <details>
+      <summary>Where are you located?</summary>
+      <p>We’re at <strong>05 An Thượng 6, Ngũ Hành Sơn, Đà Nẵng</strong> — a 5-minute walk from <strong>Mỹ Khê Beach</strong>. <a href="https://www.google.com/maps?cid=8457966646420358159&utm_source=faq&utm_medium=link&utm_campaign=rolypoly_site" target="_blank" rel="noopener">Get directions on Google Maps</a>.</p>
+    </details>
+
+    <details>
+      <summary>What are your opening hours?</summary>
+      <p><strong>Mon–Sat 10:00–20:00</strong>. Closed Sunday.</p>
+    </details>
+
+    <details>
+      <summary>Do you offer delivery?</summary>
+      <p>Yes — <strong>GrabFood</strong> and phone orders. We deliver within ~3 km of An Thượng. Call <a href="tel:+84327306076">+84 327 306 076</a>.</p>
+    </details>
+
+    <details>
+      <summary>Do you have vegan or gluten-free options?</summary>
+      <p>Yes — try our <strong>Tofu, Mushroom &amp; Avocado</strong> rolls (vegan, GF). Peanut &amp; sesame sauces are vegan; fish sauce is gluten-free. Ask our team if you have allergies.</p>
+    </details>
+
+    <details>
+      <summary>What should I try first?</summary>
+      <p>Best-sellers: <a href="/menu#spring-rolls"><strong>Garlic Prawn</strong></a> or <strong>Lemongrass Beef</strong> spring rolls, plus our <a href="/menu#coffee"><strong>Salted Coffee</strong></a> or <strong>Coconut Coffee</strong>.</p>
+    </details>
+
+    <details>
+      <summary>Do you take reservations?</summary>
+      <p>We’re casual dine-in — no reservations needed. For groups (&gt;6), call <a href="tel:+84327306076">+84 327 306 076</a> and we’ll try to arrange seating.</p>
+    </details>
+
+    <details>
+      <summary>Do you accept card payments?</summary>
+      <p>Yes — <strong>Cash, Visa, Mastercard, Apple Pay</strong> and <strong>MoMo</strong>. Currency: VND.</p>
+    </details>
+
+    <details>
+      <summary>Can you customize rolls (no chili / extra herbs)?</summary>
+      <p>Absolutely — rolls are <strong>made to order</strong>. Tell us your preferences (mild, extra herbs, no peanuts, etc.).</p>
+    </details>
+
+    <details>
+      <summary>Is there Wi-Fi and are you tourist friendly?</summary>
+      <p>Yes — <strong>free Wi-Fi</strong>. We speak <strong>English &amp; Vietnamese</strong>. Our menu is bilingual.</p>
+    </details>
+
+    <details>
+      <summary>Is the café child-friendly or pet-friendly?</summary>
+      <p>Kids welcome. Small, well-behaved pets are fine on the outdoor seating area.</p>
+    </details>
+
+    <details>
+      <summary>Price range?</summary>
+      <p>Most spring rolls are <strong>affordable</strong> — see <a href="/menu">menu &amp; prices</a>.</p>
+    </details>
+
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer" role="contentinfo">
@@ -335,9 +394,16 @@
       <section class="footer-col" aria-labelledby="footer-social">
         <h4 id="footer-social">Socials</h4>
         <div class="social-links" role="group" aria-label="Social media">
-          <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/rolypolydanang" aria-label="Instagram: rolypolydanang" target="_blank" rel="me noopener">
+  <i class="fab fa-instagram" aria-hidden="true"></i>
+</a>
+<a href="https://www.tiktok.com/@rolypolydanang" aria-label="TikTok: @rolypolydanang" target="_blank" rel="me noopener">
+  <i class="fab fa-tiktok" aria-hidden="true"></i>
+</a>
+<a href="https://www.facebook.com/rolypolydanang" aria-label="Facebook: Roly Poly Da Nang" target="_blank" rel="me noopener">
+  <i class="fab fa-facebook" aria-hidden="true"></i>
+</a>
+
           <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener"><img src="/images/trip-adv.png" width="32" height="32" alt="Tripadvisor" loading="lazy"></a>
         </div>
       </section>
