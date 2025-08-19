@@ -217,6 +217,35 @@
   });
 </script>
 
+  <style>
+  /* HERO (about page): remove dark background */
+  .hero#about {
+    background:#fff !important;
+    color:#222;
+    position:relative;
+  }
+
+  .hero#about .hero-overlay {
+    background:transparent !important;
+  }
+
+  .hero#about .hero-img {
+    filter:none !important; /* remove any darkening filters */
+  }
+
+  .hero#about .btn {
+    background:var(--brand);
+    color:#fff !important;
+    border:2px solid var(--brand);
+  }
+  .hero#about .btn:hover,
+  .hero#about .btn:focus {
+    background:var(--brand-d);
+    border-color:var(--brand-d);
+  }
+</style>
+
+
 <main id="main" role="main">
   
 
@@ -228,7 +257,7 @@
 
      <h1 id="hero-title">About Roly Poly Da Nang | Fresh Vietnamese Spring Rolls & Coffee</h1>
 <h2 class="hero-subtitle">
-A neighborhood Vietnamese restaurant in An Thuong, steps from My Khe Beach
+A neighborhood Vietnamese restaurant and café in An Thuong, steps from My Khe Beach
 </h2>
 
 
@@ -244,7 +273,7 @@ A neighborhood Vietnamese restaurant in An Thuong, steps from My Khe Beach
       </picture>
 
       <p class="subheadline">
-  We started Roly Poly with a simple idea: <strong>fresh, feel-good food made with care</strong>. 
+  We started Roly Poly Fresh Spring Rolls & Coffee Da Nange with a simple idea: <strong>fresh, feel-good food made with care</strong>. 
   Inspired by <strong>Vietnamese street-food traditions</strong>, we hand-roll spring rolls to order with 
   local herbs and seasonal produce. Our cozy space in <strong>An Thuong</strong> is 
   <strong>laptop-friendly</strong> with Wi-Fi — a relaxed spot for travelers, digital nomads and neighbors to slow down, connect, and enjoy food that travels well to the beach.
