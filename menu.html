@@ -35,7 +35,7 @@
 <meta property="og:image:alt" content="Assorted fresh Vietnamese spring rolls platter with sauces at Roly Poly Da Nang"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta property="og:site_name" content="Roly Poly Da Nang"/>
+<meta property="og:site_name" content="Roly Poly Fresh Spring Rolls & Coffee Da Nang"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:locale:alternate" content="vi_VN"/>
 
@@ -50,7 +50,6 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BLRTTJDJYL');</script>
 
-<!-- JSON-LD: WebSite -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -58,10 +57,11 @@
   "@id":"https://www.rolypolydanang.vn/#website",
   "url":"https://www.rolypolydanang.vn/",
   "name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-  "inLanguage":"en",
+  "inLanguage":["en","vi"],
   "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" }
 }
 </script>
+
 
 <!-- JSON-LD: Restaurant / Cafe (enhanced) -->
 <script type="application/ld+json">
@@ -75,17 +75,23 @@
     "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
     "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
   ],
+  "alternateName": [
+    "Roly Poly Da Nang",
+    "Roly Poly Fresh Spring Rolls Da Nang",
+    "goi cuon Da Nang",
+    "gỏi cuốn Đà Nẵng"
+  ],
   "logo": {
     "@type": "ImageObject",
     "url": "https://www.rolypolydanang.vn/images/logo.jpg",
     "width": 160,
     "height": 48
   },
-  "email": "rolypolydanang@gmail.com",
-  "description": "Fresh Vietnamese spring rolls café and coffee shop in An Thượng near Mỹ Khê Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
+  "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thượng near Mỹ Khê Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
   "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha"],
-  "priceRange": "₫-₫₫",
+  "priceRange": "₫₫",
   "telephone": "+84327306076",
+  "email": "rolypolydanang@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
@@ -95,30 +101,20 @@
     "addressCountry": "VN"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "10:00",
-    "closes": "20:00"
-  }],
-  "hasDelivery": true,
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" }
+  ],
   "menu": "https://www.rolypolydanang.vn/menu",
   "hasMenu": { "@id": "https://www.rolypolydanang.vn/menu#menu" },
   "acceptsReservations": false,
-  "paymentAccepted": "Cash, Visa, Mastercard, Apple Pay, MoMo",
+  "paymentAccepted": ["Cash","Visa","Mastercard","Apple Pay","MoMo"],
   "currenciesAccepted": "VND",
-  "areaServed": ["An Thượng, Ngũ Hành Sơn, Đà Nẵng","Mỹ Khê Beach area"],
-  "makesOffer": {
-    "@type": "Offer",
-    "name": "Delivery service",
-    "areaServed": "An Thượng, Ngũ Hành Sơn, Đà Nẵng",
-    "availableDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet",
-    "eligibleRegion": "Đà Nẵng, VN",
-    "price": "0",
-    "priceCurrency": "VND",
-    "url": "https://www.rolypolydanang.vn/menu#delivery-cta"
-  },
-  "sameAs": [
+  "areaServed": [
+    "An Thượng, Ngũ Hành Sơn, Da Nang",
+    "My Khe Beach area"
+  ],
+  "makesOffer": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" },
+  "sameAs":[
     "https://www.facebook.com/rolypolydanang",
     "https://www.instagram.com/rolypolydanang",
     "https://www.tiktok.com/@rolypolydanang",
@@ -129,12 +125,14 @@
   "contactPoint": [{
     "@type": "ContactPoint",
     "telephone": "+84327306076",
+    "email": "rolypolydanang@gmail.com",
     "contactType": "customer service",
     "areaServed": "VN",
     "availableLanguage": ["en","vi"]
   }]
 }
 </script>
+
 
 <!-- JSON-LD: WebPage (Menu page) -->
 <script type="application/ld+json">
@@ -148,26 +146,37 @@
   "inLanguage":"en",
   "isPartOf":{"@id":"https://www.rolypolydanang.vn/#website"},
   "about":{"@id":"https://www.rolypolydanang.vn/#restaurant"},
-  "primaryImageOfPage":{
-    "@type":"ImageObject",
-    "url":"https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp",
-    "width":1600,
-    "height":900
-  }
+  "primaryImageOfPage": { "@id": "https://www.rolypolydanang.vn/menu#heroimage" },
+  "breadcrumb": { "@id": "https://www.rolypolydanang.vn/menu#breadcrumb" }
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "@id": "https://www.rolypolydanang.vn/menu#heroimage",
+  "url": "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp",
+  "width": 1600,
+  "height": 900,
+  "caption": "Assorted fresh spring rolls platter at Roly Poly Da Nang"
+}
+</script>
+
 
 <!-- JSON-LD: Breadcrumbs -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
+  "@id":"https://www.rolypolydanang.vn/menu#breadcrumb",
   "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.rolypolydanang.vn/"},
     {"@type":"ListItem","position":2,"name":"Menu","item":"https://www.rolypolydanang.vn/menu"}
   ]
 }
 </script>
+
 
 <!-- JSON-LD: Menu (anchor URLs aligned to sections; offers include availability) -->
 <script type="application/ld+json">
@@ -258,9 +267,10 @@
   "@type":"FAQPage",
   "@id":"https://www.rolypolydanang.vn/menu#faq",
   "url":"https://www.rolypolydanang.vn/menu#faq",
-  "inLanguage":"en",
-  "about":{"@id":"https://www.rolypolydanang.vn/#restaurant"},
-  "mainEntityOfPage":{"@id":"https://www.rolypolydanang.vn/menu#webpage"},
+  "name":"Roly Poly Menu — FAQ",
+  "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+  "mainEntityOfPage": { "@id": "https://www.rolypolydanang.vn/menu#webpage" },
+  "inLanguage": ["en","vi"],
   "mainEntity":[
     {
       "@type":"Question",
@@ -280,6 +290,7 @@
   ]
 }
 </script>
+
 
 <!-- Styles -->
 <style>
