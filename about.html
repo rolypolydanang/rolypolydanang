@@ -245,6 +245,51 @@
   }
 </style>
 
+  <style>
+  /* Force white sticky bar across pages */
+  nav.sticky-actions,
+  .sticky-actions,
+  body nav.sticky-actions {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: #fff !important;
+    color: #111 !important;
+    border-top: 1px solid #eee !important;
+    box-shadow: 0 -2px 10px rgba(0,0,0,.05) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 1000 !important;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Make sure buttons stay readable on white */
+  nav.sticky-actions .btn,
+  .sticky-actions .btn {
+    background: var(--brand, #ff6a00);
+    border: 2px solid var(--brand, #ff6a00);
+    color: #fff !important;
+  }
+  nav.sticky-actions .btn:hover,
+  .sticky-actions .btn:hover,
+  nav.sticky-actions .btn:focus,
+  .sticky-actions .btn:focus {
+    background: var(--brand-d, #e55b00);
+    border-color: var(--brand-d, #e55b00);
+  }
+
+  /* Keep page content visible above the fixed bar */
+  main { 
+    padding-bottom: calc(var(--sticky-h, 56px) + env(safe-area-inset-bottom));
+  }
+
+  /* If any dark theme CSS is toggling colors, neutralize for sticky */
+  @media (prefers-color-scheme: dark) {
+    nav.sticky-actions,
+    .sticky-actions { background:#fff !important; color:#111 !important; }
+  }
+</style>
+
+
 
 <main id="main" role="main">
   
@@ -260,17 +305,17 @@
 A neighborhood Vietnamese restaurant and café in An Thuong, steps from My Khe Beach
 </h2>
 
+<picture>
+  <source srcset="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" type="image/webp" />
+  <img
+    src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
+    alt="Roly Poly Vietnamese restaurant shopfront on An Thuong 6 near My Khe Beach"
+    class="hero-img"
+    width="1600" height="900"
+    sizes="(max-width: 768px) 100vw, 1200px"
+    decoding="async" fetchpriority="high" />
+</picture>
 
-
-        <source srcset="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" type="image/webp">
-        <img
-          src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
-          alt="Roly Poly Vietnamese restaurant shopfront on An Thuong 6 near My Khe Beach"
-          class="hero-img"
-          width="1600" height="900"
-          sizes="(max-width: 768px) 100vw, 1200px"
-          decoding="async" fetchpriority="high">
-      </picture>
 
       <p class="subheadline">
   We started Roly Poly Fresh Spring Rolls & Coffee Da Nange with a simple idea: <strong>fresh, feel-good food made with care</strong>. 
