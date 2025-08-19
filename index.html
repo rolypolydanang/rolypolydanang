@@ -339,6 +339,34 @@
   main{ padding-bottom:calc(var(--sticky-h, 48px) + env(safe-area-inset-bottom)) }
 </style>
 
+  <style>
+  /* Homepage hero: match the menu page (white, no tint) */
+  .hero#home{
+    background:#fff !important;
+    color:#222;                 /* readable on white */
+    position:relative;
+  }
+  .hero#home .hero-overlay{
+    background:transparent !important;  /* remove dark overlay */
+  }
+  .hero#home .hero-img{
+    filter:none !important;             /* in case any global dimming/filter applies */
+  }
+
+  /* (Optional) ensure hero buttons keep your orange style on white */
+  :root{ --brand:#ff6a00; --brand-d:#e55b00; }
+  .hero#home .btn{
+    background:var(--brand);
+    color:#fff !important;
+    border:2px solid var(--brand);
+  }
+  .hero#home .btn:hover,
+  .hero#home .btn:focus{
+    background:var(--brand-d);
+    border-color:var(--brand-d);
+  }
+</style>
+
 
 </head>
 <body>
