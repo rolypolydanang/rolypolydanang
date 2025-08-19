@@ -533,6 +533,27 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   .about-gallery .gallery-grid{ --tile: 320px; }
 }
 
+/* --- Consistent hero buttons (match brand even before main.css loads) --- */
+:root{ --brand:#ff6a00; --brand-d:#e55b00; }
+
+.hero .btn { 
+  background: var(--brand); 
+  color:#fff; 
+  border-color: var(--brand);
+}
+.hero .btn:hover { background: var(--brand-d); color:#fff; }
+.hero .btn.accent { 
+  background:#fff; 
+  color:#111; 
+  border-color:#ddd;
+}
+.hero .btn.secondary {
+  background:#111;
+  color:#fff;
+  border-color:#111;
+}
+
+
 
 
 
