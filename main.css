@@ -553,6 +553,32 @@ main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)) }
   border-color:#111;
 }
 
+/* --- Global Button Style --- */
+:root {
+  --brand: #ff6a00;   /* main orange */
+  --brand-d: #e55b00; /* darker orange for hover */
+}
+
+.btn {
+  background: var(--brand);
+  color: #fff;
+  border: 2px solid var(--brand);
+  border-radius: 6px;
+  padding: 0.75em 1.25em;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--brand-d);
+  border-color: var(--brand-d);
+  color: #fff;
+}
+
+
 
 
 
