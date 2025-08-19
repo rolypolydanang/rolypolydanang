@@ -123,9 +123,16 @@
   "description":"Menu & prices for Roly Poly — fresh spring rolls, sauces, coffee, matcha & juices.",
   "inLanguage":"en",
   "isPartOf":{"@id":"https://www.rolypolydanang.vn/#website"},
-  "about":{"@id":"https://www.rolypolydanang.vn/#restaurant"}
+  "about":{"@id":"https://www.rolypolydanang.vn/#restaurant"},
+  "primaryImageOfPage":{
+    "@type":"ImageObject",
+    "url":"https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp",
+    "width":1600,
+    "height":900
+  }
 }
 </script>
+
 
 <!-- JSON-LD: Breadcrumbs -->
 <script type="application/ld+json">
@@ -213,6 +220,32 @@
 }
 </script>
 
+  <!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Do you have vegan or gluten-free options?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes — several fillings are gluten-free and our Tofu, Mushroom & Avocado roll is vegan & gluten-free. Peanut & Sesame sauces are vegan; fish sauce is gluten-free."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you offer delivery?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes — free within 3 km by phone, plus GrabFood."}
+    },
+    {
+      "@type":"Question",
+      "name":"What are your hours?",
+      "acceptedAnswer":{"@type":"Answer","text":"Mon–Sat 10:00–20:00. Closed Sunday."}
+    }
+  ]
+}
+</script>
+
+
 
 <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
 </head>
@@ -238,8 +271,8 @@
   <section id="menu-hero" class="hero hero--menu" aria-labelledby="menu-hero-title">
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-content">
-      <h1 id="menu-hero-title">Menu — Fresh Spring Rolls, Vietnamese Coffee, Matcha & Fresh Juices</h1>
-      <h2 class="hero-subtitle">Healthy, handmade gỏi cuốn in An Thượng · near Mỹ Khê Beach</h2>
+      <h1 id="menu-hero-title">Menu — Fresh Spring Rolls, Vietnamese Coffee, Matcha & Fresh Juices | Roly Poly Da Nang</h1>
+      <p class="hero-subtitle">Healthy, handmade gỏi cuốn in An Thượng · near Mỹ Khê Beach</p>
       <img src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" alt="Platter of Vietnamese fresh spring rolls with sauces" class="hero-img" width="1600" height="900" decoding="async" fetchpriority="high">
       <div class="hero-buttons" role="group" aria-label="Primary actions">
         <a class="btn primary" href="#spring-rolls">Spring Rolls & Prices</a>
@@ -252,7 +285,7 @@
   <!-- SPRING ROLLS -->
   <section id="spring-rolls" class="menu-section" aria-labelledby="spring-rolls-title">
     <div class="container">
-      <h2 id="spring-rolls-title">Mix & Match Fresh Vietnamese Spring Rolls (Gỏi Cuốn)</h2>
+      <h2 id="spring-rolls-title">Fresh Vietnamese Spring Rolls — Menu & Prices in Da Nang (Gỏi Cuốn)</h2>
       <p><strong>Each roll includes</strong> rice vermicelli, lettuce, carrot, cucumber, mint, coriander & crispy shallots — wrapped in soft rice paper with your choice of <a class="text-link" href="#sauces">house-made dipping sauce</a>.</p>
       <ul class="pricing" aria-label="Spring roll set pricing">
         <li>3 Fresh Spring Rolls — <strong>105k</strong></li>
@@ -289,22 +322,17 @@
     </div>
   </section>
 
-  <!-- DRINKS -->
-  <section id="drinks" aria-labelledby="drinks-title">
-    <div class="container"><h2 id="drinks-title">Specialty Drinks — Fresh Juices, Vietnamese Coffee & Matcha</h2></div>
-  </section>
-
   <!-- JUICES -->
   <section id="juices" class="menu-section" aria-labelledby="juices-title">
     <div class="container">
-      <h3 id="juices-title">Fresh Juices (250 mL) — No Added Sugar</h3>
-      <h4>Signature Juices — 55k</h4>
+      <h2 id="juices-title">Fresh Juices (250 mL) — No Added Sugar</h2>
+      <h3>Signature Juices — 55k</h3>
       <div class="drink-grid" role="list">
         <article class="drink" role="listitem"><img src="/images/my-khe-sunrise-juice-roly-poly-da-nang.webp" alt="Mỹ Khê Sunrise juice" width="600" height="450" loading="lazy"><h5>Mỹ Khê Sunrise</h5><p>Pineapple · Watermelon · Lime</p></article>
         <article class="drink" role="listitem"><img src="/images/along-the-han-juice-roly-poly-da-nang.webp" alt="Along the Hàn juice" width="600" height="450" loading="lazy"><h5>Along the Hàn</h5><p>Watermelon · Cucumber · Lime</p></article>
         <article class="drink" role="listitem"><img src="/images/lantern-in-hoi-an-juice-roly-poly-da-nang.webp" alt="Lantern in Hội An juice" width="600" height="450" loading="lazy"><h5>Lantern in Hội An</h5><p>Orange · Passionfruit · Lime</p></article>
       </div>
-      <h4>Solo Juices — 50k</h4>
+      <h3>Solo Juices — 50k</h3>
       <ul class="drink-list">
         <li><strong>Orange</strong> · <strong>Watermelon</strong> · <strong>Pineapple</strong> · <strong>Passionfruit</strong></li>
       </ul>
@@ -314,7 +342,7 @@
   <!-- COFFEE & MATCHA -->
   <section id="coffee" class="menu-section" aria-labelledby="coffee-title">
     <div class="container">
-      <h3 id="coffee-title">Vietnamese Coffee & Matcha</h3>
+      <h2 id="coffee-title">Vietnamese Coffee & Matcha</h2>
       <div class="drink-grid" role="list">
         <article class="drink" role="listitem"><img src="/images/iced-milk-coffee-roly-poly-da-nang.webp" alt="Iced milk coffee" width="600" height="450" loading="lazy"><h5>Iced Milk Coffee — 35k</h5><p>Classic cà phê sữa đá.</p></article>
         <article class="drink" role="listitem"><img src="/images/iced-black-coffee-roly-poly-da-nang.webp" alt="Iced black phin coffee" width="600" height="450" loading="lazy"><h5>Iced Black Coffee — 30k</h5><p>Bold & smooth phin coffee.</p></article>
@@ -329,7 +357,7 @@
   <!-- OTHER DRINKS & BEER -->
   <section id="other-drinks" class="menu-section" aria-labelledby="other-drinks-title">
     <div class="container">
-      <h3 id="other-drinks-title">Other Drinks & Local Beer</h3>
+      <h2 id="other-drinks-title">Other Drinks & Local Beer</h2>
       <div class="drink-grid" role="list">
         <article class="drink" role="listitem"><img src="/images/snowy-lime-slushie-roly-poly-da-nang.webp" alt="Snowy lime slushie" width="600" height="450" loading="lazy"><h5>Snowy Lime Slushie — 50k</h5><p>Tart, icy & refreshing.</p></article>
       </div>
@@ -337,7 +365,7 @@
         <li><strong>Soft Drinks</strong> — 25k <span class="desc">Coke, Sprite, Fanta, soda water.</span></li>
         <li><strong>Bottled Water</strong> — 20k</li>
       </ul>
-      <h4>Vietnamese Beer</h4>
+      <h3>Vietnamese Beer</h3>
       <ul class="drink-list">
         <li><strong>Huda</strong> — 25k</li>
         <li><strong>Larue</strong> — 25k</li>
@@ -349,7 +377,7 @@
   <!-- Delivery CTA -->
   <section id="delivery-cta" class="menu-section" aria-labelledby="delivery-title">
     <div class="container">
-      <h3 id="delivery-title">Free Delivery in An Thượng Area</h3>
+      <h2 id="delivery-title">Free Delivery in An Thượng, Ngũ Hành Sơn (Da Nang)</h2>
       <p><strong>Free delivery</strong> within 3 km at in-store prices — call us or order on GrabFood.</p>
       <div class="hero-buttons" role="group">
         <a class="btn" href="tel:+84327306076">Call for Delivery</a>
@@ -368,6 +396,7 @@
     </div>
   </section>
 </main>
+
 
 <footer class="site-footer" role="contentinfo">
   <div class="container">
