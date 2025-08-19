@@ -310,6 +310,35 @@
   }
 </style>
 
+  <style>
+  /* --- Menu hero: force white, kill dark overlay --- */
+  .hero.menu-hero{
+    background:#fff !important;       /* no dark backdrop */
+    color:#222;                        /* readable on white */
+    position:relative;
+  }
+  .hero.menu-hero .hero-overlay{
+    position:absolute; inset:0;
+    background:transparent !important; /* no tint */
+    pointer-events:none;
+  }
+  .hero.menu-hero img.hero-img{
+    filter:none !important;            /* in case a global filter dims it */
+  }
+
+  /* --- Sticky bar: force solid white, no blur/tint --- */
+  .sticky-actions{
+    position:fixed;                    /* optional: keep always visible */
+    left:0; right:0; bottom:0;
+    background:#fff !important;        /* kill grey */
+    border-top:1px solid #eee;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  /* keep content from being hidden behind the fixed bar */
+  main{ padding-bottom:calc(var(--sticky-h, 48px) + env(safe-area-inset-bottom)) }
+</style>
+
 
 </head>
 <body>
