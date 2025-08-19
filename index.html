@@ -72,24 +72,20 @@
     gtag('js', new Date()); gtag('config', 'G-BLRTTJDJYL');
   </script>
 
-  <!-- JSON-LD (WebSite + Home WebPage + Business + FAQ) -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "@id":"https://www.rolypolydanang.vn/#website",
-    "url":"https://www.rolypolydanang.vn/",
-    "name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-    "inLanguage":"en",
-    "sameAs":[
-      "https://www.facebook.com/rolypolydanang",
-      "https://www.instagram.com/rolypolydanang",
-      "https://www.tiktok.com/@rolypolydanang",
-      "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662-Reviews-Roly_Poly_Fresh_Spring_Rolls_Da_Nang",
-      "https://www.google.com/maps?cid=8457966646420358159"
-    ]
-  }</script>
- 
-  
+<!-- JSON-LD: WebSite -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://www.rolypolydanang.vn/#website",
+  "url":"https://www.rolypolydanang.vn/",
+  "name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+  "inLanguage":"en",
+  "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" }
+}
+</script>
+
+<!-- JSON-LD: WebPage (homepage) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -108,7 +104,7 @@
     "url": "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp",
     "width": 1600,
     "height": 900,
-    "caption": "Roly Poly shopfront on An Thuong 6 near My Khe Beach"
+    "caption": "Roly Poly shopfront on An Thượng 6 near My Khe Beach"
   },
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -118,8 +114,8 @@
   }
 }
 </script>
-  
-  
+
+<!-- JSON-LD: Restaurant -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -137,10 +133,9 @@
     "width": 160,
     "height": 48
   },
-  "description": "Fresh Vietnamese spring rolls café and coffee shop in An Thuong near My Khe Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
-  "knowsAbout": ["gỏi cuốn","spring rolls","salted coffee","coconut coffee","matcha","gluten-free","vegan"],
+  "description": "Fresh Vietnamese spring rolls café and coffee shop in An Thượng near Mỹ Khê Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
   "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha"],
-  "priceRange": "$",
+  "priceRange": "₫",
   "telephone": "+84 327 306 076",
   "address": {
     "@type": "PostalAddress",
@@ -157,13 +152,22 @@
     "opens": "10:00",
     "closes": "20:00"
   }],
-  "hasMenu": { "@type": "Menu", "url": "https://www.rolypolydanang.vn/menu", "name": "Roly Poly Fresh Spring Rolls & Coffee Menu" },
+  "hasMenu": { "@id": "https://www.rolypolydanang.vn/menu#menu" },
   "acceptsReservations": false,
-  "acceptedPaymentMethod": ["Cash","Visa","Mastercard","Apple Pay","MoMo"],
+  "paymentAccepted": "Cash, Visa, Mastercard, Apple Pay, MoMo",
   "currenciesAccepted": "VND",
-  "areaServed": ["An Thuong, Ngũ Hành Sơn, Da Nang","My Khe Beach area"],
-  "hasDelivery": true,
-  "sameAs": [
+  "areaServed": ["An Thượng, Ngũ Hành Sơn, Da Nang","My Khe Beach area"],
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Delivery service",
+    "areaServed": "An Thượng, Ngũ Hành Sơn, Đà Nẵng",
+    "availableDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet",
+    "eligibleRegion": "Đà Nẵng, VN",
+    "price": "0",
+    "priceCurrency": "VND",
+    "url": "https://www.rolypolydanang.vn/menu#delivery-cta"
+  },
+  "sameAs":[
     "https://www.facebook.com/rolypolydanang",
     "https://www.instagram.com/rolypolydanang",
     "https://www.tiktok.com/@rolypolydanang",
@@ -180,6 +184,8 @@
   }]
 }
 </script>
+
+
 
 
 
