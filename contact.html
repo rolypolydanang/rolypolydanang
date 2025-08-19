@@ -222,6 +222,48 @@
   }
 </style>
 
+  <style>
+  :root { --brand:#ff6a00; --brand-d:#e55b00; }
+
+  /* Make all buttons orange (filled) */
+  .btn,
+  .btn:visited,
+  .btn.primary,
+  .btn.secondary,
+  .btn.accent,
+  .hero .btn,
+  .sticky-actions .btn {
+    background: var(--brand) !important;
+    color: #fff !important;
+    border: 2px solid var(--brand) !important;
+    text-decoration: none !important;
+  }
+
+  /* Hover/Focus state */
+  .btn:hover, .btn:focus,
+  .btn.primary:hover, .btn.primary:focus,
+  .btn.secondary:hover, .btn.secondary:focus,
+  .btn.accent:hover, .btn.accent:focus,
+  .hero .btn:hover, .hero .btn:focus,
+  .sticky-actions .btn:hover, .sticky-actions .btn:focus {
+    background: var(--brand-d) !important;
+    border-color: var(--brand-d) !important;
+    color:#fff !important;
+  }
+
+  /* Accessibility: visible focus ring */
+  .btn:focus-visible {
+    outline: 2px solid #fff !important;
+    box-shadow: 0 0 0 3px rgba(255,106,0,.45) !important;
+  }
+
+  /* Disabled buttons stay orange but muted */
+  .btn[disabled], .btn[aria-disabled="true"] {
+    opacity: .6; pointer-events: none;
+  }
+</style>
+
+
 </head>
 <body>
 <!-- Header -->
