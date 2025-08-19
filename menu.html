@@ -291,7 +291,7 @@
   .hero-img{width:100%;height:auto;max-width:1200px}
 
   .sticky-actions{
-    position:sticky;
+    position:sticky;          /* stays at bottom of viewport within page */
     bottom:0;
     display:flex;
     gap:.5rem;
@@ -302,22 +302,35 @@
     justify-content:center
   }
 
-  /* --- Buttons unified orange style --- */
-  :root{
-    --brand:#ff6a00;
-    --brand-d:#e55b00;
+  .site-header .nav-toggle{background:none;border:0}
+
+  /* a11y helper */
+  .visually-hidden{
+    position:absolute!important;
+    clip:rect(1px,1px,1px,1px);
+    padding:0;border:0;height:1px;width:1px;overflow:hidden;white-space:nowrap
   }
+
+  /* ---------- Unified orange buttons ---------- */
+  :root{
+    --brand:#ff6a00;   /* main orange */
+    --brand-d:#e55b00; /* hover/darker */
+  }
+
   .btn{
     display:inline-block;
-    padding:.6rem 1rem;
+    padding:.65rem 1.1rem;
     border-radius:.5rem;
     text-decoration:none;
     border:2px solid var(--brand);
     background:var(--brand);
     color:#fff;
     font-weight:600;
-    transition:background .2s ease,border-color .2s ease,transform .2s ease;
+    line-height:1.1;
+    transition:background .2s ease,border-color .2s ease,transform .2s ease,opacity .2s ease;
+    -webkit-tap-highlight-color: transparent;
   }
+
   .btn:hover,
   .btn:focus{
     background:var(--brand-d);
@@ -326,7 +339,13 @@
     transform:translateY(-1px);
   }
 
-  /* Force variant classes to look the same */
+  .btn:focus-visible{ outline:3px solid rgba(255,106,0,.35); outline-offset:2px }
+  .btn:disabled,
+  .btn[aria-disabled="true"]{
+    opacity:.6; cursor:not-allowed; transform:none
+  }
+
+  /* Force all variants to match */
   .btn.primary,
   .btn.accent,
   .btn.secondary{
@@ -335,20 +354,14 @@
     color:#fff !important;
   }
 
-  .site-header .nav-toggle{background:none;border:0}
-
-  /* a11y helper */
-  .visually-hidden{
-    position:absolute!important;
-    clip:rect(1px,1px,1px,1px);
-    padding:0;
-    border:0;
-    height:1px;
-    width:1px;
-    overflow:hidden;
-    white-space:nowrap
+  /* Sticky bar buttons inherit the same look */
+  .sticky-actions .btn{
+    background:var(--brand) !important;
+    border-color:var(--brand) !important;
+    color:#fff !important;
   }
 </style>
+
 
 
   <style>
