@@ -287,15 +287,107 @@
   /* Minimal critical CSS to prevent CLS from sticky bar; extend as needed */
   html{--sticky-h:48px}
   body{padding-bottom:var(--sticky-h)}
+
   .hero-img{width:100%;height:auto;max-width:1200px}
-  .sticky-actions{position:sticky;bottom:0;display:flex;gap:.5rem;padding:.5rem;min-height:48px;background:#fff;border-top:1px solid #eee;justify-content:center}
-  .btn{display:inline-block;padding:.6rem 1rem;border-radius:.5rem;text-decoration:none;border:1px solid #ddd}
-  .btn.primary{background:#111;color:#fff;border-color:#111}
-  .btn.accent{background:#f7f7f7}
+
+  .sticky-actions{
+    position:sticky;
+    bottom:0;
+    display:flex;
+    gap:.5rem;
+    padding:.5rem;
+    min-height:48px;
+    background:#fff;
+    border-top:1px solid #eee;
+    justify-content:center
+  }
+
+  /* --- Buttons unified orange style --- */
+  :root{
+    --brand:#ff6a00;
+    --brand-d:#e55b00;
+  }
+  .btn{
+    display:inline-block;
+    padding:.6rem 1rem;
+    border-radius:.5rem;
+    text-decoration:none;
+    border:2px solid var(--brand);
+    background:var(--brand);
+    color:#fff;
+    font-weight:600;
+    transition:background .2s ease,border-color .2s ease,transform .2s ease;
+  }
+  .btn:hover,
+  .btn:focus{
+    background:var(--brand-d);
+    border-color:var(--brand-d);
+    color:#fff;
+    transform:translateY(-1px);
+  }
+
+  /* Force variant classes to look the same */
+  .btn.primary,
+  .btn.accent,
+  .btn.secondary{
+    background:var(--brand) !important;
+    border-color:var(--brand) !important;
+    color:#fff !important;
+  }
+
   .site-header .nav-toggle{background:none;border:0}
+
   /* a11y helper */
-  .visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;white-space:nowrap}
+  .visually-hidden{
+    position:absolute!important;
+    clip:rect(1px,1px,1px,1px);
+    padding:0;
+    border:0;
+    height:1px;
+    width:1px;
+    overflow:hidden;
+    white-space:nowrap
+  }
 </style>
+
+
+  <style>
+  :root { --brand:#ff6a00; --brand-d:#e55b00; }
+
+  /* Force all buttons to orange + white */
+  .btn{
+    background:var(--brand) !important;
+    color:#fff !important;
+    border:2px solid var(--brand) !important;
+    border-radius:6px;
+    padding:.75em 1.25em;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-block;
+    transition:background .2s ease, border-color .2s ease, transform .2s ease;
+  }
+  .btn:hover, .btn:focus{
+    background:var(--brand-d) !important;
+    border-color:var(--brand-d) !important;
+    color:#fff !important;
+    transform:translateY(-1px);
+  }
+
+  /* Neutralize any variant classes so they still look orange */
+  .btn.primary, .btn.accent, .btn.secondary{
+    background:var(--brand) !important;
+    color:#fff !important;
+    border-color:var(--brand) !important;
+  }
+
+  /* Sticky bar buttons too */
+  .sticky-actions .btn{
+    background:var(--brand) !important;
+    color:#fff !important;
+    border-color:var(--brand) !important;
+  }
+</style>
+
 </head>
 
 <body>
