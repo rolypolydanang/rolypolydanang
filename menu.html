@@ -804,7 +804,7 @@
 
 <!-- Utilities -->
 <script>document.getElementById('current-year').textContent=new Date().getFullYear();</script>
-
+<script>
   document.addEventListener('DOMContentLoaded',()=>{
     const t=document.querySelector('.nav-toggle'),n=document.getElementById('main-nav');
     function set(o){t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'Close menu':'Open menu');n.classList.toggle('open',o)}
