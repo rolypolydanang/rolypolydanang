@@ -28,16 +28,93 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BLRTTJDJYL');</script>
 
-<!-- JSON-LD -->
-<script type="application/ld+json">{
+<!-- JSON-LD: WebSite -->
+<script type="application/ld+json">
+{
   "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.rolypolydanang.vn/"},
-    {"@type":"ListItem","position":2,"name":"Menu","item":"https://www.rolypolydanang.vn/menu"}
-  ]
-}</script>
-<script type="application/ld+json">{
+  "@type":"WebSite",
+  "@id":"https://www.rolypolydanang.vn/#website",
+  "url":"https://www.rolypolydanang.vn/",
+  "name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+  "inLanguage":"en",
+  "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" }
+}
+</script>
+
+<!-- JSON-LD: Restaurant (menu page; consistent with homepage) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Restaurant","CafeOrCoffeeShop"],
+  "@id": "https://www.rolypolydanang.vn/#restaurant",
+  "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+  "url": "https://www.rolypolydanang.vn/",
+  "image": [
+    "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
+    "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
+  ],
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.rolypolydanang.vn/images/logo.jpg",
+    "width": 160,
+    "height": 48
+  },
+  "description": "Fresh Vietnamese spring rolls café and coffee shop in An Thượng near Mỹ Khê Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
+  "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha"],
+  "priceRange": "₫",
+  "telephone": "+84 327 306 076",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
+    "addressLocality": "Ngũ Hành Sơn",
+    "addressRegion": "Đà Nẵng",
+    "postalCode": "550000",
+    "addressCountry": "VN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "20:00"
+  }],
+  "hasMenu": { "@id": "https://www.rolypolydanang.vn/menu#menu" },
+  "acceptsReservations": false,
+  "paymentAccepted": "Cash, Visa, Mastercard, Apple Pay, MoMo",
+  "currenciesAccepted": "VND",
+  "areaServed": ["An Thượng, Ngũ Hành Sơn, Đà Nẵng","Mỹ Khê Beach area"],
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Delivery service",
+    "areaServed": "An Thượng, Ngũ Hành Sơn, Đà Nẵng",
+    "availableDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet",
+    "eligibleRegion": "Đà Nẵng, VN",
+    "price": "0",
+    "priceCurrency": "VND",
+    "url": "https://www.rolypolydanang.vn/menu#delivery-cta"
+  },
+  "sameAs": [
+    "https://www.facebook.com/rolypolydanang",
+    "https://www.instagram.com/rolypolydanang",
+    "https://www.tiktok.com/@rolypolydanang",
+    "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662-Reviews-Roly_Poly_Fresh_Spring_Rolls_Da_Nang",
+    "https://www.google.com/maps?cid=8457966646420358159"
+  ],
+  "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+84 327 306 076",
+    "contactType": "customer service",
+    "areaServed": "VN",
+    "availableLanguage": ["en","vi"]
+  }]
+}
+</script>
+
+
+<!-- JSON-LD: WebPage (Menu page) -->
+<script type="application/ld+json">
+{
   "@context":"https://schema.org",
   "@type":"WebPage",
   "@id":"https://www.rolypolydanang.vn/menu#webpage",
@@ -47,51 +124,95 @@
   "inLanguage":"en",
   "isPartOf":{"@id":"https://www.rolypolydanang.vn/#website"},
   "about":{"@id":"https://www.rolypolydanang.vn/#restaurant"}
-}</script>
-<script type="application/ld+json">{
+}
+</script>
+
+<!-- JSON-LD: Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.rolypolydanang.vn/"},
+    {"@type":"ListItem","position":2,"name":"Menu","item":"https://www.rolypolydanang.vn/menu"}
+  ]
+}
+</script>
+
+<!-- JSON-LD: Menu (enriched) -->
+<script type="application/ld+json">
+{
   "@context":"https://schema.org",
   "@type":"Menu",
   "@id":"https://www.rolypolydanang.vn/menu#menu",
   "inLanguage":"en",
   "name":"Roly Poly Menu",
   "hasMenuSection":[
-    {"@type":"MenuSection","name":"Set Pricing","description":"Mix & Match Fresh Vietnamese Spring Rolls (Gỏi Cuốn). Includes noodles, greens & herbs. Choose a house-made sauce.","hasMenuItem":[
-      {"@type":"MenuItem","name":"3 Fresh Spring Rolls","offers":{"@type":"Offer","price":"105000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"4 Fresh Spring Rolls","offers":{"@type":"Offer","price":"140000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"5 Fresh Spring Rolls","offers":{"@type":"Offer","price":"175000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"6 Fresh Spring Rolls","offers":{"@type":"Offer","price":"210000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Single Fresh Spring Roll","description":"+10k Garlic Prawn; +5k Smoked Goose or Lemongrass Beef","offers":{"@type":"Offer","price":"40000","priceCurrency":"VND"}}
-    ]},
-    {"@type":"MenuSection","name":"Fillings","hasMenuItem":[
-      {"@type":"MenuItem","name":"Garlic Prawn","description":"Gluten-free","offers":{"@type":"Offer","price":"10000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Smoked Goose","description":"Gluten-free","offers":{"@type":"Offer","price":"5000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Lemongrass Beef","offers":{"@type":"Offer","price":"5000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Soy Glazed Pork Belly"},
-      {"@type":"MenuItem","name":"Satay Chicken","description":"Contains peanuts; gluten-free"},
-      {"@type":"MenuItem","name":"Poached Chicken & Avocado","description":"Gluten-free"},
-      {"@type":"MenuItem","name":"Tofu, Mushroom & Avocado (Vegan)","description":"Vegan, gluten-free"}
-    ]},
-    {"@type":"MenuSection","name":"Dipping Sauces","hasMenuItem":[
-      {"@type":"MenuItem","name":"Peanut Sauce (Vegan)"},
-      {"@type":"MenuItem","name":"Toasted Sesame Sauce (Vegan)"},
-      {"@type":"MenuItem","name":"Vietnamese Fish Sauce (Gluten-free)"}
-    ]},
-    {"@type":"MenuSection","name":"Fresh Juices — 250 mL","hasMenuItem":[
-      {"@type":"MenuItem","name":"Mỹ Khê Sunrise","description":"Pineapple, watermelon, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Along the Hàn","description":"Watermelon, cucumber, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Lantern in Hội An","description":"Orange, passionfruit, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Orange / Watermelon / Pineapple / Passionfruit","offers":{"@type":"Offer","price":"50000","priceCurrency":"VND"}}
-    ]},
-    {"@type":"MenuSection","name":"Vietnamese Coffee & Matcha","hasMenuItem":[
-      {"@type":"MenuItem","name":"Iced Milk Coffee (Cà phê sữa đá)","offers":{"@type":"Offer","price":"35000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Iced Black Coffee","offers":{"@type":"Offer","price":"30000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Iced Salted Coffee","offers":{"@type":"Offer","price":"50000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Iced Coconut Coffee","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Iced Matcha Latte (Oat Milk)","offers":{"@type":"Offer","price":"65000","priceCurrency":"VND"}},
-      {"@type":"MenuItem","name":"Iced Strawberry Matcha Latte","offers":{"@type":"Offer","price":"75000","priceCurrency":"VND"}}
-    ]}
+    {
+      "@type":"MenuSection",
+      "name":"Set Pricing",
+      "url":"https://www.rolypolydanang.vn/menu#spring-rolls",
+      "description":"Mix & Match Fresh Vietnamese Spring Rolls (Gỏi Cuốn). Includes noodles, greens & herbs. Choose a house-made sauce.",
+      "hasMenuItem":[
+        {"@type":"MenuItem","name":"3 Fresh Spring Rolls","offers":{"@type":"Offer","price":"105000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"4 Fresh Spring Rolls","offers":{"@type":"Offer","price":"140000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"5 Fresh Spring Rolls","offers":{"@type":"Offer","price":"175000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"6 Fresh Spring Rolls","offers":{"@type":"Offer","price":"210000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Single Fresh Spring Roll","description":"+10k Garlic Prawn; +5k Smoked Goose or Lemongrass Beef","offers":{"@type":"Offer","price":"40000","priceCurrency":"VND"}}
+      ]
+    },
+    {
+      "@type":"MenuSection",
+      "name":"Fillings",
+      "url":"https://www.rolypolydanang.vn/menu#spring-rolls",
+      "hasMenuItem":[
+        {"@type":"MenuItem","name":"Garlic Prawn","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet","offers":{"@type":"Offer","price":"10000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Smoked Goose","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet","offers":{"@type":"Offer","price":"5000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Lemongrass Beef","offers":{"@type":"Offer","price":"5000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Soy Glazed Pork Belly"},
+        {"@type":"MenuItem","name":"Satay Chicken","description":"Contains peanuts; gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet"},
+        {"@type":"MenuItem","name":"Poached Chicken & Avocado","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet"},
+        {"@type":"MenuItem","name":"Tofu, Mushroom & Avocado (Vegan)","description":"Vegan, gluten-free","suitableForDiet":["https://schema.org/VeganDiet","https://schema.org/GlutenFreeDiet"]}
+      ]
+    },
+    {
+      "@type":"MenuSection",
+      "name":"Dipping Sauces",
+      "url":"https://www.rolypolydanang.vn/menu#sauces",
+      "hasMenuItem":[
+        {"@type":"MenuItem","name":"Peanut Sauce (Vegan)","suitableForDiet":"https://schema.org/VeganDiet"},
+        {"@type":"MenuItem","name":"Toasted Sesame Sauce (Vegan)","suitableForDiet":"https://schema.org/VeganDiet"},
+        {"@type":"MenuItem","name":"Vietnamese Fish Sauce (Gluten-free)","suitableForDiet":"https://schema.org/GlutenFreeDiet"}
+      ]
+    },
+    {
+      "@type":"MenuSection",
+      "name":"Fresh Juices — 250 mL",
+      "url":"https://www.rolypolydanang.vn/menu#juices",
+      "hasMenuItem":[
+        {"@type":"MenuItem","name":"Mỹ Khê Sunrise","description":"Pineapple, watermelon, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Along the Hàn","description":"Watermelon, cucumber, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Lantern in Hội An","description":"Orange, passionfruit, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Orange / Watermelon / Pineapple / Passionfruit","offers":{"@type":"Offer","price":"50000","priceCurrency":"VND"}}
+      ]
+    },
+    {
+      "@type":"MenuSection",
+      "name":"Vietnamese Coffee & Matcha",
+      "url":"https://www.rolypolydanang.vn/menu#coffee",
+      "hasMenuItem":[
+        {"@type":"MenuItem","name":"Iced Milk Coffee (Cà phê sữa đá)","offers":{"@type":"Offer","price":"35000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Iced Black Coffee","offers":{"@type":"Offer","price":"30000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Iced Salted Coffee","offers":{"@type":"Offer","price":"50000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Iced Coconut Coffee","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Iced Matcha Latte (Oat Milk)","offers":{"@type":"Offer","price":"65000","priceCurrency":"VND"}},
+        {"@type":"MenuItem","name":"Iced Strawberry Matcha Latte","offers":{"@type":"Offer","price":"75000","priceCurrency":"VND"}}
+      ]
+    }
   ]
-}</script>
+}
+</script>
+
 
 <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
 </head>
