@@ -184,76 +184,44 @@
   <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
 
    <style>
-  /* HERO (about page): remove dark background */
-  .hero#about {
-    background:#fff !important;
-    color:#222;
-    position:relative;
-  }
+  /* HERO: remove any dark tint/filters site-wide */
+  .hero,
+  #contact.hero { background:#fff !important; color:#222 !important; position:relative; }
+  .hero .hero-overlay,
+  .hero::before,
+  .hero::after { background:transparent !important; content:none !important; }
+  .hero .hero-img { filter:none !important; opacity:1 !important; mix-blend-mode:normal !important; }
 
-  .hero#about .hero-overlay {
-    background:transparent !important;
-  }
-
-  .hero#about .hero-img {
-    filter:none !important; /* remove any darkening filters */
-  }
-
-  .hero#about .btn {
-    background:var(--brand);
-    color:#fff !important;
-    border:2px solid var(--brand);
-  }
-  .hero#about .btn:hover,
-  .hero#about .btn:focus {
-    background:var(--brand-d);
-    border-color:var(--brand-d);
-  }
-</style>
-
-  <style>
-  /* Force white sticky bar across pages */
+  /* STICKY BAR: force solid white (no blur/tint) */
   nav.sticky-actions,
-  .sticky-actions,
-  body nav.sticky-actions {
-    position: fixed;
-    left: 0; right: 0; bottom: 0;
-    background: #fff !important;
-    color: #111 !important;
-    border-top: 1px solid #eee !important;
-    box-shadow: 0 -2px 10px rgba(0,0,0,.05) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    z-index: 1000 !important;
-    padding-bottom: env(safe-area-inset-bottom);
+  .sticky-actions { 
+    position:fixed; left:0; right:0; bottom:0;
+    background:#fff !important; color:#111 !important;
+    border-top:1px solid #eee !important;
+    box-shadow:0 -2px 10px rgba(0,0,0,.05) !important;
+    backdrop-filter:none !important; -webkit-backdrop-filter:none !important;
+    z-index:1000 !important; padding-bottom:env(safe-area-inset-bottom);
   }
 
-  /* Make sure buttons stay readable on white */
-  nav.sticky-actions .btn,
+  /* Buttons stay on-brand atop white bar */
   .sticky-actions .btn {
-    background: var(--brand, #ff6a00);
-    border: 2px solid var(--brand, #ff6a00);
-    color: #fff !important;
+    background:var(--brand, #ff6a00);
+    border:2px solid var(--brand, #ff6a00);
+    color:#fff !important;
   }
-  nav.sticky-actions .btn:hover,
-  .sticky-actions .btn:hover,
-  nav.sticky-actions .btn:focus,
-  .sticky-actions .btn:focus {
-    background: var(--brand-d, #e55b00);
-    border-color: var(--brand-d, #e55b00);
+  .sticky-actions .btn:hover, .sticky-actions .btn:focus {
+    background:var(--brand-d, #e55b00); border-color:var(--brand-d, #e55b00);
   }
 
-  /* Keep page content visible above the fixed bar */
-  main { 
-    padding-bottom: calc(var(--sticky-h, 56px) + env(safe-area-inset-bottom));
-  }
+  /* Keep content visible above fixed bar */
+  main { padding-bottom:calc(var(--sticky-h, 56px) + env(safe-area-inset-bottom)); }
 
-  /* If any dark theme CSS is toggling colors, neutralize for sticky */
+  /* Prevent dark-mode styles from re-darkening */
   @media (prefers-color-scheme: dark) {
-    nav.sticky-actions,
-    .sticky-actions { background:#fff !important; color:#111 !important; }
+    .hero, .sticky-actions { background:#fff !important; color:#111 !important; }
   }
 </style>
+
 </head>
 <body>
 <!-- Header -->
