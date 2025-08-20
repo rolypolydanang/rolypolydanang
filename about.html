@@ -31,8 +31,9 @@
   <meta property="og:image:height" content="900">
   <meta property="og:image:alt" content="Roly Poly Vietnamese café shopfront in An Thượng, Đà Nẵng">
   <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang">
-  <meta property="og:locale" content="en_VN">
-  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="vi_VN">
+
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -69,189 +70,214 @@
   </script>
 
   <!-- Structured Data (About page) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["Restaurant","CafeOrCoffeeShop"],
-        "@id": "https://www.rolypolydanang.vn/#restaurant",
-        "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-        "url": "https://www.rolypolydanang.vn/",
-        "image": [
-          "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
-          "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
-        ],
-        "alternateName": [
-          "Roly Poly Da Nang",
-          "Roly Poly Fresh Spring Rolls Da Nang"
-        ],
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.rolypolydanang.vn/images/logo.jpg",
-          "width": 160,
-          "height": 48
-        },
-        "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thượng near Mỹ Khê Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
-        "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha"],
-        "priceRange": "₫",
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Restaurant","CafeOrCoffeeShop"],
+      "@id": "https://www.rolypolydanang.vn/#restaurant",
+      "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+      "url": "https://www.rolypolydanang.vn/",
+      "image": [
+        "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
+        "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
+      ],
+      "alternateName": [
+        "Roly Poly Da Nang",
+        "Roly Poly Fresh Spring Rolls Da Nang"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rolypolydanang.vn/images/logo.jpg",
+        "width": 160,
+        "height": 48
+      },
+      "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thượng near Mỹ Khê Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
+      "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha"],
+      "priceRange": "₫",
+      "telephone": "+84327306076",
+      "email": "rolypolydanang@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
+        "addressLocality": "Ngũ Hành Sơn",
+        "addressRegion": "Đà Nẵng",
+        "postalCode": "550000",
+        "addressCountry": "VN"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" }
+      ],
+      "menu": "https://www.rolypolydanang.vn/menu",
+      "hasMenu": { "@id": "https://www.rolypolydanang.vn/menu#menu" },
+      "acceptsReservations": false,
+      "paymentAccepted": ["Cash","Visa","Mastercard","Apple Pay","MoMo"],
+      "currenciesAccepted": "VND",
+      "areaServed": [
+        "An Thượng, Ngũ Hành Sơn, Da Nang",
+        "My Khe Beach area"
+      ],
+      "makesOffer": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" },
+      "sameAs":[
+        "https://www.facebook.com/rolypolydanang",
+        "https://www.instagram.com/rolypolydanang",
+        "https://www.tiktok.com/@rolypolydanang",
+        "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662",
+        "https://www.google.com/maps?cid=8457966646420358159"
+      ],
+      "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
+      "contactPoint": [{
+        "@type": "ContactPoint",
         "telephone": "+84327306076",
         "email": "rolypolydanang@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
-          "addressLocality": "Ngũ Hành Sơn",
-          "addressRegion": "Đà Nẵng",
-          "postalCode": "550000",
-          "addressCountry": "VN"
+        "contactType": "customer service",
+        "areaServed": "VN",
+        "availableLanguage": ["en","vi"]
+      }]
+    },
+
+    {
+      "@type":"WebSite",
+      "@id":"https://www.rolypolydanang.vn/#website",
+      "url":"https://www.rolypolydanang.vn/",
+      "name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+      "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "inLanguage":["en","vi"]
+    },
+
+    {
+      "@type": ["WebPage","AboutPage"],
+      "@id": "https://www.rolypolydanang.vn/about#webpage",
+      "url": "https://www.rolypolydanang.vn/about",
+      "name": "About Roly Poly Da Nang | Our Story & Values",
+      "description": "Our story, ingredients, and values at Roly Poly — fresh gỏi cuốn, house-made sauces, Vietnamese coffee & matcha near My Khe Beach.",
+      "isPartOf": { "@id": "https://www.rolypolydanang.vn/#website" },
+      "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "mainEntity": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "primaryImageOfPage": { "@id": "https://www.rolypolydanang.vn/about#heroimage" },
+      "breadcrumb": { "@id": "https://www.rolypolydanang.vn/about#breadcrumb" },
+      "hasPart": [{ "@id": "https://www.rolypolydanang.vn/about#faq" }],
+      "inLanguage": ["en","vi"]
+    },
+
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.rolypolydanang.vn/about#heroimage",
+      "url": "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp",
+      "width": 1600,
+      "height": 900,
+      "caption": "Roly Poly shopfront on An Thượng 6 near My Khe Beach"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.rolypolydanang.vn/about#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.rolypolydanang.vn/", "name": "Home" } },
+        { "@type": "ListItem", "position": 2, "item": { "@id": "https://www.rolypolydanang.vn/about", "name": "About" } }
+      ]
+    },
+
+    {
+      "@type": "Menu",
+      "@id": "https://www.rolypolydanang.vn/menu#menu",
+      "name": "Roly Poly Menu",
+      "url": "https://www.rolypolydanang.vn/menu"
+    },
+
+    {
+      "@type": "Offer",
+      "@id": "https://www.rolypolydanang.vn/#delivery-offer",
+      "name": "Delivery service",
+      "areaServed": "An Thượng, Ngũ Hành Sơn, Đà Nẵng",
+      "availableDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet",
+      "eligibleRegion": "Đà Nẵng, VN",
+      "price": "0",
+      "priceCurrency": "VND",
+      "url": "https://www.rolypolydanang.vn/menu#delivery-cta"
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.rolypolydanang.vn/about#faq",
+      "url": "https://www.rolypolydanang.vn/about#faq",
+      "name": "Roly Poly About — FAQ",
+      "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "mainEntityOfPage": { "@id": "https://www.rolypolydanang.vn/about#webpage" },
+      "inLanguage": ["en","vi"],
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why gỏi cuốn—and why the name “Roly Poly”?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We love the balance and portability of gỏi cuốn—fresh herbs, vegetables, noodles and protein in one tidy roll. “Roly Poly” is a playful nod to the rolling technique and to keeping things simple and fun."
+          }
         },
-        "geo": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" }
-        ],
-        "menu": "https://www.rolypolydanang.vn/menu",
-        "hasMenu": { "@id": "https://www.rolypolydanang.vn/menu#menu" },
-        "acceptsReservations": false,
-        "paymentAccepted": ["Cash","Visa","Mastercard","Apple Pay","MoMo"],
-        "currenciesAccepted": "VND",
-        "areaServed": [
-          "An Thượng, Ngũ Hành Sơn, Da Nang",
-          "My Khe Beach area"
-        ],
-        "makesOffer": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" },
-        "sameAs":[
-          "https://www.facebook.com/rolypolydanang",
-          "https://www.instagram.com/rolypolydanang",
-          "https://www.tiktok.com/@rolypolydanang",
-          "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662",
-          "https://www.google.com/maps?cid=8457966646420358159"
-        ],
-        "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "telephone": "+84327306076",
-          "email": "rolypolydanang@gmail.com",
-          "contactType": "customer service",
-          "areaServed": "VN",
-          "availableLanguage": ["en","vi"]
-        }]
-      },
-
-      {
-        "@type":"WebSite",
-        "@id":"https://www.rolypolydanang.vn/#website",
-        "url":"https://www.rolypolydanang.vn/",
-        "name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-        "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "inLanguage":["en","vi"]
-      },
-
-      {
-        "@type": ["WebPage","AboutPage"],
-        "@id": "https://www.rolypolydanang.vn/about#webpage",
-        "url": "https://www.rolypolydanang.vn/about",
-        "name": "About Roly Poly — Vietnamese Restaurant & Café in Da Nang",
-        "description": "Our story, ingredients, and values at Roly Poly — fresh gỏi cuốn, house-made sauces, Vietnamese coffee & matcha near My Khe Beach.",
-        "isPartOf": { "@id": "https://www.rolypolydanang.vn/#website" },
-        "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "mainEntity": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "primaryImageOfPage": { "@id": "https://www.rolypolydanang.vn/about#heroimage" },
-        "breadcrumb": { "@id": "https://www.rolypolydanang.vn/about#breadcrumb" },
-        "hasPart": [{ "@id": "https://www.rolypolydanang.vn/about#faq" }],
-        "inLanguage": ["en","vi"]
-      },
-
-      {
-        "@type": "ImageObject",
-        "@id": "https://www.rolypolydanang.vn/about#heroimage",
-        "url": "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp",
-        "width": 1600,
-        "height": 900,
-        "caption": "Roly Poly shopfront on An Thượng 6 near My Khe Beach"
-      },
-
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.rolypolydanang.vn/about#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": { "@id": "https://www.rolypolydanang.vn/", "name": "Home" }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": { "@id": "https://www.rolypolydanang.vn/about", "name": "About" }
+        {
+          "@type": "Question",
+          "name": "Are your spring rolls made to order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We hand-roll to order so everything tastes bright and fresh, with herbs and greens prepped throughout the day."
           }
-        ]
-      },
-
-      {
-        "@type": "Menu",
-        "@id": "https://www.rolypolydanang.vn/menu#menu",
-        "name": "Roly Poly Menu",
-        "url": "https://www.rolypolydanang.vn/menu"
-      },
-
-      {
-        "@type": "Offer",
-        "@id": "https://www.rolypolydanang.vn/#delivery-offer",
-        "name": "Delivery service",
-        "areaServed": "An Thượng, Ngũ Hành Sơn, Đà Nẵng",
-        "availableDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet",
-        "eligibleRegion": "Đà Nẵng, VN",
-        "price": "0",
-        "priceCurrency": "VND",
-        "url": "https://www.rolypolydanang.vn/menu#delivery-cta"
-      },
-
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.rolypolydanang.vn/about#faq",
-        "url": "https://www.rolypolydanang.vn/about#faq",
-        "name": "Roly Poly About — FAQ",
-        "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "mainEntityOfPage": { "@id": "https://www.rolypolydanang.vn/about#webpage" },
-        "inLanguage": ["en","vi"],
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do you have vegan or gluten-free spring rolls?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We offer tofu, mushroom & avocado fillings. Many options are vegan and gluten-free; please ask our team and we’ll guide you."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you deliver?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We offer free delivery within 3 km and are also available on GrabFood."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What are your opening hours?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Mon–Sat 10:00–20:00. Closed Sunday."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where are you located?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000 — a short walk from Mỹ Khê Beach."
-            }
+        },
+        {
+          "@type": "Question",
+          "name": "What’s typically inside a roll?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rice vermicelli, crisp lettuce, carrot, cucumber, fresh mint and coriander—then your chosen filling—rolled in soft rice paper. Pair with a house-made sauce."
           }
-        ]
-      }
-    ]
-  }
-  </script>
+        },
+        {
+          "@type": "Question",
+          "name": "How do you source ingredients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We buy herbs and produce locally in Đà Nẵng whenever possible and prep proteins in small batches for clean, consistent flavor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sauces do you make in-house?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Peanut, toasted sesame and classic nước chấm (Vietnamese fish sauce)—crafted to complement the rolls without overpowering them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you accommodate gluten-free or vegan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Please tell our team when ordering. We can make rolls gluten-free (we’ll omit fried shallots, which contain gluten) and we have several vegan options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about your drinks—coffee and matcha?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We brew Vietnamese phin coffee and whisk ceremonial-grade matcha sourced directly from Japan—simple drinks we love, prepared with care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the café laptop-friendly? Do you take reservations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes—there’s Wi-Fi and a few quiet corners. We’re casual and walk-in friendly; for groups over 6, please call +84 327 306 076 and we’ll try to arrange seating."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 
   <!-- Minor page styles -->
   <style>
@@ -508,7 +534,7 @@
     <h2 id="process-title">How We Roll</h2>
     <ol>
       <li><strong>Prep:</strong> Wash and chill herbs and greens; cook noodles; prepare proteins.</li>
-      <li><strong>Layer:</strong> Rice paper, rice vermicelli, crisp veg, fresh herbs, chosen filling.</li>
+<li><strong>Layer:</strong> Rice paper, rice vermicelli, crisp vegetables, fresh herbs, chosen filling.</li>
       <li><strong>Roll:</strong> Tight enough to hold together, gentle enough to keep textures lively.</li>
       <li><strong>Serve:</strong> Pair with a house-made dipping sauce—peanut, toasted sesame or fish sauce.</li>
     </ol>
@@ -535,86 +561,53 @@
   </div>
 </section>
 
-
-<!-- Gallery -->
-<section class="info-section" aria-labelledby="gallery-heading">
+<section class="info-section" id="faq" aria-labelledby="faq-title">
   <div class="container">
-    <h2 id="gallery-heading">Photo Gallery — Spring Rolls, Sauces &amp; Drinks in Da Nang</h2>
-    <div class="gallery-grid" role="list">
+    <h2 id="faq-title">FAQ</h2>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="See fresh spring rolls menu">
-          <img src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" width="600" height="450" alt="Assorted fresh spring rolls with house-made sauces at Roly Poly Da Nang near My An Beach" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Fresh spring rolls — <a href="/menu#spring-rolls">see fillings &amp; prices</a></figcaption>
-      </figure>
+    <article class="faq-item" role="listitem">
+      <h3>Why gỏi cuốn—and why the name “Roly Poly”?</h3>
+      <p>We love the balance and portability of gỏi cuốn—fresh herbs, vegetables, noodles and protein in one tidy roll. “Roly Poly” is a playful nod to the rolling technique and to keeping things simple and fun.</p>
+    </article>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="Garlic prawn spring rolls">
-          <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" width="600" height="450" alt="Garlic prawn spring roll with herbs and vermicelli at Roly Poly in An Thuong" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Garlic prawn — <a href="/menu#spring-rolls">popular filling</a></figcaption>
-      </figure>
+    <article class="faq-item" role="listitem">
+      <h3>Are your spring rolls made to order?</h3>
+      <p>Yes. We hand-roll to order so everything tastes bright and fresh, with herbs and greens prepped throughout the day.</p>
+    </article>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="Lemongrass beef spring rolls">
-          <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp" width="600" height="450" alt="Lemongrass beef spring roll with dipping sauce at Roly Poly Da Nang, An Thuong" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Lemongrass beef — <a href="/menu#spring-rolls">see all options</a></figcaption>
-      </figure>
+    <article class="faq-item" role="listitem">
+      <h3>What’s typically inside a roll?</h3>
+      <p>Rice vermicelli, crisp lettuce, carrot, cucumber, fresh mint and coriander—then your chosen filling—rolled in soft rice paper. Pair with a house-made sauce.</p>
+    </article>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#spring-rolls" aria-label="Soy glazed pork belly spring rolls">
-          <img src="/images/soy-glazed-pork-belly-spring-roll-roly-poly-da-nang.webp" width="600" height="450" alt="Soy glazed pork belly spring roll with rice noodles and herbs at Roly Poly Da Nang" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Soy glazed pork belly — <a href="/menu#spring-rolls">build a set</a></figcaption>
-      </figure>
+    <article class="faq-item" role="listitem">
+      <h3>How do you source ingredients?</h3>
+      <p>We buy herbs and produce locally in Đà Nẵng whenever possible and prep proteins in small batches for clean, consistent flavor.</p>
+    </article>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#sauces" aria-label="See dipping sauces">
-          <img src="/images/trio-of-sauces-roly-poly-da-nang.webp" width="600" height="450" alt="Peanut, sesame and fish sauce dips at Roly Poly Da Nang" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>House-made dipping sauces — <a href="/menu#sauces">peanut, sesame &amp; nước chấm</a></figcaption>
-      </figure>
+    <article class="faq-item" role="listitem">
+      <h3>What sauces do you make in-house?</h3>
+      <p>Peanut, toasted sesame and classic <em>nước chấm</em> (Vietnamese fish sauce)—crafted to complement the rolls without overpowering them.</p>
+    </article>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#juices" aria-label="See fresh juices">
-          <img src="/images/my-khe-sunrise-juice-roly-poly-da-nang.webp" width="600" height="450" alt="Mỹ Khê Sunrise juice with pineapple, watermelon and lime at Roly Poly Da Nang" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Fresh juices — <a href="/menu#juices">view the juice menu</a></figcaption>
-      </figure>
+    <article class="faq-item" role="listitem">
+      <h3>Can you accommodate gluten-free or vegan?</h3>
+      <p>Yes. Please tell our team when ordering. We can make rolls gluten-free (we’ll omit fried shallots, which contain gluten) and we have several vegan options.</p>
+    </article>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#coffee" aria-label="See matcha and coffee">
-          <img src="/images/iced-strawberry-matcha-latte-roly-poly-da-nang.webp" width="600" height="450" alt="Iced strawberry matcha latte at Roly Poly in An Thuong" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Ceremonial matcha latte — <a href="/menu#coffee">see matcha lattes</a></figcaption>
-      </figure>
+    <article class="faq-item" role="listitem">
+      <h3>What about your drinks—coffee and matcha?</h3>
+      <p>We brew Vietnamese <em>phin</em> coffee and whisk ceremonial-grade matcha sourced directly from Japan—simple drinks we love, prepared with care.</p>
+    </article>
 
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#coffee" aria-label="See coconut coffee">
-          <img src="/images/iced-coconut-coffee-roly-poly-da-nang.webp" width="600" height="450" alt="Creamy iced coconut coffee at Roly Poly Da Nang, near My An Beach" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Coconut coffee — <a href="/menu#coffee">coffee &amp; specials</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/menu#coffee" aria-label="See salted coffee">
-          <img src="/images/iced-salted-coffee-roly-poly-da-nang.webp" width="600" height="450" alt="Vietnamese iced salted coffee with cream foam at Roly Poly in An Thuong" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Salted coffee — <a href="/menu#coffee">Vietnamese coffee</a></figcaption>
-      </figure>
-
-      <figure class="gallery-item" role="listitem">
-        <a href="/contact" aria-label="See contact &amp; location">
-          <img src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" width="1600" height="900" alt="Roly Poly Fresh Spring Rolls Da Nang shopfront in An Thuong near My An Beach" decoding="async" loading="lazy" />
-        </a>
-        <figcaption>Visit us in An Thuong — <a href="/contact">contact &amp; location</a></figcaption>
-      </figure>
-
-    </div>
+    <article class="faq-item" role="listitem">
+      <h3>Is the café laptop-friendly? Do you take reservations?</h3>
+      <p>Yes—there’s Wi-Fi and a few quiet corners. We’re casual and walk-in friendly; for groups over 6, please call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> and we’ll try to arrange seating.</p>
+    </article>
   </div>
 </section>
+
+
 
 </main>
 
