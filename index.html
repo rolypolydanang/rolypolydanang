@@ -82,235 +82,204 @@
 
   <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["Restaurant","CafeOrCoffeeShop"],
-        "@id": "https://www.rolypolydanang.vn/#restaurant",
-        "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-        "url": "https://www.rolypolydanang.vn/",
-        "image": [
-          "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
-          "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
-        ],
-        "alternateName": [
-          "Roly Poly Da Nang",
-          "Roly Poly Fresh Spring Rolls Da Nang"
-        ],
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.rolypolydanang.vn/images/logo.jpg",
-          "width": 2000,
-          "height": 2000
-        },
-        "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thượng near My Khe Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
-        "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha","Juice"],
-        "priceRange": "₫",
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Restaurant","CafeOrCoffeeShop"],
+      "@id": "https://www.rolypolydanang.vn/#restaurant",
+      "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+      "url": "https://www.rolypolydanang.vn/",
+      "image": [
+        "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
+        "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp"
+      ],
+      "alternateName": ["Roly Poly Da Nang","Roly Poly Fresh Spring Rolls Da Nang"],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rolypolydanang.vn/images/logo.jpg",
+        "width": 2000,
+        "height": 2000
+      },
+      "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thượng near My Khe Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
+      "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha","Juice"],
+      "priceRange": "₫",
+      "telephone": "+84327306076",
+      "email": "rolypolydanang@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
+        "addressLocality": "Ngũ Hành Sơn",
+        "addressRegion": "Đà Nẵng",
+        "postalCode": "550000",
+        "addressCountry": "VN"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" }
+      ],
+      "menu": "https://www.rolypolydanang.vn/menu",
+      "hasMenu": { "@id": "https://www.rolypolydanang.vn/menu#menu" },
+      "acceptsReservations": false,
+      "paymentAccepted": ["Cash","Visa","Mastercard","Apple Pay","MoMo"],
+      "currenciesAccepted": "VND",
+      "areaServed": ["An Thượng, Ngũ Hành Sơn, Da Nang", "My Khe Beach area"],
+      "makesOffer": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" },
+      "sameAs": [
+        "https://www.facebook.com/rolypolydanang",
+        "https://www.instagram.com/rolypolydanang",
+        "https://www.tiktok.com/@rolypolydanang",
+        "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662",
+        "https://www.google.com/maps?cid=8457966646420358159",
+        "https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
+      ],
+      "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
+      "contactPoint": [{
+        "@type": "ContactPoint",
         "telephone": "+84327306076",
         "email": "rolypolydanang@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
-          "addressLocality": "Ngũ Hành Sơn",
-          "addressRegion": "Đà Nẵng",
-          "postalCode": "550000",
-          "addressCountry": "VN"
-        },
-        "geo": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" }
-        ],
-        "menu": "https://www.rolypolydanang.vn/menu",
-        "hasMenu": { "@id": "https://www.rolypolydanang.vn/menu#menu" },
-        "acceptsReservations": false,
-        "paymentAccepted": ["Cash","Visa","Mastercard","Apple Pay","MoMo"],
-        "currenciesAccepted": "VND",
-        "areaServed": ["An Thượng, Ngũ Hành Sơn, Da Nang", "My Khe Beach area"],
-        "makesOffer": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" },
-        "sameAs": [
-          "https://www.facebook.com/rolypolydanang",
-          "https://www.instagram.com/rolypolydanang",
-          "https://www.tiktok.com/@rolypolydanang",
-          "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662",
-          "https://www.google.com/maps?cid=8457966646420358159",
-          "https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
-        ],
-        "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "telephone": "+84327306076",
-          "email": "rolypolydanang@gmail.com",
-          "contactType": "customer service",
-          "areaServed": "VN",
-          "availableLanguage": ["en","vi"]
-        }],
-        "potentialAction": {
-          "@type": "OrderAction",
-          "target": "https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6",
-          "expectsAcceptanceOf": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" }
-        },
-        "hasDelivery": true,
-        "hasTakeout": true,
-        "inLanguage": "en"
+        "contactType": "customer service",
+        "areaServed": "VN",
+        "availableLanguage": ["en","vi"]
+      }],
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": "https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6",
+        "expectsAcceptanceOf": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" }
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.rolypolydanang.vn/#website",
-        "url": "https://www.rolypolydanang.vn/",
-        "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-        "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "inLanguage": "en"
+      "hasDelivery": true,
+      "hasTakeout": true,
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.rolypolydanang.vn/#website",
+      "url": "https://www.rolypolydanang.vn/",
+      "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+      "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.rolypolydanang.vn/#webpage",
+      "url": "https://www.rolypolydanang.vn/",
+      "name": "Roly Poly — Fresh Spring Rolls & Coffee in Da Nang (An Thượng)",
+      "description": "Healthy Vietnamese fresh spring rolls, specialty coffee and matcha near My Khe Beach in An Thượng, Da Nang. Dine-in, takeaway, or GrabFood delivery.",
+      "isPartOf": { "@id": "https://www.rolypolydanang.vn/#website" },
+      "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "mainEntity": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "primaryImageOfPage": { "@id": "https://www.rolypolydanang.vn/#heroimage" },
+      "breadcrumb": { "@id": "https://www.rolypolydanang.vn/#breadcrumb" },
+      "hasPart": [{ "@id": "https://www.rolypolydanang.vn/#faq" }],
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-08-01",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.rolypolydanang.vn/#heroimage",
+      "url": "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp",
+      "width": 1600,
+      "height": 900,
+      "caption": "Roly Poly shopfront on An Thượng 6 near My Khe Beach"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.rolypolydanang.vn/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.rolypolydanang.vn/", "name": "Home" } }
+      ]
+    },
+    {
+      "@type": "Menu",
+      "@id": "https://www.rolypolydanang.vn/menu#menu",
+      "name": "Roly Poly Menu",
+      "url": "https://www.rolypolydanang.vn/menu"
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://www.rolypolydanang.vn/#delivery-offer",
+      "name": "Delivery service",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
+        "geoRadius": 3000
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.rolypolydanang.vn/#webpage",
-        "url": "https://www.rolypolydanang.vn/",
-        "name": "Roly Poly — Fresh Spring Rolls & Coffee in Da Nang (An Thượng)",
-        "description": "Healthy Vietnamese fresh spring rolls, specialty coffee and matcha near My Khe Beach in An Thượng, Da Nang. Dine-in, takeaway, or GrabFood delivery.",
-        "isPartOf": { "@id": "https://www.rolypolydanang.vn/#website" },
-        "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "mainEntity": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "primaryImageOfPage": { "@id": "https://www.rolypolydanang.vn/#heroimage" },
-        "breadcrumb": { "@id": "https://www.rolypolydanang.vn/#breadcrumb" },
-        "hasPart": [{ "@id": "https://www.rolypolydanang.vn/#faq" }],
-        "datePublished": "2025-01-01",
-        "dateModified": "2025-08-01",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "ImageObject",
-        "@id": "https://www.rolypolydanang.vn/#heroimage",
-        "url": "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp",
-        "width": 1600,
-        "height": 900,
-        "caption": "Roly Poly shopfront on An Thượng 6 near My Khe Beach"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.rolypolydanang.vn/#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.rolypolydanang.vn/", "name": "Home" } }
-        ]
-      },
-      {
-        "@type": "Menu",
-        "@id": "https://www.rolypolydanang.vn/menu#menu",
-        "name": "Roly Poly Menu",
-        "url": "https://www.rolypolydanang.vn/menu"
-      },
-      {
-        "@type": "Offer",
-        "@id": "https://www.rolypolydanang.vn/#delivery-offer",
-        "name": "Delivery service",
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
-          "geoRadius": 3000
-        },
-        "availableDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet",
-        "eligibleRegion": "Đà Nẵng, VN",
+      "availableDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet",
+      "eligibleRegion": "Da Nang, VN",
+      "price": 0,
+      "priceCurrency": "VND",
+      "priceSpecification": {
+        "@type": "DeliveryChargeSpecification",
         "price": 0,
         "priceCurrency": "VND",
-        "priceSpecification": {
-          "@type": "DeliveryChargeSpecification",
-          "price": 0,
-          "priceCurrency": "VND",
-          "appliesToDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet"
-        },
-        "url": "https://www.rolypolydanang.vn/menu#delivery-cta"
+        "appliesToDeliveryMethod": "https://schema.org/DeliveryModeOwnFleet"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.rolypolydanang.vn/#faq",
-        "url": "https://www.rolypolydanang.vn/#faq",
-        "name": "Roly Poly FAQ",
-        "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "mainEntityOfPage": { "@id": "https://www.rolypolydanang.vn/#webpage" },
-        "inLanguage": "en",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Where is Roly Poly Da Nang located?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We’re at 05 An Thượng 6, Ngũ Hành Sơn, Đà Nẵng, a 5-minute walk from My Khe Beach. Directions: https://www.google.com/maps?cid=8457966646420358159"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What are your opening hours?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Mon–Sat 10:00–20:00. Closed Sunday." }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer delivery in An Thuong / My Khe Beach?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Order via GrabFood or call +84327306076. We typically deliver within ~3 km of An Thuong."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you have vegan or gluten-free spring rolls?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. 5 of 7 fillings are gluten-free; vegan options include Tofu, Mushroom & Avocado. Fish sauce is gluten-free; peanut and toasted sesame sauces are vegan."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What should I try first?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Best-sellers: Garlic Prawn and Lemongrass Beef spring rolls, plus Salted Coffee or Coconut Coffee."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are you a Vietnamese restaurant and coffee shop in Da Nang?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We’re a casual Vietnamese restaurant & café serving hand-rolled gỏi cuốn, Vietnamese coffee, matcha and juices in An Thuong near My Khe Beach."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you take reservations?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No reservations needed. For groups over 6, call +84327306076 and we’ll try to arrange seating."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you accept card and cashless payments?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We accept Cash, Visa, Mastercard, Apple Pay and MoMo. Currency: VND."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there Wi-Fi and an English menu?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We offer free Wi-Fi, English-speaking staff, and a bilingual menu (EN/VI)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are you child-friendly or pet-friendly?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Kids are welcome. Small, well-behaved pets are fine in the outdoor seating area."
-            }
+      "url": "https://www.rolypolydanang.vn/menu#delivery-cta"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.rolypolydanang.vn/#faq",
+      "url": "https://www.rolypolydanang.vn/#faq",
+      "name": "Roly Poly FAQ",
+      "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
+      "mainEntityOfPage": { "@id": "https://www.rolypolydanang.vn/#webpage" },
+      "inLanguage": "en",
+      "mainEntity": [
+        { "@type": "Question", "name": "Where is Roly Poly Da Nang located?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "We’re at 05 An Thượng 6, Ngũ Hành Sơn, Đà Nẵng, a 5-minute walk from My Khe Beach. Directions: https://www.google.com/maps?cid=8457966646420358159"
           }
-        ]
-      }
-    ]
-  }
-  </script>
+        },
+        { "@type": "Question", "name": "What are your opening hours?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Mon–Sat 10:00–20:00. Closed Sunday." }
+        },
+        { "@type": "Question", "name": "Do you offer delivery in An Thuong / My Khe Beach?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "Yes. Order via GrabFood or call +84327306076. We typically deliver within ~3 km of An Thuong."
+          }
+        },
+        { "@type": "Question", "name": "Do you have vegan or gluten-free spring rolls?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "Yes. 5 of 7 fillings are gluten-free; vegan options include Tofu, Mushroom & Avocado. Fish sauce is gluten-free; peanut and toasted sesame sauces are vegan."
+          }
+        },
+        { "@type": "Question", "name": "What should I try first?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "Best-sellers: Garlic Prawn and Lemongrass Beef spring rolls, plus Salted Coffee or Coconut Coffee."
+          }
+        },
+        { "@type": "Question", "name": "Are you a Vietnamese restaurant and coffee shop in Da Nang?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "Yes. We’re a casual Vietnamese restaurant & café serving hand-rolled gỏi cuốn, Vietnamese coffee, matcha and juices in An Thuong near My Khe Beach."
+          }
+        },
+        { "@type": "Question", "name": "Do you take reservations?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "No reservations needed. For groups over 6, call +84327306076 and we’ll try to arrange seating."
+          }
+        },
+        { "@type": "Question", "name": "Do you accept card and cashless payments?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "Yes. We accept Cash, Visa, Mastercard, Apple Pay and MoMo. Currency: VND."
+          }
+        },
+        { "@type": "Question", "name": "Is there Wi-Fi and an English menu?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "Yes. We offer free Wi-Fi, English-speaking staff, and a bilingual menu (EN/VI)."
+          }
+        },
+        { "@type": "Question", "name": "Are you child-friendly or pet-friendly?",
+          "acceptedAnswer": { "@type": "Answer",
+            "text": "Kids are welcome. Small, well-behaved pets are fine in the outdoor seating area."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 
   <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
   <style>
