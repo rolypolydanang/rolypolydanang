@@ -10,10 +10,11 @@
 
 <link rel="canonical" href="https://www.rolypolydanang.vn/menu"/>
 
-<!-- hreflang (adjust when you add Vietnamese) -->
+<!-- hreflang -->
 <link rel="alternate" href="https://www.rolypolydanang.vn/menu" hreflang="x-default">
+<link rel="alternate" href="https://www.rolypolydanang.vn/menu" hreflang="en">
 <link rel="alternate" href="https://www.rolypolydanang.vn/menu" hreflang="en-VN">
-<!-- Example when Vietnamese page is live:
+<!-- When Vietnamese page is live:
 <link rel="alternate" href="https://www.rolypolydanang.vn/vi/menu" hreflang="vi-VN">
 -->
 
@@ -24,6 +25,15 @@
 <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/main.css"></noscript>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
+<link rel="preload" as="image" href="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" imagesrcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" imagesizes="(max-width: 768px) 100vw, 1200px">
+
+<!-- Icons & PWA -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
 
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website"/>
@@ -31,27 +41,33 @@
 <meta property="og:description" content="Menu & prices for fresh Vietnamese spring rolls (gỏi cuốn), Vietnamese coffee, matcha lattes, and sugar-free fresh juices in Đà Nẵng — vegan & gluten-free options."/>
 <meta property="og:url" content="https://www.rolypolydanang.vn/menu"/>
 <meta property="og:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png"/>
+<meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png"/>
 <meta property="og:image:alt" content="Assorted fresh Vietnamese spring rolls platter with sauces at Roly Poly Da Nang"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls & Coffee Da Nang"/>
-<meta property="og:locale" content="en_VN"/>
+<meta property="og:locale" content="en_US"/>
+<!-- Add when /vi/menu goes live:
 <meta property="og:locale:alternate" content="vi_VN"/>
+-->
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Menu & Prices – Fresh Spring Rolls, Coffee | Roly Poly Da Nang (An Thuong)"/>
 <meta name="twitter:description" content="Menu & prices for fresh Vietnamese spring rolls (gỏi cuốn), Vietnamese coffee, matcha lattes, and sugar-free fresh juices in Đà Nẵng — vegan & gluten-free options."/>
 <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png"/>
+<meta name="twitter:image:alt" content="Assorted fresh Vietnamese spring rolls platter with sauces at Roly Poly Da Nang"/>
 <meta name="twitter:site" content="@rolypolydanang"/>
 <meta name="twitter:creator" content="@rolypolydanang"/>
-<meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png"/>
-<meta name="twitter:image:alt" content="Assorted fresh Vietnamese spring rolls platter with sauces at Roly Poly Da Nang"/>
-
 
 <!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BLRTTJDJYL');</script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date()); gtag('config','G-BLRTTJDJYL');
+</script>
 
+<!-- JSON-LD: WebSite -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -59,13 +75,12 @@
   "@id":"https://www.rolypolydanang.vn/#website",
   "url":"https://www.rolypolydanang.vn/",
   "name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-  "inLanguage":["en","vi"],
+  "inLanguage":"en",
   "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" }
 }
 </script>
 
-
-<!-- JSON-LD: Restaurant / Cafe (enhanced) -->
+<!-- JSON-LD: Restaurant / Cafe -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,11 +99,11 @@
   "logo": {
     "@type": "ImageObject",
     "url": "https://www.rolypolydanang.vn/images/logo.jpg",
-    "width": 160,
-    "height": 48
+    "width": 2000,
+    "height": 2000
   },
   "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thượng near Mỹ Khê Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
-  "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha"],
+  "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha","Juice"],
   "priceRange": "₫",
   "telephone": "+84327306076",
   "email": "rolypolydanang@gmail.com",
@@ -109,17 +124,15 @@
   "acceptsReservations": false,
   "paymentAccepted": ["Cash","Visa","Mastercard","Apple Pay","MoMo"],
   "currenciesAccepted": "VND",
-  "areaServed": [
-    "An Thượng, Ngũ Hành Sơn, Da Nang",
-    "My Khe Beach area"
-  ],
+  "areaServed": ["An Thượng, Ngũ Hành Sơn, Đà Nẵng", "Mỹ Khê Beach area"],
   "makesOffer": { "@id": "https://www.rolypolydanang.vn/#delivery-offer" },
   "sameAs":[
     "https://www.facebook.com/rolypolydanang",
     "https://www.instagram.com/rolypolydanang",
     "https://www.tiktok.com/@rolypolydanang",
     "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662",
-    "https://www.google.com/maps?cid=8457966646420358159"
+    "https://www.google.com/maps?cid=8457966646420358159",
+    "https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
   ],
   "hasMap": "https://www.google.com/maps?cid=8457966646420358159",
   "contactPoint": [{
@@ -129,10 +142,12 @@
     "contactType": "customer service",
     "areaServed": "VN",
     "availableLanguage": ["en","vi"]
-  }]
+  }],
+  "hasDelivery": true,
+  "hasTakeout": true,
+  "inLanguage": "en"
 }
 </script>
-
 
 <!-- JSON-LD: WebPage (Menu page) -->
 <script type="application/ld+json">
@@ -149,13 +164,13 @@
   "primaryImageOfPage": { "@id": "https://www.rolypolydanang.vn/menu#heroimage" },
   "breadcrumb": { "@id": "https://www.rolypolydanang.vn/menu#breadcrumb" },
   "hasPart":[
-  {"@id":"https://www.rolypolydanang.vn/menu#menu"},
-  {"@id":"https://www.rolypolydanang.vn/menu#faq"}
-]
-
+    {"@id":"https://www.rolypolydanang.vn/menu#menu"},
+    {"@id":"https://www.rolypolydanang.vn/menu#faq"}
+  ]
 }
 </script>
 
+<!-- JSON-LD: Image -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -167,7 +182,6 @@
   "caption": "Assorted fresh spring rolls platter at Roly Poly Da Nang"
 }
 </script>
-
 
 <!-- JSON-LD: Breadcrumbs -->
 <script type="application/ld+json">
@@ -182,8 +196,7 @@
 }
 </script>
 
-
-<!-- JSON-LD: Menu (anchor URLs aligned to sections; offers include availability) -->
+<!-- JSON-LD: Menu (numeric prices; availability) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -198,11 +211,11 @@
       "url":"https://www.rolypolydanang.vn/menu#spring-rolls",
       "description":"Mix & Match Fresh Vietnamese Spring Rolls (Gỏi Cuốn). Includes noodles, greens & herbs. Choose a house-made sauce.",
       "hasMenuItem":[
-        {"@type":"MenuItem","name":"3 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":"105000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
-        {"@type":"MenuItem","name":"4 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":"140000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
-        {"@type":"MenuItem","name":"5 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":"175000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
-        {"@type":"MenuItem","name":"6 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":"210000","priceCurrency":"VND","availability":"https://schema.org/InStock"}},
-        {"@type":"MenuItem","name":"Single Fresh Spring Roll","description":"+10k Garlic Prawn; +5k Smoked Goose or Lemongrass Beef","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":"40000","priceCurrency":"VND","availability":"https://schema.org/InStock"}}
+        {"@type":"MenuItem","name":"3 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":105000,"priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+        {"@type":"MenuItem","name":"4 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":140000,"priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+        {"@type":"MenuItem","name":"5 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":175000,"priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+        {"@type":"MenuItem","name":"6 Fresh Spring Rolls","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":210000,"priceCurrency":"VND","availability":"https://schema.org/InStock"}},
+        {"@type":"MenuItem","name":"Single Fresh Spring Roll","description":"+10k Garlic Prawn; +5k Smoked Goose or Lemongrass Beef","url":"https://www.rolypolydanang.vn/menu#spring-rolls","offers":{"@type":"Offer","price":40000,"priceCurrency":"VND","availability":"https://schema.org/InStock"}}
       ]
     },
     {
@@ -210,9 +223,9 @@
       "name":"Fillings",
       "url":"https://www.rolypolydanang.vn/menu#spring-rolls",
       "hasMenuItem":[
-        {"@type":"MenuItem","name":"Garlic Prawn","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet","offers":{"@type":"Offer","price":"10000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#spring-rolls"}},
-        {"@type":"MenuItem","name":"Smoked Goose","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet","offers":{"@type":"Offer","price":"5000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#spring-rolls"}},
-        {"@type":"MenuItem","name":"Lemongrass Beef","offers":{"@type":"Offer","price":"5000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#spring-rolls"}},
+        {"@type":"MenuItem","name":"Garlic Prawn","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet","offers":{"@type":"Offer","price":10000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#spring-rolls"}},
+        {"@type":"MenuItem","name":"Smoked Goose","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet","offers":{"@type":"Offer","price":5000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#spring-rolls"}},
+        {"@type":"MenuItem","name":"Lemongrass Beef","offers":{"@type":"Offer","price":5000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#spring-rolls"}},
         {"@type":"MenuItem","name":"Soy Glazed Pork Belly"},
         {"@type":"MenuItem","name":"Satay Chicken","description":"Contains peanuts; gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet"},
         {"@type":"MenuItem","name":"Poached Chicken & Avocado","description":"Gluten-free","suitableForDiet":"https://schema.org/GlutenFreeDiet"},
@@ -223,8 +236,7 @@
       "@type":"MenuSection",
       "name":"House-Made Dipping Sauces",
       "url":"https://www.rolypolydanang.vn/menu#sauces",
-  "description": "Peanut, toasted sesame, and classic Vietnamese fish sauce made fresh daily.",
-
+      "description": "Peanut, toasted sesame, and classic Vietnamese fish sauce made fresh daily.",
       "hasMenuItem":[
         {"@type":"MenuItem","name":"Peanut Sauce (Vegan)","suitableForDiet":"https://schema.org/VeganDiet"},
         {"@type":"MenuItem","name":"Toasted Sesame Sauce (Vegan)","suitableForDiet":"https://schema.org/VeganDiet"},
@@ -235,43 +247,43 @@
       "@type":"MenuSection",
       "name":"Fresh Juices (250 mL) — No Added Sugar",
       "url":"https://www.rolypolydanang.vn/menu#juices",
-  "description": "Freshly juiced local fruit in 250 mL cups with no added sugar.",
-
+      "description": "Freshly juiced local fruit in 250 mL cups with no added sugar.",
       "hasMenuItem":[
-        {"@type":"MenuItem","name":"Mỹ Khê Sunrise","description":"Pineapple, watermelon, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}},
-        {"@type":"MenuItem","name":"Along the Hàn","description":"Watermelon, cucumber, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}},
-        {"@type":"MenuItem","name":"Lantern in Hội An","description":"Orange, passionfruit, lime","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}},
-        {"@type":"MenuItem","name":"Orange / Watermelon / Pineapple / Passionfruit","offers":{"@type":"Offer","price":"50000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}}
+        {"@type":"MenuItem","name":"Mỹ Khê Sunrise","description":"Pineapple, watermelon, lime","offers":{"@type":"Offer","price":55000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}},
+        {"@type":"MenuItem","name":"Along the Hàn","description":"Watermelon, cucumber, lime","offers":{"@type":"Offer","price":55000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}},
+        {"@type":"MenuItem","name":"Lantern in Hội An","description":"Orange, passionfruit, lime","offers":{"@type":"Offer","price":55000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}},
+        {"@type":"MenuItem","name":"Orange / Watermelon / Pineapple / Passionfruit","offers":{"@type":"Offer","price":50000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#juices"}}
       ]
     },
     {
       "@type":"MenuSection",
       "name":"Vietnamese Coffee & Matcha",
       "url":"https://www.rolypolydanang.vn/menu#coffee",
-  "description": "Phin-brewed Vietnamese coffee and creamy matcha lattes with oat milk.",
-
+      "description": "Phin-brewed Vietnamese coffee and creamy matcha lattes with oat milk.",
       "hasMenuItem":[
-        {"@type":"MenuItem","name":"Iced Milk Coffee (Cà phê sữa đá)","offers":{"@type":"Offer","price":"35000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
-        {"@type":"MenuItem","name":"Iced Black Coffee","offers":{"@type":"Offer","price":"30000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
-        {"@type":"MenuItem","name":"Iced Salted Coffee","offers":{"@type":"Offer","price":"50000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
-        {"@type":"MenuItem","name":"Iced Coconut Coffee","offers":{"@type":"Offer","price":"55000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
-        {"@type":"MenuItem","name":"Iced Matcha Latte (Oat Milk)","offers":{"@type":"Offer","price":"65000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
-        {"@type":"MenuItem","name":"Iced Strawberry Matcha Latte","offers":{"@type":"Offer","price":"75000","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}}
+        {"@type":"MenuItem","name":"Iced Milk Coffee (Cà phê sữa đá)","offers":{"@type":"Offer","price":35000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
+        {"@type":"MenuItem","name":"Iced Black Coffee","offers":{"@type":"Offer","price":30000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
+        {"@type":"MenuItem","name":"Iced Salted Coffee","offers":{"@type":"Offer","price":50000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
+        {"@type":"MenuItem","name":"Iced Coconut Coffee","offers":{"@type":"Offer","price":55000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
+        {"@type":"MenuItem","name":"Iced Matcha Latte (Oat Milk)","offers":{"@type":"Offer","price":65000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}},
+        {"@type":"MenuItem","name":"Iced Strawberry Matcha Latte","offers":{"@type":"Offer","price":75000,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#coffee"}}
       ]
     },
     {
       "@type":"MenuSection",
-      "name":"Free Delivery in An Thượng, Ngũ Hành Sơn (Da Nang)",
+      "name":"Free Delivery in An Thượng, Ngũ Hành Sơn (Đà Nẵng)",
       "url":"https://www.rolypolydanang.vn/menu#delivery-cta",
       "hasMenuItem":[
-        {"@type":"MenuItem","name":"Delivery Service","description":"Free within 3 km at in-store prices","offers":{"@type":"Offer","price":"0","priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#delivery-cta"}}
+        {"@type":"MenuItem","name":"Delivery Service","description":"Free within 3 km at in-store prices","offers":{"@type":"Offer","price":0,"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://www.rolypolydanang.vn/menu#delivery-cta"}}
       ]
     }
   ]
 }
 </script>
 
-  <script type="application/ld+json">{
+<!-- JSON-LD: Delivery Offer (re-usable @id) -->
+<script type="application/ld+json">
+{
   "@context":"https://schema.org",
   "@type":"Offer",
   "@id":"https://www.rolypolydanang.vn/#delivery-offer",
@@ -279,10 +291,12 @@
   "areaServed":"An Thượng, Ngũ Hành Sơn, Đà Nẵng",
   "availableDeliveryMethod":"https://schema.org/DeliveryModeOwnFleet",
   "eligibleRegion":"Đà Nẵng, VN",
-  "price":"0","priceCurrency":"VND",
-  "url":"https://www.rolypolydanang.vn/menu#delivery-cta"
-}</script>
-
+  "price":0,
+  "priceCurrency":"VND",
+  "url":"http?
+?s://www.rolypolydanang.vn/menu#delivery-cta"
+}
+</script>
 
 <!-- JSON-LD: FAQPage (scoped to this URL) -->
 <script type="application/ld+json">
@@ -294,7 +308,7 @@
   "name": "Roly Poly Menu — FAQ",
   "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
   "mainEntityOfPage": { "@id": "https://www.rolypolydanang.vn/menu#webpage" },
-  "inLanguage": ["en","vi"],
+  "inLanguage": "en",
   "mainEntity": [
     {
       "@type": "Question",
@@ -320,7 +334,6 @@
         "text": "Please tell our staff when ordering. We will prepare your rolls gluten-free and omit the fried shallots, which contain gluten."
       }
     },
-    
     {
       "@type": "Question",
       "name": "What grade is your matcha and where is it from?",
@@ -334,7 +347,7 @@
       "name": "Do you offer delivery?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—free within 3 km in An Thuong (Ngu Hanh Son) at in-store prices. Order by phone at +84 327 306 076 or via GrabFood."
+        "text": "Yes—free within 3 km in An Thượng (Ngũ Hành Sơn) at in-store prices. Order by phone at +84 327 306 076 or via GrabFood."
       }
     },
     {
@@ -349,64 +362,43 @@
 }
 </script>
 
-
-
 <!-- Styles -->
 <style>
   :root{ --brand:#ff6a00; --brand-d:#e55b00; --sticky-h:48px; }
-
   body{ margin:0; }
   main{ padding-bottom:calc(var(--sticky-h) + env(safe-area-inset-bottom)); }
-
   .hero-img{width:100%;height:auto;max-width:1200px}
-
   /* Unified orange buttons */
   .btn{
-    display:inline-block;
-    padding:.65rem 1.1rem;
-    border-radius:.5rem;
-    text-decoration:none;
-    border:2px solid var(--brand);
-    background:var(--brand);
-    color:#fff;
-    font-weight:600;
-    line-height:1.1;
+    display:inline-block; padding:.65rem 1.1rem; border-radius:.5rem; text-decoration:none;
+    border:2px solid var(--brand); background:var(--brand); color:#fff; font-weight:600; line-height:1.1;
     transition:background .2s ease,border-color .2s ease,transform .2s ease,opacity .2s ease;
     -webkit-tap-highlight-color: transparent;
   }
   .btn:hover,.btn:focus{ background:var(--brand-d); border-color:var(--brand-d); color:#fff; transform:translateY(-1px) }
   .btn:focus-visible{ outline:3px solid rgba(255,106,0,.35); outline-offset:2px }
-
   /* Menu hero: white, no overlay tint */
   .hero.menu-hero{ background:#fff !important; color:#222; position:relative; }
   .hero.menu-hero .hero-overlay{ position:absolute; inset:0; background:transparent !important; pointer-events:none; }
   .hero.menu-hero img.hero-img{ filter:none !important; }
-
-  /* Sticky action bar: fixed & measured; no duplicate styles */
+  /* Sticky action bar */
   .sticky-actions{
-    position:fixed; left:0; right:0; bottom:0;
-    display:flex; gap:.5rem; padding:.5rem; min-height:48px;
-    background:#fff; border-top:1px solid #eee; justify-content:center;
-    backdrop-filter:none; -webkit-backdrop-filter:none;
+    position:fixed; left:0; right:0; bottom:0; display:flex; gap:.5rem; padding:.5rem; min-height:48px;
+    background:#fff; border-top:1px solid #eee; justify-content:center; backdrop-filter:none; -webkit-backdrop-filter:none;
   }
   .sticky-actions .btn{ background:var(--brand) !important; border-color:var(--brand) !important; color:#fff !important; }
-
-  /* a11y helper */
-  .visually-hidden{
-    position:absolute!important; clip:rect(1px,1px,1px,1px);
-    padding:0;border:0;height:1px;width:1px;overflow:hidden;white-space:nowrap
-  }
-
+  /* a11y helpers */
+  .visually-hidden{ position:absolute!important; clip:rect(1px,1px,1px,1px); padding:0;border:0;height:1px;width:1px;overflow:hidden;white-space:nowrap }
+  .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;}
+  .skip-link:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;background:#000;color:#fff;z-index:1000;}
   .site-header .nav-toggle{background:none;border:0}
-</style>
-
-  <style>
   .section-lead{margin:.5rem 0 1rem;color:#444;max-width:65ch}
 </style>
-
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
 <header class="site-header" role="banner">
   <div class="container nav-container">
    <a href="/" class="logo" aria-label="Roly Poly — Home">
@@ -436,30 +428,28 @@
   <div class="container">
     <div class="hero-content">
       <h1 id="menu-hero-title">Menu — Fresh Spring Rolls, Vietnamese Coffee & Matcha in Da Nang</h1>
-<h2 class="hero-subtitle">
-  Handmade gỏi cuốn (fresh spring rolls / summer rolls / rice paper rolls), sugar-free fresh juices, Vietnamese phin coffee & creamy matcha lattes — ceremonial-grade matcha sourced from Japan.
-</h2>
+      <h2 class="hero-subtitle">
+        Handmade gỏi cuốn (fresh spring rolls / summer rolls / rice paper rolls), sugar-free fresh juices, Vietnamese phin coffee & creamy matcha lattes — ceremonial-grade matcha sourced from Japan.
+      </h2>
 
       <picture>
         <source srcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" type="image/webp">
         <img
           src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
-  alt="Assorted fresh Vietnamese spring rolls with dipping sauces in Da Nang"
+          alt="Assorted fresh Vietnamese spring rolls with dipping sauces in Da Nang"
           class="hero-img" width="1600" height="900"
           sizes="(max-width: 768px) 100vw, 1200px"
           decoding="async" fetchpriority="high">
       </picture>
 
      <p class="subheadline">
-  <strong>Vietnamese spring rolls</strong> (gỏi cuốn, <em>summer rolls</em>, <em>rice paper rolls</em>) with vegan &amp; gluten-free options.
-  Pair with <a href="#coffee"><strong>Vietnamese coffee</strong></a>, creamy
-  <a href="#coffee"><strong>matcha lattes</strong></a>, and refreshing
-  <a href="#juices"><strong>fresh juices</strong></a>. Dine-in, takeaway, or
-  <a href="#delivery-cta"><strong>GrabFood delivery</strong></a> near <strong>My Khe Beach</strong>.
-  <br><em>Gluten-free?</em> Please tell our staff — we’ll omit the fried shallots (contain gluten).
-</p>
-
-
+      <strong>Vietnamese spring rolls</strong> (gỏi cuốn, <em>summer rolls</em>, <em>rice paper rolls</em>) with vegan &amp; gluten-free options.
+      Pair with <a href="#coffee"><strong>Vietnamese coffee</strong></a>, creamy
+      <a href="#coffee"><strong>matcha lattes</strong></a>, and refreshing
+      <a href="#juices"><strong>fresh juices</strong></a>. Dine-in, takeaway, or
+      <a href="#delivery-cta"><strong>GrabFood delivery</strong></a> near <strong>Mỹ Khê Beach</strong>.
+      <br><em>Gluten-free?</em> Please tell our staff — we’ll omit the fried shallots (contain gluten).
+    </p>
 
       <div class="hero-buttons" role="group" aria-label="Primary actions">
         <a href="#spring-rolls" class="btn">Spring Rolls & Prices</a>
@@ -475,59 +465,53 @@
 <section id="spring-rolls" class="menu-section" aria-labelledby="spring-rolls-title">
   <div class="container">
     <h2 id="spring-rolls-title">Fresh Vietnamese Spring Rolls — Menu & Prices in Da Nang (Gỏi Cuốn)</h2>
-<p>
-  <strong>Each roll includes</strong> rice vermicelli, lettuce, carrot, cucumber, mint, coriander &amp; crispy shallots — wrapped in soft rice paper with your choice of <a class="text-link" href="#sauces">house-made dipping sauce</a>.
-  <br><em>Gluten-free?</em> Tell our team and we will not add fried shallots (they contain gluten).
-</p>
+    <p>
+      <strong>Each roll includes</strong> rice vermicelli, lettuce, carrot, cucumber, mint, coriander &amp; crispy shallots — wrapped in soft rice paper with your choice of <a class="text-link" href="#sauces">house-made dipping sauce</a>.
+      <br><em>Gluten-free?</em> Tell our team and we will not add fried shallots (they contain gluten).
+    </p>
 
     <ul class="pricing" aria-label="Spring roll set pricing">
-  <li>3 Fresh Spring Rolls — <strong>105,000₫ </strong></li>
-  <li>4 Fresh Spring Rolls — <strong>140,000₫ </strong></li>
-  <li>5 Fresh Spring Rolls — <strong>175,000₫ </strong></li>
-  <li>6 Fresh Spring Rolls — <strong>210,000₫ </strong></li>
-</ul>
-<p class="price-note">All prices in VND (₫). Mix any fillings.</p>
+      <li>3 Fresh Spring Rolls — <strong>105,000₫</strong></li>
+      <li>4 Fresh Spring Rolls — <strong>140,000₫</strong></li>
+      <li>5 Fresh Spring Rolls — <strong>175,000₫</strong></li>
+      <li>6 Fresh Spring Rolls — <strong>210,000₫</strong></li>
+    </ul>
+    <p class="price-note">All prices in VND (₫). Mix any fillings.</p>
 
+    <h3>Choose Your Protein or Vegan Filling</h3>
+    <p class="section-lead">Premium fillings: <strong>Garlic Prawn</strong> (+10,000₫), <strong>Lemongrass Beef</strong> (+5,000₫), <strong>Smoked Goose</strong> (+5,000₫).</p>
 
-<h3>Choose Your Protein or Vegan Filling</h3>
-<p class="section-lead">Premium fillings: <strong>Garlic Prawn</strong> (+10,000₫), <strong>Lemongrass Beef</strong> (+5,000₫), <strong>Smoked Goose</strong> (+5,000₫).</p>
     <div class="roll-options-grid" role="list">
       <article class="roll" role="listitem">
         <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" alt="Garlic prawn summer roll (fresh rice paper roll, gluten-free)" width="600" height="450" loading="lazy">
         <h4>Garlic Prawn <span>(+10,000₫)</span></h4>
         <p>Juicy garlic-marinated prawns. <em>Gluten-free</em>.</p>
       </article>
-
       <article class="roll" role="listitem">
         <img src="/images/smoked-goose-spring-roll-roly-poly-da-nang.webp" alt="Smoked goose fresh spring roll (gluten-free rice paper roll)" width="600" height="450" loading="lazy">
         <h4>Smoked Goose <span>(+5,000₫)</span></h4>
         <p>Tender smoked goose. <em>Gluten-free</em>.</p>
       </article>
-
       <article class="roll" role="listitem">
         <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp" alt="Lemongrass beef Vietnamese rice paper roll" width="600" height="450" loading="lazy">
         <h4>Lemongrass Beef <span>(+5,000₫)</span></h4>
         <p>Grilled beef with lemongrass &amp; herbs.</p>
       </article>
-
       <article class="roll" role="listitem">
         <img src="/images/soy-glazed-pork-belly-spring-roll-roly-poly-da-nang.webp" alt="Soy-glazed pork belly fresh spring roll (summer roll)" width="600" height="450" loading="lazy">
         <h4>Soy Glazed Pork Belly</h4>
         <p>Sticky-sweet, savory glaze.</p>
       </article>
-
       <article class="roll" role="listitem">
         <img src="/images/satay-chicken-spring-roll-roly-poly-da-nang.webp" alt="Satay chicken Vietnamese summer roll (contains peanuts; gluten-free)" width="600" height="450" loading="lazy">
         <h4>Satay Chicken</h4>
         <p>Nutty &amp; savory. <em>Contains peanuts; gluten-free</em>.</p>
       </article>
-
       <article class="roll" role="listitem">
         <img src="/images/poached-chicken-avocado-spring-roll-roly-poly-da-nang.webp" alt="Poached chicken and avocado rice paper roll (gluten-free fresh spring roll)" width="600" height="450" loading="lazy">
         <h4>Poached Chicken &amp; Avocado</h4>
         <p>Creamy avocado with fresh poached chicken. <em>Gluten-free</em>.</p>
       </article>
-
       <article class="roll" role="listitem">
         <img src="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp" alt="Tofu, mushroom and avocado vegan summer roll (fresh spring roll, gluten-free)" width="600" height="450" loading="lazy">
         <h4>Tofu, Mushroom &amp; Avocado <span>(Vegan)</span></h4>
@@ -535,7 +519,7 @@
       </article>
     </div>
 
-<p><strong>Single Fresh Spring Rolls:</strong> <strong>40,000₫</strong> per roll — add +10,000₫ Garlic Prawn or +5,000₫ Smoked Goose / Lemongrass Beef.</p>
+    <p><strong>Single Fresh Spring Rolls:</strong> <strong>40,000₫</strong> per roll — add +10,000₫ Garlic Prawn or +5,000₫ Smoked Goose / Lemongrass Beef.</p>
   </div>
 </section>
 
@@ -543,7 +527,7 @@
 <section id="sauces" class="menu-section" aria-labelledby="sauces-title">
   <div class="container">
     <h2 id="sauces-title">House-Made Dipping Sauces</h2>
-<p class="section-lead">House-made peanut, toasted sesame, and classic Vietnamese fish sauce (nước chấm)—fresh daily and perfect for dipping our Vietnamese spring rolls.</p>
+    <p class="section-lead">House-made peanut, toasted sesame, and classic Vietnamese fish sauce (nước chấm)—fresh daily and perfect for dipping our Vietnamese spring rolls.</p>
 
     <h3 class="visually-hidden">Sauce Options</h3>
     <div class="roll-options-grid" role="list">
@@ -568,9 +552,7 @@
 <section id="juices" class="menu-section" aria-labelledby="juices-title">
   <div class="container">
     <h2 id="juices-title">Fresh Juices (250 mL) — No Added Sugar</h2>
-
-  <p class="section-lead">Freshly juiced local fruit in 250 mL cups with no added sugar—light, refreshing, and beach-ready in An Thuong, Da Nang.</p>
-
+    <p class="section-lead">Freshly juiced local fruit in 250 mL cups with no added sugar—light, refreshing, and beach-ready in An Thượng, Đà Nẵng.</p>
 
     <h3>Signature Juices</h3>
     <div class="drink-grid" role="list">
@@ -621,9 +603,9 @@
 <section id="coffee" class="menu-section" aria-labelledby="coffee-title">
   <div class="container">
     <h2 id="coffee-title">Vietnamese Coffee &amp; Matcha</h2>
-<p class="section-lead">
-  Phin-brewed Vietnamese coffee and creamy matcha lattes with oat milk — using ceremonial-grade matcha sourced directly from Japan.
-</p>
+    <p class="section-lead">
+      Phin-brewed Vietnamese coffee and creamy matcha lattes with oat milk — using ceremonial-grade matcha sourced directly from Japan.
+    </p>
 
     <div class="drink-grid" role="list">
       <article class="drink" role="listitem">
@@ -666,7 +648,6 @@
     <h2 id="other-drinks-title">Other Drinks &amp; Local Beer</h2>
     <p class="section-lead">Crisp soft drinks and chilled Vietnamese beers (Huda, Larue, Tiger), plus our icy Snowy Lime Slushie.</p>
 
-
     <div class="drink-grid" role="list">
       <article class="drink" role="listitem">
         <img src="/images/snowy-lime-slushie-roly-poly-da-nang.webp" alt="Snowy lime slushie" width="600" height="450" loading="lazy">
@@ -677,7 +658,7 @@
 
     <h3>Soft Drinks</h3>
     <ul class="drink-list">
-  <li><strong>Soft Drinks</strong> — 25,000₫ <span class="desc">Coke, Sprite, Fanta, Soda Water.</span></li>
+      <li><strong>Soft Drinks</strong> — 25,000₫ <span class="desc">Coke, Sprite, Fanta, Soda Water.</span></li>
       <li><strong>Bottled Water</strong> — 20,000₫</li>
     </ul>
 
@@ -693,8 +674,8 @@
 <!-- Delivery CTA -->
 <section id="delivery-cta" class="menu-section" aria-labelledby="delivery-title">
   <div class="container">
-    <h2 id="delivery-title">Free Delivery in An Thuong, Ngu Hanh Son (Da Nang)</h2>
-<p><strong>Free delivery</strong> within 3 km in <strong>An Thuong (Ngu Hanh Son), Đa Nang</strong> at in-store prices — call us or order on GrabFood.</p>
+    <h2 id="delivery-title">Free Delivery in An Thượng, Ngũ Hành Sơn (Đà Nẵng)</h2>
+    <p><strong>Free delivery</strong> within 3 km in <strong>An Thượng (Ngũ Hành Sơn), Đà Nẵng</strong> at in-store prices — call us or order on GrabFood.</p>
     <div class="hero-buttons" role="group">
       <a class="btn" href="tel:+84327306076">Call for Delivery</a>
       <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener">Order on GrabFood</a>
@@ -722,7 +703,6 @@
       <p>Please let our staff know when ordering. We’ll prepare your rolls gluten-free and <strong>leave out the fried shallots</strong>, which contain gluten.</p>
     </details>
 
-
     <details>
       <summary>What grade is your matcha and where is it from?</summary>
       <p>We use <strong>ceremonial-grade matcha</strong> sourced directly from Japan. Matcha lattes are made with oat milk by default.</p>
@@ -730,7 +710,7 @@
 
     <details>
       <summary>Do you offer delivery?</summary>
-      <p>Yes—<strong>free within 3 km</strong> in An Thuong (Ngu Hanh Son) at in-store prices. Order by phone at <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> or via GrabFood.</p>
+      <p>Yes—<strong>free within 3 km</strong> in An Thượng (Ngũ Hành Sơn) at in-store prices. Order by phone at <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> or via GrabFood.</p>
     </details>
 
     <details>
@@ -803,7 +783,7 @@
 
 <!-- Sticky action bar -->
 <nav class="sticky-actions" role="navigation" aria-label="Quick actions">
-  <a class="btn accent" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener">Order on GrabFood</a>
+  <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener">Order on GrabFood</a>
   <a class="btn" href="tel:+84327306076">Call to Order</a>
 </nav>
 
