@@ -14,7 +14,6 @@
 
   <!-- Hreflang -->
   <link rel="alternate" href="https://www.rolypolydanang.vn/" hreflang="x-default">
-  <link rel="alternate" href="https://www.rolypolydanang.vn/" hreflang="en">
   <link rel="alternate" href="https://www.rolypolydanang.vn/" hreflang="en-VN">
   <!-- When the Vietnamese homepage goes live:
   <link rel="alternate" href="https://www.rolypolydanang.vn/vi/" hreflang="vi-VN">
@@ -24,6 +23,7 @@
   <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
 
   <!-- Performance -->
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -31,12 +31,17 @@
   <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 
-  <link rel="preload" as="image" href="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" type="image/webp" />
+  <!-- Preload the actual hero image used on this page -->
+  <link rel="preload" as="image" href="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" type="image/webp" />
 
   <!-- Styles -->
   <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"></noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Make FA non-blocking -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
 
@@ -60,8 +65,6 @@
   <meta property="og:image:alt" content="Assorted fresh spring rolls platter at Roly Poly in Da Nang" />
   <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang" />
   <meta property="og:locale" content="en_US" />
-  <!-- Add this when /vi/ is live -->
-  <!-- <meta property="og:locale:alternate" content="vi_VN" /> -->
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -70,7 +73,6 @@
   <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png" />
   <meta name="twitter:image:alt" content="Assorted fresh spring rolls platter at Roly Poly in Da Nang" />
   <meta name="twitter:site" content="@rolypolydanang" />
-  <meta name="twitter:creator" content="@rolypolydanang" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
@@ -221,23 +223,22 @@
       "@type": "FAQPage",
       "@id": "https://www.rolypolydanang.vn/#faq",
       "url": "https://www.rolypolydanang.vn/#faq",
-      "name": "Roly Poly - FAQs",
+      "name": "FAQs — Fresh Spring Rolls & Drinks",
       "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
       "mainEntityOfPage": { "@id": "https://www.rolypolydanang.vn/#webpage" },
       "inLanguage": "en",
       "mainEntity":[
-    {"@type":"Question","name":"What is gỏi cuốn (fresh spring rolls)?","acceptedAnswer":{"@type":"Answer","text":"Soft rice paper wrapped around rice vermicelli, crisp greens, fresh herbs, and your chosen filling — dipped in a house-made sauce."}},
-    {"@type":"Question","name":"Are your rolls made to order?","acceptedAnswer":{"@type":"Answer","text":"Yes. We hand-roll to order so everything tastes bright and fresh."}},
-    {"@type":"Question","name":"Which sauce should I pick?","acceptedAnswer":{"@type":"Answer","text":"Peanut (classic & creamy), Toasted Sesame (nutty, vegan), or nước chấm (Vietnamese fish sauce — light & tangy)."}},
-    {"@type":"Question","name":"Do you have vegan or gluten-free options?","acceptedAnswer":{"@type":"Answer","text":"Yes. Vegan fillings include Tofu, Mushroom & Avocado. Nước chấm is gluten-free; Peanut & Toasted Sesame are vegan. Tell us if you need gluten-free and we’ll omit fried shallots."}},
-    {"@type":"Question","name":"What are your best-sellers?","acceptedAnswer":{"@type":"Answer","text":"Garlic Prawn and Lemongrass Beef spring rolls — plus Salted Coffee and Coconut Coffee."}},
-    {"@type":"Question","name":"How can I order?","acceptedAnswer":{"@type":"Answer","text":"Dine-in or takeaway, order via GrabFood, or call +84 327 306 076."}}
-  ]
+        {"@type":"Question","name":"What is gỏi cuốn (fresh spring rolls)?","acceptedAnswer":{"@type":"Answer","text":"Soft rice paper wrapped around rice vermicelli, crisp greens, fresh herbs, and your chosen filling — dipped in a house-made sauce."}},
+        {"@type":"Question","name":"Are your rolls made to order?","acceptedAnswer":{"@type":"Answer","text":"Yes. We hand-roll to order so everything tastes bright and fresh."}},
+        {"@type":"Question","name":"Which sauce should I pick?","acceptedAnswer":{"@type":"Answer","text":"Peanut (classic & creamy), Toasted Sesame (nutty, vegan), or nước chấm (Vietnamese fish sauce — light & tangy)."}},
+        {"@type":"Question","name":"Do you have vegan or gluten-free options?","acceptedAnswer":{"@type":"Answer","text":"Yes. Vegan fillings include Tofu, Mushroom & Avocado. Nước chấm is gluten-free; Peanut & Toasted Sesame are vegan. Tell us if you need gluten-free and we’ll omit fried shallots."}},
+        {"@type":"Question","name":"What are your best-sellers?","acceptedAnswer":{"@type":"Answer","text":"Garlic Prawn and Lemongrass Beef spring rolls — plus Salted Coffee and Coconut Coffee."}},
+        {"@type":"Question","name":"How can I order?","acceptedAnswer":{"@type":"Answer","text":"Dine-in or takeaway, order via GrabFood, or call +84 327 306 076."}}
+      ]
     }
   ]
 }
 </script>
-
 
   <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
   <style>
@@ -331,37 +332,36 @@
   </header>
 
   <main id="main" role="main">
-    <!-- HERO -->
     <!-- HERO — HOME -->
-<section class="hero hero--home" id="home" aria-labelledby="hero-title">
-  <div class="hero-overlay" aria-hidden="true"></div>
-  <div class="container">
-    <div class="hero-content">
-      <h1 id="hero-title">Roly Poly — Fresh Spring Rolls & Coffee in Đà Nẵng</h1>
-      <h2 class="hero-subtitle">Made-to-order Vietnamese spring rolls (gỏi cuốn), house-made dipping sauces, Vietnamese phin coffee, fresh juices & matcha lattes.</h2>
+    <section class="hero hero--home" id="home" aria-labelledby="hero-title">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-title">Roly Poly — Fresh Spring Rolls & Coffee in Đà Nẵng</h1>
+          <h2 class="hero-subtitle">Made-to-order Vietnamese spring rolls (gỏi cuốn), house-made dipping sauces, Vietnamese phin coffee, fresh juices & matcha lattes.</h2>
 
-      <picture>
-        <source srcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" type="image/webp">
-        <img
-          src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
-          alt="Fresh spring rolls with peanut, sesame and nước chấm sauces at Roly Poly"
-          class="hero-img" width="1600" height="900"
-          sizes="(max-width: 768px) 100vw, 1200px"
-          decoding="async" fetchpriority="high">
-      </picture>
+          <picture>
+            <source srcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" type="image/webp">
+            <img
+              src="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp"
+              alt="Fresh spring rolls with peanut, sesame and nước chấm sauces at Roly Poly"
+              class="hero-img" width="1600" height="900"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              decoding="async" fetchpriority="high">
+          </picture>
 
-      <p class="subheadline">
-        Light, balanced and rolled to order. Vegan & gluten-free options available.
-      </p>
+          <p class="subheadline">
+            Light, balanced and rolled to order. Vegan & gluten-free options available.
+          </p>
 
-      <div class="hero-buttons" role="group" aria-label="Primary actions">
-        <a href="/menu" class="btn">View Menu & Prices</a>
-        <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn" target="_blank" rel="noopener">Order on GrabFood</a>
-        <a href="tel:+84327306076" class="btn">Call to Order</a>
+          <div class="hero-buttons" role="group" aria-label="Primary actions">
+            <a href="/menu" class="btn">View Menu & Prices</a>
+            <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn" target="_blank" rel="noopener noreferrer">Order on GrabFood</a>
+            <a href="tel:+84327306076" class="btn">Call to Order</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="about" aria-labelledby="about-heading">
       <div class="container">
@@ -373,7 +373,6 @@
           <strong>Explore our <a href="/menu#spring-rolls">fresh spring rolls in Da Nang</a> and <a href="/menu#coffee">Vietnamese coffee in An Thuong</a>.</strong></p>
       </div>
     </section>
-
 
     <section class="different" id="why-us" aria-labelledby="why-heading">
       <div class="container">
@@ -426,41 +425,41 @@
     </section>
 
     <!-- FAQ — HOME -->
-<section class="faq" id="faq" aria-labelledby="faq-heading">
-  <div class="container">
-    <h2 id="faq-heading">FAQs — Fresh Spring Rolls & Drinks</h2>
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading">FAQs — Fresh Spring Rolls & Drinks</h2>
 
-    <details>
-      <summary>What is gỏi cuốn (fresh spring rolls)?</summary>
-      <p>Soft rice paper wrapped around rice vermicelli, crisp greens, fresh herbs, and your chosen filling — dipped in a house-made sauce.</p>
-    </details>
+        <details>
+          <summary>What is gỏi cuốn (fresh spring rolls)?</summary>
+          <p>Soft rice paper wrapped around rice vermicelli, crisp greens, fresh herbs, and your chosen filling — dipped in a house-made sauce.</p>
+        </details>
 
-    <details>
-      <summary>Are your rolls made to order?</summary>
-      <p>Yes. We hand-roll to order so everything tastes bright and fresh.</p>
-    </details>
+        <details>
+          <summary>Are your rolls made to order?</summary>
+          <p>Yes. We hand-roll to order so everything tastes bright and fresh.</p>
+        </details>
 
-    <details>
-      <summary>Which sauce should I pick?</summary>
-      <p>Peanut (classic & creamy), Toasted Sesame (nutty, vegan), or <em>nước chấm</em> (Vietnamese fish sauce — light & tangy).</p>
-    </details>
+        <details>
+          <summary>Which sauce should I pick?</summary>
+          <p>Peanut (classic &amp; creamy), Toasted Sesame (nutty, vegan), or <em>nước chấm</em> (Vietnamese fish sauce — light &amp; tangy).</p>
+        </details>
 
-    <details>
-      <summary>Do you have vegan or gluten-free options?</summary>
-      <p>Yes. Vegan fillings include Tofu, Mushroom &amp; Avocado. <em>Nước chấm</em> is gluten-free; Peanut &amp; Toasted Sesame are vegan. Tell us if you need gluten-free and we’ll omit fried shallots.</p>
-    </details>
+        <details>
+          <summary>Do you have vegan or gluten-free options?</summary>
+          <p>Yes. Vegan fillings include Tofu, Mushroom &amp; Avocado. <em>Nước chấm</em> is gluten-free; Peanut &amp; Toasted Sesame are vegan. Tell us if you need gluten-free and we’ll omit fried shallots.</p>
+        </details>
 
-    <details>
-      <summary>What are your best-sellers?</summary>
-      <p>Garlic Prawn and Lemongrass Beef spring rolls — plus Salted Coffee and Coconut Coffee.</p>
-    </details>
+        <details>
+          <summary>What are your best-sellers?</summary>
+          <p>Garlic Prawn and Lemongrass Beef spring rolls — plus Salted Coffee and Coconut Coffee.</p>
+        </details>
 
-    <details>
-      <summary>How can I order?</summary>
-      <p>Dine-in or takeaway, order via <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener">GrabFood</a>, or call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a>.</p>
-    </details>
-  </div>
-</section>
+        <details>
+          <summary>How can I order?</summary>
+          <p>Dine-in or takeaway, order via <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer">GrabFood</a>, or call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a>.</p>
+        </details>
+      </div>
+    </section>
 
     <section class="map" aria-labelledby="map-heading">
       <div class="container">
@@ -551,7 +550,7 @@
 
   <!-- Sticky action bar -->
   <nav class="sticky-actions" role="navigation" aria-label="Quick actions">
-    <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6?utm_source=homepage_cta&amp;utm_medium=button&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener">Order on GrabFood</a>
+    <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6?utm_source=homepage_cta&amp;utm_medium=button&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener noreferrer">Order on GrabFood</a>
     <a class="btn" href="tel:+84327306076">Call to Order</a>
   </nav>
 
