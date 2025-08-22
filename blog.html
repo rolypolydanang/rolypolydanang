@@ -62,8 +62,9 @@
   <link rel="manifest" href="/site.webmanifest"/>
   <meta name="theme-color" content="#ffffff"/>
 
-  <!-- External libs -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- External libs (async) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
@@ -209,6 +210,8 @@
   <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header" id="site-header" role="banner">
   <div class="container nav-container">
     <a class="logo" href="/" aria-label="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Home">
@@ -266,14 +269,14 @@
 </script>
 
 <main id="main" role="main">
-  <!-- HERO — BLOG (replace your current <section id="blog"> … </section>) -->
+  <!-- HERO — BLOG -->
 <section class="hero hero--blog" id="blog" aria-labelledby="hero-title">
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-content">
 
-      <h1 id="hero-title">Roly Poly Blog — News, Specials & Guides</h1>
-      <h2 class="hero-subtitle">Stories from our spring-roll café, coffee & matcha notes, and local tips.</h2>
+      <h1 id="hero-title">Roly Poly Blog — News, Specials &amp; Guides</h1>
+      <h2 class="hero-subtitle">Stories from our spring-roll café, coffee &amp; matcha notes, and local tips.</h2>
 
       <picture>
         <source srcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" type="image/webp">
