@@ -103,15 +103,26 @@
   <!-- Page styles -->
   <style>
     :root{ --brand:#ff6a00; --brand-d:#e55b00; }
+
     .support-wrap{ padding: 2rem 0 3rem; }
     .support-header{ text-align:center; margin-bottom:1.25rem }
     .support-intro{ color:#444; max-width:52rem; margin:.25rem auto 1.5rem; }
-    .order-id{ display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; }
+
+    .order-id{ display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem; }
     .order-id input{ border:1px solid #e3e3e3; border-radius:8px; padding:.6rem .8rem; min-width:260px; width:100%; max-width:520px; }
+
     .btn-large{ padding:1rem 1.25rem; font-size:1.1rem; border-width:2px }
-    .contact-grid{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1rem; margin-top:1.25rem }
+    .contact-grid{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1.25rem; margin-top:1.5rem }
     @media (min-width: 640px){ .contact-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    .contact-btn{ display:flex; align-items:center; justify-content:center; gap:.6rem; border-radius:10px; text-align:center; min-height:48px; line-height:1.2; }
+
+    .contact-btn{
+      display:flex; align-items:center; justify-content:center; gap:.6rem;
+      border-radius:10px; text-align:center; min-height:48px; line-height:1.2;
+      padding:1rem 1.25rem; font-weight:600; border:2px solid transparent;
+      transition: transform .1s ease, box-shadow .1s ease;
+    }
+    .contact-btn:hover{ transform: translateY(-2px); box-shadow: 0 3px 8px rgba(0,0,0,0.08); }
+
     .contact-btn i,.contact-btn img,.contact-btn svg{ width:22px; height:22px }
     .btn-wa{ background:#25D366; border-color:#20b457 }
     .btn-wa:hover{ background:#20b457; border-color:#1a9449 }
@@ -131,6 +142,13 @@
       border-radius: 10px;
     }
 
+    /* H1 clamp & intro rhythm */
+    .support-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: .5rem; }
+    .support-intro { font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem; }
+
+    /* Scoped container rule so we don't affect other pages */
+    main.support-wrap > .container { max-width: 960px; margin-inline: auto; padding-inline: 1rem; }
+
     /* Fallback in case not present in /main.css */
     .visually-hidden {
       position: absolute !important;
@@ -139,6 +157,9 @@
       height: 1px; width: 1px;
       overflow: hidden; white-space: nowrap;
     }
+
+    /* Footer breathing room */
+    footer.site-footer { margin-top: 4rem; }
   </style>
 </head>
 
