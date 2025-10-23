@@ -16,9 +16,9 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <!-- Preload likely hero in both formats -->
-  <link rel="preload" as="image" href="/images/blog-catering-platter-roly-poly-da-nang.webp" type="image/webp"/>
-  <link rel="preload" as="image" href="/images/blog-catering-platter-roly-poly-da-nang.jpg" type="image/jpeg"/>
+  <!-- Preload hero images -->
+  <link rel="preload" as="image" href="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-1.webp" type="image/webp"/>
+  <link rel="preload" as="image" href="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp" type="image/webp"/>
   <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link rel="stylesheet" href="/main.css"/></noscript>
 
@@ -27,6 +27,7 @@
   <meta property="og:title" content="Catering in Da Nang — Fresh Spring Rolls for Small Parties & Office Lunches"/>
   <meta property="og:description" content="Fresh spring roll platters, sauces, and drinks for villas, offices, and small events. Easy ordering, tidy setup, fast service."/>
   <meta property="og:url" content="https://www.rolypolydanang.vn/blog/catering-da-nang"/>
+  <!-- Keep a JPG for broad social compatibility -->
   <meta property="og:image" content="https://www.rolypolydanang.vn/images/blog-catering-platter-roly-poly-da-nang.jpg"/>
   <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/blog-catering-platter-roly-poly-da-nang.jpg"/>
   <meta property="og:image:width" content="1600"/>
@@ -166,8 +167,9 @@
         "description": "Roly Poly catering brings fresh spring rolls, sauces, and drinks to villas, offices, and small events across Da Nang. Flexible sets, tidy setup, and quick service.",
         "inLanguage": "en",
         "image": [
-          { "@type":"ImageObject","url":"https://www.rolypolydanang.vn/images/blog-catering-platter-roly-poly-da-nang.jpg","width":1600,"height":900 },
-          { "@type":"ImageObject","url":"https://www.rolypolydanang.vn/images/blog-catering-platter-roly-poly-da-nang.webp","width":1600,"height":900 }
+          { "@type":"ImageObject","url":"https://www.rolypolydanang.vn/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-1.webp","width":1200,"height":800 },
+          { "@type":"ImageObject","url":"https://www.rolypolydanang.vn/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp","width":1200,"height":800 },
+          { "@type":"ImageObject","url":"https://www.rolypolydanang.vn/images/blog-catering-platter-roly-poly-da-nang.jpg","width":1600,"height":900 }
         ],
         "author": { "@type":"Organization","name":"Roly Poly Fresh Spring Rolls & Coffee Da Nang" },
         "publisher": {
@@ -219,7 +221,15 @@
   }
   </script>
 
-  <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
+  <style>
+    .hero-img{width:100%;height:auto;max-width:1200px}
+    /* Two-up hero layout */
+    .post-hero.two-up{display:grid;gap:1rem;grid-template-columns:1fr}
+    .post-hero.two-up figure{margin:0}
+    @media (min-width: 768px){
+      .post-hero.two-up{grid-template-columns:1fr 1fr}
+    }
+  </style>
 </head>
 <body>
 <header class="site-header" id="site-header" role="banner">
@@ -266,19 +276,30 @@
           <span itemprop="name">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</span>
         </span>
       </p>
-      <figure class="post-hero">
-        <picture>
-          <source srcset="/images/blog-catering-platter-roly-poly-da-nang.webp" type="image/webp"/>
-          <source srcset="/images/blog-catering-platter-roly-poly-da-nang.jpg" type="image/jpeg"/>
-          <img
-            src="/images/blog-catering-platter-roly-poly-da-nang.jpg"
-            alt="food catering service in Da Nang — Roly Poly spring roll platters with sauces"
-            class="hero-img"
-            width="1600" height="900"
-            sizes="(max-width: 768px) 100vw, 1200px"
-            decoding="async" fetchpriority="high">
-        </picture>
-      </figure>
+
+      <!-- Two-image hero -->
+      <div class="post-hero two-up">
+        <figure>
+          <picture>
+            <source srcset="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-1.webp" type="image/webp"/>
+            <img
+              src="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-1.webp"
+              alt="Food catering service in Da Nang — office lunch guests enjoying Roly Poly fresh spring roll platters with peanut sauce"
+              width="1200" height="800"
+              decoding="async" fetchpriority="high" style="width:100%;height:auto">
+          </picture>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp" type="image/webp"/>
+            <img
+              src="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp"
+              alt="Small party catering in Da Nang — guests holding Roly Poly spring roll platters with peanut and sesame sauce cups"
+              width="1200" height="800"
+              loading="eager" decoding="async" style="width:100%;height:auto">
+          </picture>
+        </figure>
+      </div>
     </header>
 
     <section class="post-content" itemprop="articleBody">
@@ -336,40 +357,6 @@
         <li><strong>Staging:</strong> Set sauces front-center with labels; place tongs on each platter.</li>
         <li><strong>Refills:</strong> If your group grazes slowly, we can stagger delivery — just ask.</li>
       </ul>
-
-      <!-- Real Catering Photos (inserted after Serving Tips) -->
-      <section class="post-photos" aria-labelledby="catering-photos-title">
-        <div class="container">
-          <h2 id="catering-photos-title">Real Catering — Office Lunch Sets in Da Nang</h2>
-          <div class="photo-grid" role="list" style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start">
-            <figure role="listitem" style="margin:0">
-              <picture>
-                <source srcset="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-1.webp" type="image/webp">
-                <img
-                  src="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-1.webp"
-                  alt="Food catering service in Da Nang — office lunch guests enjoying Roly Poly fresh spring roll platters with peanut sauce"
-                  loading="lazy" decoding="async" width="1200" height="800" style="width:100%;height:auto">
-              </picture>
-              <figcaption style="font-size:.95rem;opacity:.9;margin-top:.25rem">
-                Office lunch catering in Da Nang — tidy spring roll sets with labeled sauces.
-              </figcaption>
-            </figure>
-
-            <figure role="listitem" style="margin:0">
-              <picture>
-                <source srcset="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp" type="image/webp">
-                <img
-                  src="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp"
-                  alt="Small party catering in Da Nang — guests holding Roly Poly spring roll platters with peanut and sesame sauce cups"
-                  loading="lazy" decoding="async" width="1200" height="800" style="width:100%;height:auto">
-              </picture>
-              <figcaption style="font-size:.95rem;opacity:.9;margin-top:.25rem">
-                Small party catering — easy-to-serve spring roll platters keep things neat.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
 
       <!-- FAQs section (visible content) -->
       <h2>FAQs — Roly Poly Catering in Da Nang</h2>
