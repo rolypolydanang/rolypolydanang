@@ -281,39 +281,77 @@ optimise this page
         <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
       </a>
 
-      <!-- Messenger -->
-      <a id="btn-msgr" class="btn btn-large contact-btn btn-msgr"
-         href="https://m.me/rolypolydanang"
-         target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-messenger" aria-hidden="true"></i> Messenger
-      </a>
+     <!-- CONTACT BUTTONS -->
+<div class="contact-buttons">
 
-      <!-- Zalo -->
-      <a id="btn-zalo" class="btn btn-large contact-btn btn-zalo"
-         href="https://zalo.me/84327306076"
-         target="_blank" rel="noopener noreferrer">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false">
-          <rect x="1" y="1" width="22" height="22" rx="7" ry="7" fill="#0068FF"></rect>
-          <path d="M13 6.8H7.2v1.8h3.3l-3.6 6H13v-1.8H9.7l3.6-6z" fill="#fff"></path>
-        </svg>
-        Zalo
-      </a>
+  <!-- WhatsApp -->
+  <a class="contact-btn whatsapp" href="https://wa.me/84327306076" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+  </a>
 
-      <!-- Instagram -->
-      <a id="btn-ig" class="btn btn-large contact-btn btn-ig"
-         href="https://ig.me/m/rolypolydanang"
-         target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-      </a>
+  <!-- Messenger -->
+  <a class="contact-btn messenger" href="https://m.me/rolypolydanang" target="_blank" rel="noopener">
+    <i class="fab fa-facebook-messenger" aria-hidden="true"></i> Messenger
+  </a>
 
-      <!-- Call -->
-      <a id="btn-call" class="btn btn-large contact-btn btn-call"
-         href="tel:+84327306076">
-        <i class="fa-solid fa-phone" aria-hidden="true"></i> Call Us
-      </a>
-    </div>
-  </div>
-</section>
+  <!-- Zalo -->
+  <a class="contact-btn zalo" href="https://zalo.me/84327306076" target="_blank" rel="noopener">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false">
+      <rect x="1" y="1" width="22" height="22" rx="7" ry="7" fill="#fff"></rect>
+      <path d="M13 6.8H7.2v1.8h3.3l-3.6 6H13v-1.8H9.7l3.6-6z" fill="#0068FF"></path>
+    </svg>
+    Zalo
+  </a>
+
+  <!-- Instagram -->
+  <a class="contact-btn instagram" href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener">
+    <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+  </a>
+
+  <!-- Call -->
+  <a class="contact-btn call" href="tel:+84327306076">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i> Call Us
+  </a>
+
+</div>
+
+<style>
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Brand colors */
+.whatsapp { background-color: #25D366; }
+.messenger { background-color: #0084FF; }
+.zalo { background-color: #0068FF; }
+.instagram { background-color: #E4405F; }
+.call { background-color: #000000; }
+</style>
+
 
 
    <!-- DELIVERY SECTION -->
