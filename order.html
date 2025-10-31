@@ -188,6 +188,37 @@
     .instagram:hover { background-color:var(--brand-d); }
     .call { background-color:#000; }
 
+    /* 1) Keep orange links, but NOT on buttons */
+.info-section a:not(.btn):not(.contact-btn) {
+  color: #f26522;
+}
+
+/* 2) Force white text on buttons */
+.btn,
+.btn.accent,
+.contact-btn {
+  color: #fff !important;
+}
+
+/* 3) Force white on icons inside buttons (Font Awesome + inline SVG) */
+.contact-btn i,
+.contact-btn svg,
+.contact-btn svg *,
+.btn i,
+.btn svg,
+.btn svg * {
+  color: #fff !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
+/* Optional: subtle hover without changing text color */
+.contact-btn:hover,
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+
     /* Closing section link styles */
     .about-list { list-style: disc; padding-left: 1.4rem; margin: 0.5rem 0 1.25rem; }
     .about-list li { margin: 0.35rem 0; }
