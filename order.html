@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
   <!-- Preload LCP hero image & CSS -->
-  <link rel="preload" as="image" href="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp" />
+  <link rel="preload" as="image" href="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp" type="image/webp" />
   <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="/main.css" /></noscript>
 
@@ -25,8 +25,8 @@
   <meta property="og:title" content="Order Fresh Spring Rolls in Da Nang | Roly Poly — Pickup & Delivery">
   <meta property="og:description" content="Order fresh spring rolls, Vietnamese coffee, matcha, and juices from Roly Poly Da Nang. Pickup in An Thuong or delivery via GrabFood." />
   <meta property="og:url" content="https://www.rolypolydanang.vn/order">
-  <meta property="og:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
-  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
+  <meta property="og:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp">
+  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Assorted fresh spring rolls from Roly Poly Da Nang">
@@ -38,7 +38,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Order Fresh Spring Rolls in Da Nang | Roly Poly — Pickup & Delivery">
   <meta name="twitter:description" content="Order fresh spring rolls, Vietnamese coffee, matcha, and juices from Roly Poly Da Nang. Pickup in An Thuong or delivery via GrabFood.">
-  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
+  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp">
   <meta name="twitter:image:alt" content="Assorted fresh spring rolls from Roly Poly Da Nang">
 
   <!-- Icons & PWA -->
@@ -78,12 +78,12 @@
         "name": "Roly Poly Fresh Spring Rolls & Coffee Da Nang",
         "url": "https://www.rolypolydanang.vn/",
         "image": [
-          "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png",
-          "https://www.rolypolydanang.vn/images/spring-rolls-trio-roly-poly-da-nang.webp"
+          "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp",
+          "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
         ],
         "alternateName": ["Roly Poly Da Nang","Roly Poly Fresh Spring Rolls Da Nang"],
         "logo": { "@type": "ImageObject", "url": "https://www.rolypolydanang.vn/images/logo.jpg", "width": 2000, "height": 2000 },
-        "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thuong near My Khe Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
+        "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thoung near My Khe Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
         "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha","Juice"],
         "priceRange": "₫",
         "telephone": "+84327306076",
@@ -142,10 +142,10 @@
       {
         "@type": "ImageObject",
         "@id": "https://www.rolypolydanang.vn/order#heroimage",
-        "url": "https://www.rolypolydanang.vn/images/spring-rolls-trio-roly-poly-da-nang.webp",
+        "url": "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp",
         "width": 1600,
         "height": 900,
-        "caption": "Fresh spring rolls from Roly Poly Da Nang"
+        "caption": "Assorted fresh spring rolls platter from Roly Poly Da Nang"
       },
       {
         "@type": "BreadcrumbList",
@@ -177,7 +177,7 @@
     .info-section .section-lead { max-width: 70ch; }
     .list { padding-left: 1.25rem; }
 
-    /* Contact buttons (moved from body for clean DOM) */
+    /* Contact buttons */
     .contact-buttons { display:flex; flex-direction:column; gap:15px; width:100%; max-width:400px; margin:0 auto; }
     .contact-btn { display:flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; font-weight:700; font-size:1.1rem; color:#fff; padding:14px; border-radius:10px; transition:transform .2s ease, opacity .2s ease; }
     .contact-btn:hover { transform:translateY(-2px); opacity:.9; }
@@ -188,46 +188,39 @@
     .instagram:hover { background-color:var(--brand-d); }
     .call { background-color:#000; }
 
+    /* Keep orange links, but NOT on buttons */
+    .info-section a:not(.btn):not(.contact-btn) { color:#f26522; text-decoration:none; font-weight:600; }
+    .info-section a:not(.btn):not(.contact-btn):hover { text-decoration:underline; }
 
+    /* Force white text on buttons + icons */
+    .btn, .btn.accent, .contact-btn { color:#fff !important; }
+    .contact-btn i, .contact-btn svg, .contact-btn svg *, .btn i, .btn svg, .btn svg * {
+      color:#fff !important; fill:#fff !important; stroke:#fff !important;
+    }
+    .contact-btn:hover, .btn:hover { filter:brightness(0.95); }
 
-/* 2) Force white text on buttons */
-.btn,
-.btn.accent,
-.contact-btn {
-  color: #fff !important;
-}
-
-/* 3) Force white on icons inside buttons (Font Awesome + inline SVG) */
-.contact-btn i,
-.contact-btn svg,
-.contact-btn svg *,
-.btn i,
-.btn svg,
-.btn svg * {
-  color: #fff !important;
-  fill: #fff !important;
-  stroke: #fff !important;
-}
-
-/* Optional: subtle hover without changing text color */
-.contact-btn:hover,
-.btn:hover {
-  filter: brightness(0.95);
-}
-
-
-    /* Closing section link styles */
+    /* Closing list spacing */
     .about-list { list-style: disc; padding-left: 1.4rem; margin: 0.5rem 0 1.25rem; }
     .about-list li { margin: 0.35rem 0; }
-    .info-section a { color: #f26522; text-decoration: none; font-weight: 600; }
-    .info-section a:hover { text-decoration: underline; }
 
-    .contact-btn {
-  border: none;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-}
+    .contact-btn { border:none; font-weight:600; letter-spacing:0.3px; }
 
+    /* Helpers */
+    .note { color:#666; font-size:.95rem; }
+    .muted { color:#666; margin-top:.5rem; }
+
+    /* Pickup image */
+    .pickup-photo { margin:1rem 0 1.25rem; }
+    .pickup-photo img { width:100%; height:auto; border-radius:12px; display:block; }
+
+    /* Sauce image + layout */
+    .sauce-layout { display:grid; gap:20px; align-items:start; }
+    .sauce-media img { width:100%; height:auto; border-radius:12px; display:block; }
+    @media (min-width: 880px) {
+      .sauce-layout { grid-template-columns: 1fr 1fr; }
+      .sauce-media { order:2; }
+      .sauce-list { order:1; }
+    }
   </style>
 </head>
 
@@ -269,188 +262,185 @@
   </script>
 
   <main id="main" role="main">
-  <!-- HERO — ORDER -->
-  <section class="hero hero--order" id="order" aria-labelledby="hero-title">
-    <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero-content">
-        <h1 id="hero-title">Order Now — Fresh Spring Rolls, Coffee, Matcha & Juices</h1>
-        <p class="hero-subtitle">Pickup in An Thuong or delivery via GrabFood. Always fresh, rolled to order.</p>
+    <!-- HERO — ORDER -->
+    <section class="hero hero--order" id="order" aria-labelledby="hero-title">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-title">Order Now — Fresh Spring Rolls, Coffee, Matcha & Juices</h1>
+          <p class="hero-subtitle">Pickup in An Thong or delivery via GrabFood. Always fresh, rolled to order.</p>
 
-        <picture>
-          <source srcset="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp">
-          <img
-            src="/images/spring-rolls-trio-roly-poly-da-nang.webp"
-            alt="Fresh spring rolls from Roly Poly Da Nang"
-            class="hero-img"
-            width="1600" height="900"
-            sizes="(max-width: 768px) 100vw, 1200px"
-            decoding="async" fetchpriority="high">
-        </picture>
+          <picture>
+            <source srcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp" type="image/webp">
+            <img
+              src="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp"
+              alt="Assorted fresh spring rolls platter from Roly Poly Da Nang"
+              class="hero-img"
+              width="1600" height="900"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              decoding="async" fetchpriority="high">
+          </picture>
 
-        <div class="hero-buttons" role="group" aria-label="Page shortcuts">
-          <a href="#pickup" class="btn">Order Pickup</a>
-          <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
-             class="btn" target="_blank" rel="noopener"
-             aria-label="Order delivery on GrabFood (opens in new tab)">Order Delivery</a>
+          <div class="hero-buttons" role="group" aria-label="Page shortcuts">
+            <a href="#pickup" class="btn">Order Pickup</a>
+            <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
+               class="btn" target="_blank" rel="noopener"
+               aria-label="Order delivery on GrabFood (opens in new tab)">Order Delivery</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PICKUP (single, deduped) -->
-  <section id="pickup" class="info-section" aria-labelledby="pickup-title">
-    <div class="container">
-      <h2 id="pickup-title">Pickup at Roly Poly Da Nang</h2>
-      <p>Call or message us to place your order — we’ll have it freshly rolled and ready when you arrive.</p>
+    <!-- PICKUP -->
+    <section id="pickup" class="info-section" aria-labelledby="pickup-title">
+      <div class="container">
+        <h2 id="pickup-title">Pickup at Roly Poly Da Nang</h2>
+        <p>Call or message us to place your order — we’ll have it freshly rolled and ready when you arrive.</p>
 
-      <address>
-        <strong>Address:</strong><br>
-        <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener">
-          05 An Thượng 6, Bắc Mỹ Phú,<br>
-          Ngũ Hành Sơn, Đà Nẵng 550000
-        </a><br><br>
+        <address>
+          <strong>Address:</strong><br>
+          <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener">
+            05 An Thượng 6, Bắc Mỹ Phú,<br>
+            Ngũ Hành Sơn, Đà Nẵng 550000
+          </a><br><br>
 
-        <strong>Phone:</strong> <a href="tel:+84327306076">+84 327 306 076</a><br>
-        <strong>Hours:</strong> Monday – Saturday, 10:00 – 20:00 (Closed Sunday)<br>
-        <strong>Prep time:</strong> 10–15 minutes for most orders.<br>
-        <strong>Payment:</strong> Cash, Visa, Mastercard, Apple Pay, MoMo.
-      </address>
+          <strong>Phone:</strong> <a href="tel:+84327306076">+84 327 306 076</a><br>
+          <strong>Hours:</strong> Monday – Saturday, 10:00 – 20:00 (Closed Sunday)<br>
+          <strong>Prep time:</strong> 10–15 minutes for most orders.<br>
+          <strong>Payment:</strong> Cash, Visa, Mastercard, Apple Pay, MoMo.
+        </address>
 
-      <p>Message us directly to place an order, ask about today’s specials, or confirm your pickup time — we’ll get back to you as soon as possible during opening hours.</p>
+        <!-- Storefront photo -->
+        <figure class="pickup-photo">
+          <img
+            src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
+            alt="Roly Poly storefront on An Thượng 6, Ngũ Hành Sơn, Đà Nẵng"
+            width="1200" height="800" loading="lazy" decoding="async">
+          <figcaption class="visually-hidden">Roly Poly storefront on An Thượng 6</figcaption>
+        </figure>
 
-      <h3>Contact us on your preferred app:</h3>
+        <p>Message us directly to place an order, ask about today’s specials, or confirm your pickup time — we’ll get back to you as soon as possible during opening hours.</p>
 
-      <div class="contact-grid" aria-label="Contact options">
-        <div class="contact-buttons">
-          <!-- WhatsApp -->
-          <a class="contact-btn whatsapp"
-             href="https://wa.me/84327306076"
-             target="_blank" rel="noopener"
-             aria-label="Contact Roly Poly on WhatsApp">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
-          </a>
+        <h3>Contact us on your preferred app:</h3>
 
-          <!-- Messenger -->
-          <a class="contact-btn messenger"
-             href="https://m.me/rolypolydanang"
-             target="_blank" rel="noopener"
-             aria-label="Contact Roly Poly on Facebook Messenger">
-            <i class="fab fa-facebook-messenger" aria-hidden="true"></i> Messenger
-          </a>
+        <div class="contact-grid" aria-label="Contact options">
+          <div class="contact-buttons">
+            <a class="contact-btn whatsapp" href="https://wa.me/84327306076" target="_blank" rel="noopener" aria-label="Contact Roly Poly on WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+            </a>
+            <a class="contact-btn messenger" href="https://m.me/rolypolydanang" target="_blank" rel="noopener" aria-label="Contact Roly Poly on Facebook Messenger">
+              <i class="fab fa-facebook-messenger" aria-hidden="true"></i> Messenger
+            </a>
+            <a class="contact-btn zalo" href="https://zalo.me/84327306076" target="_blank" rel="noopener" aria-label="Contact Roly Poly on Zalo">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false">
+                <path d="M13 6.8H7.2v1.8h3.3l-3.6 6H13v-1.8H9.7l3.6-6z" fill="currentColor"></path>
+              </svg>
+              Zalo
+            </a>
+            <a class="contact-btn instagram" href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener" aria-label="Contact Roly Poly on Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+            </a>
+            <a class="contact-btn call" href="tel:+84327306076" aria-label="Call Roly Poly Da Nang">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> Call Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Zalo -->
-          <a class="contact-btn zalo"
-             href="https://zalo.me/84327306076"
-             target="_blank" rel="noopener"
-             aria-label="Contact Roly Poly on Zalo">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false">
-              <path d="M13 6.8H7.2v1.8h3.3l-3.6 6H13v-1.8H9.7l3.6-6z" fill="currentColor"></path>
-            </svg>
-            Zalo
-          </a>
+    <!-- DELIVERY -->
+    <section id="delivery" class="info-section" aria-labelledby="delivery-title">
+      <div class="container">
+        <h2 id="delivery-title">Order Delivery via GrabFood</h2>
+        <p>Enjoy Roly Poly from the comfort of your home in Da Nang. Our fresh spring rolls, signature sauces, and drinks are available for fast delivery through GrabFood — always fresh, rolled to order.</p>
+        <p><em>Open the GrabFood app or website to order directly from Roly Poly Da Nang.</em></p>
+        <a class="btn accent"
+           href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Order Roly Poly Da Nang delivery on GrabFood (opens in new tab)">Order on GrabFood</a>
+      </div>
+    </section>
 
-          <!-- Instagram -->
-          <a class="contact-btn instagram"
-             href="https://ig.me/m/rolypolydanang"
-             target="_blank" rel="noopener"
-             aria-label="Contact Roly Poly on Instagram">
-            <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-          </a>
+    <!-- FAVORITES -->
+    <section id="favorites" class="info-section" aria-labelledby="favorites-title">
+      <div class="container">
+        <h2 id="favorites-title">Favorites from Our Menu</h2>
+        <p>Quick picks our guests love. Order as shown or customize your filling and sauce.</p>
 
-          <!-- Call -->
-          <a class="contact-btn call"
-             href="tel:+84327306076"
-             aria-label="Call Roly Poly Da Nang">
-            <i class="fa-solid fa-phone" aria-hidden="true"></i> Call Us
-          </a>
-        </div><!-- /.contact-buttons -->
-      </div><!-- /.contact-grid -->
-    </div><!-- /.container -->
-  </section><!-- /#pickup -->
+        <h3>Spring Rolls</h3>
+        <ul>
+          <li><strong>Prawn Spring Roll</strong> — classic, light, and super fresh <span class="note"> • Suggested sauce: Fish Sauce (nước chấm)</span></li>
+          <li><strong>Lemongrass Beef Roll</strong> — juicy with a fragrant lemongrass kick <span class="note"> • Suggested sauce: Spicy Mayo</span></li>
+          <li><strong>Smoked Goose Spring Roll</strong> — smoky, tender, and uniquely flavorful <span class="note"> • Suggested sauce: Toasted Sesame</span></li>
+          <li><strong>Roasted Crispy Pork Belly Spring Roll</strong> — crackling skin, succulent meat, and house herbs <span class="note"> • Suggested sauce: Sweet &amp; Sour</span></li>
+        </ul>
 
-  <!-- DELIVERY -->
-  <section id="delivery" class="info-section" aria-labelledby="delivery-title">
-    <div class="container">
-      <h2 id="delivery-title">Order Delivery via GrabFood</h2>
-      <p>Enjoy Roly Poly from the comfort of your home in Da Nang. Our fresh spring rolls, signature sauces, and drinks are available for fast delivery through GrabFood — always fresh, rolled to order.</p>
-      <p><em>Open the GrabFood app or website to order directly from Roly Poly Da Nang.</em></p>
-      <a class="btn accent"
-         href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
-         target="_blank" rel="noopener noreferrer"
-         aria-label="Order Roly Poly Da Nang delivery on GrabFood (opens in new tab)">Order on GrabFood</a>
-    </div>
-  </section>
+        <h3>Drinks</h3>
+        <ul>
+          <li><strong>Salted Coffee</strong> — bold Vietnamese coffee with silky salted cream foam</li>
+          <li><strong>Coconut Coffee</strong> — creamy coconut meets rich espresso (a local favorite)</li>
+          <li><strong>Matcha Latte</strong> — smooth, earthy matcha with velvety milk</li>
+        </ul>
 
-  <!-- FAVORITES -->
-  <section id="favorites" class="info-section" aria-labelledby="favorites-title">
-    <div class="container">
-      <h2 id="favorites-title">Favorites from Our Menu</h2>
-      <p>Quick picks our guests love. Order as shown or customize your filling and sauce.</p>
+        <p class="muted">Availability may vary by day. Gluten-free and vegan options available on request.</p>
 
-      <h3>Spring Rolls</h3>
-      <ul>
-        <li><strong>Prawn Spring Roll</strong> — classic, light, and super fresh <span class="note"> • Suggested sauce: Fish Sauce (nước chấm)</span></li>
-        <li><strong>Lemongrass Beef Roll</strong> — juicy with a fragrant lemongrass kick <span class="note"> • Suggested sauce: Spicy Mayo</span></li>
-        <li><strong>Smoked Goose Spring Roll</strong> — smoky, tender, and uniquely flavorful <span class="note"> • Suggested sauce: Toasted Sesame</span></li>
-        <li><strong>Roasted Crispy Pork Belly Spring Roll</strong> — crackling skin, succulent meat, and house herbs <span class="note"> • Suggested sauce: Sweet &amp; Sour</span></li>
-      </ul>
+        <p><a href="/menu" class="btn" aria-label="See the full Roly Poly Da Nang menu">See Full Menu</a></p>
+      </div>
+    </section>
 
-      <h3>Drinks</h3>
-      <ul>
-        <li><strong>Salted Coffee</strong> — bold Vietnamese coffee with silky salted cream foam</li>
-        <li><strong>Coconut Coffee</strong> — creamy coconut meets rich espresso (a local favorite)</li>
-        <li><strong>Matcha Latte</strong> — smooth, earthy matcha with velvety milk</li>
-      </ul>
+    <!-- SAUCES -->
+    <section id="sauces" class="info-section" aria-labelledby="sauce-title">
+      <div class="container">
+        <h2 id="sauce-title">Choose Your Sauce</h2>
+        <p>Every spring roll comes with your choice of our house-made sauces — crafted fresh daily with local ingredients.</p>
 
-      <p class="muted">Availability may vary by day. Gluten-free and vegan options available on request.</p>
+        <div class="sauce-layout">
+          <div class="sauce-list">
+            <ul>
+              <li><strong>Fish Sauce</strong> (GF) — our signature blend of sweet, salty, and tangy</li>
+              <li><strong>Peanut</strong> (V) — creamy and rich, a perfect classic</li>
+              <li><strong>Sweet &amp; Sour</strong> (GF) — bright and balanced with a hint of chili</li>
+              <li><strong>Toasted Sesame</strong> (V) — nutty, fragrant, and smooth</li>
+              <li><strong>Spicy Mayo</strong> — creamy with a touch of heat</li>
+            </ul>
+            <p><em>V = Vegan | GF = Gluten-Free</em></p>
+            <p>Tell us your favorite combo — we’ll make sure your rolls are just right.</p>
+          </div>
 
-      <p><a href="/menu" class="btn" aria-label="See the full Roly Poly Da Nang menu">See Full Menu</a></p>
-    </div>
-  </section>
+          <div class="sauce-media">
+            <img
+              src="/images/five-sauces-roly-poly-da-nang.webp"
+              alt="Five house-made sauces from Roly Poly Da Nang"
+              width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- SAUCES -->
-  <section id="sauces" class="info-section" aria-labelledby="sauce-title">
-    <div class="container">
-      <h2 id="sauce-title">Choose Your Sauce</h2>
-      <p>Every spring roll comes with your choice of our house-made sauces — crafted fresh daily with local ingredients.</p>
-      <ul>
-        <li><strong>Fish Sauce</strong> (GF) — our signature blend of sweet, salty, and tangy</li>
-        <li><strong>Peanut</strong> (V) — creamy and rich, a perfect classic</li>
-        <li><strong>Sweet &amp; Sour</strong> (GF) — bright and balanced with a hint of chili</li>
-        <li><strong>Toasted Sesame</strong> (V) — nutty, fragrant, and smooth</li>
-        <li><strong>Spicy Mayo</strong> — creamy with a touch of heat</li>
-      </ul>
-      <p><em>V = Vegan | GF = Gluten-Free</em></p>
-      <p>Tell us your favorite combo — we’ll make sure your rolls are just right.</p>
-    </div>
-  </section>
+    <!-- CLOSING -->
+    <section class="info-section" aria-labelledby="closing-title">
+      <div class="container">
+        <h2 id="closing-title">Stay Connected</h2>
+        <p><strong>Always fresh, made to order.</strong> Roly Poly brings Vietnamese comfort food to life — one roll at a time.</p>
 
-  <!-- CLOSING -->
-  <section class="info-section" aria-labelledby="closing-title">
-    <div class="container">
-      <h2 id="closing-title">Stay Connected</h2>
-      <p><strong>Always fresh, made to order.</strong> Roly Poly brings Vietnamese comfort food to life — one roll at a time.</p>
+        <p>Follow us for updates, behind-the-scenes moments, and new flavor drops:</p>
+        <ul class="about-list">
+          <li>Instagram: <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener noreferrer">@rolypolydanang</a></li>
+          <li>TikTok: <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener noreferrer">@rolypolydanang</a></li>
+          <li>Facebook: <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener noreferrer">Roly Poly Fresh Spring Rolls & Coffee Da Nang</a></li>
+        </ul>
 
-      <p>Follow us for updates, behind-the-scenes moments, and new flavor drops:</p>
-      <ul class="about-list">
-        <li>Instagram: <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener noreferrer">@rolypolydanang</a></li>
-        <li>TikTok: <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener noreferrer">@rolypolydanang</a></li>
-        <li>Facebook: <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener noreferrer">Roly Poly Fresh Spring Rolls & Coffee Da Nang</a></li>
-      </ul>
-
-      <p>Need to reach us directly? We’re happy to help:</p>
-      <ul class="about-list">
-        <li>Instagram: <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener noreferrer">ig.me/m/rolypolydanang</a></li>
-        <li>Messenger: <a href="https://m.me/rolypolydanang" target="_blank" rel="noopener noreferrer">m.me/rolypolydanang</a></li>
-        <li>Zalo: <a href="https://zalo.me/84327306076" target="_blank" rel="noopener noreferrer">zalo.me/84327306076</a></li>
-        <li>WhatsApp: <a href="https://wa.me/84327306076?text=Hello%2C%20I%20love%20your%20fresh%20rolls%21" target="_blank" rel="noopener noreferrer">wa.me/84327306076</a></li>
-        <li>Call Us: <a href="tel:+84327306076" aria-label="Call Roly Poly Da Nang at +84 327 306 076">+84 327 306 076</a></li>
-      </ul>
-    </div>
-  </section>
-</main>
-
+        <p>Need to reach us directly? We’re happy to help:</p>
+        <ul class="about-list">
+          <li>Instagram: <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener noreferrer">ig.me/m/rolypolydanang</a></li>
+          <li>Messenger: <a href="https://m.me/rolypolydanang" target="_blank" rel="noopener noreferrer">m.me/rolypolydanang</a></li>
+          <li>Zalo: <a href="https://zalo.me/84327306076" target="_blank" rel="noopener noreferrer">zalo.me/84327306076</a></li>
+          <li>WhatsApp: <a href="https://wa.me/84327306076?text=Hello%2C%20I%20love%20your%20fresh%20rolls%21" target="_blank" rel="noopener noreferrer">wa.me/84327306076</a></li>
+          <li>Call Us: <a href="tel:+84327306076" aria-label="Call Roly Poly Da Nang at +84 327 306 076">+84 327 306 076</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
