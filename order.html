@@ -1,3 +1,5 @@
+optimise this page
+
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -12,44 +14,13 @@
   <link rel="canonical" href="https://www.rolypolydanang.vn/order" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-  <!-- Security & privacy (set these as HTTP headers ideally) -->
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-
-  <!-- PWA -->
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <meta name="theme-color" content="#ffffff" />
-
-  <!-- Performance: early connections to third-parties actually used on this page -->
+  <!-- Performance -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://food.grab.com" crossorigin />
-  <link rel="preconnect" href="https://wa.me" crossorigin />
-  <link rel="preconnect" href="https://m.me" crossorigin />
-  <link rel="preconnect" href="https://zalo.me" crossorigin />
-
-  <!-- LCP hero image: warm up and ensure correct candidate is ready -->
-  <link rel="preload" as="image" imagesrcset="/images/spring-rolls-trio-roly-poly-da-nang.avif 1600w, /images/spring-rolls-trio-roly-poly-da-nang.webp 1600w" imagesizes="(max-width: 768px) 100vw, 1200px" href="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp" />
-
-  <!-- CSS: keep critical bits inline, load the rest async -->
-  <style>
-    :root{ --brand:#ff6a00; --brand-d:#e55b00; }
-    /* Critical layout & hero */
-    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"; color:#111;}
-    .container{max-width:1100px; margin-inline:auto; padding:0 16px}
-    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:999px; text-decoration:none; font-weight:600}
-    .btn.accent,.hero#order .btn{background:var(--brand); border:2px solid var(--brand); color:#fff}
-    .btn:hover,.btn:focus{background:var(--brand-d); border-color:var(--brand-d)}
-    .hero#order{background:#fff; color:#222; position:relative;}
-    .hero#order .hero-img{display:block; width:100%; height:auto; max-width:1200px}
-    nav.sticky-actions{position:fixed; left:0; right:0; bottom:0; background:#fff; color:#111; border-top:1px solid #eee; box-shadow:0 -2px 10px rgba(0,0,0,.05); z-index:1000; padding-bottom:env(safe-area-inset-bottom)}
-    main{padding-bottom:calc(var(--sticky-h,56px) + env(safe-area-inset-bottom))}
-    .visually-hidden{position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px, 1px, 1px, 1px); white-space:nowrap}
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important;scroll-behavior:auto!important} }
-  </style>
-  <link rel="preload" as="style" href="/main.css" />
-  <link rel="stylesheet" href="/main.css" media="print" onload="this.media='all'" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp" />
+  <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="/main.css" /></noscript>
 
   <!-- Open Graph -->
@@ -72,11 +43,12 @@
   <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
   <meta name="twitter:image:alt" content="Assorted fresh spring rolls from Roly Poly Da Nang">
 
-  <!-- Icons -->
+  <!-- Icons & PWA -->
   <link rel="icon" sizes="any" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Hreflang -->
   <link rel="alternate" href="https://www.rolypolydanang.vn/order" hreflang="x-default">
@@ -86,18 +58,19 @@
   <link rel="alternate" href="https://www.rolypolydanang.vn/vi/order" hreflang="vi-VN">
   -->
 
-  <!-- Remove Font Awesome (70–90KB) and use inline SVGs below to cut JS/CSS weight. If you must keep FA, load it async. -->
+  <!-- External libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-BLRTTJDJYL', { anonymize_ip: true });
+    gtag('config', 'G-BLRTTJDJYL');
   </script>
 
-  <!-- Structured Data (Restaurant + WebPage + OrderAction) -->
+  <!-- Structured Data (Order page) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -138,6 +111,7 @@
         "areaServed": ["An Thuong, Ngũ Hành Sơn, Da Nang", "My Khe Beach area"],
         "hasDelivery": true,
         "hasTakeout": true,
+        "inLanguage": "en",
         "sameAs":[
           "https://www.facebook.com/rolypolydanang",
           "https://www.instagram.com/rolypolydanang",
@@ -145,15 +119,7 @@
           "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662",
           "https://www.google.com/maps?cid=8457966646420358159",
           "https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
-        ],
-        "potentialAction": {
-          "@type": "OrderAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6",
-            "inLanguage": "en"
-          }
-        }
+        ]
       },
       {
         "@type": ["WebPage","ItemPage"],
@@ -194,13 +160,33 @@
     ]
   }
   </script>
+
+  <!-- Minor page styles -->
+  <style>
+    :root{ --brand:#ff6a00; --brand-d:#e55b00; }
+    .hero-img { width: 100%; height: auto; max-width: 1200px; }
+    .hero#order { background:#fff !important; color:#222; position:relative; }
+    .hero#order .hero-overlay{ background:transparent !important; }
+    .hero#order .hero-img{ filter:none !important; }
+    .hero#order .btn{ background:var(--brand); color:#fff !important; border:2px solid var(--brand); }
+    .hero#order .btn:hover,.hero#order .btn:focus{ background:var(--brand-d); border-color:var(--brand-d); }
+
+    nav.sticky-actions{ position:fixed; left:0; right:0; bottom:0; background:#fff !important; color:#111 !important; border-top:1px solid #eee !important; box-shadow:0 -2px 10px rgba(0,0,0,.05) !important; z-index:1000 !important; padding-bottom:env(safe-area-inset-bottom); }
+    nav.sticky-actions .btn{ background:var(--brand); border:2px solid var(--brand); color:#fff !important; }
+    nav.sticky-actions .btn:hover, nav.sticky-actions .btn:focus{ background:var(--brand-d); border-color:var(--brand-d); }
+    main{ padding-bottom:calc(var(--sticky-h,56px) + env(safe-area-inset-bottom)); }
+
+    .info-section .section-lead { max-width: 70ch; }
+    .list { padding-left: 1.25rem; }
+  </style>
 </head>
 
 <body>
+
   <header class="site-header" id="site-header" role="banner">
     <div class="container nav-container">
       <a class="logo" href="/" aria-label="Roly Poly Fresh Spring Rolls & Coffee Da Nang — Home">
-        <img class="logo-img" src="/images/logo.jpg" width="160" height="48" alt="Roly Poly Fresh Spring Rolls & Coffee Da Nang" decoding="async" loading="eager" />
+        <img class="logo-img" src="/images/logo.jpg" width="160" height="48" alt="Roly Poly Fresh Spring Rolls & Coffee Da Nang" decoding="async" />
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Primary" role="navigation">
         <ul class="nav-list">
@@ -221,12 +207,11 @@
   </header>
 
   <script>
-    // Accessible mobile nav: toggle ARIA state and body scroll lock
     document.addEventListener('DOMContentLoaded', () => {
       const t = document.querySelector('.nav-toggle'), e = document.getElementById('main-nav');
-      function sync(a){ t.setAttribute('aria-expanded', a); t.setAttribute('aria-label', a ? 'Close menu' : 'Open menu'); document.documentElement.classList.toggle('no-scroll', a); }
+      function sync(a){ t.setAttribute('aria-expanded', a); t.setAttribute('aria-label', a ? 'Close menu' : 'Open menu'); }
       if(t && e){
-        t.addEventListener('click', () => { const a = e.classList.toggle('open'); sync(a); t.focus(); });
+        t.addEventListener('click', () => { const a = e.classList.toggle('open'); sync(a); });
         e.querySelectorAll('a').forEach(o => o.addEventListener('click', () => { e.classList.remove('open'); sync(false); }));
         document.addEventListener('keydown', i => { if(i.key === 'Escape' && e){ e.classList.remove('open'); sync(false);} });
       }
@@ -235,168 +220,170 @@
 
   <main id="main" role="main">
     <!-- HERO — ORDER -->
-    <section class="hero hero--order" id="order" aria-labelledby="hero-title">
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1 id="hero-title">Order Now — Fresh Spring Rolls, Coffee, Matcha & Juices</h1>
-          <p class="hero-subtitle">
-            Pickup in An Thuong or delivery via GrabFood. Always fresh, rolled to order.
-          </p>
+<section class="hero hero--order" id="order" aria-labelledby="hero-title">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1 id="hero-title">Order Now — Fresh Spring Rolls, Coffee, Matcha & Juices</h1>
+      <p class="hero-subtitle">
+        Pickup in An Thuong or delivery via GrabFood. Always fresh, rolled to order.
+      </p>
 
-          <!-- Hero image with modern formats and proper sizes -->
-          <picture>
-            <source srcset="/images/spring-rolls-trio-roly-poly-da-nang.avif" type="image/avif">
-            <source srcset="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp">
-            <img
-              src="/images/spring-rolls-trio-roly-poly-da-nang.webp"
-              alt="Fresh spring rolls from Roly Poly Da Nang"
-              class="hero-img"
-              width="1600" height="900"
-              sizes="(max-width: 768px) 100vw, 1200px"
-              decoding="async" fetchpriority="high">
-          </picture>
+      <!-- Optional hero image -->
+      <picture>
+        <source srcset="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp">
+        <img
+          src="/images/spring-rolls-trio-roly-poly-da-nang.webp"
+          alt="Fresh spring rolls from Roly Poly Da Nang"
+          class="hero-img"
+          width="1600" height="900"
+          sizes="(max-width: 768px) 100vw, 1200px"
+          decoding="async" fetchpriority="high">
+      </picture>
 
-          <div class="hero-buttons" role="group" aria-label="Page shortcuts">
-            <a href="#pickup" class="btn">Order Pickup</a>
-            <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
-               class="btn" target="_blank" rel="noopener">Order Delivery</a>
-          </div>
-        </div>
+      <div class="hero-buttons" role="group" aria-label="Page shortcuts">
+        <a href="#pickup" class="btn">Order Pickup</a>
+        <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
+           class="btn" target="_blank" rel="noopener">Order Delivery</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- PICKUP SECTION -->
-    <section id="pickup" class="info-section" aria-labelledby="pickup-title">
-      <div class="container">
-        <h2 id="pickup-title">Pickup at Roly Poly Da Nang</h2>
-        <p>
-          Call or message us to place your order — we’ll have it freshly rolled and ready when you arrive.
-        </p>
 
-        <address>
-          <strong>Address:</strong><br>
-          05 An Thuong 6, Bac My Phu,<br>
-          Ngu Hanh Son, Da Nang 550000<br><br>
+   <!-- PICKUP SECTION -->
+<section id="pickup" class="info-section" aria-labelledby="pickup-title">
+  <div class="container">
+    <h2 id="pickup-title">Pickup at Roly Poly Da Nang</h2>
+    <p>
+      Call or message us to place your order — we’ll have it freshly rolled and ready when you arrive.
+    </p>
 
-          <strong>Phone:</strong> <a href="tel:+84327306076">+84 327 306 076</a><br>
-          <strong>Hours:</strong> Monday – Saturday, 10:00 – 20:00<br>
-          Closed on Sundays
-        </address>
+    <address>
+      <strong>Address:</strong><br>
+      05 An Thuong 6, Bac My Phu,<br>
+      Ngu Hanh Son, Da Nang 550000<br><br>
 
-        <h3>Contact us on your preferred app:</h3>
+      <strong>Phone:</strong> <a href="tel:+84327306076">+84 327 306 076</a><br>
+      <strong>Hours:</strong> Monday – Saturday, 10:00 – 20:00<br>
+      Closed on Sundays
+    </address>
 
-        <div class="contact-grid" aria-label="Contact options">
-          <!-- WhatsApp -->
-          <a id="btn-wa" class="btn btn-large contact-btn btn-wa"
-             href="https://wa.me/84327306076?text=Hello%2C%20I%20would%20like%20to%20order%20for%20pickup%20at%20Roly%20Poly%20Da%20Nang."
-             target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp">
-            <!-- WhatsApp SVG -->
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M.057 24l1.687-6.163A11.867 11.867 0 0111.93 0C18.6 0 24 5.373 24 12.01c-.003 6.627-5.4 11.99-12.067 11.99A12.14 12.14 0 016.62 22.26L.057 24zM6.6 20.515c1.676.995 3.276 1.59 5.35 1.592 5.45.003 9.907-4.43 9.91-9.882.002-5.462-4.41-9.89-9.86-9.895-5.452-.006-9.89 4.414-9.894 9.867a9.8 9.8 0 001.699 5.42l-.999 3.648 3.794-.75zm11.29-5.52c-.07-.115-.255-.185-.534-.324-.28-.14-1.64-.804-1.89-.896-.25-.093-.433-.14-.616.14-.184.28-.708.896-.868 1.08-.16.186-.32.21-.6.07-.28-.14-1.18-.434-2.243-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.017-.43.123-.57.127-.126.28-.33.42-.495.14-.165.186-.28.28-.466.093-.186.046-.35-.023-.49-.07-.14-.616-1.487-.845-2.04-.22-.53-.44-.46-.616-.47l-.526-.01c-.18 0-.47.07-.716.35-.25.28-.94.92-.94 2.24s.964 2.6 1.1 2.78c.14.186 1.9 2.9 4.6 4.06.64.28 1.14.446 1.53.57.64.2 1.22.17 1.68.1.51-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.33z"/></svg>
-            WhatsApp
-          </a>
+    <h3>Contact us on your preferred app:</h3>
 
-          <!-- Messenger -->
-          <a id="btn-msgr" class="btn btn-large contact-btn btn-msgr"
-             href="https://m.me/rolypolydanang"
-             target="_blank" rel="noopener noreferrer" aria-label="Message us on Facebook Messenger">
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M12 .5C5.73.5.63 5.1.63 11.02c0 3.24 1.49 6.17 3.86 8.2V23.5l3.54-1.95c1.26.35 2.61.54 4 .54 6.27 0 11.37-4.6 11.37-10.52C23.4 5.1 18.3.5 12 .5zm1.01 13.94l-2.65-2.83-5.19 2.83 5.72-6.05 2.63 2.83 5.2-2.83-5.71 6.05z"/></svg>
-            Messenger
-          </a>
+    <div class="contact-grid" aria-label="Contact options">
+      <!-- WhatsApp -->
+      <a id="btn-wa" class="btn btn-large contact-btn btn-wa"
+         href="https://wa.me/84327306076?text=Hello%2C%20I%20would%20like%20to%20order%20for%20pickup%20at%20Roly%20Poly%20Da%20Nang."
+         target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+      </a>
 
-          <!-- Zalo -->
-          <a id="btn-zalo" class="btn btn-large contact-btn btn-zalo"
-             href="https://zalo.me/84327306076"
-             target="_blank" rel="noopener noreferrer" aria-label="Message us on Zalo">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false">
-              <rect x="1" y="1" width="22" height="22" rx="7" ry="7" fill="#0068FF"></rect>
-              <path d="M13 6.8H7.2v1.8h3.3l-3.6 6H13v-1.8H9.7l3.6-6z" fill="#fff"></path>
-            </svg>
-            Zalo
-          </a>
+      <!-- Messenger -->
+      <a id="btn-msgr" class="btn btn-large contact-btn btn-msgr"
+         href="https://m.me/rolypolydanang"
+         target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-messenger" aria-hidden="true"></i> Messenger
+      </a>
 
-          <!-- Instagram -->
-          <a id="btn-ig" class="btn btn-large contact-btn btn-ig"
-             href="https://ig.me/m/rolypolydanang"
-             target="_blank" rel="noopener noreferrer" aria-label="Message us on Instagram">
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-1a1 1 0 100 2 1 1 0 000-2z"/></svg>
-            Instagram
-          </a>
+      <!-- Zalo -->
+      <a id="btn-zalo" class="btn btn-large contact-btn btn-zalo"
+         href="https://zalo.me/84327306076"
+         target="_blank" rel="noopener noreferrer">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false">
+          <rect x="1" y="1" width="22" height="22" rx="7" ry="7" fill="#0068FF"></rect>
+          <path d="M13 6.8H7.2v1.8h3.3l-3.6 6H13v-1.8H9.7l3.6-6z" fill="#fff"></path>
+        </svg>
+        Zalo
+      </a>
 
-          <!-- Call -->
-          <a id="btn-call" class="btn btn-large contact-btn btn-call" href="tel:+84327306076" aria-label="Call us">
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" focusable="false"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1C10.52 22 2 13.48 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.22.2 2.42.57 3.56a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-            Call Us
-          </a>
-        </div>
-      </div>
-    </section>
+      <!-- Instagram -->
+      <a id="btn-ig" class="btn btn-large contact-btn btn-ig"
+         href="https://ig.me/m/rolypolydanang"
+         target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+      </a>
 
-    <!-- DELIVERY SECTION -->
-    <section id="delivery" class="info-section" aria-labelledby="delivery-title">
-      <div class="container">
-        <h2 id="delivery-title">Delivery via GrabFood</h2>
-        <p>
-          Enjoy Roly Poly from the comfort of your home. Our fresh rolls, signature sauces, and drinks are
-          available on GrabFood — delivered straight to your door.
-        </p>
+      <!-- Call -->
+      <a id="btn-call" class="btn btn-large contact-btn btn-call"
+         href="tel:+84327306076">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i> Call Us
+      </a>
+    </div>
+  </div>
+</section>
 
-        <a class="btn accent"
-           href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
-           target="_blank" rel="noopener noreferrer">
-           Order on GrabFood
-        </a>
-      </div>
-    </section>
+
+   <!-- DELIVERY SECTION -->
+<section id="delivery" class="info-section" aria-labelledby="delivery-title">
+  <div class="container">
+    <h2 id="delivery-title">Delivery via GrabFood</h2>
+    <p>
+      Enjoy Roly Poly from the comfort of your home. Our fresh rolls, signature sauces, and drinks are
+      available on GrabFood — delivered straight to your door.
+    </p>
+
+    <a class="btn accent"
+       href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6"
+       target="_blank" rel="noopener noreferrer">
+       Order on GrabFood
+    </a>
+  </div>
+</section>
+
 
     <!-- FAVORITES SECTION -->
-    <section id="favorites" class="info-section" aria-labelledby="favorites-title">
-      <div class="container">
-        <h2 id="favorites-title">Favorites from Our Menu</h2>
-        <p>
-          Whether you’re a regular or trying us for the first time, you can’t go wrong with these house favorites.
-        </p>
+<section id="favorites" class="info-section" aria-labelledby="favorites-title">
+  <div class="container">
+    <h2 id="favorites-title">Favorites from Our Menu</h2>
+    <p>
+      Whether you’re a regular or trying us for the first time, you can’t go wrong with these house favorites.
+    </p>
 
-        <h3>Rolls</h3>
-        <ul class="list">
-          <li><strong>Prawn Spring Roll</strong> — classic, light, and super fresh</li>
-          <li><strong>Lemongrass Beef Roll</strong> — juicy with a fragrant lemongrass kick</li>
-          <li><strong>Smoked Goose Spring Roll</strong> — smoky, tender, and uniquely flavorful</li>
-          <li><strong>Roasted Crispy Pork Belly Spring Roll</strong> — crackling skin, succulent meat, and house herbs</li>
-        </ul>
+    <h3>Rolls</h3>
+    <ul>
+      <li><strong>Prawn Spring Roll</strong> — classic, light, and super fresh</li>
+      <li><strong>Lemongrass Beef Roll</strong> — juicy with a fragrant lemongrass kick</li>
+      <li><strong>Smoked Goose Spring Roll</strong> — smoky, tender, and uniquely flavorful</li>
+      <li><strong>Roasted Crispy Pork Belly Spring Roll</strong> — crackling skin, succulent meat, and house herbs</li>
+    </ul>
 
-        <h3>Drinks</h3>
-        <ul class="list">
-          <li><strong>Salted Coffee</strong> — bold Vietnamese coffee with silky salted cream foam</li>
-          <li><strong>Coconut Coffee</strong> — creamy coconut meets rich espresso (a local favorite)</li>
-          <li><strong>Matcha Latte</strong> — smooth, earthy matcha with velvety milk</li>
-        </ul>
+    <h3>Drinks</h3>
+    <ul>
+      <li><strong>Salted Coffee</strong> — bold Vietnamese coffee with silky salted cream foam</li>
+      <li><strong>Coconut Coffee</strong> — creamy coconut meets rich espresso (a local favorite)</li>
+      <li><strong>Matcha Latte</strong> — smooth, earthy matcha with velvety milk</li>
+    </ul>
 
-        <p><a href="/menu" class="btn">See Full Menu</a></p>
-      </div>
-    </section>
+    <p><a href="/menu" class="btn">See Full Menu</a></p>
+  </div>
+</section>
 
-    <!-- SAUCE SECTION -->
-    <section id="sauces" class="info-section" aria-labelledby="sauce-title">
-      <div class="container">
-        <h2 id="sauce-title">Choose Your Sauce</h2>
-        <p>
-          Every spring roll comes with your choice of our house-made sauces, crafted fresh daily.
-        </p>
 
-        <ul class="list">
-          <li><strong>Fish Sauce</strong> (GF)</li>
-          <li><strong>Peanut</strong> (V)</li>
-          <li><strong>Sweet &amp; Sour</strong> (GF)</li>
-          <li><strong>Toasted Sesame</strong> (V)</li>
-          <li><strong>Spicy Mayo</strong></li>
-        </ul>
+   <!-- SAUCE SECTION -->
+<section id="sauces" class="info-section" aria-labelledby="sauce-title">
+  <div class="container">
+    <h2 id="sauce-title">Choose Your Sauce</h2>
+    <p>
+      Every spring roll comes with your choice of our house-made sauces, crafted fresh daily.
+    </p>
 
-        <p><em>V = Vegan | GF = Gluten-Free</em></p>
+    <ul>
+      <li><strong>Fish Sauce</strong> (GF)</li>
+      <li><strong>Peanut</strong> (V)</li>
+      <li><strong>Sweet &amp; Sour</strong> (GF)</li>
+      <li><strong>Toasted Sesame</strong> (V)</li>
+      <li><strong>Spicy Mayo</strong></li>
+    </ul>
 
-        <p>Tell us your preferences — we’ll make sure your rolls are just right.</p>
-      </div>
-    </section>
+    <p><em>V = Vegan | GF = Gluten-Free</em></p>
+
+    <p>Tell us your preferences — we’ll make sure your rolls are just right.</p>
+  </div>
+</section>
+
+
+    
 
     <!-- CLOSING -->
     <section class="info-section" aria-labelledby="closing-title">
@@ -407,7 +394,7 @@
         <ul class="about-list">
           <li>Instagram: <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener">@rolypolydanang</a></li>
           <li>TikTok: <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener">@rolypolydanang</a></li>
-          <li>Facebook: <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener">Roly Poly Fresh Spring Rolls & Coffee Da Nang</a></li>
+          <li>Facebook: <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener">Roly Poly Fresh Spring Rolls & Coffee Da Na Nang</a></li>
         </ul>
         <p>Or contact us anytime:</p>
         <ul class="about-list">
@@ -430,7 +417,7 @@
           <p class="footer-tagline">Vietnamese restaurant & café in An Thuong (My An), near My Khe Beach, Da Nang.</p>
           <address>
             05 An Thượng 6, Bắc Mỹ Phú,<br />Ngũ Hành Sơn, Đà Nẵng 550000<br />
-            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Directions to Roly Poly Fresh Spring Rolls & Coffee Da Nang on Google Maps">Directions (Google Maps)</a><br />
+            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer" aria-label="Directions to Roly Poly Fresh Spring Rolls & Coffee Da Nang on Google Maps">Directions (Google Maps)</a><br />
             <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls & Coffee Da Nang">+84 327 306 076</a><br />
             <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a>
           </address>
@@ -452,16 +439,10 @@
         <section class="footer-col" aria-labelledby="footer-social">
           <h3 id="footer-social">Socials</h3>
           <div class="social-links" role="group" aria-label="Social media">
-            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener" aria-label="Roly Poly Da Nang on Instagram" title="Instagram">
-              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-1a1 1 0 100 2 1 1 0 000-2z"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener" aria-label="Roly Poly Da Nang on TikTok" title="TikTok">
-              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M16.1 3.1a6.9 6.9 0 004.3 1.5V8a10.3 10.3 0 01-4.3-1V15a6 6 0 11-6-6 6.7 6.7 0 011 .08v3.7a2.8 2.8 0 10-1 .19V2h4z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener" aria-label="Roly Poly Da Nang on Facebook" title="Facebook">
-              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M13 22v-9h3l1-4h-4V7c0-1 .5-2 2-2h2V1h-3c-3 0-5 2-5 5v3H6v4h3v9h4z"/></svg>
-            </a>
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener" aria-label="Roly Poly Da Nang on Tripadvisor" title="Tripadvisor">
+            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener noreferrer" aria-label="Roly Poly Da Nang on Tripadvisor">
               <img class="social-icon-img" src="/images/trip-adv.png" width="32" height="32" alt="Tripadvisor" decoding="async" loading="lazy" />
             </a>
           </div>
@@ -480,7 +461,7 @@
   <!-- Sticky Actions -->
   <nav class="sticky-actions" role="navigation" aria-label="Quick actions">
     <a class="btn accent" href="/menu" aria-label="View the menu"><span class="label--full">View Menu</span><span class="label--short" style="display:none">Menu</span></a>
-    <a class="btn accent" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener" aria-label="Order delivery on GrabFood"><span class="label--full">Order on GrabFood</span><span class="label--short" style="display:none">GrabFood</span></a>
+    <a class="btn accent" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer" aria-label="Order delivery on GrabFood"><span class="label--full">Order on GrabFood</span><span class="label--short" style="display:none">GrabFood</span></a>
   </nav>
 
   <!-- Measure sticky bar height -->
@@ -489,7 +470,7 @@
     window.addEventListener('load',s,{once:true}); window.addEventListener('resize',s); s();})();
   </script>
 
-  <!-- Simple click event tagging: expanded to cover contact buttons -->
+  <!-- Simple click event tagging -->
   <script>
     document.addEventListener('click', function(e) {
       var a = e.target.closest('a'); if(!a) return;
@@ -497,19 +478,8 @@
         if (a.href && a.href.indexOf('google.com/maps') !== -1) { gtag('event','click_maps',{link_url:a.href, location:'order'}); }
         if (a.href && a.href.indexOf('grab.com') !== -1) { gtag('event','click_grabfood',{link_url:a.href, location:'order'}); }
         if (a.href && a.href.indexOf('tel:') === 0) { gtag('event','click_call',{phone:a.href, location:'order'}); }
-        if (a.id === 'btn-wa') { gtag('event','click_whatsapp',{location:'order'}); }
-        if (a.id === 'btn-msgr') { gtag('event','click_messenger',{location:'order'}); }
-        if (a.id === 'btn-zalo') { gtag('event','click_zalo',{location:'order'}); }
-        if (a.id === 'btn-ig') { gtag('event','click_instagram_dm',{location:'order'}); }
       } catch(err) {}
     }, {passive:true});
   </script>
-
-  <style>
-    /* Minor non-critical styles moved to bottom so they don't block rendering */
-    .info-section .section-lead { max-width: 70ch; }
-    .list { padding-left: 1.25rem; }
-    .no-scroll{overflow:hidden}
-  </style>
 </body>
 </html>
