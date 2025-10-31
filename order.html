@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
   <!-- Preload LCP hero image & CSS -->
-  <link rel="preload" as="image" href="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp" type="image/webp" />
+  <link rel="preload" as="image" href="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp" />
   <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="/main.css" /></noscript>
 
@@ -83,7 +83,7 @@
         ],
         "alternateName": ["Roly Poly Da Nang","Roly Poly Fresh Spring Rolls Da Nang"],
         "logo": { "@type": "ImageObject", "url": "https://www.rolypolydanang.vn/images/logo.jpg", "width": 2000, "height": 2000 },
-        "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thoung near My Khe Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
+        "description": "Fresh Vietnamese spring rolls restaurant and coffee shop in An Thuong near My Khe Beach — coffee, matcha & fresh juices; vegan & gluten-free options.",
         "servesCuisine": ["Vietnamese","Cafe","Coffee","Matcha","Juice"],
         "priceRange": "₫",
         "telephone": "+84327306076",
@@ -142,10 +142,10 @@
       {
         "@type": "ImageObject",
         "@id": "https://www.rolypolydanang.vn/order#heroimage",
-        "url": "https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp",
+        "url": "https://www.rolypolydanang.vn/images/spring-rolls-trio-roly-poly-da-nang.webp",
         "width": 1600,
         "height": 900,
-        "caption": "Assorted fresh spring rolls platter from Roly Poly Da Nang"
+        "caption": "Fresh spring rolls from Roly Poly Da Nang"
       },
       {
         "@type": "BreadcrumbList",
@@ -213,6 +213,23 @@
     .pickup-photo { margin:1rem 0 1.25rem; }
     .pickup-photo img { width:100%; height:auto; border-radius:12px; display:block; }
 
+    /* Favorites layout: image + content */
+    .favorites-wrap {
+      display: grid;
+      gap: 20px;
+      align-items: start;
+      margin-block: 10px 18px;
+    }
+    .favorites-media img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+    @media (min-width: 900px) {
+      .favorites-wrap { grid-template-columns: 1fr 1.2fr; }
+    }
+
     /* Sauce image + layout */
     .sauce-layout { display:grid; gap:20px; align-items:start; }
     .sauce-media img { width:100%; height:auto; border-radius:12px; display:block; }
@@ -268,13 +285,13 @@
       <div class="container">
         <div class="hero-content">
           <h1 id="hero-title">Order Now — Fresh Spring Rolls, Coffee, Matcha & Juices</h1>
-          <p class="hero-subtitle">Pickup in An Thong or delivery via GrabFood. Always fresh, rolled to order.</p>
+          <p class="hero-subtitle">Pickup in An Thuong or delivery via GrabFood. Always fresh, rolled to order.</p>
 
           <picture>
-            <source srcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp" type="image/webp">
+            <source srcset="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp">
             <img
-              src="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp"
-              alt="Assorted fresh spring rolls platter from Roly Poly Da Nang"
+              src="/images/spring-rolls-trio-roly-poly-da-nang.webp"
+              alt="Fresh spring rolls from Roly Poly Da Nang"
               class="hero-img"
               width="1600" height="900"
               sizes="(max-width: 768px) 100vw, 1200px"
@@ -367,24 +384,35 @@
         <h2 id="favorites-title">Favorites from Our Menu</h2>
         <p>Quick picks our guests love. Order as shown or customize your filling and sauce.</p>
 
-        <h3>Spring Rolls</h3>
-        <ul>
-          <li><strong>Prawn Spring Roll</strong> — classic, light, and super fresh <span class="note"> • Suggested sauce: Fish Sauce (nước chấm)</span></li>
-          <li><strong>Lemongrass Beef Roll</strong> — juicy with a fragrant lemongrass kick <span class="note"> • Suggested sauce: Spicy Mayo</span></li>
-          <li><strong>Smoked Goose Spring Roll</strong> — smoky, tender, and uniquely flavorful <span class="note"> • Suggested sauce: Toasted Sesame</span></li>
-          <li><strong>Roasted Crispy Pork Belly Spring Roll</strong> — crackling skin, succulent meat, and house herbs <span class="note"> • Suggested sauce: Sweet &amp; Sour</span></li>
-        </ul>
+        <div class="favorites-wrap">
+          <div class="favorites-media">
+            <img
+              src="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp"
+              alt="Assorted fresh spring rolls platter from Roly Poly Da Nang"
+              width="1200" height="800" loading="lazy" decoding="async">
+          </div>
 
-        <h3>Drinks</h3>
-        <ul>
-          <li><strong>Salted Coffee</strong> — bold Vietnamese coffee with silky salted cream foam</li>
-          <li><strong>Coconut Coffee</strong> — creamy coconut meets rich espresso (a local favorite)</li>
-          <li><strong>Matcha Latte</strong> — smooth, earthy matcha with velvety milk</li>
-        </ul>
+          <div class="favorites-content">
+            <h3>Spring Rolls</h3>
+            <ul>
+              <li><strong>Prawn Spring Roll</strong> — classic, light, and super fresh <span class="note"> • Suggested sauce: Fish Sauce (nước chấm)</span></li>
+              <li><strong>Lemongrass Beef Roll</strong> — juicy with a fragrant lemongrass kick <span class="note"> • Suggested sauce: Spicy Mayo</span></li>
+              <li><strong>Smoked Goose Spring Roll</strong> — smoky, tender, and uniquely flavorful <span class="note"> • Suggested sauce: Toasted Sesame</span></li>
+              <li><strong>Roasted Crispy Pork Belly Spring Roll</strong> — crackling skin, succulent meat, and house herbs <span class="note"> • Suggested sauce: Sweet &amp; Sour</span></li>
+            </ul>
 
-        <p class="muted">Availability may vary by day. Gluten-free and vegan options available on request.</p>
+            <h3>Drinks</h3>
+            <ul>
+              <li><strong>Salted Coffee</strong> — bold Vietnamese coffee with silky salted cream foam</li>
+              <li><strong>Coconut Coffee</strong> — creamy coconut meets rich espresso (a local favorite)</li>
+              <li><strong>Matcha Latte</strong> — smooth, earthy matcha with velvety milk</li>
+            </ul>
 
-        <p><a href="/menu" class="btn" aria-label="See the full Roly Poly Da Nang menu">See Full Menu</a></p>
+            <p class="muted">Availability may vary by day. Gluten-free and vegan options available on request.</p>
+
+            <p><a href="/menu" class="btn" aria-label="See the full Roly Poly Da Nang menu">See Full Menu</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
