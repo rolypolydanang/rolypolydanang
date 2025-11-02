@@ -28,7 +28,11 @@
       .social-links img.social-icon-img{ filter:brightness(100); }
     }
 
-    body{ margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--text); background:var(--bg); text-align:center; }
+    html, body { margin:0; overflow-x:hidden; }
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      color:var(--text); background:var(--bg); text-align:center;
+    }
 
     /* Header + big logo (2×) */
     .mini-header{ display:flex; justify-content:center; padding:.85rem 1rem 0; }
@@ -39,19 +43,21 @@
       display:block; margin:0 auto; border-radius:8px;
     }
 
-    /* Shorter hero (≈ half height) */
+    /* FULL-WIDTH HERO (edge-to-edge on mobile & desktop) */
     .hero-img{
-      width:100%; max-width:720px;
-      margin:0 auto 1rem; display:block;
-      aspect-ratio:8/3; /* compact banner */
-      object-fit:cover; object-position:center top;
-      border-radius:8px; box-shadow:0 3px 12px rgba(0,0,0,.08);
+      width:100vw;               /* fill viewport width */
+      max-width:none;
+      margin:0 calc(-50vw + 50%);/* break out of centered rail cleanly */
+      display:block;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:0;
+      box-shadow:0 3px 12px rgba(0,0,0,0.08);
+      aspect-ratio:8/3;          /* compact banner (mobile) */
     }
     @media (min-width:768px){
       .hero-img{
-        max-width:1080px;
-        aspect-ratio:16/5; /* slim desktop */
-        border-radius:0;
+        aspect-ratio:16/5;       /* slim desktop banner */
       }
     }
 
@@ -107,23 +113,13 @@
       filter:brightness(0) saturate(100%); margin-top:1px;
     }
 
-    /* Map wrapper: smaller on web, reasonable on mobile */
-    .map-iframe-wrapper{
-      width:100%;
-      max-width:1080px;
-      margin-inline:auto;
-    }
+    /* Map wrapper: smaller on web, tidy on mobile */
+    .map-iframe-wrapper{ width:100%; max-width:1080px; margin-inline:auto; }
     .map-iframe-wrapper iframe{
-      width:100%;
-      height:320px;         /* default base */
-      border:0;
+      width:100%; height:320px; border:0;
     }
-    @media (min-width:768px){
-      .map-iframe-wrapper iframe{ height:400px; } /* smaller than before on desktop */
-    }
-    @media (max-width:767px){
-      .map-iframe-wrapper iframe{ height:260px; } /* tidy on phones */
-    }
+    @media (min-width:768px){ .map-iframe-wrapper iframe{ height:400px; } }
+    @media (max-width:767px){ .map-iframe-wrapper iframe{ height:260px; } }
 
     footer{ margin:2rem 0; color:var(--muted); font-size:.95rem; }
   </style>
@@ -137,7 +133,8 @@
   </div>
 
   <header class="hero" role="banner" aria-labelledby="title">
-    <img class="hero-img" src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
+    <img class="hero-img"
+         src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
          alt="Roly Poly Da Nang storefront" width="1200" height="675" decoding="async" loading="eager">
     <h1 id="title">Roly Poly Fresh Spring Rolls & Coffee Da Nang</h1>
     <p class="subtitle">
@@ -202,7 +199,6 @@
         <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
         </a>
-        <!-- Google Maps (uses a solid map icon for clarity) -->
         <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps">
           <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
         </a>
@@ -236,7 +232,7 @@
       setBadge(document.getElementById('status-top'),label,openNow);
       setBadge(document.getElementById('status'),label,openNow);
     }
-    updateStatus(); setInterval(updateStatus,60000);
+    document.addEventListener('DOMContentLoaded', () => { updateStatus(); setInterval(updateStatus,60000); });
   </script>
 </body>
 </html>
