@@ -34,7 +34,7 @@
       color:var(--text); background:var(--bg); text-align:center;
     }
 
-    /* Header + big logo (2×) */
+    /* Header + big logo (≈2×) */
     .mini-header{ display:flex; justify-content:center; padding:.85rem 1rem 0; }
     .mini-header img{
       width:clamp(320px,60vw,420px);
@@ -43,22 +43,39 @@
       display:block; margin:0 auto; border-radius:8px;
     }
 
-    /* FULL-WIDTH HERO (edge-to-edge on mobile & desktop) */
-    .hero-img{
-      width:100vw;               /* fill viewport width */
-      max-width:none;
-      margin:0 calc(-50vw + 50%);/* break out of centered rail cleanly */
-      display:block;
-      object-fit:cover;
-      object-position:center top;
-      border-radius:0;
-      box-shadow:0 3px 12px rgba(0,0,0,0.08);
-      aspect-ratio:8/3;          /* compact banner (mobile) */
+    /* === FULL-BLEED HERO (no cutoff, no overflow) === */
+    header.hero {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      overflow: hidden;   /* trims any tiny rounding issues */
+      padding: 0;         /* remove container padding in the bleed */
     }
-    @media (min-width:768px){
-      .hero-img{
-        aspect-ratio:16/5;       /* slim desktop banner */
-      }
+    /* Image simply fills the hero section */
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+      border: 0;
+      margin: 0;
+      aspect-ratio: 16 / 9;   /* mobile/tablet */
+    }
+    /* Make shorter on desktop */
+    @media (min-width: 768px) {
+      .hero-img { aspect-ratio: 16 / 5; }
+    }
+
+    /* Keep heading/subtitle aligned to your normal content width */
+    header.hero > h1,
+    header.hero > p.subtitle{
+      width: min(1080px, 100%);
+      margin: 0.5rem auto;
+      padding-inline: 16px;
     }
 
     h1{ font-size:clamp(1.35rem,2.5vw+0.9rem,1.9rem); margin:.5rem 0 .35rem; }
@@ -99,7 +116,7 @@
     .status-badge.closed{ background:#fdf2f2; color:#7f1d1d; border-color:#fecaca; }
     .status-badge.closed::before{ background:#ef4444; }
 
-    /* Social icons (black) */
+    /* Social icons (black) + Google Maps */
     .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:.75rem; flex-wrap:wrap; }
     .social-links a{
       display:inline-flex; align-items:center; justify-content:center;
@@ -133,9 +150,268 @@
   </div>
 
   <header class="hero" role="banner" aria-labelledby="title">
-    <img class="hero-img"
-         src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
-         alt="Roly Poly Da Nang storefront" width="1200" height="675" decoding="async" loading="eager">
+    <img
+      class="hero-img"
+      src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
+      alt="Roly Poly Da Nang storefront"
+      width="1200" height="675" decoding="async" loading="eager">
+    <h1 id="title">Roly Poly Fresh Spring Rolls & Coffee Da Nang</h1>
+    <p class="subtitle">
+      10 Signature Spring Rolls<br>
+      5 House-Made Sauces<br>
+      Coffee, Matcha & Juices<br>
+      <span id="status-top" class="status-badge" aria-live="polite">Checking hours…</span>
+    </p>
+  </header>
+
+  <main role="main">
+    <section class="section" aria-labelledby="act">
+      <h2 id="act" class="sr-only">Quick Actions</h2>
+      <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn" target="_blank" rel="noopener">Order on GrabFood</a>
+      <a href="tel:+84327306076" class="btn">Call for Pickup</a>
+      <a href="/menu" class="btn">View Menu</a>
+    </section>
+
+    <section class="section" aria-labelledby="msg">
+      <h2 id="msg">Message Us</h2>
+      <div class="contact-icons">
+        <a href="https://zalo.me/84327306076" target="_blank" rel="noopener" class="chip zalo">Zalo</a>
+        <a href="https://m.me/rolypolydanang" target="_blank" rel="noopener" class="chip messenger">Messenger</a>
+        <a href="https://wa.me/84327306076" target="_blank" rel="noopener" class="chip whatsapp">WhatsApp</a>
+        <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener" class="chip instagram">Instagram DM</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="visit">
+      <h2 id="visit">Visit Us</h2>
+      <p>
+        05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000<br>
+        <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener">View on Google Maps</a><br>
+        <small>Open: Mon–Sat 10:00–20:00 · Closed Sunday</small><br>
+        <span id="status" class="status-badge" aria-live="polite">Checking hours…</span>
+      </p>
+
+      <div class="map-iframe-wrapper" style="margin-top:1rem;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.3205785797218!2d108.2450329!3d16.0488458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217b2c3b0fcad%3A0x7560bbda49fcc40f!2sRoly%20Poly%20Fresh%20Spring%20Rolls%20%26%20Coffee%20Da%20Nang!5e0&amp;hl=en"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Map location">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section notes">
+      <p>Vegan & gluten-free options available</p>
+      <p>Cash, Visa, Mastercard, Apple Pay & MoMo accepted</p>
+      <p>English & Vietnamese spoken</p>
+    </section>
+
+    <section class="section" aria-labelledby="socials">
+      <h2 id="socials">Socials</h2>
+      <div class="social-links" role="group" aria-label="Social media & maps">
+        <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps">
+          <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener" aria-label="Tripadvisor">
+          <img class="social-icon-img" src="/images/trip-adv.png" width="32" height="32" alt="Tripadvisor logo" decoding="async" loading="lazy">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Roly Poly Fresh Spring Rolls & Coffee Da Nang</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function setBadge(el, label, open){
+      if(!el) return;
+      el.textContent = label;
+      el.classList.toggle('open', open);
+      el.classList.toggle('closed', !open);
+    }
+    function updateStatus(){
+      const tz='Asia/Ho_Chi_Minh', now=new Date();
+      const [h,m]=new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(now).split(':').map(Number);
+      const day=new Intl.DateTimeFormat('en-US',{timeZone:tz,weekday:'short'}).format(now);
+      const isOpenDay=['Mon','Tue','Wed','Thu','Fri','Sat'].includes(day);
+      const openNow=isOpenDay&&(h>10||(h===10&&m>=0))&&h<20;
+      const label=openNow?'Open now · Closes 20:00':(isOpenDay?'Closed · Opens 10:00':'Closed today (Sunday)');
+      setBadge(document.getElementById('status-top'),label,openNow);
+      setBadge(document.getElementById('status'),label,openNow);
+    }
+    document.addEventListener('DOMContentLoaded', () => { updateStatus(); setInterval(updateStatus,60000); });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roly Poly Fresh Spring Rolls & Coffee Da Nang | Go Page</title>
+
+  <meta name="description" content="Quick links to order, call, message, or visit Roly Poly Fresh Spring Rolls & Coffee Da Nang. Fresh Vietnamese spring rolls, coffee, matcha & more." />
+  <link rel="canonical" href="https://www.rolypolydanang.vn/go" />
+  <meta name="theme-color" content="#ff6a00" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <style>
+    :root{
+      --brand:#ff6a00; --brand-d:#e55b00;
+      --text:#222; --muted:#555; --line:#eee; --bg:#fff;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --text:#eaeaea; --muted:#b3b3b3; --line:#2a2a2a; --bg:#0f0f0f; }
+      body{ background:var(--bg); }
+      .btn{ color:#fff!important; }
+      .status-badge.open{ background:#112215; color:#b5dfc2; border-color:#1c3b22; }
+      .status-badge.closed{ background:#2a1515; color:#f1c7c7; border-color:#4a1f1f; }
+      .social-links a{ color:#fff; background:transparent; }
+      .social-links img.social-icon-img{ filter:brightness(100); }
+    }
+
+    html, body { margin:0; overflow-x:hidden; }
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      color:var(--text); background:var(--bg); text-align:center;
+    }
+
+    /* Header + big logo (≈2×) */
+    .mini-header{ display:flex; justify-content:center; padding:.85rem 1rem 0; }
+    .mini-header img{
+      width:clamp(320px,60vw,420px);
+      max-height:120px;
+      height:auto; object-fit:contain;
+      display:block; margin:0 auto; border-radius:8px;
+    }
+
+    /* === FULL-BLEED HERO (no cutoff, no overflow) === */
+    header.hero {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      overflow: hidden;   /* trims any tiny rounding issues */
+      padding: 0;         /* remove container padding in the bleed */
+    }
+    /* Image simply fills the hero section */
+    .hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+      border: 0;
+      margin: 0;
+      aspect-ratio: 16 / 9;   /* mobile/tablet */
+    }
+    /* Make shorter on desktop */
+    @media (min-width: 768px) {
+      .hero-img { aspect-ratio: 16 / 5; }
+    }
+
+    /* Keep heading/subtitle aligned to your normal content width */
+    header.hero > h1,
+    header.hero > p.subtitle{
+      width: min(1080px, 100%);
+      margin: 0.5rem auto;
+      padding-inline: 16px;
+    }
+
+    h1{ font-size:clamp(1.35rem,2.5vw+0.9rem,1.9rem); margin:.5rem 0 .35rem; }
+    p.subtitle{ color:var(--muted); margin:0 0 1.1rem; line-height:1.4; text-wrap:balance; }
+
+    .btn{
+      display:block; background:var(--brand); color:#fff!important; font-weight:700;
+      padding:14px 18px; border-radius:10px; text-decoration:none;
+      margin:.55rem auto; max-width:380px; transition:.15s;
+      box-shadow:0 2px 0 rgba(0,0,0,.06);
+    }
+    .btn:hover{ background:var(--brand-d); transform:translateY(-1px); }
+
+    .section{ padding:1.2rem 0; }
+    .section + .section{ border-top:1px solid var(--line); }
+
+    /* Message chips (solid colors) */
+    .contact-icons{
+      display:grid; grid-template-columns:repeat(2,1fr);
+      gap:10px; max-width:420px; margin:0 auto;
+    }
+    .chip{ color:#fff; text-decoration:none; font-weight:700; padding:.75rem 1rem; border-radius:10px; transition:.15s; }
+    .chip:hover{ transform:translateY(-1px); filter:brightness(.96); }
+    .zalo{ background:#0068FF; }
+    .messenger{ background:#0084FF; }
+    .whatsapp{ background:#25D366; }
+    .instagram{ background:#E4405F; }
+
+    /* Status badge */
+    .status-badge{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.25rem .6rem; border-radius:999px; font-weight:700; font-size:.95rem;
+      border:1px solid #e5e7eb; background:#f6f6f6; color:#444;
+    }
+    .status-badge::before{ content:""; width:.55rem; height:.55rem; border-radius:50%; background:#9ca3af; }
+    .status-badge.open{ background:#f0fdf4; color:#14532d; border-color:#bbf7d0; }
+    .status-badge.open::before{ background:#22c55e; }
+    .status-badge.closed{ background:#fdf2f2; color:#7f1d1d; border-color:#fecaca; }
+    .status-badge.closed::before{ background:#ef4444; }
+
+    /* Social icons (black) + Google Maps */
+    .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:.75rem; flex-wrap:wrap; }
+    .social-links a{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:42px; height:42px; border-radius:50%;
+      background:transparent; color:#000; font-size:1.3rem;
+      text-decoration:none; transition:transform .15s ease, filter .15s ease;
+    }
+    .social-links a:hover{ transform:translateY(-2px); filter:brightness(.6); }
+    .social-links img.social-icon-img{
+      width:32px; height:32px; display:block;
+      filter:brightness(0) saturate(100%); margin-top:1px;
+    }
+
+    /* Map wrapper: smaller on web, tidy on mobile */
+    .map-iframe-wrapper{ width:100%; max-width:1080px; margin-inline:auto; }
+    .map-iframe-wrapper iframe{
+      width:100%; height:320px; border:0;
+    }
+    @media (min-width:768px){ .map-iframe-wrapper iframe{ height:400px; } }
+    @media (max-width:767px){ .map-iframe-wrapper iframe{ height:260px; } }
+
+    footer{ margin:2rem 0; color:var(--muted); font-size:.95rem; }
+  </style>
+</head>
+
+<body>
+  <div class="mini-header">
+    <a href="/" aria-label="Home">
+      <img src="/images/logo.jpg" alt="Roly Poly logo" width="400" height="120" decoding="async">
+    </a>
+  </div>
+
+  <header class="hero" role="banner" aria-labelledby="title">
+    <img
+      class="hero-img"
+      src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
+      alt="Roly Poly Da Nang storefront"
+      width="1200" height="675" decoding="async" loading="eager">
     <h1 id="title">Roly Poly Fresh Spring Rolls & Coffee Da Nang</h1>
     <p class="subtitle">
       10 Signature Spring Rolls<br>
