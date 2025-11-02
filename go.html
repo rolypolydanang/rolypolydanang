@@ -163,6 +163,25 @@
   }
 }
 
+    /* Hero image — horizontal banner style */
+img.hero-img {
+  width: 100%;
+  max-width: 960px;
+  border-radius: var(--radius);
+  margin: 1rem auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  box-shadow: 0 3px 14px rgba(0,0,0,.06);
+}
+
+@media (min-width: 768px) {
+  img.hero-img {
+    max-width: 1080px;
+  }
+}
+
+
   </style>
 </head>
 
