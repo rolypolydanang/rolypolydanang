@@ -26,6 +26,7 @@
 
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp" type="image/webp" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
   <!-- GA4 -->
@@ -64,10 +65,13 @@
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
 
+    /* Containers */
     .mini-header,
-    header.hero,
     main,
     footer{ width:min(var(--container), 100%); margin-inline:auto; padding-inline:16px; }
+
+    /* Hero gets wider container for a horizontal banner */
+    header.hero{ width:min(1080px, 100%); margin-inline:auto; padding-inline:16px; }
 
     /* Header */
     .mini-header{ padding:.85rem 1rem 0; display:flex; justify-content:center; }
@@ -77,19 +81,21 @@
     header.hero{ padding:1rem 1rem 0; }
     h1{
       font-size:clamp(1.35rem, 2.5vw + .9rem, 1.9rem);
-      margin:.5rem 0 .35rem;
-      letter-spacing:.2px;
+      margin:.5rem 0 .35rem; letter-spacing:.2px;
     }
     p.subtitle{
-      color:var(--muted);
-      margin:0 0 1.1rem;
-      line-height:1.55;
-      text-wrap:balance;
+      color:var(--muted); margin:0 0 1.1rem; line-height:1.55; text-wrap:balance;
     }
+
+    /* Single, consolidated rule: wide horizontal banner */
     img.hero-img{
-      width:100%; max-width:640px; border-radius:var(--radius);
-      margin:1rem auto; display:block;
-      aspect-ratio: 3 / 2; object-fit:cover;
+      width:100%;
+      max-width:1080px;
+      border-radius:var(--radius);
+      margin:1rem auto;
+      display:block;
+      aspect-ratio:16 / 9;
+      object-fit:cover;
       box-shadow:0 3px 14px rgba(0,0,0,.06);
     }
 
@@ -142,46 +148,16 @@
     /* Footer */
     footer{ margin:2rem 0; color:var(--muted); font-size:.95rem; }
 
+    /* a11y helper for the hidden H2 text */
+    .sr-only{
+      position:absolute!important; width:1px!important; height:1px!important;
+      padding:0!important; margin:-1px!important; overflow:hidden!important;
+      clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important;
+    }
+
     @media (prefers-reduced-motion: reduce){
       .btn, .chip{ transition:none; }
     }
-
-    img.hero-img {
-  width: 90%;
-  max-width: 480px;
-  border-radius: var(--radius);
-  margin: 1rem auto;
-  display: block;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  box-shadow: 0 3px 14px rgba(0,0,0,.06);
-}
-
-@media (min-width: 768px) {
-  img.hero-img {
-    max-width: 600px;
-  }
-}
-
-    /* Hero image — horizontal banner style */
-img.hero-img {
-  width: 100%;
-  max-width: 960px;
-  border-radius: var(--radius);
-  margin: 1rem auto;
-  display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  box-shadow: 0 3px 14px rgba(0,0,0,.06);
-}
-
-@media (min-width: 768px) {
-  img.hero-img {
-    max-width: 1080px;
-  }
-}
-
-
   </style>
 </head>
 
@@ -195,8 +171,8 @@ img.hero-img {
   <header class="hero" role="banner" aria-labelledby="title">
     <img class="hero-img"
          src="images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
-         alt="Roly Poly Da Nang storefront"
-         width="1200" height="800"
+         alt="Roly Poly Da Nang storefront on An Thượng 6, near My Khe Beach"
+         width="1600" height="900"
          decoding="async" loading="eager" fetchpriority="high">
     <h1 id="title">Roly Poly Fresh Spring Rolls & Coffee Da Nang</h1>
     <p class="subtitle">
