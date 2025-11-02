@@ -145,6 +145,24 @@
     @media (prefers-reduced-motion: reduce){
       .btn, .chip{ transition:none; }
     }
+
+    img.hero-img {
+  width: 90%;
+  max-width: 480px;
+  border-radius: var(--radius);
+  margin: 1rem auto;
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  box-shadow: 0 3px 14px rgba(0,0,0,.06);
+}
+
+@media (min-width: 768px) {
+  img.hero-img {
+    max-width: 600px;
+  }
+}
+
   </style>
 </head>
 
@@ -269,7 +287,7 @@
       "https://www.instagram.com/rolypolydanang",
       "https://www.facebook.com/rolypolydanang",
       "https://www.tiktok.com/@rolypolydanang",
-      "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662"
+      "https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662.html"
     ]
   }
   </script>
