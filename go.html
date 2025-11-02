@@ -148,6 +148,21 @@
     @media (min-width:768px){ .map-iframe-wrapper iframe{ height:400px; } }
     @media (max-width:767px){ .map-iframe-wrapper iframe{ height:260px; } }
 
+    /* Good to Know section */
+    .notes h2 {
+      font-size:1.1rem;
+      font-weight:700;
+      margin-bottom:.75rem;
+    }
+    .info-list {
+      list-style:none;
+      margin:0;
+      padding:0;
+      line-height:1.6;
+      color:var(--muted);
+    }
+    .info-list li + li { margin-top:.25rem; }
+
     footer { margin:2rem 0; color:var(--muted); font-size:.95rem; }
   </style>
 </head>
@@ -166,8 +181,8 @@
          decoding="async" loading="eager">
     <h1 id="title">Roly Poly Fresh Spring Rolls & Coffee Da Nang</h1>
     <p class="subtitle">
-      10 Signature Spring Rolls<br>
-      5 House-Made Sauces<br>
+      10 Signature Fresh Spring Rolls<br>
+      5 House-Made Dipping Sauces<br>
       Coffee, Matcha & Juices<br>
       <span id="status-top" class="status-badge" aria-live="polite">Checking hours…</span>
     </p>
@@ -187,7 +202,7 @@
         <a href="https://zalo.me/84327306076" target="_blank" rel="noopener" class="chip zalo">Zalo</a>
         <a href="https://m.me/rolypolydanang" target="_blank" rel="noopener" class="chip messenger">Messenger</a>
         <a href="https://wa.me/84327306076" target="_blank" rel="noopener" class="chip whatsapp">WhatsApp</a>
-        <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener" class="chip instagram">Instagram DM</a>
+        <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener" class="chip instagram">Instagram</a>
       </div>
     </section>
 
@@ -208,10 +223,16 @@
       </div>
     </section>
 
-    <section class="section notes">
-      <p>Vegan & gluten-free options available</p>
-      <p>Cash, Visa, Mastercard, Apple Pay & MoMo accepted</p>
-      <p>English & Vietnamese spoken</p>
+    <section class="section notes" aria-labelledby="info">
+      <h2 id="info">Good to Know</h2>
+      <ul class="info-list">
+        <li>Vegan, vegetarian & gluten-free options available</li>
+        <li>Freshly made to order — sauces prepared in-house daily</li>
+        <li>Dine-in or order online via <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener">GrabFood</a> or call for pickup</li>
+        <li>Cash, Visa, Mastercard, Apple Pay & MoMo accepted</li>
+        <li>English & Vietnamese spoken</li>
+        <li>Free Wi-Fi available for guests</li>
+      </ul>
     </section>
 
     <section class="section" aria-labelledby="socials">
