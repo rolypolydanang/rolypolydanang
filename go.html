@@ -15,18 +15,21 @@
   <meta property="og:title" content="Roly Poly Fresh Spring Rolls & Coffee Da Nang" />
   <meta property="og:description" content="10 Signature Spring Roll Fillings, 5 House-Made Dipping Sauces, Coffee, Matcha & Juices. Call, order, or visit Roly Poly Da Nang." />
   <meta property="og:url" content="https://www.rolypolydanang.vn/go" />
-  <meta property="og:image" content="https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp" />
+  <meta property="og:image" content="https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam-social-1200x630.webp" />
   <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls & Coffee Da Nang" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Roly Poly Fresh Spring Rolls & Coffee Da Nang" />
   <meta name="twitter:description" content="10 Signature Spring Roll Fillings, 5 House-Made Dipping Sauces, Coffee, Matcha & Juices. Quick links to call, order, or visit." />
-  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp" />
+  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam-social-1200x630.webp" />
 
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+
+  <!-- Preload hero -->
+  <link rel="preload" as="image" href="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp" type="image/webp">
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
@@ -44,7 +47,6 @@
       --radius:12px; --container:720px;
     }
 
-    /* Dark mode */
     @media (prefers-color-scheme: dark){
       :root{ --text:#eaeaea; --muted:#b3b3b3; --line:#2a2a2a; --bg:#0f0f0f; }
       .btn{ color:#fff !important; }
@@ -55,7 +57,6 @@
       body{ background:var(--bg); }
     }
 
-    /* Base */
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
     body{
@@ -64,17 +65,14 @@
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
 
-    /* Container without HTML changes */
     .mini-header,
     header.hero,
     main,
     footer{ width:min(var(--container), 100%); margin-inline:auto; padding-inline:16px; }
 
-    /* Header */
     .mini-header{ padding:.85rem 1rem 0; display:flex; justify-content:center; }
     .mini-header img{ width:140px; height:auto; border-radius:8px; }
 
-    /* Hero */
     header.hero{ padding:1rem 1rem 0; }
     h1{
       font-size:clamp(1.35rem, 2.5vw + .9rem, 1.9rem);
@@ -90,15 +88,13 @@
     img.hero-img{
       width:100%; max-width:640px; border-radius:var(--radius);
       margin:1rem auto; display:block;
-      aspect-ratio: 3 / 2; object-fit:cover; /* reduces CLS */
+      aspect-ratio: 3 / 2; object-fit:cover;
       box-shadow:0 3px 14px rgba(0,0,0,.06);
     }
 
-    /* Sections */
     .section{ padding:1.2rem 0; }
     .section + .section{ border-top:1px solid var(--line); }
 
-    /* Buttons */
     .btn{
       display:block; background:var(--brand); color:#fff !important; font-weight:700;
       padding:14px 18px; border-radius:10px; text-decoration:none; margin:.55rem auto;
@@ -106,25 +102,19 @@
       box-shadow:0 2px 0 rgba(0,0,0,.06);
     }
     .btn:hover{ background:var(--brand-d); transform:translateY(-1px); }
-    .btn:active{ transform:translateY(0); }
-    .btn:focus-visible{ outline:2px solid #2223; outline-offset:3px; }
 
-    /* Contact chips */
     .contact-icons{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; justify-content:center; max-width:420px; margin:0 auto; }
     .chip{
       color:#fff; text-decoration:none; font-weight:700; padding:.75rem 1rem; border-radius:10px;
       transition:transform .15s ease, filter .15s ease;
     }
     .chip:hover{ transform:translateY(-1px); filter:brightness(.96); }
-    .chip:focus-visible{ outline:2px solid #2223; outline-offset:3px; }
     .messenger{ background:#0084FF; } .zalo{ background:#0068FF; }
     .whatsapp{ background:#25D366; } .instagram{ background:var(--brand); }
 
-    /* Visit */
     .address small{ color:var(--muted); }
     #status{ display:inline-flex; }
 
-    /* Status badge */
     .status-badge{
       display:inline-flex; align-items:center; gap:.5rem;
       padding:.25rem .6rem; border-radius:999px;
@@ -140,10 +130,13 @@
     .status-badge.closed{ background:#fdf2f2; color:#7f1d1d; border-color:#fecaca; }
     .status-badge.closed::before{ background:#ef4444; }
 
-    /* Footer */
     footer{ margin:2rem 0; color:var(--muted); font-size:.95rem; }
 
-    /* Motion respect */
+    .sr-only{
+      position:absolute!important; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+
     @media (prefers-reduced-motion: reduce){
       .btn, .chip{ transition:none; }
     }
@@ -153,13 +146,17 @@
 <body>
   <div class="mini-header">
     <a href="/" aria-label="Roly Poly Da Nang — Home">
-      <img src="/images/logo.jpg" alt="Roly Poly Fresh Spring Rolls & Coffee Da Nang logo" width="140" height="42" decoding="async" fetchpriority="low">
+      <img src="/images/logo.jpg" alt="Roly Poly Fresh Spring Rolls & Coffee Da Nang logo" width="140" height="42" decoding="async">
     </a>
   </div>
 
   <header class="hero" role="banner" aria-labelledby="title">
     <img class="hero-img"
          src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp"
+         srcset="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam-w480.webp 480w,
+                 /images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam-w800.webp 800w,
+                 /images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam-w1200.webp 1200w"
+         sizes="(max-width: 640px) 100vw, 640px"
          alt="Roly Poly Da Nang storefront"
          width="1200" height="800" decoding="async" loading="eager" fetchpriority="high">
     <h1 id="title">Roly Poly Fresh Spring Rolls & Coffee Da Nang</h1>
@@ -173,7 +170,7 @@
   <main id="main" role="main">
     <section class="section" aria-labelledby="act">
       <h2 id="act" class="sr-only">Actions</h2>
-      <a href="tel:+84327306076" class="btn" aria-label="Call Roly Poly Da Nang">Call for Pickup</a>
+      <a href="tel:+84327306076" class="btn" aria-label="Call Roly Poly Da Nang for pickup">Call for pickup</a>
       <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" class="btn" target="_blank" rel="noopener">Order on GrabFood</a>
       <a href="https://www.rolypolydanang.vn/menu" class="btn">View Menu</a>
     </section>
@@ -181,10 +178,10 @@
     <section class="section" aria-labelledby="msg">
       <h2 id="msg">Message Us</h2>
       <div class="contact-icons">
-        <a href="https://m.me/rolypolydanang" target="_blank" rel="noopener" class="chip messenger">Messenger</a>
-        <a href="https://zalo.me/84327306076" target="_blank" rel="noopener" class="chip zalo">Zalo</a>
-        <a href="https://wa.me/84327306076" target="_blank" rel="noopener" class="chip whatsapp">WhatsApp</a>
-        <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener" class="chip instagram">Instagram DM</a>
+        <a href="https://m.me/rolypolydanang" target="_blank" rel="noopener" class="chip messenger" aria-label="Message us on Messenger">Messenger</a>
+        <a href="https://zalo.me/84327306076" target="_blank" rel="noopener" class="chip zalo" aria-label="Message us on Zalo">Zalo</a>
+        <a href="https://wa.me/84327306076" target="_blank" rel="noopener" class="chip whatsapp" aria-label="Message us on WhatsApp">WhatsApp</a>
+        <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener" class="chip instagram" aria-label="Message us on Instagram">Instagram DM</a>
       </div>
     </section>
 
@@ -251,6 +248,7 @@
     "url": "https://www.rolypolydanang.vn/",
     "image": "https://www.rolypolydanang.vn/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp",
     "telephone": "+84327306076",
+    "priceRange": "₫",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "05 An Thượng 6, Bắc Mỹ Phú",
