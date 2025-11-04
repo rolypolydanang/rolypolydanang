@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Charset & viewport -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
   <title>Roly Poly Fresh Spring Rolls & Coffee Da Nang | Go Page</title>
   <meta name="description" content="Quick links to order, call, message, or visit Roly Poly Fresh Spring Rolls & Coffee Da Nang. Fresh Vietnamese spring rolls, coffee, matcha & more." />
   <link rel="canonical" href="https://www.rolypolydanang.vn/go" />
+
+  <!-- If you prefer this page not to appear in search results, keep this. Remove if you want it indexed. -->
+  <meta name="robots" content="noindex,follow" />
+
+  <!-- Theming -->
   <meta name="theme-color" content="#ff6a00" />
   <meta name="color-scheme" content="light dark" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Roly Poly — Quick Links">
+  <meta property="og:description" content="Order, call, message, or visit Roly Poly Fresh Spring Rolls & Coffee Da Nang.">
+  <meta property="og:url" content="https://www.rolypolydanang.vn/go">
+  <meta property="og:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Assorted fresh Vietnamese spring rolls with sauces at Roly Poly Da Nang">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Roly Poly — Quick Links">
+  <meta name="twitter:description" content="Order, call, message, or visit.">
+  <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
+
+  <!-- Icons -->
+  <link rel="icon" sizes="any" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Performance: preload hero for better LCP -->
+  <link rel="preload" as="image" href="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp" type="image/webp" imagesrcset="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang-vietnam.webp" imagesizes="(max-width: 768px) 100vw, 1200px" fetchpriority="high">
+
+  <!-- Font Awesome (non-blocking) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 
   <style>
     :root {
@@ -30,6 +63,9 @@
       font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
       color:var(--text); background:var(--bg); text-align:center;
     }
+
+    /* Visually hidden (for headings etc.) */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* Header + logo */
     .mini-header {
@@ -104,6 +140,7 @@
     .chip {
       color:#fff; text-decoration:none; font-weight:700;
       padding:.75rem 1rem; border-radius:10px; transition:.15s;
+      display:flex; align-items:center; justify-content:center;
     }
     .chip:hover{ transform:translateY(-1px); filter:brightness(.96); }
     .zalo{ background:#0068FF; }
@@ -253,12 +290,14 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     function setBadge(el, label, open){
       if(!el) return;
       el.textContent = label;
       el.classList.toggle('open', open);
       el.classList.toggle('closed', !open);
     }
+
     function updateStatus(){
       const tz='Asia/Ho_Chi_Minh', now=new Date();
       const [h,m]=new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(now).split(':').map(Number);
@@ -269,7 +308,11 @@
       setBadge(document.getElementById('status-top'),label,openNow);
       setBadge(document.getElementById('status'),label,openNow);
     }
-    document.addEventListener('DOMContentLoaded',()=>{updateStatus();setInterval(updateStatus,60000);});
+
+    document.addEventListener('DOMContentLoaded',()=>{
+      updateStatus();
+      setInterval(updateStatus,60000);
+    });
   </script>
 </body>
 </html>
