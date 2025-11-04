@@ -52,7 +52,7 @@
   <link rel="alternate" href="https://www.rolypolydanang.vn/support" hreflang="en">
   <link rel="alternate" href="https://www.rolypolydanang.vn/support" hreflang="en-VN">
 
-  <!-- External libraries -->
+  <!-- External libraries (icons may be used in footer; no icons on main buttons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
   <!-- GA4 -->
@@ -111,29 +111,38 @@
     .order-id{ display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem; }
     .order-id input{ border:1px solid #e3e3e3; border-radius:8px; padding:.6rem .8rem; min-width:260px; width:100%; max-width:520px; }
 
-    .btn-large{ padding:1rem 1.25rem; font-size:1.1rem; border-width:2px }
+    /* Generic .btn used only for Clear */
+    .btn{ background:var(--brand); color:#fff; border:none; border-radius:8px; font-weight:700; padding:.7rem 1.25rem; cursor:pointer; }
+    .btn:hover{ background:var(--brand-d); }
+
+    /* Contact grid */
     .contact-grid{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1.25rem; margin-top:1.5rem }
-    @media (min-width: 640px){ .contact-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (min-width: 700px){ .contact-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
 
-    .contact-btn{
-      display:flex; align-items:center; justify-content:center; gap:.6rem;
-      border-radius:10px; text-align:center; min-height:48px; line-height:1.2;
-      padding:1rem 1.25rem; font-weight:600; border:2px solid transparent;
-      transition: transform .1s ease, box-shadow .1s ease;
+    /* Base style for brand-colored contact buttons (no icons) */
+    .contact-btn.rp-btn{
+      --rp-bg: var(--brand); /* fallback */
+      --rp-bd: var(--brand-d);
+      display:flex; align-items:center; justify-content:center;
+      border-radius:999px; text-align:center; min-height:52px; line-height:1.2;
+      padding:1rem 1.25rem; font-weight:800; letter-spacing:.2px; font-size:1.08rem;
+      border:2px solid var(--rp-bg); background:var(--rp-bg); color:#fff !important; text-decoration:none;
+      transition: transform .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
     }
-    .contact-btn:hover{ transform: translateY(-2px); box-shadow: 0 3px 8px rgba(0,0,0,0.08); }
+    .contact-btn.rp-btn:hover{ transform:translateY(-2px); background:var(--rp-bd); border-color:var(--rp-bd); filter:brightness(.98); }
+    .rp-btn--full{ grid-column:1 / -1; }
 
-    .contact-btn i,.contact-btn img,.contact-btn svg{ width:22px; height:22px }
-    .btn-wa{ background:#25D366; border-color:#20b457 }
-    .btn-wa:hover{ background:#20b457; border-color:#1a9449 }
-    .btn-msgr{ background:#0084FF; border-color:#0077e6 }
-    .btn-msgr:hover{ background:#0077e6; border-color:#006acc }
-    .btn-ig{ background:#E1306C; border-color:#c42a60 }
-    .btn-ig:hover{ background:#c42a60; border-color:#a92453 }
-    .btn-zalo{ background:#0068FF; border-color:#005ee6 }
-    .btn-zalo:hover{ background:#005ee6; border-color:#0052cc }
-    .btn-call{ background:#111; border-color:#000 }
-    .btn-call:hover{ background:#000; border-color:#000 }
+    /* Per-platform brand colors */
+    .rp-wa   { --rp-bg:#25D366; --rp-bd:#20b457; } /* WhatsApp */
+    .rp-zalo { --rp-bg:#0068FF; --rp-bd:#005ee6; } /* Zalo */
+    .rp-msgr { --rp-bg:#0084FF; --rp-bd:#0077e6; } /* Messenger */
+    .rp-ig   { --rp-bg:#E4405F; --rp-bd:#c42a60; } /* Instagram */
+    .rp-call { --rp-bg:#111111; --rp-bd:#000000; } /* Call */
+
+    /* Card utility */
+    .card { max-width: 760px; margin: 14px auto 22px; background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 18px 20px; box-shadow: 0 6px 18px rgba(0,0,0,.04); }
+    .card.narrow{ max-width: 760px; }
+    .card-title{ margin:0 0 10px; font-weight:800; font-size:1.12rem; }
 
     /* Accessible focus ring */
     a:focus-visible, button:focus-visible, input:focus-visible {
@@ -141,10 +150,6 @@
       outline-offset: 2px;
       border-radius: 10px;
     }
-
-    /* H1 clamp & intro rhythm */
-    .support-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: .5rem; }
-    .support-intro { font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem; }
 
     /* Scoped container rule so we don't affect other pages */
     main.support-wrap > .container { max-width: 960px; margin-inline: auto; padding-inline: 1rem; }
@@ -160,6 +165,13 @@
 
     /* Footer breathing room */
     footer.site-footer { margin-top: 4rem; }
+
+    /* Dark mode niceties */
+    @media (prefers-color-scheme: dark){
+      .support-intro { color: #d0d0d0; }
+      .order-id input { background:#141414; color:#e8e8e8; border-color:#2a2a2a; }
+      .card { background:#131313; border-color:#2a2a2a; box-shadow:none; }
+    }
   </style>
 </head>
 
@@ -197,128 +209,46 @@
     });
   </script>
 
-  <!-- REPLACE YOUR EXISTING <main>...</main> WITH THIS -->
-<main id="main" role="main" class="support-wrap">
-  <div class="container">
-    <header class="support-header">
-      <h1>Customer Support</h1>
-      <p class="support-intro">
-        Having an issue with your <strong>GrabFood</strong> delivery? Message us below and include your
-        <strong>Order ID</strong> for the fastest help. We can send a rider back out or provide compensation when appropriate.
-      </p>
-    </header>
+  <!-- UPDATED MAIN -->
+  <main id="main" role="main" class="support-wrap">
+    <div class="container">
+      <header class="support-header">
+        <h1>Customer Support</h1>
+        <p class="support-intro">
+          Having an issue with your <strong>GrabFood</strong> delivery? Message us below and include your
+          <strong>Order ID</strong> (e.g., GF-123456789) for the fastest help. We can send a rider back out or provide compensation when appropriate.
+        </p>
+      </header>
 
-    <!-- Order ID helper -->
-    <form class="order-id" onsubmit="return false" aria-label="Add optional order ID">
-      <label class="visually-hidden" for="orderIdInput">Order ID</label>
-      <input id="orderIdInput" type="text" inputmode="text" autocomplete="off"
-             placeholder="GrabFood Order ID (e.g., GF-123456789)">
-      <button id="clearOrderBtn" class="btn" type="button">Clear</button>
-    </form>
+      <!-- Order ID helper -->
+      <form class="order-id" onsubmit="return false" aria-label="Add optional order ID">
+        <label class="visually-hidden" for="orderIdInput">Order ID</label>
+        <input id="orderIdInput" type="text" inputmode="text" autocomplete="off"
+               placeholder="GrabFood Order ID (e.g., GF-123456789)">
+        <button id="clearOrderBtn" class="btn" type="button">Clear</button>
+      </form>
 
-    <!-- Brand-colored contact buttons (no icons) -->
-    <section class="contact-grid" aria-label="Contact options">
-      <!-- Prioritized for GrabFood support -->
-      <a id="btn-wa" class="contact-btn rp-btn" href="https://wa.me/84327306076"
-         target="_blank" rel="noopener" aria-label="Contact Roly Poly on WhatsApp">WhatsApp</a>
+      <!-- Brand-colored contact buttons (no icons) -->
+      <section class="contact-grid" aria-label="Contact options">
+        <!-- Prioritized for VN support usage -->
+        <a id="btn-wa"   class="contact-btn rp-btn rp-wa"   href="https://wa.me/84327306076" target="_blank" rel="noopener" aria-label="Contact Roly Poly on WhatsApp">WhatsApp</a>
+        <a id="btn-zalo" class="contact-btn rp-btn rp-zalo" href="https://zalo.me/84327306076" target="_blank" rel="noopener" aria-label="Contact Roly Poly on Zalo">Zalo</a>
+        <a id="btn-msgr" class="contact-btn rp-btn rp-msgr" href="https://m.me/rolypolydanang"  target="_blank" rel="noopener" aria-label="Contact Roly Poly on Facebook Messenger">Messenger</a>
+        <a id="btn-ig"   class="contact-btn rp-btn rp-ig"   href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener" aria-label="Contact Roly Poly on Instagram">Instagram</a>
+        <!-- Full-width secondary option -->
+        <a id="btn-call" class="contact-btn rp-btn rp-call rp-btn--full" href="tel:+84327306076" aria-label="Call Roly Poly Da Nang">Call Us</a>
+      </section>
 
-      <a id="btn-zalo" class="contact-btn rp-btn" href="https://zalo.me/84327306076"
-         target="_blank" rel="noopener" aria-label="Contact Roly Poly on Zalo">Zalo</a>
-
-      <a id="btn-msgr" class="contact-btn rp-btn" href="https://m.me/rolypolydanang"
-         target="_blank" rel="noopener" aria-label="Contact Roly Poly on Facebook Messenger">Messenger</a>
-
-      <a id="btn-ig" class="contact-btn rp-btn" href="https://ig.me/m/rolypolydanang"
-         target="_blank" rel="noopener" aria-label="Contact Roly Poly on Instagram">Instagram</a>
-
-      <!-- Full-width secondary option -->
-      <a id="btn-call" class="contact-btn rp-btn rp-btn--full" href="tel:+84327306076"
-         aria-label="Call Roly Poly Da Nang">Call Us</a>
-    </section>
-
-    <div class="card narrow" style="margin-top:1.25rem;">
-      <h2 class="card-title" style="margin:0 0 .5rem;">Faster Resolution Tips</h2>
-      <ul style="margin:.25rem 0 0 1.1rem; line-height:1.6;">
-        <li>Include your <strong>GrabFood Order ID</strong> in your first message.</li>
-        <li>Share a quick photo if the order is incorrect or damaged.</li>
-        <li>Message us within <strong>30 minutes</strong> of delivery whenever possible.</li>
-      </ul>
+      <div class="card narrow" style="margin-top:1.25rem;">
+        <h2 class="card-title" style="margin:0 0 .5rem;">Faster Resolution Tips</h2>
+        <ul style="margin:.25rem 0 0 1.1rem; line-height:1.6;">
+          <li>Include your <strong>GrabFood Order ID</strong> in your first message.</li>
+          <li>Share a quick photo if the order is incorrect or damaged.</li>
+          <li>Message us within <strong>30 minutes</strong> of delivery whenever possible.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</main>
-
-<!-- Scoped overrides just for the Support main -->
-<style>
-  /* Container sizing (kept consistent with your site) */
-  main.support-wrap > .container { max-width: 960px; margin-inline: auto; padding-inline: 1rem; }
-
-  /* Headline and intro */
-  .support-header { text-align: center; margin-bottom: 1.25rem; }
-  .support-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: .5rem; }
-  .support-intro { color: #444; max-width: 52rem; margin: .25rem auto 1.5rem; font-size: 1.05rem; line-height: 1.6; }
-
-  /* Order ID row */
-  .order-id { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
-  .order-id input {
-    border: 1px solid #e3e3e3; border-radius: 8px; padding: .6rem .8rem;
-    min-width: 260px; width: 100%; max-width: 520px;
-  }
-
-  /* Brand button baseline (same for all contact buttons) */
-  .btn { cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
-         font-weight: 700; border-radius: 999px; border: 2px solid var(--brand);
-         background: var(--brand); color: #fff; padding: .75rem 1.25rem; text-decoration: none; }
-  .btn:hover { background: var(--brand-d); border-color: var(--brand-d); }
-
-  /* Contact grid + buttons (no icons) */
-  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 1.5rem; }
-  @media (min-width: 700px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
-
-  .contact-btn.rp-btn {
-    display: flex; align-items: center; justify-content: center;
-    text-decoration: none; font-weight: 800; font-size: 1.08rem; letter-spacing: .2px;
-    color: #fff !important; padding: 16px 18px; border-radius: 999px; border: 2px solid var(--brand);
-    background: var(--brand); transition: transform .15s ease, opacity .15s ease, background .15s ease, border-color .15s ease;
-  }
-  .contact-btn.rp-btn:hover { transform: translateY(-2px); opacity: .95; background: var(--brand-d); border-color: var(--brand-d); }
-  .rp-btn--full { grid-column: 1 / -1; }
-
-  /* Card utility (matches your /order style) */
-  .card { max-width: 760px; margin: 14px auto 22px; background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 18px 20px; box-shadow: 0 6px 18px rgba(0,0,0,.04); }
-  .card-title { font-weight: 800; font-size: 1.12rem; }
-
-  /* Focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible {
-    outline: 3px solid rgba(255,106,0,.5); outline-offset: 2px; border-radius: 8px;
-  }
-
-  /* Dark mode niceties */
-  @media (prefers-color-scheme: dark){
-    .support-intro { color: #d0d0d0; }
-    .order-id input { background:#141414; color:#e8e8e8; border-color:#2a2a2a; }
-    .card { background:#131313; border-color:#2a2a2a; box-shadow:none; }
-  }
-</style>
-
-<!-- WhatsApp autofill with Order ID (kept lean and scoped) -->
-<script>
-  (function(){
-    const orderInput = document.getElementById('orderIdInput');
-    const waBtn = document.getElementById('btn-wa');
-    const clearBtn = document.getElementById('clearOrderBtn');
-
-    function updateLink(){
-      const id = (orderInput?.value || '').trim();
-      const msg = `Hello, I need help with my GrabFood delivery.${id ? ` (Order ID: ${id})` : ''}`;
-      waBtn.href = `https://wa.me/84327306076?text=${encodeURIComponent(msg)}`;
-    }
-
-    orderInput?.addEventListener('input', updateLink);
-    clearBtn?.addEventListener('click', () => { orderInput.value = ''; updateLink(); });
-    updateLink();
-  })();
-</script>
-
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
@@ -413,7 +343,7 @@
 
       function updateLink(){
         const id=(orderInput?.value||'').trim();
-        const msg=`Hello, I need help with my order.${id?` (Order ID: ${id})`:''}`;
+        const msg=`Hello, I need help with my GrabFood delivery.${id?` (Order ID: ${id})`:''}`;
         waBtn.href=`https://wa.me/84327306076?text=${encodeURIComponent(msg)}`;
       }
 
