@@ -172,7 +172,7 @@
     nav.sticky-actions .btn:hover, nav.sticky-actions .btn:focus{ background:var(--brand-d); border-color:var(--brand-d); }
     main{ padding-bottom:calc(var(--sticky-h,56px) + env(safe-area-inset-bottom)); }
 
-    /* ---------- Generic card (used by all main sections) ---------- */
+    /* ---------- Generic card ---------- */
     .card{
       max-width: 1020px;
       margin: 14px auto 22px;
@@ -186,7 +186,7 @@
     .card-title{ margin:0 0 10px; font-weight:800; font-size:1.15rem; }
     .card + .card{ margin-top: 18px; }
 
-    /* Pickup details grid (definition list) */
+    /* Pickup details grid */
     .contact-list{
       display:grid; grid-template-columns:140px 1fr;
       column-gap:16px; row-gap:10px; margin:0;
@@ -227,24 +227,25 @@
     @media (min-width:900px){ .favorites-grid{ grid-template-columns: 1fr 1.2fr; } }
     @media (min-width:880px){ .sauce-grid{ grid-template-columns: 1fr 1fr; } }
 
-    /* ===== Socials: force BLACK in light mode, WHITE in dark mode ===== */
-    .social-links{
-      display:flex; justify-content:center; align-items:center;
-      gap:1rem; margin-top:.75rem; flex-wrap:wrap;
+    /* Socials like /go */
+    .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:.75rem; flex-wrap:wrap; }
+    .social-links a{ display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:transparent; color:#000; font-size:1.3rem; text-decoration:none; transition:transform .15s ease, filter .15s ease; }
+    .social-links a:hover{ transform:translateY(-2px); filter:brightness(.6); }
+    .social-links img.social-icon-img{ width:36px; height:36px; display:block; filter:brightness(0) saturate(100%); }
+
+    /* Force socials to pure black (override any external CSS) */
+    .social-links a,
+    .social-links a:link,
+    .social-links a:visited { color:#000 !important; }
+    .social-links i,
+    .social-links svg {
+      color:#000 !important;
+      fill:#000 !important;
+      stroke:#000 !important;
+      opacity:1 !important;
+      filter:none !important;
     }
-    .social-links a{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:42px; height:42px; border-radius:50%;
-      background:transparent; color:#000 !important; /* solid black */
-      font-size:1.3rem; text-decoration:none;
-      transition:transform .15s ease;
-    }
-    .social-links a:hover{ transform:translateY(-2px); } /* no grey dim */
-    /* PNG/SVG images (e.g., Tripadvisor) -> pure black */
-    .social-links img.social-icon-img{
-      width:36px; height:36px; display:block;
-      filter:brightness(0) saturate(100%) !important;
-    }
+    .social-links img.social-icon-img{ filter:brightness(0) saturate(100%) !important; }
 
     /* Utilities */
     .note{ color:#666; font-size:.95rem; }
@@ -257,7 +258,11 @@
       .contact-list dt{ color:#e8e8e8; }
       .contact-list dd{ color:#d0d0d0; }
       .hours-pill{ background:#1b1b1b; border-color:#2a2a2a; color:#e5e5e5; }
-      .social-links a{ color:#fff !important; } /* solid white in dark */
+      .social-links a,
+      .social-links i,
+      .social-links svg{
+        color:#fff !important; fill:#fff !important; stroke:#fff !important;
+      }
       .social-links img.social-icon-img{ filter:brightness(100) !important; }
     }
   </style>
