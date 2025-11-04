@@ -227,11 +227,24 @@
     @media (min-width:900px){ .favorites-grid{ grid-template-columns: 1fr 1.2fr; } }
     @media (min-width:880px){ .sauce-grid{ grid-template-columns: 1fr 1fr; } }
 
-    /* Socials like /go */
-    .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:.75rem; flex-wrap:wrap; }
-    .social-links a{ display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:transparent; color:#000; font-size:1.3rem; text-decoration:none; transition:transform .15s ease, filter .15s ease; }
-    .social-links a:hover{ transform:translateY(-2px); filter:brightness(.6); }
-    .social-links img.social-icon-img{ width:36px; height:36px; display:block; filter:brightness(0) saturate(100%); }
+    /* ===== Socials: force BLACK in light mode, WHITE in dark mode ===== */
+    .social-links{
+      display:flex; justify-content:center; align-items:center;
+      gap:1rem; margin-top:.75rem; flex-wrap:wrap;
+    }
+    .social-links a{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:42px; height:42px; border-radius:50%;
+      background:transparent; color:#000 !important; /* solid black */
+      font-size:1.3rem; text-decoration:none;
+      transition:transform .15s ease;
+    }
+    .social-links a:hover{ transform:translateY(-2px); } /* no grey dim */
+    /* PNG/SVG images (e.g., Tripadvisor) -> pure black */
+    .social-links img.social-icon-img{
+      width:36px; height:36px; display:block;
+      filter:brightness(0) saturate(100%) !important;
+    }
 
     /* Utilities */
     .note{ color:#666; font-size:.95rem; }
@@ -244,8 +257,8 @@
       .contact-list dt{ color:#e8e8e8; }
       .contact-list dd{ color:#d0d0d0; }
       .hours-pill{ background:#1b1b1b; border-color:#2a2a2a; color:#e5e5e5; }
-      .social-links a{ color:#fff; }
-      .social-links img.social-icon-img{ filter:brightness(100); }
+      .social-links a{ color:#fff !important; } /* solid white in dark */
+      .social-links img.social-icon-img{ filter:brightness(100) !important; }
     }
   </style>
 </head>
