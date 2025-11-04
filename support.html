@@ -197,62 +197,128 @@
     });
   </script>
 
-  <main id="main" role="main" class="support-wrap">
-    <div class="container">
-      <header class="support-header">
-        <h1>Customer Support</h1>
-        <p class="support-intro">
-          Need help with your order? Tap a button to message us directly. Add your Order ID and we’ll sort it fast — we can send a driver to fix issues or provide compensation when appropriate.
-        </p>
-      </header>
+  <!-- REPLACE YOUR EXISTING <main>...</main> WITH THIS -->
+<main id="main" role="main" class="support-wrap">
+  <div class="container">
+    <header class="support-header">
+      <h1>Customer Support</h1>
+      <p class="support-intro">
+        Having an issue with your <strong>GrabFood</strong> delivery? Message us below and include your
+        <strong>Order ID</strong> for the fastest help. We can send a rider back out or provide compensation when appropriate.
+      </p>
+    </header>
 
-      <form class="order-id" onsubmit="return false" aria-label="Add optional order ID">
-        <label class="visually-hidden" for="orderIdInput">Order ID</label>
-        <input id="orderIdInput" type="text" inputmode="text" autocomplete="off" placeholder="Order ID (e.g., GF-123456789)">
-        <button id="clearOrderBtn" class="btn" type="button">Clear</button>
-      </form>
+    <!-- Order ID helper -->
+    <form class="order-id" onsubmit="return false" aria-label="Add optional order ID">
+      <label class="visually-hidden" for="orderIdInput">Order ID</label>
+      <input id="orderIdInput" type="text" inputmode="text" autocomplete="off"
+             placeholder="GrabFood Order ID (e.g., GF-123456789)">
+      <button id="clearOrderBtn" class="btn" type="button">Clear</button>
+    </form>
 
-      <section class="contact-grid" aria-label="Contact options">
-        <!-- WhatsApp -->
-        <a id="btn-wa" class="btn btn-large contact-btn btn-wa"
-           href="https://wa.me/84327306076?text=Hello%2C%20I%20need%20help%20with%20my%20order."
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i> <span>WhatsApp</span>
-        </a>
+    <!-- Brand-colored contact buttons (no icons) -->
+    <section class="contact-grid" aria-label="Contact options">
+      <!-- Prioritized for GrabFood support -->
+      <a id="btn-wa" class="contact-btn rp-btn" href="https://wa.me/84327306076"
+         target="_blank" rel="noopener" aria-label="Contact Roly Poly on WhatsApp">WhatsApp</a>
 
-        <!-- Messenger -->
-        <a id="btn-msgr" class="btn btn-large contact-btn btn-msgr"
-           href="https://m.me/rolypolydanang"
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-facebook-messenger" aria-hidden="true"></i> <span>Messenger</span>
-        </a>
+      <a id="btn-zalo" class="contact-btn rp-btn" href="https://zalo.me/84327306076"
+         target="_blank" rel="noopener" aria-label="Contact Roly Poly on Zalo">Zalo</a>
 
-        <!-- Zalo (inline SVG icon) -->
-        <a id="btn-zalo" class="btn btn-large contact-btn btn-zalo"
-           href="https://zalo.me/84327306076"
-           target="_blank" rel="noopener noreferrer">
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false" style="display:block">
-            <rect x="1" y="1" width="22" height="22" rx="7" ry="7" fill="#0068FF"></rect>
-            <path d="M13 6.8H7.2v1.8h3.3l-3.6 6H13v-1.8H9.7l3.6-6z" fill="#fff"></path>
-          </svg>
-          <span>Zalo</span>
-        </a>
+      <a id="btn-msgr" class="contact-btn rp-btn" href="https://m.me/rolypolydanang"
+         target="_blank" rel="noopener" aria-label="Contact Roly Poly on Facebook Messenger">Messenger</a>
 
-        <!-- Instagram -->
-        <a id="btn-ig" class="btn btn-large contact-btn btn-ig"
-           href="https://ig.me/m/rolypolydanang"
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram" aria-hidden="true"></i> <span>Instagram</span>
-        </a>
+      <a id="btn-ig" class="contact-btn rp-btn" href="https://ig.me/m/rolypolydanang"
+         target="_blank" rel="noopener" aria-label="Contact Roly Poly on Instagram">Instagram</a>
 
-        <!-- Call -->
-        <a id="btn-call" class="btn btn-large contact-btn btn-call"
-           href="tel:+84327306076">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i> <span>Call Us</span>
-        </a>
-      </section>
+      <!-- Full-width secondary option -->
+      <a id="btn-call" class="contact-btn rp-btn rp-btn--full" href="tel:+84327306076"
+         aria-label="Call Roly Poly Da Nang">Call Us</a>
+    </section>
+
+    <div class="card narrow" style="margin-top:1.25rem;">
+      <h2 class="card-title" style="margin:0 0 .5rem;">Faster Resolution Tips</h2>
+      <ul style="margin:.25rem 0 0 1.1rem; line-height:1.6;">
+        <li>Include your <strong>GrabFood Order ID</strong> in your first message.</li>
+        <li>Share a quick photo if the order is incorrect or damaged.</li>
+        <li>Message us within <strong>30 minutes</strong> of delivery whenever possible.</li>
+      </ul>
     </div>
-  </main>
+  </div>
+</main>
+
+<!-- Scoped overrides just for the Support main -->
+<style>
+  /* Container sizing (kept consistent with your site) */
+  main.support-wrap > .container { max-width: 960px; margin-inline: auto; padding-inline: 1rem; }
+
+  /* Headline and intro */
+  .support-header { text-align: center; margin-bottom: 1.25rem; }
+  .support-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: .5rem; }
+  .support-intro { color: #444; max-width: 52rem; margin: .25rem auto 1.5rem; font-size: 1.05rem; line-height: 1.6; }
+
+  /* Order ID row */
+  .order-id { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+  .order-id input {
+    border: 1px solid #e3e3e3; border-radius: 8px; padding: .6rem .8rem;
+    min-width: 260px; width: 100%; max-width: 520px;
+  }
+
+  /* Brand button baseline (same for all contact buttons) */
+  .btn { cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+         font-weight: 700; border-radius: 999px; border: 2px solid var(--brand);
+         background: var(--brand); color: #fff; padding: .75rem 1.25rem; text-decoration: none; }
+  .btn:hover { background: var(--brand-d); border-color: var(--brand-d); }
+
+  /* Contact grid + buttons (no icons) */
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 1.5rem; }
+  @media (min-width: 700px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .contact-btn.rp-btn {
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-weight: 800; font-size: 1.08rem; letter-spacing: .2px;
+    color: #fff !important; padding: 16px 18px; border-radius: 999px; border: 2px solid var(--brand);
+    background: var(--brand); transition: transform .15s ease, opacity .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .contact-btn.rp-btn:hover { transform: translateY(-2px); opacity: .95; background: var(--brand-d); border-color: var(--brand-d); }
+  .rp-btn--full { grid-column: 1 / -1; }
+
+  /* Card utility (matches your /order style) */
+  .card { max-width: 760px; margin: 14px auto 22px; background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 18px 20px; box-shadow: 0 6px 18px rgba(0,0,0,.04); }
+  .card-title { font-weight: 800; font-size: 1.12rem; }
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid rgba(255,106,0,.5); outline-offset: 2px; border-radius: 8px;
+  }
+
+  /* Dark mode niceties */
+  @media (prefers-color-scheme: dark){
+    .support-intro { color: #d0d0d0; }
+    .order-id input { background:#141414; color:#e8e8e8; border-color:#2a2a2a; }
+    .card { background:#131313; border-color:#2a2a2a; box-shadow:none; }
+  }
+</style>
+
+<!-- WhatsApp autofill with Order ID (kept lean and scoped) -->
+<script>
+  (function(){
+    const orderInput = document.getElementById('orderIdInput');
+    const waBtn = document.getElementById('btn-wa');
+    const clearBtn = document.getElementById('clearOrderBtn');
+
+    function updateLink(){
+      const id = (orderInput?.value || '').trim();
+      const msg = `Hello, I need help with my GrabFood delivery.${id ? ` (Order ID: ${id})` : ''}`;
+      waBtn.href = `https://wa.me/84327306076?text=${encodeURIComponent(msg)}`;
+    }
+
+    orderInput?.addEventListener('input', updateLink);
+    clearBtn?.addEventListener('click', () => { orderInput.value = ''; updateLink(); });
+    updateLink();
+  })();
+</script>
+
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
