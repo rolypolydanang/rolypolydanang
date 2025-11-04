@@ -248,7 +248,7 @@
       <p>
         05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000<br>
         <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener">View on Google Maps</a><br>
-        <small>Open: Mon–Sat 10:00–20:00 · Closed Sunday</small><br>
+        <small>Open daily 10:00–20:00</small><br>
         <span id="status" class="status-badge" aria-live="polite">Checking hours…</span>
       </p>
 
@@ -289,30 +289,35 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    function setBadge(el, label, open){
-      if(!el) return;
-      el.textContent = label;
-      el.classList.toggle('open', open);
-      el.classList.toggle('closed', !open);
-    }
+  function setBadge(el, label, open){
+    if(!el) return;
+    el.textContent = label;
+    el.classList.toggle('open', open);
+    el.classList.toggle('closed', !open);
+  }
 
-    function updateStatus(){
-      const tz='Asia/Ho_Chi_Minh', now=new Date();
-      const [h,m]=new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(now).split(':').map(Number);
-      const day=new Intl.DateTimeFormat('en-US',{timeZone:tz,weekday:'short'}).format(now);
-      const isOpenDay=['Mon','Tue','Wed','Thu','Fri','Sat'].includes(day);
-      const openNow=isOpenDay&&(h>10||(h===10&&m>=0))&&h<20;
-      const label=openNow?'Open now · Closes 20:00':(isOpenDay?'Closed · Opens 10:00':'Closed today (Sunday)');
-      setBadge(document.getElementById('status-top'),label,openNow);
-      setBadge(document.getElementById('status'),label,openNow);
-    }
+  function updateStatus(){
+    const tz='Asia/Ho_Chi_Minh', now=new Date();
+    const [h,m]=new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(now).split(':').map(Number);
 
-    document.addEventListener('DOMContentLoaded',()=>{
-      updateStatus();
-      setInterval(updateStatus,60000);
-    });
-  </script>
+    // Open every day 10:00–20:00 local time
+    const openNow = (h>10 || (h===10 && m>=0)) && h < 20;
+
+    const label = openNow
+      ? 'Open now · Closes 20:00'
+      : 'Closed · Opens 10:00';
+
+    setBadge(document.getElementById('status-top'), label, openNow);
+    setBadge(document.getElementById('status'), label, openNow);
+  }
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    updateStatus();
+    setInterval(updateStatus,60000);
+  });
+</script>
+
 </body>
 </html>
