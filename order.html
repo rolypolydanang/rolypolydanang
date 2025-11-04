@@ -55,7 +55,7 @@
   <link rel="alternate" href="https://www.rolypolydanang.vn/vi/order" hreflang="vi-VN">
   -->
 
-  <!-- External libraries -->
+  <!-- Font Awesome (for socials icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
   <!-- GA4 -->
@@ -98,12 +98,7 @@
         },
         "geo": { "@type": "GeoCoordinates", "latitude": 16.04869, "longitude": 108.244106 },
         "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "10:00",
-            "closes": "20:00"
-          }
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "20:00" }
         ],
         "openingHours": ["Mo-Su 10:00-20:00"],
         "menu": "https://www.rolypolydanang.vn/menu",
@@ -165,7 +160,7 @@
   }
   </script>
 
-  <!-- Minor page styles -->
+  <!-- Page-specific styles -->
   <style>
     :root{ --brand:#ff6a00; --brand-d:#e55b00; }
     .hero-img { width: 100%; height: auto; max-width: 1200px; }
@@ -183,7 +178,7 @@
     .info-section .section-lead { max-width: 70ch; }
     .list { padding-left: 1.25rem; }
 
-    /* ---------- Contact buttons (icon-free, brand colors) ---------- */
+    /* ---------- Contact buttons (icon-free, brand colors, grid) ---------- */
     .contact-buttons{
       display:grid;
       grid-template-columns:1fr;      /* mobile */
@@ -211,6 +206,27 @@
     .whatsapp{ background-color:#25D366; }   /* WhatsApp green */
     .instagram{ background-color:#E4405F; }  /* Instagram red-pink */
     .call{ background-color:#000000; }       /* Black for call */
+
+    /* ---------- Social links (match /go page) ---------- */
+    .social-links{
+      display:flex; justify-content:center; align-items:center;
+      gap:1rem; margin-top:.75rem; flex-wrap:wrap;
+    }
+    .social-links a{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:42px; height:42px; border-radius:50%;
+      background:transparent; color:#000; font-size:1.3rem;
+      text-decoration:none; transition:transform .15s ease, filter .15s ease;
+    }
+    .social-links a:hover{ transform:translateY(-2px); filter:brightness(.6); }
+    .social-links img.social-icon-img{
+      width:36px; height:36px; display:block;
+      filter:brightness(0) saturate(100%);
+    }
+    @media (prefers-color-scheme: dark){
+      .social-links a{ color:#fff; }
+      .social-links img.social-icon-img{ filter:brightness(100); }
+    }
 
     /* Keep orange links, but NOT on buttons */
     .info-section a:not(.btn):not(.contact-btn) { color:#f26522; text-decoration:none; font-weight:600; }
@@ -256,7 +272,7 @@
       .sauce-list { order:1; }
     }
 
-    /* Visually hidden helper (for any hidden headings if needed) */
+    /* Visually hidden helper (if you ever need hidden headings) */
     .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
@@ -459,21 +475,24 @@
         <h2 id="closing-title">Stay Connected</h2>
         <p><strong>Always fresh, made to order.</strong> Roly Poly brings Vietnamese comfort food to life — one roll at a time.</p>
 
-        <p>Follow us for updates, behind-the-scenes moments, and new flavor drops:</p>
-        <ul class="about-list">
-          <li>Instagram: <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener noreferrer">@rolypolydanang</a></li>
-          <li>TikTok: <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener noreferrer">@rolypolydanang</a></li>
-          <li>Facebook: <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener noreferrer">Roly Poly Fresh Spring Rolls & Coffee Da Nang</a></li>
-        </ul>
-
-        <p>Need to reach us directly? We’re happy to help:</p>
-        <ul class="about-list">
-          <li>Instagram: <a href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener noreferrer">ig.me/m/rolypolydanang</a></li>
-          <li>Messenger: <a href="https://m.me/rolypolydanang" target="_blank" rel="noopener noreferrer">m.me/rolypolydanang</a></li>
-          <li>Zalo: <a href="https://zalo.me/84327306076" target="_blank" rel="noopener noreferrer">zalo.me/84327306076</a></li>
-          <li>WhatsApp: <a href="https://wa.me/84327306076?text=Hello%2C%20I%20love%20your%20fresh%20rolls%21" target="_blank" rel="noopener noreferrer">wa.me/84327306076</a></li>
-          <li>Call Us: <a href="tel:+84327306076" aria-label="Call Roly Poly Da Nang at +84 327 306 076">+84 327 306 076</a></li>
-        </ul>
+        <!-- Socials row styled like /go -->
+        <div class="social-links" role="group" aria-label="Social media">
+          <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener" aria-label="Tripadvisor">
+            <img class="social-icon-img" src="/images/trip-adv.png" width="36" height="36" alt="Tripadvisor">
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -510,11 +529,12 @@
         <section class="footer-col" aria-labelledby="footer-social">
           <h3 id="footer-social">Socials</h3>
           <div class="social-links" role="group" aria-label="Social media">
-            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener noreferrer" aria-label="Roly Poly Da Nang on Tripadvisor">
-              <img class="social-icon-img" src="/images/trip-adv.png" width="32" height="32" alt="Tripadvisor" decoding="async" loading="lazy" />
+            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></a>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener" aria-label="Tripadvisor">
+              <img class="social-icon-img" src="/images/trip-adv.png" width="36" height="36" alt="Tripadvisor" decoding="async" loading="lazy" />
             </a>
           </div>
         </section>
