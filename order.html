@@ -172,7 +172,7 @@
     nav.sticky-actions .btn:hover, nav.sticky-actions .btn:focus{ background:var(--brand-d); border-color:var(--brand-d); }
     main{ padding-bottom:calc(var(--sticky-h,56px) + env(safe-area-inset-bottom)); }
 
-    /* ---------- Generic card ---------- */
+    /* ---------- Generic card (used by all main sections) ---------- */
     .card{
       max-width: 1020px;
       margin: 14px auto 22px;
@@ -186,7 +186,7 @@
     .card-title{ margin:0 0 10px; font-weight:800; font-size:1.15rem; }
     .card + .card{ margin-top: 18px; }
 
-    /* Pickup details grid */
+    /* Pickup details grid (definition list) */
     .contact-list{
       display:grid; grid-template-columns:140px 1fr;
       column-gap:16px; row-gap:10px; margin:0;
@@ -227,25 +227,25 @@
     @media (min-width:900px){ .favorites-grid{ grid-template-columns: 1fr 1.2fr; } }
     @media (min-width:880px){ .sauce-grid{ grid-template-columns: 1fr 1fr; } }
 
-    /* Socials like /go */
+    /* ---- Socials layout (shared) ---- */
     .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:.75rem; flex-wrap:wrap; }
-    .social-links a{ display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:transparent; color:#000; font-size:1.3rem; text-decoration:none; transition:transform .15s ease, filter .15s ease; }
-    .social-links a:hover{ transform:translateY(-2px); filter:brightness(.6); }
-    .social-links img.social-icon-img{ width:36px; height:36px; display:block; filter:brightness(0) saturate(100%); }
+    .social-links img.social-icon-img{ width:36px; height:36px; display:block; }
 
-    /* Force socials to pure black (override any external CSS) */
-    .social-links a,
-    .social-links a:link,
-    .social-links a:visited { color:#000 !important; }
-    .social-links i,
-    .social-links svg {
-      color:#000 !important;
-      fill:#000 !important;
-      stroke:#000 !important;
-      opacity:1 !important;
-      filter:none !important;
-    }
-    .social-links img.social-icon-img{ filter:brightness(0) saturate(100%) !important; }
+    /* MAIN CARDS: icons black */
+    .card .social-links a,
+    .card .social-links a:link,
+    .card .social-links a:visited { color:#000 !important; }
+    .card .social-links i,
+    .card .social-links svg{ color:#000 !important; fill:#000 !important; stroke:#000 !important; }
+    .card .social-links img.social-icon-img{ filter:brightness(0) saturate(100%) !important; }
+
+    /* FOOTER: icons white */
+    .site-footer .social-links a,
+    .site-footer .social-links a:link,
+    .site-footer .social-links a:visited{ color:#fff !important; }
+    .site-footer .social-links i,
+    .site-footer .social-links svg{ color:#fff !important; fill:#fff !important; stroke:#fff !important; }
+    .site-footer .social-links img.social-icon-img{ filter: invert(1) brightness(2) saturate(0) !important; }
 
     /* Utilities */
     .note{ color:#666; font-size:.95rem; }
@@ -258,12 +258,11 @@
       .contact-list dt{ color:#e8e8e8; }
       .contact-list dd{ color:#d0d0d0; }
       .hours-pill{ background:#1b1b1b; border-color:#2a2a2a; color:#e5e5e5; }
-      .social-links a,
-      .social-links i,
-      .social-links svg{
-        color:#fff !important; fill:#fff !important; stroke:#fff !important;
-      }
-      .social-links img.social-icon-img{ filter:brightness(100) !important; }
+
+      /* keep footer icons light in dark mode too */
+      .site-footer .social-links i,
+      .site-footer .social-links svg{ color:#fff !important; fill:#fff !important; stroke:#fff !important; }
+      .site-footer .social-links img.social-icon-img{ filter:brightness(100) !important; }
     }
   </style>
 </head>
@@ -497,18 +496,18 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
+  <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title" style="background:#111;color:#fff;">
     <div class="container">
       <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls & Coffee Da Nang — Footer</h2>
       <div class="footer-grid">
         <section class="footer-col" aria-labelledby="footer-brand">
-          <h3 id="footer-brand"><a href="/" aria-label="Roly Poly Fresh Spring Rolls & Coffee Da Nang — Home">Roly Poly Fresh Spring Rolls & Coffee Da Nang</a></h3>
+          <h3 id="footer-brand"><a href="/" aria-label="Roly Poly Fresh Spring Rolls & Coffee Da Nang — Home" style="color:#fff;">Roly Poly Fresh Spring Rolls & Coffee Da Nang</a></h3>
           <p class="footer-tagline">Vietnamese restaurant & café in An Thuong (My An), near My Khe Beach, Da Nang.</p>
           <address>
             05 An Thượng 6, Bắc Mỹ Phú,<br />Ngũ Hành Sơn, Đà Nẵng 550000<br />
-            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer" aria-label="Directions to Roly Poly Fresh Spring Rolls & Coffee Da Nang on Google Maps">Directions (Google Maps)</a><br />
-            <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls & Coffee Da Nang">+84 327 306 076</a><br />
-            <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a>
+            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer" aria-label="Directions to Roly Poly Fresh Spring Rolls & Coffee Da Nang on Google Maps" style="color:#fff;">Directions (Google Maps)</a><br />
+            <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls & Coffee Da Nang" style="color:#fff;">+84 327 306 076</a><br />
+            <a href="mailto:rolypolydanang@gmail.com" style="color:#fff;">rolypolydanang@gmail.com</a>
           </address>
           <p><strong>Open:</strong> Daily, 10:00–20:00</p>
         </section>
@@ -516,12 +515,12 @@
         <nav class="footer-col" aria-labelledby="footer-links">
           <h3 id="footer-links">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/order" aria-current="page">Order</a></li>
+            <li><a href="/" style="color:#fff;">Home</a></li>
+            <li><a href="/menu" style="color:#fff;">Menu</a></li>
+            <li><a href="/about" style="color:#fff;">About</a></li>
+            <li><a href="/contact" style="color:#fff;">Contact</a></li>
+            <li><a href="/blog" style="color:#fff;">Blog</a></li>
+            <li><a href="/order" aria-current="page" style="color:#fff;">Order</a></li>
           </ul>
         </nav>
 
