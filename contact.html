@@ -384,6 +384,22 @@ main { padding-bottom:calc(var(--sticky-h, 56px) + env(safe-area-inset-bottom));
   margin: 0 0 8px;   /* small space before the cards */
 }
 
+    /* --- Fix: center + full-width heading in the contact grid --- */
+.contact-grid > h2#contact-info-heading{
+  grid-column: 1 / -1 !important;  /* span entire grid row */
+  width: 100%;
+  text-align: center !important;
+  justify-self: center;
+  float: none !important;           /* in case something floated it */
+  margin: 0 0 8px;
+}
+
+/* (Optional) keep the three info cards stretched nicely */
+.contact-grid > .contact-box{
+  justify-self: stretch;
+}
+
+
 </style>
 
 </head>
