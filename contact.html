@@ -246,13 +246,14 @@
             }
           },
           {
-            "@type": "Question",
-            "name": "Do you offer delivery near An Thuong / My An / My Khe Beach?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes — free delivery within ~3 km during opening hours. Call +84 327 306 076 or order via GrabFood."
-            }
-          },
+  "@type": "Question",
+  "name": "Do you offer delivery near An Thuong / My An / My Khe Beach?",
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — order via GrabFood or call +84 327 306 076 for pickup. Available during opening hours."
+  }
+}
+,
           {
             "@type": "Question",
             "name": "Do I need a reservation?",
@@ -412,20 +413,23 @@
 </script>
 
 <main id="main" role="main">
-  <!-- HERO — CONTACT -->
+  <!-- HERO — CONTACT (optimized) -->
 <section class="hero" id="contact" aria-labelledby="hero-title">
-  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-content">
 
-      <h1 id="hero-title">Contact Roly Poly Da Nang — Address, Hours &amp; Directions</h1>
-      <h2 class="hero-subtitle">Find us in An Thuong / My An, a short walk from My Khe Beach.</h2>
+      <h1 id="hero-title">Contact Roly Poly Da Nang — Hours, Address & Directions</h1>
+
+      <p class="subheadline">
+        In An Thuong / My An, 5 minutes from My Khe Beach.
+        <br>Serving fresh Vietnamese spring rolls, coffee & juices daily.
+      </p>
 
       <picture>
         <source srcset="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp" type="image/webp">
         <img
           src="/images/assorted-spring-rolls-platter-roly-poly-da-nang-vietnam.webp"
-          alt="Roly Poly shopfront on An Thuong 6 — look for the vintage façade"
+          alt="Roly Poly Fresh Spring Rolls & Coffee Da Nang on An Thượng 6 near My Khe Beach"
           class="hero-img"
           width="1600" height="900"
           sizes="(max-width: 768px) 100vw, 1200px"
@@ -433,15 +437,22 @@
       </picture>
 
       <p class="subheadline">
-        <strong>05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000</strong> · <strong>Open daily 10:00–20:00</strong>.
-        Call <a href="tel:+84327306076"><strong>+84&nbsp;327&nbsp;306&nbsp;076</strong></a> or open directions below.
+        <strong>05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000</strong>
+        <span aria-hidden="true"> · </span>
+        <strong>
+          <time datetime="10:00">10:00</time>–<time datetime="20:00">20:00</time> daily
+        </strong>
       </p>
 
-
       <div class="hero-buttons" role="group" aria-label="Primary actions">
-        <a href="tel:+84327306076" class="btn" aria-label="Call Roly Poly Da Nang">Call Us</a>
-        <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=contact_hero&amp;utm_medium=button&amp;utm_campaign=rolypoly_site"
-           class="btn" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Roly Poly on Google Maps">Get Directions</a>
+        <a href="tel:+84327306076" class="btn" aria-label="Call Roly Poly Da Nang">Call</a>
+        <a
+          href="https://www.google.com/maps?cid=8457966646420358159&utm_source=contact_hero&utm_medium=button&utm_campaign=rolypoly_site"
+          class="btn"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Get directions to Roly Poly on Google Maps">
+          Directions
+        </a>
       </div>
 
     </div>
@@ -449,66 +460,140 @@
 </section>
 
 
-  <!-- Essentials -->
-  <section class="contact-details" aria-labelledby="contact-info-heading">
-    <div class="container contact-grid">
-      <h2 id="contact-info-heading">Address, Hours &amp; Phone</h2>
 
-      <div class="contact-box">
-        <h3>Visit Us</h3>
-        <address>
-          05 An Thượng 6, Bắc Mỹ Phú,<br />
-          Ngũ Hành Sơn, Đà Nẵng 550000<br />
-          <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=contact&amp;utm_medium=link&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener noreferrer" aria-label="Open Roly Poly on Google Maps">Open on Google Maps</a>
-        </address>
-        <p class="small">
-          We’re in <strong>An Thuong / My An</strong> near <strong>My Khe Beach</strong>, just off <strong>An Thuong 6</strong> (look for the vintage shopfront).
-          Easy scooter/street parking on the block.
-        </p>
-      </div>
 
-      <div class="contact-box">
-        <h3>Call or Email</h3>
-        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+84327306076">+84 327 306 076</a></p>
-        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a></p>
-      </div>
+  <!-- Essentials (optimized + semantic) -->
+<section class="contact-details" aria-labelledby="contact-info-heading"
+         itemscope itemtype="https://schema.org/Restaurant" itemid="https://www.rolypolydanang.vn/#restaurant">
+  <div class="container contact-grid">
+    <h2 id="contact-info-heading">Address, Hours &amp; Phone</h2>
 
-      <div class="contact-box">
-  <h3>Opening Hours</h3>
-  <p><strong>Open daily:</strong> 10:00–20:00</p>
-</div>
-
+    <!-- Address -->
+    <div class="contact-box">
+      <h3>Visit Us</h3>
+      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">05 An Thượng 6, Bắc Mỹ Phú</span><br>
+        <span itemprop="addressLocality">Ngũ Hành Sơn</span>,
+        <span itemprop="addressRegion">Đà Nẵng</span>
+        <span itemprop="postalCode">550000</span><br>
+        <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=contact&amp;utm_medium=link&amp;utm_campaign=rolypoly_site"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Open Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps">
+          Open in Google Maps
+        </a>
+      </address>
+      <p class="small">
+        In <strong>An Thuong / My An</strong>, 5 minutes from <strong>My Khe Beach</strong>.
+        Easy scooter &amp; street parking on An Thượng&nbsp;6.
+      </p>
     </div>
-  </section>
 
-  <!-- Getting Here -->
-  <section class="info-section" aria-labelledby="getting-here-heading">
-    <div class="container info-box">
-      <h2 id="getting-here-heading">Getting Here (An Thuong / My An)</h2>
-      <ul>
-        <li><strong>From My Khe Beach:</strong> Walk ~5 minutes inland toward An Thuong 6.</li>
-        <li><strong>By Grab/Taxi:</strong> Set destination to “Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang”.</li>
-        <li><strong>Parking:</strong> Street/scooter parking available on An Thuong 6.</li>
-      </ul>
+    <!-- Contact -->
+    <div class="contact-box">
+      <h3>Call or Email</h3>
+      <p>
+        <a href="tel:+84327306076" itemprop="telephone" aria-label="Call +84 327 306 076">
+          <strong>+84 327 306 076</strong>
+        </a>
+      </p>
+      <p>
+        <a href="mailto:rolypolydanang@gmail.com" itemprop="email">
+          <strong>rolypolydanang@gmail.com</strong>
+        </a>
+      </p>
+      <p class="small">English &amp; Vietnamese spoken. Messages answered during opening hours.</p>
     </div>
-  </section>
 
-  <!-- Delivery -->
-  <section class="info-section" aria-labelledby="delivery-heading">
-    <div class="container info-box">
-      <h2 id="delivery-heading">Delivery</h2>
-      <ul>
-        <li><strong>Free delivery</strong> within <strong>~3 km</strong> of <strong>An Thuong / My An / My Khe Beach</strong> during opening hours.</li>
-        <li>Call <a href="tel:+84327306076">+84 327 306 076</a> or order via
-          <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6?utm_source=contact&amp;utm_medium=link&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener">GrabFood</a>.
-        </li>
-        <li>See <a href="/menu#spring-rolls">spring rolls</a>,
-            <a href="/menu#coffee">Vietnamese coffee &amp; matcha</a>,
-            and <a href="/menu#juices">fresh juices</a>.
-        </li>
-      </ul>
+    <!-- Hours -->
+    <div class="contact-box">
+      <h3>Opening Hours</h3>
+      <p>
+        <strong>
+          <time datetime="10:00">10:00</time>–<time datetime="20:00">20:00</time> daily
+        </strong>
+      </p>
+      <!-- Machine-readable hours for crawlers -->
+      <meta itemprop="openingHours" content="Mo-Su 10:00-20:00">
+      <p class="small">Hours may change on major public holidays, check our socials for updates.</p>
     </div>
-  </section>
+
+    <!-- Optional hidden name (ties microdata to the business entity) -->
+    <span itemprop="name" class="visually-hidden">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</span>
+  </div>
+</section>
+
+
+  <!-- Getting Here (final polished and clarified) -->
+<section class="info-section" aria-labelledby="getting-here-heading">
+  <div class="container info-box">
+    <h2 id="getting-here-heading">Getting Here — An Thuong / My An</h2>
+    <ul>
+      <li>
+        <strong>From My Khe Beach:</strong>
+        Walk about 5 minutes inland from the beach, just off <strong>Hoàng Kế Viêm</strong> main street.
+        We’re about three shops down from <strong>Cộng Cà Phê</strong>, which is on the corner of 
+        <strong>An Thượng 6</strong> and <strong>Hoàng Kế Viêm</strong>.
+      </li>
+      <li>
+        <strong>By Grab or Taxi:</strong>
+        Search for <em>“Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang”</em> — the address auto-fills correctly in most ride-hailing apps.
+      </li>
+      <li>
+        <strong>By Motorbike:</strong>
+        From <strong>Hoàng Kế Viêm</strong>, turn onto <strong>An Thượng 6</strong>. Free scooter parking is available directly in front of the shop.
+      </li>
+      <li>
+        <strong>By Car:</strong>
+        Short-term car parking is available on nearby side streets off <strong>An Thượng 6</strong>. Follow Google Maps for the fastest route.
+      </li>
+    </ul>
+    <p class="small">
+      <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=getting_here&amp;utm_medium=link&amp;utm_campaign=rolypoly_site"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Open directions to Roly Poly Da Nang on Google Maps">
+        Open Google Maps for directions
+      </a>
+    </p>
+  </div>
+</section>
+
+
+  <!-- Service Options (optimized) -->
+<section class="info-section" aria-labelledby="delivery-heading">
+  <div class="container info-box">
+    <h2 id="delivery-heading">Dine-In · Pickup · Delivery</h2>
+    <p>
+      Enjoy your favorite <strong>Vietnamese spring rolls, coffee, and juices</strong> however you like — 
+      relax in our cozy <strong>An Thượng café</strong>, pick up your order on the way to <strong>My Khe Beach</strong>, 
+      or have it delivered right to your door.
+    </p>
+    <ul>
+      <li>
+        <strong>Dine-In:</strong> Comfortable indoor seating and relaxed beach-neighborhood vibe — ideal for lunch, coffee, or a light evening meal.
+      </li>
+      <li>
+        <strong>Pickup:</strong> Call ahead at 
+        <a href="tel:+84327306076" aria-label="Call Roly Poly Da Nang for pickup">+84&nbsp;327&nbsp;306&nbsp;076</a> 
+        and we’ll have your order ready for quick collection.
+      </li>
+      <li>
+        <strong>Delivery:</strong>  
+        Order directly via 
+        <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6?utm_source=contact&amp;utm_medium=link&amp;utm_campaign=rolypoly_site"
+           target="_blank" rel="noopener noreferrer" aria-label="Order Roly Poly Da Nang on GrabFood">
+          GrabFood
+        </a>
+        .
+      </li>
+    </ul>
+    <p class="small">
+      Browse our <a href="/menu">full menu</a> — featuring <a href="/menu#spring-rolls">fresh spring rolls</a>, 
+      <a href="/menu#coffee">Vietnamese coffee &amp; matcha</a>, and <a href="/menu#juices">fresh juices</a>.  
+      Available <strong>10:00 – 20:00 daily</strong>.
+    </p>
+  </div>
+</section>
+
 
   <!-- Contact Form -->
   <section class="contact-form-section" aria-labelledby="contact-form-heading">
@@ -536,72 +621,97 @@
     </div>
   </section>
 
-  <!-- Contact FAQs -->
-  <section class="info-section" aria-labelledby="contact-faq-heading">
-    <div class="container info-box">
-      <h2 id="contact-faq-heading">Contact FAQs</h2>
+ <!-- Contact FAQs (optimized) -->
+<section class="info-section" aria-labelledby="contact-faq-heading">
+  <div class="container info-box">
+    <h2 id="contact-faq-heading">Contact FAQs</h2>
 
-      <div class="faq-list" role="list">
-        <details class="faq-item" role="listitem">
-          <summary>Where exactly are you located?</summary>
-          <p>We’re at <strong>05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000</strong> — a 5-minute walk from <strong>My Khe Beach</strong>.
-            <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=contact&amp;utm_medium=faq&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener">Open in Google Maps</a>.
-          </p>
-        </details>
+    <div class="faq-list" role="list">
+      <details class="faq-item" role="listitem">
+        <summary>Where are you located?</summary>
+        <p>
+          We’re at <strong>05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000</strong> — about a 5-minute walk from
+          <strong>My Khe Beach</strong>. 
+          <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=contact&amp;utm_medium=faq&amp;utm_campaign=rolypoly_site"
+             target="_blank" rel="noopener noreferrer" aria-label="Open Roly Poly Da Nang on Google Maps">
+            Open in Google Maps
+          </a>.
+        </p>
+      </details>
 
-        <details class="faq-item" role="listitem">
-          <summary>What are your opening hours?</summary>
-          <p><strong>Open daily:</strong> 10:00–20:00.</p>
-        </details>
+      <details class="faq-item" role="listitem">
+        <summary>What are your opening hours?</summary>
+        <p>
+          <strong>
+            <time datetime="10:00">10:00</time>–<time datetime="20:00">20:00</time> daily
+          </strong>.
+        </p>
+      </details>
 
-        <details class="faq-item" role="listitem">
-          <summary>Do you offer delivery near An Thuong / My An / My Khe Beach?</summary>
-          <p>Yes — <strong>free delivery within ~3 km</strong> during opening hours. Call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> or order via
-            <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6?utm_source=contact&amp;utm_medium=faq&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener">GrabFood</a>.
-          </p>
-        </details>
+      <details class="faq-item" role="listitem">
+        <summary>Do you deliver near An Thuong / My An / My Khe Beach?</summary>
+        <p>
+          Yes. Order via
+          <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6?utm_source=contact&amp;utm_medium=faq&amp;utm_campaign=rolypoly_site"
+             target="_blank" rel="noopener noreferrer" aria-label="Order Roly Poly Da Nang on GrabFood">
+            GrabFood
+          </a>
+          or call <a href="tel:+84327306076"><strong>+84&nbsp;327&nbsp;306&nbsp;076</strong></a>. Pickup is also available.
+        </p>
+      </details>
 
-        <details class="faq-item" role="listitem">
-          <summary>Do I need a reservation?</summary>
-          <p>No reservations needed. For groups of <strong>6+</strong>, please call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> and we’ll try to arrange seating.</p>
-        </details>
+      <details class="faq-item" role="listitem">
+        <summary>Do I need a reservation?</summary>
+        <p>
+          No reservations needed. For groups of <strong>6+</strong>, please call 
+          <a href="tel:+84327306076"><strong>+84&nbsp;327&nbsp;306&nbsp;076</strong></a> and we’ll do our best to arrange seating.
+        </p>
+      </details>
 
-        <details class="faq-item" role="listitem">
-          <summary>Is parking available nearby?</summary>
-          <p>Yes — typical street and scooter parking on <strong>An Thuong 6</strong>.</p>
-        </details>
+      <details class="faq-item" role="listitem">
+        <summary>Is parking available?</summary>
+        <p>
+          Yes — street &amp; scooter parking on <strong>An Thượng 6</strong>. Short-term car parking is available on nearby side streets.
+        </p>
+      </details>
 
-        <details class="faq-item" role="listitem">
-          <summary>How can I contact you?</summary>
-          <p>Call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a> or email <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a>. We speak <strong>English</strong> and <strong>Vietnamese</strong>.</p>
-        </details>
+      <details class="faq-item" role="listitem">
+        <summary>How can I contact you?</summary>
+        <p>
+          Call <a href="tel:+84327306076"><strong>+84&nbsp;327&nbsp;306&nbsp;076</strong></a> or email
+          <a href="mailto:rolypolydanang@gmail.com"><strong>rolypolydanang@gmail.com</strong></a>. We speak <strong>English</strong> &amp; <strong>Vietnamese</strong>.
+        </p>
+      </details>
 
-        <details class="faq-item" role="listitem">
-          <summary>What payment methods do you accept?</summary>
-          <p><strong>Cash</strong>, <strong>Visa</strong>, <strong>Mastercard</strong>, <strong>Apple&nbsp;Pay</strong>, and <strong>MoMo</strong>.</p>
-        </details>
-      </div>
+      <details class="faq-item" role="listitem">
+        <summary>What payment methods do you accept?</summary>
+        <p>
+          <strong>Cash</strong>, <strong>Visa</strong>, <strong>Mastercard</strong>, <strong>Apple&nbsp;Pay</strong>, and <strong>MoMo</strong>.
+        </p>
+      </details>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Map -->
-  <section class="map-section" aria-labelledby="map-heading">
+
+  <!-- Map Section (optimized) -->
+<section class="map-section" aria-labelledby="map-heading">
   <div class="container map-box">
-    <h2 id="map-heading">Find Us in An Thuong (near My Khe Beach)</h2>
+    <h2 id="map-heading">Find Us in An Thượng — Near My Khe Beach</h2>
 
     <p class="subheadline">
-      Address: 05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000<br>
-      Phone: <a href="tel:+84327306076">+84 327 306 076</a>
+      <strong>Address:</strong> 05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000<br>
+      <strong>Phone:</strong> <a href="tel:+84327306076" aria-label="Call Roly Poly Da Nang">+84&nbsp;327&nbsp;306&nbsp;076</a>
     </p>
 
     <p>
       <a class="btn small"
          href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=site&amp;utm_medium=button&amp;utm_campaign=rolypoly_site"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Open Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps">
         Open in Google Maps
       </a>
       <br>
-      <a href="/contact">More directions &amp; details</a>
     </p>
 
     <div class="map-iframe-wrapper" style="margin-top:1rem;aspect-ratio:16/9;max-width:100%;">
@@ -612,11 +722,12 @@
         loading="lazy"
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
-        title="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Map location in An Thuong, near My Khe Beach">
+        title="Map showing Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang in An Thượng, near My Khe Beach">
       </iframe>
     </div>
   </div>
 </section>
+
 
 </main>
 
@@ -691,3 +802,4 @@
 </script>
 </body>
 </html>
+
