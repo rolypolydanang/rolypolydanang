@@ -376,6 +376,14 @@ main { padding-bottom:calc(var(--sticky-h, 56px) + env(safe-area-inset-bottom));
   .contact-box{ background:#131313; border-color:#2a2a2a; box-shadow:none; }
   .small{ color:#cfcfcf; }
 }
+
+    /* Make the section heading span the full grid and center it */
+.contact-grid > h2#contact-info-heading{
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0 0 8px;   /* small space before the cards */
+}
+
 </style>
 
 </head>
