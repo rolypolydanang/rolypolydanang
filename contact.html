@@ -330,7 +330,28 @@
       display:flex; flex-direction:column; gap:.5rem;
     }
     /* Make wide rows (e.g., Message Us) span full width regardless of column count */
-    .contact-box--wide{ grid-column: 1 / -1; }
+    /* Make wide rows (e.g., Message Us) span full width and center contents */
+.contact-box--wide{
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Center the grid of messaging buttons */
+.contact-box--wide .contact-buttons{
+  margin: 6px auto 0;
+}
+
+/* Optional: keep two columns centered on wider screens */
+@media (min-width:700px){
+  .contact-buttons{
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    justify-content: center;
+  }
+}
+
 
     /* Messaging buttons (single source of truth) */
     .contact-buttons{
