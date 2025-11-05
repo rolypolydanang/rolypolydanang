@@ -317,13 +317,39 @@
       opacity: .6; pointer-events: none;
     }
 
-    /* Contact grid / boxes */
-    .contact-grid{ display:grid; gap:20px; }
-    @media (min-width: 820px){ .contact-grid{ grid-template-columns: repeat(3, 1fr); } }
-    .contact-box{
-      background:#fff; border:1px solid #eee; border-radius:12px;
-      padding:18px; box-shadow:0 6px 18px rgba(0,0,0,.04);
-    }
+   /* Contact grid / boxes */
+.contact-grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items:start;
+}
+.contact-box{
+  background:#fff; border:1px solid #eee; border-radius:12px;
+  padding:18px; box-shadow:0 6px 18px rgba(0,0,0,.04);
+  display:flex; flex-direction:column; gap:.5rem;
+}
+/* Make wide rows (e.g., Message Us) span full width regardless of column count */
+.contact-box--wide{ grid-column: 1 / -1; }
+
+/* Messaging buttons (unchanged except no “Call Us” now) */
+.contact-buttons{
+  display:grid; grid-template-columns:1fr; gap:15px;
+  width:100%; max-width:820px; margin:6px 0 0;
+}
+@media (min-width:700px){ .contact-buttons{ grid-template-columns:repeat(2,1fr); } }
+.contact-btn{
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; font-weight:800; font-size:1.05rem; letter-spacing:.2px;
+  color:#fff !important; padding:14px 18px; border-radius:999px;
+  transition:transform .2s ease, opacity .2s ease; border:none;
+}
+.contact-btn:hover{ transform:translateY(-2px); opacity:.92; }
+.zalo{ background-color:#0068FF; }
+.messenger{ background-color:#0084FF; }
+.whatsapp{ background-color:#25D366; }
+.instagram{ background-color:#E4405F; }
+
 
     /* Messaging buttons (same look as Order page) */
     .contact-buttons{
@@ -447,88 +473,87 @@
 
   <!-- Essentials (optimized + semantic) -->
   <section class="contact-details" aria-labelledby="contact-info-heading"
-           itemscope itemtype="https://schema.org/Restaurant" itemid="https://www.rolypolydanang.vn/#restaurant">
-    <div class="container contact-grid">
-      <h2 id="contact-info-heading">Address, Hours &amp; Phone</h2>
+         itemscope itemtype="https://schema.org/Restaurant" itemid="https://www.rolypolydanang.vn/#restaurant">
+  <div class="container contact-grid">
+    <h2 id="contact-info-heading">Address, Hours &amp; Phone</h2>
 
-      <!-- Address -->
-      <div class="contact-box">
-        <h3>Visit Us</h3>
-        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-          <span itemprop="streetAddress">05 An Thượng 6, Bắc Mỹ Phú</span><br>
-          <span itemprop="addressLocality">Ngũ Hành Sơn</span>,
-          <span itemprop="addressRegion">Đà Nẵng</span>
-          <span itemprop="postalCode">550000</span><br>
-          <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=contact&amp;utm_medium=link&amp;utm_campaign=rolypoly_site"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Open Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps">
-            Open in Google Maps
-          </a>
-        </address>
-        <p class="small">
-          In <strong>An Thượng / My An</strong>, 5 minutes from <strong>My Khe Beach</strong>.
-          Easy scooter &amp; street parking on An Thượng&nbsp;6.
-        </p>
-      </div>
-
-      <!-- Contact -->
-      <div class="contact-box">
-        <h3>Call or Email</h3>
-        <p>
-          <a href="tel:+84327306076" itemprop="telephone" aria-label="Call +84 327 306 076">
-            <strong>+84 327 306 076</strong>
-          </a>
-        </p>
-        <p>
-          <a href="mailto:rolypolydanang@gmail.com" itemprop="email">
-            <strong>rolypolydanang@gmail.com</strong>
-          </a>
-        </p>
-        <p class="small">English &amp; Vietnamese spoken. Messages answered during opening hours.</p>
-      </div>
-
-      <!-- Hours -->
-      <div class="contact-box">
-        <h3>Opening Hours</h3>
-        <p>
-          <strong>
-            <time datetime="10:00">10:00</time>–<time datetime="20:00">20:00</time> daily
-          </strong>
-        </p>
-        <!-- Machine-readable hours for crawlers -->
-        <meta itemprop="openingHours" content="Mo-Su 10:00-20:00">
-        <p class="small">Hours may change on major public holidays — check our socials for updates.</p>
-      </div>
-
-      <!-- Messaging Shortcuts (new block with 5 buttons) -->
-      <div class="contact-box" aria-labelledby="message-us-heading" style="grid-column:1 / -1">
-        <h3 id="message-us-heading">Message Us</h3>
-        <p class="small">Prefer chat? Reach us on your favorite app below.</p>
-
-        <div class="contact-buttons" role="group" aria-label="Contact options">
-          <a class="contact-btn zalo" href="https://zalo.me/84327306076"
-             target="_blank" rel="noopener"
-             aria-label="Message Roly Poly Da Nang on Zalo">Zalo</a>
-
-          <a class="contact-btn messenger" href="https://m.me/rolypolydanang"
-             target="_blank" rel="noopener"
-             aria-label="Message Roly Poly Da Nang on Facebook Messenger">Messenger</a>
-
-          <a class="contact-btn whatsapp" href="https://wa.me/84327306076?text=Hello%20Roly%20Poly%21"
-             target="_blank" rel="noopener"
-             aria-label="Message Roly Poly Da Nang on WhatsApp">WhatsApp</a>
-
-          <a class="contact-btn instagram" href="https://ig.me/m/rolypolydanang"
-             target="_blank" rel="noopener"
-             aria-label="Message Roly Poly Da Nang on Instagram">Instagram</a>
-
-          <a class="contact-btn call contact-btn--full" href="tel:+84327306076"
-             aria-label="Call Roly Poly Da Nang">Call Us</a>
-        </div>
-      </div>
-
+    <!-- Address -->
+    <div class="contact-box">
+      <h3>Visit Us</h3>
+      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">05 An Thượng 6, Bắc Mỹ Phú</span><br>
+        <span itemprop="addressLocality">Ngũ Hành Sơn</span>,
+        <span itemprop="addressRegion">Đà Nẵng</span>
+        <span itemprop="postalCode">550000</span><br>
+        <a href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=contact&amp;utm_medium=link&amp;utm_campaign=rolypoly_site"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Open Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps">
+          Open in Google Maps
+        </a>
+      </address>
+      <p class="small">
+        In <strong>An Thượng / My An</strong>, 5 minutes from <strong>My Khe Beach</strong>.
+        Easy scooter &amp; street parking on An Thượng&nbsp;6.
+      </p>
     </div>
-  </section>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <h3>Call or Email</h3>
+      <p>
+        <a href="tel:+84327306076" itemprop="telephone" aria-label="Call +84 327 306 076">
+          <strong>+84 327 306 076</strong>
+        </a>
+      </p>
+      <p>
+        <a href="mailto:rolypolydanang@gmail.com" itemprop="email">
+          <strong>rolypolydanang@gmail.com</strong>
+        </a>
+      </p>
+      <p class="small">English &amp; Vietnamese spoken. Messages answered during opening hours.</p>
+    </div>
+
+    <!-- Hours -->
+    <div class="contact-box">
+      <h3>Opening Hours</h3>
+      <p>
+        <strong>
+          <time datetime="10:00">10:00</time>–<time datetime="20:00">20:00</time> daily
+        </strong>
+      </p>
+      <meta itemprop="openingHours" content="Mo-Su 10:00-20:00">
+      <p class="small">Hours may change on major public holidays — check our socials for updates.</p>
+    </div>
+
+    <!-- Message Us (no Call button) -->
+    <div class="contact-box contact-box--wide" aria-labelledby="message-us-heading">
+      <h3 id="message-us-heading">Message Us</h3>
+      <p class="small">Prefer chat? Reach us on your favorite app below.</p>
+
+      <div class="contact-buttons" role="group" aria-label="Contact options">
+        <a class="contact-btn zalo" href="https://zalo.me/84327306076"
+           target="_blank" rel="noopener"
+           aria-label="Message Roly Poly Da Nang on Zalo">Zalo</a>
+
+        <a class="contact-btn messenger" href="https://m.me/rolypolydanang"
+           target="_blank" rel="noopener"
+           aria-label="Message Roly Poly Da Nang on Facebook Messenger">Messenger</a>
+
+        <a class="contact-btn whatsapp" href="https://wa.me/84327306076?text=Hello%20Roly%20Poly%21"
+           target="_blank" rel="noopener"
+           aria-label="Message Roly Poly Da Nang on WhatsApp">WhatsApp</a>
+
+        <a class="contact-btn instagram" href="https://ig.me/m/rolypolydanang"
+           target="_blank" rel="noopener"
+           aria-label="Message Roly Poly Da Nang on Instagram">Instagram</a>
+      </div>
+    </div>
+
+    <!-- Hidden name to bind microdata -->
+    <span itemprop="name" class="visually-hidden">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</span>
+  </div>
+</section>
+
 
   <!-- Getting Here (final polished and clarified) -->
   <section class="info-section" aria-labelledby="getting-here-heading">
