@@ -399,6 +399,34 @@ main { padding-bottom:calc(var(--sticky-h, 56px) + env(safe-area-inset-bottom));
   justify-self: stretch;
 }
 
+    /* Center the 3-info cards + the wide Message Us card */
+.contact-grid{
+  display:grid;
+  gap:20px;
+  /* exactly 3 centered columns on desktop, so cards don't stick left */
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  justify-content: center;     /* center the column track group */
+  align-items: start;
+  max-width: 1000px;           /* match your .info-box width */
+  margin: 0 auto;              /* center the whole grid in the container */
+}
+
+/* 2 columns on tablets, 1 on phones */
+@media (max-width: 980px){
+  .contact-grid{ grid-template-columns: repeat(2, minmax(260px, 1fr)); }
+}
+@media (max-width: 620px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+
+/* Make the section heading span the whole grid & center it */
+.contact-grid > h2#contact-info-heading{
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+
 
 </style>
 
