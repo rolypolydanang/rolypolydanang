@@ -53,7 +53,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#ffffff" />
 
-  <!-- External libraries (for footer icons) -->
+  <!-- External libraries (for icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
   <!-- GA4 -->
@@ -163,9 +163,27 @@
     .hero#about .btn:hover{ background:var(--brand-d); border-color:var(--brand-d); }
     nav.sticky-actions{ position:fixed; left:0; right:0; bottom:0; background:#fff; border-top:1px solid #eee; z-index:1000; }
     main{ padding-bottom:calc(var(--sticky-h,56px) + env(safe-area-inset-bottom)); }
-    .pill{display:inline-block;padding:.25rem .5rem;border:1px solid #eee;border-radius:999px;font-size:.85rem}
-    .kicker{letter-spacing:.06em;text-transform:uppercase;font-weight:600;font-size:.8rem;color:#777}
     .lead-tight{max-width:62ch}
+
+    /* --- Card system --- */
+    .cards{--gap:1rem; display:grid; gap:var(--gap)}
+    @media (min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:960px){.cards{grid-template-columns:repeat(3,1fr)}}
+    .card{
+      background:#fff; border:1px solid #eee; border-radius:16px;
+      padding:1rem; box-shadow:0 1px 2px rgba(0,0,0,.04);
+    }
+    .card--highlight{ border-color:var(--brand); box-shadow:0 4px 14px rgba(255,106,0,.12) }
+    .card h3{margin:.25rem 0 .5rem; font-size:1.05rem}
+    .card p{margin:0}
+    .card .meta{font-size:.9rem; color:#666}
+    .num{ 
+      width:32px;height:32px;border-radius:999px;background:var(--brand);
+      color:#fff;display:inline-grid;place-items:center;font-weight:700;margin-bottom:.5rem
+    }
+    .icon{font-size:1.25rem; opacity:.9; margin-right:.5rem}
+    /* --- end card system --- */
+
     .grid-2{display:grid;gap:1.25rem}
     @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
   </style>
@@ -214,7 +232,6 @@
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-content">
-          <p class="kicker">An Thượng • My Khe Beach</p>
           <h1 id="hero-title">About Roly Poly Da Nang</h1>
           <h2 class="hero-subtitle">Fresh spring rolls, house-made sauces, and a relaxed beach-neighbourhood café.</h2>
 
@@ -273,81 +290,111 @@
       </div>
     </section>
 
-    <!-- What Makes Us Different -->
+    <!-- What Makes Us Different — cards -->
     <section class="about-philosophy" aria-labelledby="difference-title">
       <div class="container">
         <h2 id="difference-title">What Makes Us Different</h2>
-        <ul class="philosophy-grid" role="list">
-          <li class="philosophy-item">
-            <i class="fas fa-leaf" aria-hidden="true"></i>
-            <p><strong>Hand-rolled to order.</strong> Rolls are wrapped when you order—never tired, always lively.</p>
-          </li>
-          <li class="philosophy-item">
-            <i class="fas fa-bowl-food" aria-hidden="true"></i>
-            <p><strong>House-made sauces.</strong> Peanut, sweet &amp; sour, spicy mayo, toasted sesame, classic <em>nước chấm</em>.</p>
-          </li>
-          <li class="philosophy-item">
-            <i class="fas fa-mug-hot" aria-hidden="true"></i>
-            <p><strong>Coffee &amp; matcha we love.</strong> Vietnamese <em>phin</em> coffee and ceremonial-grade matcha.</p>
-          </li>
-          <li class="philosophy-item">
-            <i class="fas fa-seedling" aria-hidden="true"></i>
-            <p><strong>Local sourcing.</strong> Da Nang herbs and produce whenever we can.</p>
-          </li>
-          <li class="philosophy-item">
-            <i class="fas fa-heart" aria-hidden="true"></i>
-            <p><strong>Options for everyone.</strong> Clear vegan and gluten-free choices—just tell us your needs.</p>
-          </li>
-        </ul>
+        <div class="cards" role="list">
+          <article class="card" role="listitem">
+            <h3><i class="fas fa-leaf icon" aria-hidden="true"></i>Hand-rolled to order</h3>
+            <p>Wrapped when you order—never tired, always lively.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3><i class="fas fa-bowl-food icon" aria-hidden="true"></i>House-made sauces</h3>
+            <p>Peanut, sweet &amp; sour, spicy mayo, toasted sesame, <em>nước chấm</em>.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3><i class="fas fa-mug-hot icon" aria-hidden="true"></i>Coffee &amp; matcha</h3>
+            <p>Vietnamese <em>phin</em> brew and ceremonial-grade matcha.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3><i class="fas fa-seedling icon" aria-hidden="true"></i>Local sourcing</h3>
+            <p>Da Nang herbs and produce whenever we can.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3><i class="fas fa-heart icon" aria-hidden="true"></i>Options for everyone</h3>
+            <p>Clear vegan and gluten-free choices—just tell us your needs.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Ingredients & Sourcing -->
+    <!-- Ingredients & Sourcing — spec cards -->
     <section class="info-section" aria-labelledby="ingredients-title">
-      <div class="container grid-2">
-        <div>
-          <h2 id="ingredients-title">Ingredients &amp; Sourcing</h2>
-          <p class="section-lead">Short list. High standards. Prepped throughout the day.</p>
-          <ul>
-            <li><strong>Herbs &amp; greens:</strong> Bright, crisp, and locally sourced when possible.</li>
-            <li><strong>Proteins:</strong> Cooked in small batches for clean, consistent flavour.</li>
-            <li><strong>Noodles &amp; wrappers:</strong> Soft rice-paper with bitey vermicelli for that perfect roll.</li>
-            <li><strong>Matcha &amp; coffee:</strong> Ceremonial-grade matcha; Vietnamese <em>phin</em> brew.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="kicker" style="margin-top:.5rem">House Sauces</h3>
-          <p class="pill" aria-label="Sauce badge">Peanut</p>
-          <p class="pill" aria-label="Sauce badge">Sweet &amp; Sour</p>
-          <p class="pill" aria-label="Sauce badge">Spicy Mayo</p>
-          <p class="pill" aria-label="Sauce badge">Toasted Sesame</p>
-          <p class="pill" aria-label="Sauce badge">Nước Chấm</p>
-          <p style="margin-top:.75rem">Balanced to lift the roll—not overpower it.</p>
+      <div class="container">
+        <h2 id="ingredients-title">Ingredients &amp; Sourcing</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Herbs &amp; Greens</h3>
+            <p class="meta">Locally sourced when possible</p>
+            <p>Crisp, bright, prepped through the day.</p>
+          </article>
+          <article class="card">
+            <h3>Proteins</h3>
+            <p class="meta">Small-batch prep</p>
+            <p>Clean, consistent flavour across fillings.</p>
+          </article>
+          <article class="card">
+            <h3>Noodles &amp; Wrappers</h3>
+            <p class="meta">Texture balance</p>
+            <p>Soft rice paper + bitey vermicelli.</p>
+          </article>
+          <article class="card">
+            <h3>Drinks</h3>
+            <p class="meta">Simple, quality</p>
+            <p><em>Phin</em> coffee and ceremonial-grade matcha.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- How We Roll -->
+    <!-- How We Roll — step cards -->
     <section class="info-section" aria-labelledby="process-title">
       <div class="container">
         <h2 id="process-title">How We Roll</h2>
-        <ol>
-          <li><strong>Prep:</strong> Chill herbs and greens; cook noodles; marinate and cook proteins.</li>
-          <li><strong>Layer:</strong> Rice paper, vermicelli, crunchy veg, fresh herbs, chosen filling.</li>
-          <li><strong>Roll:</strong> Tight enough to hold; gentle enough to keep textures lively.</li>
-          <li><strong>Serve:</strong> Pair with your choice of house-made dipping sauce.</li>
-        </ol>
+        <div class="cards">
+          <article class="card">
+            <div class="num" aria-hidden="true">1</div>
+            <h3>Prep</h3>
+            <p>Chill herbs, cook noodles, marinate &amp; cook proteins.</p>
+          </article>
+          <article class="card">
+            <div class="num" aria-hidden="true">2</div>
+            <h3>Layer</h3>
+            <p>Rice paper, vermicelli, crunchy veg, fresh herbs, filling.</p>
+          </article>
+          <article class="card">
+            <div class="num" aria-hidden="true">3</div>
+            <h3>Roll</h3>
+            <p>Tight to hold, gentle to keep textures lively.</p>
+          </article>
+          <article class="card">
+            <div class="num" aria-hidden="true">4</div>
+            <h3>Serve</h3>
+            <p>Choose a house-made dipping sauce and enjoy.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Dietary Needs -->
+    <!-- Dietary Needs — reassurance cards -->
     <section class="info-section" aria-labelledby="dietary-title">
       <div class="container">
         <h2 id="dietary-title">Dietary Needs</h2>
-        <p>
-          We can help with dietary requests. <strong>Gluten-free?</strong> Tell us at the counter—
-          we’ll <strong>omit fried shallots</strong> (they contain gluten). Several <strong>vegan</strong> options are available. If you’re ordering delivery, add a note and we’ll take care.
-        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Gluten-free</h3>
+            <p>We can omit fried shallots and handle your order with care.</p>
+          </article>
+          <article class="card">
+            <h3>Vegan Options</h3>
+            <p>Several fillings and sauces—just let us know at the counter.</p>
+          </article>
+          <article class="card">
+            <h3>Allergens</h3>
+            <p>Ask our team; we’ll guide you to safe choices.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -362,48 +409,40 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ — card list -->
     <section class="info-section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <h2 id="faq-title">FAQ</h2>
-
-        <div class="faq-list" role="list">
-          <article class="faq-item" role="listitem">
+        <div class="cards" role="list">
+          <article class="card" role="listitem">
             <h3>Why gỏi cuốn—and why “Roly Poly”?</h3>
-            <p>Gỏi cuốn packs herbs, veg, noodles, and protein into one fresh bite. “Roly Poly” nods to the rolling technique—and to keeping things light and fun.</p>
+            <p>Gỏi cuốn brings herbs, veg, noodles and protein into one fresh bite. “Roly Poly” nods to the rolling and to keeping things light.</p>
           </article>
-
-          <article class="faq-item" role="listitem">
+          <article class="card" role="listitem">
             <h3>Are the rolls made to order?</h3>
             <p>Yes. We hand-roll to order so everything stays bright and crisp.</p>
           </article>
-
-          <article class="faq-item" role="listitem">
+          <article class="card" role="listitem">
             <h3>What’s inside a typical roll?</h3>
             <p>Rice vermicelli, lettuce, carrot, cucumber, fresh mint and coriander, plus your chosen filling—wrapped in soft rice paper and served with a house sauce.</p>
           </article>
-
-          <article class="faq-item" role="listitem">
+          <article class="card" role="listitem">
             <h3>How do you source ingredients?</h3>
             <p>We buy herbs and produce locally in Da Nang whenever possible and prep proteins in small batches through the day.</p>
           </article>
-
-          <article class="faq-item" role="listitem">
+          <article class="card" role="listitem">
             <h3>Which sauces are house-made?</h3>
             <p>All of them—peanut, sweet &amp; sour, spicy mayo, toasted sesame, and classic <em>nước chấm</em>. Crafted to complement, not overpower.</p>
           </article>
-
-          <article class="faq-item" role="listitem">
+          <article class="card" role="listitem">
             <h3>Gluten-free or vegan options?</h3>
             <p>Yes. For gluten-free we omit fried shallots; several fillings and sauces are vegan. Just let us know when ordering.</p>
           </article>
-
-          <article class="faq-item" role="listitem">
+          <article class="card" role="listitem">
             <h3>What about coffee and matcha?</h3>
             <p>We brew Vietnamese <em>phin</em> coffee and whisk ceremonial-grade matcha—simple drinks, prepared with care.</p>
           </article>
-
-          <article class="faq-item" role="listitem">
+          <article class="card" role="listitem">
             <h3>Laptop-friendly? Reservations?</h3>
             <p>Yes—Wi-Fi and a few quiet corners. We’re walk-in friendly; for groups of 6+ call <a href="tel:+84327306076">+84&nbsp;327&nbsp;306&nbsp;076</a>.</p>
           </article>
@@ -411,18 +450,19 @@
       </div>
     </section>
 
-    <!-- Visit Us / CTA -->
+    <!-- Visit Us — CTA card -->
     <section class="info-section" id="visit-us" aria-labelledby="visit-title">
       <div class="container">
         <h2 id="visit-title">Come Visit Us</h2>
-        <p>
-          Find us at <strong>05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000</strong>. Open daily <strong>10:00–20:00</strong>.
-        </p>
-        <div role="group" aria-label="Primary calls to action">
-          <a class="btn accent" href="/menu">Explore the Menu</a>
-          <a class="btn" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer">Get Directions</a>
-          <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer">Order Delivery</a>
-        </div>
+        <article class="card card--highlight">
+          <p><strong>05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000</strong></p>
+          <p class="meta">Open daily: 10:00–20:00</p>
+          <div role="group" aria-label="Primary calls to action" style="margin-top:.5rem">
+            <a class="btn accent" href="/menu">Explore the Menu</a>
+            <a class="btn" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener noreferrer">Order Delivery</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>
