@@ -199,7 +199,7 @@
       border-radius: 12px;
       padding: 22px 24px;
       box-shadow: 0 6px 18px rgba(0,0,0,.04);
-      text-align: left; /* ensure left alignment inside cards */
+      text-align: left;
     }
     .card.narrow{ max-width: 760px; }
     .card-title{ margin:0 0 10px; font-weight:800; font-size:1.15rem; }
@@ -236,16 +236,16 @@
     @media (min-width:900px){ .favorites-grid{ grid-template-columns: 1fr 1.2fr; } }
     @media (min-width:880px){ .sauce-grid{ grid-template-columns: 1fr 1fr; } }
 
-    /* ===== Unified social icons (base) — LEFT aligned ===== */
+    /* ===== Unified social icons — left by default ===== */
     .social-links{
       display:flex;
-      justify-content:flex-start; /* LEFT align by default */
+      justify-content:flex-start;
       align-items:center;
       gap:1rem;
       flex-wrap:wrap;
       margin-top:.75rem;
     }
-    /* Center modifier for the Stay Connected section */
+    /* Center modifier for the Stay Connected card */
     .social-links--center{ justify-content:center; }
 
     .social-links a{
@@ -262,12 +262,9 @@
     .card .social-links a{ color:#000; }
     .card .social-links img.social-icon-img{ filter:brightness(0) saturate(100%); }
 
-    /* FOOTER icons: white */
+    /* FOOTER icons: white (visuals handled by footer style block too) */
     .site-footer .social-links a{ color:#fff; }
     .site-footer .social-links img.social-icon-img{ filter:brightness(0) invert(1); }
-
-    /* Footer columns left-aligned */
-    .site-footer .footer-col{ text-align:left; }
 
     /* Dark mode */
     @media (prefers-color-scheme: dark){
@@ -489,19 +486,19 @@
 
           <!-- Centered icons here -->
           <div class="social-links social-links--center" role="group" aria-label="Social media">
-            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Instagram">
               <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="TikTok">
               <i class="fab fa-tiktok" aria-hidden="true"></i>
             </a>
-            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Facebook">
               <i class="fab fa-facebook-f" aria-hidden="true"></i>
             </a>
             <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps">
               <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
             </a>
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener" aria-label="Tripadvisor">
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662.html" target="_blank" rel="noopener" aria-label="Tripadvisor">
               <img class="social-icon-img" src="/images/trip-adv.png" width="36" height="36" alt="Tripadvisor">
             </a>
           </div>
@@ -510,14 +507,21 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (IDENTICAL TO MENU) -->
   <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title" style="background:#111;color:#fff;">
     <div class="container">
       <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Footer</h2>
       <div class="footer-grid">
-        <section class="footer-col" aria-labelledby="footer-brand" style="text-align:left;">
-          <h3 id="footer-brand"><a href="/" aria-label="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Home" style="color:#fff;">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</a></h3>
-          <p class="footer-tagline">Vietnamese restaurant &amp; café in An Thuong (My An), near My Khe Beach, Da Nang.</p>
+        <!-- Brand Info -->
+        <section class="footer-col" aria-labelledby="footer-brand">
+          <h3 id="footer-brand">
+            <a href="/" aria-label="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Home" style="color:#fff;">
+              Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang
+            </a>
+          </h3>
+          <p class="footer-tagline">
+            Vietnamese restaurant &amp; café in An Thuong (My An), near My Khe Beach, Da Nang.
+          </p>
           <address>
             05 An Thượng 6, Bắc Mỹ Phú,<br />Ngũ Hành Sơn, Đà Nẵng 550000<br />
             <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer" aria-label="Directions to Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps" style="color:#fff;">Directions (Google Maps)</a><br />
@@ -527,26 +531,28 @@
           <p><strong>Open:</strong> Daily, 10:00–20:00</p>
         </section>
 
-        <nav class="footer-col" aria-labelledby="footer-links" style="text-align:left;">
+        <!-- Quick Links -->
+        <nav class="footer-col" aria-labelledby="footer-links">
           <h3 id="footer-links">Quick Links</h3>
           <ul class="footer-links">
             <li><a href="/" style="color:#fff;">Home</a></li>
             <li><a href="/menu" style="color:#fff;">Menu</a></li>
-            <li><a href="/about" style="color:#fff;">About</a></li>
-            <li><a href="/contact" style="color:#fff;">Contact</a></li>
-            <li><a href="/blog" style="color:#fff;">Blog</a></li>
             <li><a href="/order" aria-current="page" style="color:#fff;">Order</a></li>
+            <li><a href="/about" style="color:#fff;">About</a></li>
+            <li><a href="/blog" style="color:#fff;">Blog</a></li>
+            <li><a href="/contact" style="color:#fff;">Contact</a></li>
           </ul>
         </nav>
 
-        <section class="footer-col" aria-labelledby="footer-social" style="text-align:left;">
+        <!-- Social Links -->
+        <section class="footer-col" aria-labelledby="footer-social">
           <h3 id="footer-social">Socials</h3>
           <div class="social-links" role="group" aria-label="Social media">
             <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
             <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
             <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></a>
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener" aria-label="Tripadvisor">
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662.html" target="_blank" rel="noopener" aria-label="Tripadvisor">
               <img class="social-icon-img" src="/images/trip-adv.png" width="36" height="36" alt="Tripadvisor" decoding="async" loading="lazy" />
             </a>
           </div>
@@ -558,6 +564,68 @@
       </div>
     </div>
   </footer>
+
+  <!-- Footer icon color fix (IDENTICAL TO MENU) -->
+  <style>
+    /* ===== Footer social icons: force white ===== */
+
+    .site-footer .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      text-decoration: none;
+      opacity: 1;
+      transition:
+        opacity .15s ease-in-out,
+        transform .15s ease-in-out,
+        color .15s ease-in-out,
+        filter .15s ease-in-out;
+    }
+
+    .site-footer .social-links a i {
+      font-size: 1.125rem;
+      line-height: 1;
+    }
+
+    .site-footer .social-links .fa-solid,
+    .site-footer .social-links .fas,
+    .site-footer .social-links .fab,
+    .site-footer .social-links .fa-brands {
+      color: currentColor;
+    }
+
+    .site-footer .social-links a:hover,
+    .site-footer .social-links a:focus-visible {
+      opacity: .9;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .site-footer .social-links a + a {
+      margin-left: .5rem;
+    }
+
+    .site-footer .social-links img.social-icon-img {
+      display: block;
+      width: 36px;
+      height: 36px;
+      filter: brightness(0) invert(1); /* makes dark logo white */
+    }
+
+    .site-footer .social-links a:hover img.social-icon-img,
+    .site-footer .social-links a:focus-visible img.social-icon-img {
+      filter: brightness(0) invert(1) opacity(.9);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-footer .social-links a {
+        transition: none;
+      }
+    }
+  </style>
 
   <!-- Utilities -->
   <script>
