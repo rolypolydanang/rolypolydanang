@@ -1,54 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta & links same as before... -->
+  <!-- Charset & viewport -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
   <title>Order Fresh Spring Rolls in Da Nang | Roly Poly — Pickup &amp; Delivery</title>
+  <meta name="description" content="Order fresh spring rolls, Vietnamese coffee, matcha, and juices from Roly Poly Da Nang. Pickup in An Thuong or delivery via GrabFood. Open daily 10:00–20:00." />
+  <link rel="canonical" href="https://www.rolypolydanang.vn/order" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
-  <!-- Styles (simplified for clarity) -->
+  <!-- Main Styles -->
   <style>
-    :root{ --brand:#ff6a00; --brand-d:#e55b00; }
-
-    .social-links{
-      display:flex;
-      justify-content:flex-start;
-      align-items:center;
-      gap:1rem;
-      flex-wrap:wrap;
-      margin-top:.75rem;
+    :root {
+      --brand: #ff6a00;
+      --brand-d: #e55b00;
+      --sticky-h: 48px;
     }
 
-    /* Center only when explicitly requested */
-    .social-links--center{ justify-content:center; }
+    body { margin: 0; font-family: system-ui, sans-serif; }
+    main { padding-bottom: calc(var(--sticky-h) + env(safe-area-inset-bottom)); }
 
-    .social-links a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:40px; height:40px;
-      text-decoration:none;
-      transition:opacity .15s ease, transform .15s ease;
+    /* Hero image */
+    .hero-img { width: 100%; height: auto; max-width: 1200px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: .65rem 1.1rem;
+      border-radius: .5rem;
+      text-decoration: none;
+      border: 2px solid var(--brand);
+      background: var(--brand);
+      color: #fff;
+      font-weight: 600;
+      line-height: 1.1;
+      transition: background .2s, border-color .2s, transform .2s, opacity .2s;
+    }
+    .btn:hover, .btn:focus {
+      background: var(--brand-d);
+      border-color: var(--brand-d);
+      color: #fff;
+      transform: translateY(-1px);
     }
 
-    .social-links i{ font-size:1.125rem; line-height:1; }
-    .social-links img.social-icon-img{ display:block; width:36px; height:36px; }
+    /* Hero section (menu style) */
+    .hero.menu-hero { background: #fff !important; color: #222; position: relative; }
+    .hero.menu-hero .hero-overlay { position: absolute; inset: 0; background: transparent !important; pointer-events: none; }
 
-    .card .social-links a{ color:#000; }
-    .card .social-links img.social-icon-img{ filter:brightness(0) saturate(100%); }
-    .site-footer .social-links a{ color:#fff; }
-    .site-footer .social-links img.social-icon-img{ filter:brightness(0) invert(1); }
+    /* Sticky bar */
+    .sticky-actions {
+      position: fixed; left: 0; right: 0; bottom: 0;
+      background: #fff; border-top: 1px solid #eee;
+      display: flex; justify-content: center; gap: .5rem; padding: .5rem;
+    }
 
-    .social-links a:hover{ opacity:.9; transform:translateY(-1px); }
+    /* Cards */
+    .card {
+      max-width: 1020px;
+      margin: 14px auto 22px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.04);
+      text-align: left;
+    }
+    .card.narrow { max-width: 760px; }
+
+    .card-title { font-weight: 800; font-size: 1.15rem; margin-bottom: 10px; }
+
+    /* Social icons (base) */
+    .social-links {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: .75rem;
+    }
+    /* Center variant */
+    .social-links--center { justify-content: center; }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      text-decoration: none;
+      transition: opacity .15s ease, transform .15s ease;
+    }
+    .social-links i {
+      font-size: 1.125rem;
+      line-height: 1;
+    }
+    .social-links img.social-icon-img {
+      display: block;
+      width: 36px;
+      height: 36px;
+    }
+
+    .social-links a:hover,
+    .social-links a:focus-visible {
+      opacity: .9;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    /* Card icons black */
+    .card .social-links a { color: #000; }
+    .card .social-links img.social-icon-img { filter: brightness(0) saturate(100%); }
+
+    /* Footer icons white */
+    .site-footer .social-links a { color: #fff; }
+    .site-footer .social-links img.social-icon-img { filter: brightness(0) invert(1); }
+
+    /* Footer */
+    .site-footer { background: #111; color: #fff; padding: 40px 0; }
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .site-footer .footer-col { text-align: left; }
+    .site-footer a { color: #fff; text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .card { background: #131313; border-color: #2a2a2a; }
+    }
   </style>
 </head>
-<body>
 
+<body>
   <main id="main" role="main">
-    <!-- Other sections above omitted for brevity -->
+    <!-- HERO -->
+    <section class="hero menu-hero" id="order">
+      <div class="container">
+        <h1>Order Now — Fresh Spring Rolls, Coffee, Matcha &amp; Juices</h1>
+        <p>Pickup in An Thuong or delivery via GrabFood. Always fresh, rolled to order.</p>
+        <img src="/images/spring-rolls-trio-roly-poly-da-nang.webp" alt="Fresh spring rolls from Roly Poly Da Nang" class="hero-img" width="1600" height="900">
+        <div>
+          <a href="#pickup" class="btn">Order Pickup</a>
+          <a href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener" class="btn">Order Delivery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PICKUP -->
+    <section id="pickup" class="info-section">
+      <div class="container">
+        <div class="card narrow">
+          <h2 class="card-title">Pickup at Roly Poly Da Nang</h2>
+          <p>Call or message us to place your order — we’ll have it freshly rolled and ready when you arrive.</p>
+
+          <p><strong>Address:</strong> 05 An Thượng 6, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng</p>
+          <p><strong>Phone:</strong> <a href="tel:+84327306076">+84 327 306 076</a></p>
+          <p><strong>Hours:</strong> Daily, 10:00–20:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY -->
+    <section id="delivery" class="info-section">
+      <div class="container">
+        <div class="card narrow">
+          <h2 class="card-title">Order Delivery via GrabFood</h2>
+          <p>Enjoy Roly Poly from the comfort of your home in Da Nang. Available for fast delivery through GrabFood.</p>
+          <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener">Order on GrabFood</a>
+        </div>
+      </div>
+    </section>
 
     <!-- STAY CONNECTED -->
     <section class="info-section" aria-labelledby="closing-title">
@@ -78,37 +205,62 @@
         </div>
       </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer" style="background:#111;color:#fff;">
-      <div class="container">
-        <div class="footer-grid">
-          <section class="footer-col" style="text-align:left;">
-            <h3><a href="/" style="color:#fff;">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</a></h3>
-            <p>Vietnamese restaurant &amp; café in An Thuong (My An), near My Khe Beach, Da Nang.</p>
-            <address>
-              05 An Thượng 6, Bắc Mỹ Phú,<br>Ngũ Hành Sơn, Đà Nẵng 550000<br>
-              <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" style="color:#fff;">Directions</a><br>
-              <a href="tel:+84327306076" style="color:#fff;">+84 327 306 076</a>
-            </address>
-          </section>
-
-          <section class="footer-col" style="text-align:left;">
-            <h3>Socials</h3>
-            <div class="social-links" role="group" aria-label="Social media">
-              <a href="https://www.instagram.com/rolypolydanang" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.tiktok.com/@rolypolydanang" target="_blank"><i class="fab fa-tiktok"></i></a>
-              <a href="https://www.facebook.com/rolypolydanang" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank"><i class="fa-solid fa-map-location-dot"></i></a>
-              <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank">
-                <img class="social-icon-img" src="/images/trip-adv.png" width="36" height="36" alt="Tripadvisor">
-              </a>
-            </div>
-          </section>
-        </div>
-      </div>
-    </footer>
   </main>
 
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <section class="footer-col">
+          <h3><a href="/" style="color:#fff;">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</a></h3>
+          <p>Vietnamese restaurant &amp; café in An Thuong (My An), near My Khe Beach, Da Nang.</p>
+          <address>
+            05 An Thượng 6, Bắc Mỹ Phú,<br>Ngũ Hành Sơn, Đà Nẵng 550000<br>
+            <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" style="color:#fff;">Directions</a><br>
+            <a href="tel:+84327306076" style="color:#fff;">+84 327 306 076</a>
+          </address>
+        </section>
+
+        <!-- Links -->
+        <section class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/order" aria-current="page">Order</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </section>
+
+        <!-- Social -->
+        <section class="footer-col">
+          <h3>Socials</h3>
+          <div class="social-links" role="group" aria-label="Social media">
+            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener" aria-label="Tripadvisor">
+              <img class="social-icon-img" src="/images/trip-adv.png" width="36" height="36" alt="Tripadvisor">
+            </a>
+          </div>
+        </section>
+      </div>
+      <p style="margin-top:20px;">© <span id="current-year">2025</span> Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky actions -->
+  <nav class="sticky-actions">
+    <a class="btn" href="/menu">View Menu</a>
+    <a class="btn" href="https://food.grab.com/vn/en/restaurant/online-delivery/5-C7DBL7TBPEDDT6" target="_blank" rel="noopener">Order on GrabFood</a>
+  </nav>
+
+  <!-- Current year script -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
