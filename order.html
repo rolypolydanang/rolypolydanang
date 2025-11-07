@@ -199,6 +199,7 @@
       border-radius: 12px;
       padding: 22px 24px;
       box-shadow: 0 6px 18px rgba(0,0,0,.04);
+      text-align: left; /* ensure left alignment inside cards */
     }
     .card.narrow{ max-width: 760px; }
     .card-title{ margin:0 0 10px; font-weight:800; font-size:1.15rem; }
@@ -235,8 +236,15 @@
     @media (min-width:900px){ .favorites-grid{ grid-template-columns: 1fr 1.2fr; } }
     @media (min-width:880px){ .sauce-grid{ grid-template-columns: 1fr 1fr; } }
 
-    /* ===== Unified social icons (base) ===== */
-    .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:.75rem; }
+    /* ===== Unified social icons (base) — LEFT aligned ===== */
+    .social-links{
+      display:flex;
+      justify-content:flex-start; /* LEFT align */
+      align-items:center;
+      gap:1rem;
+      flex-wrap:wrap;
+      margin-top:.75rem;
+    }
     .social-links a{
       display:inline-flex; align-items:center; justify-content:center;
       width:40px; height:40px; text-decoration:none;
@@ -254,6 +262,9 @@
     /* FOOTER icons: white (matches other pages) */
     .site-footer .social-links a{ color:#fff; }
     .site-footer .social-links img.social-icon-img{ filter:brightness(0) invert(1); }
+
+    /* Footer columns left-aligned */
+    .site-footer .footer-col{ text-align:left; }
 
     /* Dark mode */
     @media (prefers-color-scheme: dark){
@@ -305,7 +316,7 @@
   </script>
 
   <main id="main" role="main">
-    <!-- HERO — ORDER (matches Menu/Home hero style) -->
+    <!-- HERO — ORDER -->
     <section class="hero menu-hero" id="order" aria-labelledby="hero-title">
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container">
@@ -500,7 +511,7 @@
     <div class="container">
       <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Footer</h2>
       <div class="footer-grid">
-        <section class="footer-col" aria-labelledby="footer-brand">
+        <section class="footer-col" aria-labelledby="footer-brand" style="text-align:left;">
           <h3 id="footer-brand"><a href="/" aria-label="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Home" style="color:#fff;">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</a></h3>
           <p class="footer-tagline">Vietnamese restaurant &amp; café in An Thuong (My An), near My Khe Beach, Da Nang.</p>
           <address>
@@ -512,7 +523,7 @@
           <p><strong>Open:</strong> Daily, 10:00–20:00</p>
         </section>
 
-        <nav class="footer-col" aria-labelledby="footer-links">
+        <nav class="footer-col" aria-labelledby="footer-links" style="text-align:left;">
           <h3 id="footer-links">Quick Links</h3>
           <ul class="footer-links">
             <li><a href="/" style="color:#fff;">Home</a></li>
@@ -524,7 +535,7 @@
           </ul>
         </nav>
 
-        <section class="footer-col" aria-labelledby="footer-social">
+        <section class="footer-col" aria-labelledby="footer-social" style="text-align:left;">
           <h3 id="footer-social">Socials</h3>
           <div class="social-links" role="group" aria-label="Social media">
             <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
