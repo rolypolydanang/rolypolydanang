@@ -15,7 +15,6 @@
   <!-- Performance -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
-  <!-- Preload LCP hero image & CSS -->
   <link rel="preload" as="image" href="/images/spring-rolls-trio-roly-poly-da-nang.webp" type="image/webp" />
   <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="/main.css" /></noscript>
@@ -52,7 +51,7 @@
   <link rel="alternate" href="https://www.rolypolydanang.vn/order" hreflang="en">
   <link rel="alternate" href="https://www.rolypolydanang.vn/order" hreflang="en-VN">
 
-  <!-- Font Awesome (for socials icons) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
   <!-- GA4 -->
@@ -236,25 +235,25 @@
     @media (min-width:900px){ .favorites-grid{ grid-template-columns: 1fr 1.2fr; } }
     @media (min-width:880px){ .sauce-grid{ grid-template-columns: 1fr 1fr; } }
 
-    /* ---- Socials layout (shared) ---- */
-    .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:.75rem; flex-wrap:wrap; }
-    .social-links img.social-icon-img{ width:36px; height:36px; display:block; }
+    /* ===== Unified social icons (base) ===== */
+    .social-links{ display:flex; justify-content:center; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:.75rem; }
+    .social-links a{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:40px; height:40px; text-decoration:none;
+      transition: opacity .15s ease-in-out, transform .15s ease-in-out, filter .15s ease-in-out;
+    }
+    .social-links i{ font-size:1.125rem; line-height:1; }
+    .social-links .fa-solid, .social-links .fas, .social-links .fab, .social-links .fa-brands{ color:currentColor; }
+    .social-links img.social-icon-img{ display:block; width:36px; height:36px; }
+    .social-links a:hover, .social-links a:focus-visible{ opacity:.9; transform:translateY(-1px); outline:none; }
 
-    /* MAIN CARDS: icons black */
-    .card .social-links a,
-    .card .social-links a:link,
-    .card .social-links a:visited { color:#000 !important; }
-    .card .social-links i,
-    .card .social-links svg{ color:#000 !important; fill:#000 !important; stroke:#000 !important; }
-    .card .social-links img.social-icon-img{ filter:brightness(0) saturate(100%) !important; }
+    /* Icons INSIDE cards: black (same as Menu page) */
+    .card .social-links a{ color:#000; }
+    .card .social-links img.social-icon-img{ filter:brightness(0) saturate(100%); }
 
-    /* FOOTER: icons white (matches other pages) */
-    .site-footer .social-links a,
-    .site-footer .social-links a:link,
-    .site-footer .social-links a:visited{ color:#fff !important; }
-    .site-footer .social-links i,
-    .site-footer .social-links svg{ color:#fff !important; fill:#fff !important; stroke:#fff !important; }
-    .site-footer .social-links img.social-icon-img{ filter: brightness(0) invert(1); }
+    /* FOOTER icons: white (matches other pages) */
+    .site-footer .social-links a{ color:#fff; }
+    .site-footer .social-links img.social-icon-img{ filter:brightness(0) invert(1); }
 
     /* Dark mode */
     @media (prefers-color-scheme: dark){
@@ -476,13 +475,13 @@
 
           <div class="social-links" role="group" aria-label="Social media">
             <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Instagram">
-              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
             <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="noopener" aria-label="TikTok">
-              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+              <i class="fab fa-tiktok" aria-hidden="true"></i>
             </a>
             <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="noopener" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
             </a>
             <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps">
               <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
