@@ -192,27 +192,31 @@
 <body>
 
   <!-- Header -->
-  <header class="site-header" id="site-header" role="banner">
-    <div class="container nav-container">
-      <a class="logo" href="/" aria-label="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Home">
-        <img class="logo-img" src="/images/logo.jpg" width="160" height="48" alt="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang" decoding="async" />
-      </a>
-      <nav class="main-nav" id="main-nav" aria-label="Primary" role="navigation">
-        <ul class="nav-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="/menu" title="View Menu">Menu</a></li>
-          <li><a href="/about" aria-current="page" class="active" title="About Roly Poly">About</a></li>
-          <li><a href="/contact" title="Contact &amp; Location">Contact</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-      </button>
-    </div>
-  </header>
+  <header class="site-header" role="banner">
+  <div class="container nav-container">
+    <a href="/" class="logo" aria-label="Roly Poly — Home">
+      <img src="/images/logo.jpg" alt="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang" class="logo-img" width="160" height="48" decoding="async">
+    </a>
+
+    <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/order">Order</a></li>
+        <li><a href="/about" aria-current="page" class="active">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
