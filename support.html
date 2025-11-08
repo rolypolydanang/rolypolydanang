@@ -54,8 +54,9 @@
   <link rel="alternate" href="https://www.rolypolydanang.vn/support" hreflang="en">
   <link rel="alternate" href="https://www.rolypolydanang.vn/support" hreflang="en-VN">
 
-  <!-- Font Awesome kept for footer only (no button icons used) -->
+  <!-- Font Awesome (footer icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
@@ -122,6 +123,9 @@
 
     /* Container width (scoped) */
     main.support-wrap > .container { max-width: 960px; margin-inline: auto; padding-inline: 1rem; }
+
+    /* Accessibility helper */
+    .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* Dark mode */
     @media (prefers-color-scheme: dark){
@@ -190,10 +194,10 @@
 
       <!-- Contact buttons in platform brand colors (no icons) -->
       <section class="contact-grid" aria-label="Contact options">
-        <a id="btn-wa"   class="rp-btn rp-wa"   href="https://wa.me/84327306076" target="_blank" rel="noopener">WhatsApp</a>
-        <a id="btn-zalo" class="rp-btn rp-zalo" href="https://zalo.me/84327306076" target="_blank" rel="noopener">Zalo</a>
-        <a id="btn-msgr" class="rp-btn rp-msgr" href="https://m.me/rolypolydanang" target="_blank" rel="noopener">Messenger</a>
-        <a id="btn-ig"   class="rp-btn rp-ig"   href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener">Instagram</a>
+        <a id="btn-wa"   class="rp-btn rp-wa"   href="https://wa.me/84327306076" target="_blank" rel="noopener nofollow">WhatsApp</a>
+        <a id="btn-zalo" class="rp-btn rp-zalo" href="https://zalo.me/84327306076" target="_blank" rel="noopener nofollow">Zalo</a>
+        <a id="btn-msgr" class="rp-btn rp-msgr" href="https://m.me/rolypolydanang" target="_blank" rel="noopener nofollow">Messenger</a>
+        <a id="btn-ig"   class="rp-btn rp-ig"   href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener nofollow">Instagram</a>
         <a id="btn-call" class="rp-btn rp-btn--outline rp-btn--full" href="tel:+84327306076">Call Us (fastest)</a>
       </section>
 
@@ -218,7 +222,7 @@
           <p class="footer-tagline">Vietnamese restaurant &amp; café in <strong>An Thuong (My An)</strong>, near <strong>My Khe Beach</strong>, Da Nang.</p>
           <address>
             05 An Thượng 6, Bắc Mỹ Phú,<br />Ngũ Hành Sơn, Đà Nẵng 550000<br />
-            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=footer&amp;utm_medium=link&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener noreferrer" aria-label="Directions to Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps">Directions (Google Maps)</a><br />
+            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=footer&amp;utm_medium=link&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener noreferrer nofollow" aria-label="Directions to Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps">Directions (Google Maps)</a><br />
             <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang">+84 327 306 076</a><br />
             <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a>
           </address>
@@ -239,10 +243,10 @@
         <section class="footer-col" aria-labelledby="footer-social">
           <h3 id="footer-social">Socials</h3>
           <div class="social-links" role="group" aria-label="Social media">
-            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Roly Poly Da Nang on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662" target="_blank" rel="noopener noreferrer" aria-label="Roly Poly Da Nang on Tripadvisor">
+            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662.html" target="_blank" rel="noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on Tripadvisor">
               <img class="social-icon-img" src="/images/trip-adv.png" width="32" height="32" alt="Tripadvisor" decoding="async" loading="lazy" />
             </a>
           </div>
@@ -261,14 +265,14 @@
   <!-- Click event tagging -->
   <script>
     document.addEventListener('click', function(e) {
-      var a = e.target.closest('a'); if(!a) return;
+      var a = e.target.closest('a'); if(!a || typeof gtag!=='function') return;
       try {
-        if (a.href && a.href.indexOf('google.com/maps') !== -1) { gtag('event','click_maps',{link_url:a.href, location:'support'}); }
-        if (a.href && a.href.indexOf('wa.me') !== -1) { gtag('event','click_whatsapp',{link_url:a.href, location:'support'}); }
-        if (a.href && a.href.indexOf('m.me') !== -1) { gtag('event','click_msgr',{link_url:a.href, location:'support'}); }
-        if (a.href && a.href.indexOf('ig.me') !== -1) { gtag('event','click_instagram_dm',{link_url:a.href, location:'support'}); }
-        if (a.href && a.href.indexOf('zalo.me') !== -1) { gtag('event','click_zalo',{link_url:a.href, location:'support'}); }
-        if (a.href && a.href.indexOf('tel:') === 0) { gtag('event','click_call',{phone:a.href, location:'support'}); }
+        if (a.href && a.href.indexOf('google.com/maps') !== -1) gtag('event','click_maps',{link_url:a.href, location:'support'});
+        if (a.href && a.href.indexOf('wa.me') !== -1) gtag('event','click_whatsapp',{link_url:a.href, location:'support'});
+        if (a.href && a.href.indexOf('m.me') !== -1) gtag('event','click_msgr',{link_url:a.href, location:'support'});
+        if (a.href && a.href.indexOf('ig.me') !== -1) gtag('event','click_instagram_dm',{link_url:a.href, location:'support'});
+        if (a.href && a.href.indexOf('zalo.me') !== -1) gtag('event','click_zalo',{link_url:a.href, location:'support'});
+        if (a.href && a.href.indexOf('tel:') === 0) gtag('event','click_call',{phone:a.href, location:'support'});
       } catch(err) {}
     }, {passive:true});
   </script>
