@@ -134,7 +134,32 @@
   }
   </script>
 
-  <style>.hero-img{width:100%;height:auto;max-width:1200px}</style>
+  <!-- Page-specific styles (image caps + mobile-nav fallback) -->
+  <style>
+    .hero-img,
+    .post-card .post-thumb img{
+      width:100%;
+      height:auto;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    @media (min-width:1024px){
+      .hero-img{max-width:980px}
+      .post-card .post-thumb img{max-width:980px}
+    }
+    @media (max-width: 900px){
+      .main-nav{display:none}
+      .main-nav.open{display:block}
+    }
+    .nav-toggle{background:none;border:0;cursor:pointer;display:flex;flex-direction:column;gap:4px}
+    .nav-toggle-bar{width:24px;height:2px;background:#333;display:block}
+    .hero{padding:3rem 1rem;text-align:center}
+    .container.blog-list{max-width:980px;margin:2rem auto;padding:0 1rem}
+    .post-card{margin-bottom:2rem;border-bottom:1px solid #eee;padding-bottom:1.25rem}
+    .post-card h3{font-size:1.25rem;margin:.25rem 0}
+    .post-meta{color:#777;font-size:.92rem}
+  </style>
 </head>
 
 <body>
@@ -155,7 +180,8 @@
       </ul>
     </nav>
 
-    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+    <button class="nav-toggle" type="button"
+            aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
       <span class="nav-toggle-bar" aria-hidden="true"></span>
       <span class="nav-toggle-bar" aria-hidden="true"></span>
       <span class="nav-toggle-bar" aria-hidden="true"></span>
@@ -163,6 +189,32 @@
   </div>
 </header>
 
+<!-- Mobile nav toggle JS -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav    = document.getElementById('main-nav');
+    if (!toggle || !nav) return;
+
+    const sync = (isOpen) => {
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      sync(isOpen);
+    });
+
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) { nav.classList.remove('open'); sync(false); }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { nav.classList.remove('open'); sync(false); }
+    });
+  });
+</script>
 
 <main id="main">
 <section class="hero hero--blog" id="blog">
