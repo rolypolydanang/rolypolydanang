@@ -17,43 +17,52 @@
   <link rel="alternate" href="https://www.rolypolydanang.vn/blog" hreflang="en">
   <link rel="alternate" href="https://www.rolypolydanang.vn/blog" hreflang="en-VN">
 
+  <!-- Social images -->
+  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
+
   <!-- Performance -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin/>
-  <link rel="preconnect" href="https://www.gstatic.com" crossorigin/>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin> 
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Preload hero image used on this page -->
   <link rel="preload" as="image" href="/images/five-sauces-roly-poly-da-nang.webp" type="image/webp"/>
-  <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'"/>
+
+  <!-- Styles -->
+  <link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/main.css"/></noscript>
 
-  <!-- Font Awesome (ensure social icons render) -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Make FA non-blocking -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
-  <!-- Open Graph / Twitter -->
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Blog | Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang"/>
-  <meta property="og:description" content="News, specials, and stories from our spring rolls café near My Khe Beach."/>
+  <meta property="og:description" content="News, specials, and stories from our spring roll café near My Khe Beach."/>
   <meta property="og:url" content="https://www.rolypolydanang.vn/blog"/>
   <meta property="og:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png"/>
-  <meta property="og:image:secure_url" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png"/>
+  <meta property="og:image:type" content="image/png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta property="og:image:alt" content="Assorted fresh Vietnamese spring rolls with sauces at Roly Poly Da Nang"/>
   <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:updated_time" content="2025-10-28">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Blog | Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang"/>
   <meta name="twitter:description" content="Updates from our café in An Thuong — new menu items, coffee &amp; matcha, delivery info."/>
   <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png"/>
   <meta name="twitter:image:alt" content="Assorted fresh Vietnamese spring rolls with sauces at Roly Poly Da Nang"/>
-
-  <!-- Icons -->
-  <link rel="icon" sizes="any" href="/favicon.ico"/>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-  <meta name="theme-color" content="#ffffff"/>
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
@@ -67,23 +76,23 @@
   <!-- JSON-LD: Blog + ItemList + WebPage -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "Blog",
-        "@id": "https://www.rolypolydanang.vn/blog#blog",
-        "url": "https://www.rolypolydanang.vn/blog",
-        "name": "Roly Poly Blog — News, Specials & Guides",
-        "inLanguage": "en",
-        "publisher": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "hasPart": { "@id": "https://www.rolypolydanang.vn/blog#list" }
+        "@type":"Blog",
+        "@id":"https://www.rolypolydanang.vn/blog#blog",
+        "url":"https://www.rolypolydanang.vn/blog",
+        "name":"Roly Poly Blog — News, Specials & Guides",
+        "inLanguage":"en",
+        "publisher":{"@id":"https://www.rolypolydanang.vn/#restaurant"},
+        "hasPart":{"@id":"https://www.rolypolydanang.vn/blog#list"}
       },
       {
-        "@type": "ItemList",
-        "@id": "https://www.rolypolydanang.vn/blog#list",
-        "itemListOrder": "https://schema.org/ItemListOrderDescending",
-        "numberOfItems": 14,
-        "itemListElement": [
+        "@type":"ItemList",
+        "@id":"https://www.rolypolydanang.vn/blog#list",
+        "itemListOrder":"https://schema.org/ItemListOrderDescending",
+        "numberOfItems":14,
+        "itemListElement":[
           {"@type":"ListItem","position":1,"url":"https://www.rolypolydanang.vn/blog/rice-paper-rolls-and-summer-rolls-da-nang","name":"Rice Paper Rolls & Summer Rolls in Da Nang — An Informational Guide"},
           {"@type":"ListItem","position":2,"url":"https://www.rolypolydanang.vn/blog/best-spring-rolls-da-nang","name":"Best Spring Rolls in Da Nang: Gỏi Cuốn, Ram Cuốn Cải & Bánh Tráng Cuốn Thịt Heo"},
           {"@type":"ListItem","position":3,"url":"https://www.rolypolydanang.vn/blog/catering-da-nang","name":"Catering in Da Nang — Fresh Spring Rolls for Small Parties & Office Lunches"},
@@ -101,449 +110,384 @@
         ]
       },
       {
-        "@type": ["WebPage","CollectionPage","Blog"],
-        "@id": "https://www.rolypolydanang.vn/blog#webpage",
-        "url": "https://www.rolypolydanang.vn/blog",
-        "name": "Blog | Roly Poly Fresh Spring Rolls & Coffee Da Nang",
-        "description": "Updates from Roly Poly in Da Nang — new fillings, seasonal drinks, behind-the-scenes, and tips for visiting An Thuong & My Khe Beach.",
-        "isPartOf": { "@id": "https://www.rolypolydanang.vn/#website" },
-        "about": { "@id": "https://www.rolypolydanang.vn/#restaurant" },
-        "primaryImageOfPage": { "@id": "https://www.rolypolydanang.vn/blog#heroimage" },
-        "breadcrumb": { "@id": "https://www.rolypolydanang.vn/blog#breadcrumb" },
-        "datePublished": "2025-10-28",
-        "dateModified": "2025-10-28",
-        "inLanguage": "en"
+        "@type":["WebPage","CollectionPage","Blog"],
+        "@id":"https://www.rolypolydanang.vn/blog#webpage",
+        "url":"https://www.rolypolydanang.vn/blog",
+        "name":"Blog | Roly Poly Fresh Spring Rolls & Coffee Da Nang",
+        "description":"Updates from Roly Poly in Da Nang — new fillings, seasonal drinks, behind-the-scenes, and tips for visiting An Thuong & My Khe Beach.",
+        "isPartOf":{"@id":"https://www.rolypolydanang.vn/#website"},
+        "about":{"@id":"https://www.rolypolydanang.vn/#restaurant"},
+        "primaryImageOfPage":{"@id":"https://www.rolypolydanang.vn/blog#heroimage"},
+        "breadcrumb":{"@id":"https://www.rolypolydanang.vn/blog#breadcrumb"},
+        "datePublished":"2025-10-28",
+        "dateModified":"2025-10-28",
+        "inLanguage":"en"
       },
       {
-        "@type": "ImageObject",
-        "@id": "https://www.rolypolydanang.vn/blog#heroimage",
-        "url": "https://www.rolypolydanang.vn/images/five-sauces-roly-poly-da-nang.webp",
-        "width": 1600,
-        "height": 900,
-        "caption": "Five house-made sauces at Roly Poly Da Nang"
+        "@type":"ImageObject",
+        "@id":"https://www.rolypolydanang.vn/blog#heroimage",
+        "url":"https://www.rolypolydanang.vn/images/five-sauces-roly-poly-da-nang.webp",
+        "width":1600,
+        "height":900,
+        "caption":"Five house-made sauces at Roly Poly Da Nang"
       },
       {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.rolypolydanang.vn/blog#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.rolypolydanang.vn/", "name": "Home" } },
-          { "@type": "ListItem", "position": 2, "item": { "@id": "https://www.rolypolydanang.vn/blog", "name": "Blog" } }
+        "@type":"BreadcrumbList",
+        "@id":"https://www.rolypolydanang.vn/blog#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"item":{"@id":"https://www.rolypolydanang.vn/","name":"Home"}},
+          {"@type":"ListItem","position":2,"item":{"@id":"https://www.rolypolydanang.vn/blog","name":"Blog"}}
         ]
       }
     ]
   }
   </script>
 
-  <!-- Page-specific styles (image caps + mobile-nav fallback) -->
+  <!-- Image caps + minimal blog layout -->
   <style>
-    .hero-img,
-    .post-card .post-thumb img{
-      width:100%;
-      height:auto;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-    }
+    .hero-img{width:100%;height:auto;display:block;margin:0 auto;max-width:1200px}
+    .post-thumb img{width:100%;height:auto;display:block;margin:0 auto}
     @media (min-width:1024px){
-      .hero-img{max-width:980px}
-      .post-card .post-thumb img{max-width:980px}
+      .hero-img,.post-thumb img{max-width:980px}
     }
-    @media (max-width: 900px){
-      .main-nav{display:none}
-      .main-nav.open{display:block}
-    }
-    .nav-toggle{background:none;border:0;cursor:pointer;display:flex;flex-direction:column;gap:4px}
-    .nav-toggle-bar{width:24px;height:2px;background:#333;display:block}
+
+    /* Mobile nav show/hide (in case main.css doesn't already do this) */
+    @media (max-width:900px){ .main-nav{display:none} .main-nav.open{display:block} }
+
     .hero{padding:3rem 1rem;text-align:center}
-    .container.blog-list{max-width:980px;margin:2rem auto;padding:0 1rem}
+    .hero .subheadline{max-width:820px;margin:0.5rem auto 0}
+    .blog-list{max-width:1000px;margin:2rem auto;padding:0 1rem}
     .post-card{margin-bottom:2rem;border-bottom:1px solid #eee;padding-bottom:1.25rem}
-    .post-card h3{font-size:1.25rem;margin:.25rem 0}
-    .post-meta{color:#777;font-size:.92rem}
+    .post-card header h3{margin:.25rem 0}
+    .post-meta{color:#777;font-size:.9rem}
+    .btn{background:#ff6a00;color:#fff!important;border:2px solid #ff6a00;border-radius:6px;padding:.6em 1em;font-weight:600;text-decoration:none;display:inline-block}
+    .btn:hover,.btn:focus{background:#e55b00;border-color:#e55b00;color:#fff!important}
   </style>
 </head>
 
 <body>
-<header class="site-header" role="banner">
-  <div class="container nav-container">
-    <a href="/" class="logo" aria-label="Roly Poly — Home">
-      <img src="/images/logo.jpg" alt="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang" class="logo-img" width="160" height="48" decoding="async">
-    </a>
+  <!-- HEADER (exact same structure as homepage; active state on Blog) -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="/" class="logo" aria-label="Roly Poly — Home">
+        <img src="/images/logo.jpg" alt="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang" class="logo-img" width="160" height="48" decoding="async">
+      </a>
 
-    <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/order">Order</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog" aria-current="page" class="active">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu">Menu</a></li>
+          <li><a href="/order">Order</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog" aria-current="page" class="active">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <button class="nav-toggle" type="button"
-            aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
-      <span class="nav-toggle-bar" aria-hidden="true"></span>
-      <span class="nav-toggle-bar" aria-hidden="true"></span>
-      <span class="nav-toggle-bar" aria-hidden="true"></span>
-    </button>
-  </div>
-</header>
-
-<!-- Mobile nav toggle JS -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.nav-toggle');
-    const nav    = document.getElementById('main-nav');
-    if (!toggle || !nav) return;
-
-    const sync = (isOpen) => {
-      toggle.setAttribute('aria-expanded', String(isOpen));
-      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-    };
-
-    toggle.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
-      sync(isOpen);
-    });
-
-    nav.addEventListener('click', (e) => {
-      if (e.target.closest('a')) { nav.classList.remove('open'); sync(false); }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { nav.classList.remove('open'); sync(false); }
-    });
-  });
-</script>
-
-<main id="main">
-<section class="hero hero--blog" id="blog">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Roly Poly Blog — News, Specials &amp; Guides</h1>
-      <h2 class="hero-subtitle">Stories from our spring roll café and coffee shop, coffee &amp; matcha notes, and local tips.</h2>
-      <picture>
-        <source srcset="/images/five-sauces-roly-poly-da-nang.webp" type="image/webp">
-        <img src="/images/five-sauces-roly-poly-da-nang.webp" alt="Five house-made dipping sauces — fish sauce, peanut, sweet & sour, sesame, and spicy mayo" class="hero-img" width="1600" height="900" decoding="async" fetchpriority="high">
-      </picture>
-      <p class="subheadline">Fresh fillings, behind-the-scenes prep, and guides to enjoying gỏi cuốn in Đà Nẵng. Browse the latest posts below.</p>
-      <div class="hero-buttons"><a href="#latest" class="btn">Read Latest Posts</a></div>
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="container blog-list" aria-label="Latest posts">
-  <h2 id="latest">Latest posts</h2>
+  <!-- Same mobile toggle script as homepage -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const t=document.querySelector('.nav-toggle'), n=document.getElementById('main-nav');
+      function set(open){ t.setAttribute('aria-expanded',open); t.setAttribute('aria-label',open?'Close menu':'Open menu'); n.classList.toggle('open',open); }
+      t?.addEventListener('click',()=>set(!n.classList.contains('open')));
+      n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set(false)));
+      document.addEventListener('keydown',e=>{ if(e.key==='Escape') set(false); });
+    });
+  </script>
 
-  <!-- 🆕 New Post: Rice Paper Rolls & Summer Rolls (Oct 28, 2025) -->
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/rice-paper-rolls-and-summer-rolls-da-nang">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/rice-paper-rolls-and-summer-rolls-da-nang" itemprop="url">
-          Rice Paper Rolls &amp; Summer Rolls in Da Nang — A Guide
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero hero--blog" id="blog">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Roly Poly Blog — News, Specials &amp; Guides</h1>
+          <h2 class="hero-subtitle">Stories from our spring roll café and coffee shop, coffee &amp; matcha notes, and local tips.</h2>
+          <picture>
+            <source srcset="/images/five-sauces-roly-poly-da-nang.webp" type="image/webp">
+            <img src="/images/five-sauces-roly-poly-da-nang.webp" alt="Five house-made dipping sauces — fish sauce, peanut, sweet &amp; sour, sesame, and spicy mayo" class="hero-img" width="1600" height="900" decoding="async" fetchpriority="high">
+          </picture>
+          <p class="subheadline">Fresh fillings, behind-the-scenes prep, and guides to enjoying gỏi cuốn in Đà Nẵng. Browse the latest posts below.</p>
+          <div class="hero-buttons"><a href="#latest" class="btn">Read Latest Posts</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIST -->
+    <section class="container blog-list" aria-label="Latest posts">
+      <h2 id="latest">Latest posts</h2>
+
+      <!-- Newest -->
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/rice-paper-rolls-and-summer-rolls-da-nang">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/rice-paper-rolls-and-summer-rolls-da-nang" itemprop="url">
+              Rice Paper Rolls &amp; Summer Rolls in Da Nang — A Guide
+            </a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-10-28" itemprop="datePublished">Oct 28, 2025</time>
+            <meta itemprop="dateModified" content="2025-10-28"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/rice-paper-rolls-and-summer-rolls-da-nang">
+          <img src="/images/assorted-summer-rolls-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Assorted Vietnamese summer rolls—shrimp, grilled pork, and egg—served with dipping sauce at Roly Poly in Da Nang" itemprop="image">
         </a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-10-28" itemprop="datePublished">Oct 28, 2025</time>
-        <meta itemprop="dateModified" content="2025-10-28">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Roly Poly Team</span>
-          </span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/rice-paper-rolls-and-summer-rolls-da-nang">
-      <img src="/images/assorted-summer-rolls-roly-poly-da-nang.webp"
-           width="1200" height="675" loading="lazy" decoding="async"
-           alt="Assorted Vietnamese summer rolls—shrimp, grilled pork, and egg—served with dipping sauce at Roly Poly in Da Nang"
-           itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">
-      What rice paper/summer rolls are, how they differ from fried spring rolls, classic sauces, and where to try them in Da Nang.
-    </p>
-    <footer><a class="btn text-link" href="/blog/rice-paper-rolls-and-summer-rolls-da-nang">Read more →</a></footer>
-  </article>
+        <p class="post-excerpt" itemprop="description">What rice paper/summer rolls are, how they differ from fried spring rolls, classic sauces, and where to try them in Da Nang.</p>
+        <footer><a class="btn text-link" href="/blog/rice-paper-rolls-and-summer-rolls-da-nang">Read more →</a></footer>
+      </article>
 
-  <!-- 🆕 New Post: Best Spring Rolls in Da Nang (Oct 27, 2025) -->
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/best-spring-rolls-da-nang">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/best-spring-rolls-da-nang" itemprop="url">
-          Best Spring Rolls in Da Nang: Gỏi Cuốn, Ram Cuốn Cải &amp; Bánh Tráng Cuốn Thịt Heo
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/best-spring-rolls-da-nang">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/best-spring-rolls-da-nang" itemprop="url">
+              Best Spring Rolls in Da Nang: Gỏi Cuốn, Ram Cuốn Cải &amp; Bánh Tráng Cuốn Thịt Heo
+            </a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-10-27" itemprop="datePublished">Oct 27, 2025</time>
+            <meta itemprop="dateModified" content="2025-10-27"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/best-spring-rolls-da-nang">
+          <img src="/images/beef-spring-rolls-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Assorted Vietnamese spring rolls with sauces at Roly Poly Da Nang" itemprop="image">
         </a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-10-27" itemprop="datePublished">Oct 27, 2025</time>
-        <meta itemprop="dateModified" content="2025-10-27">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">Roly Poly Team</span>
-          </span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/best-spring-rolls-da-nang">
-      <img src="/images/beef-spring-rolls-roly-poly-da-nang.webp"
-           width="1200" height="675" loading="lazy" decoding="async"
-           alt="Assorted Vietnamese spring rolls with sauces at Roly Poly Da Nang"
-           itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">
-      Your guide to Da Nang’s must-try spring rolls — gỏi cuốn, ram cuốn cải, and the city’s signature bánh tráng cuốn thịt heo — plus where to try them.
-    </p>
-    <footer><a class="btn text-link" href="/blog/best-spring-rolls-da-nang">Read more →</a></footer>
-  </article>
+        <p class="post-excerpt" itemprop="description">Your guide to Da Nang’s must-try spring rolls — gỏi cuốn, ram cuốn cải, and the city’s signature bánh tráng cuốn thịt heo — plus where to try them.</p>
+        <footer><a class="btn text-link" href="/blog/best-spring-rolls-da-nang">Read more →</a></footer>
+      </article>
 
-  <!-- 🆕 New Post: Catering -->
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/catering-da-nang">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/catering-da-nang" itemprop="url">Catering in Da Nang — Fresh Spring Rolls for Small Parties &amp; Office Lunches</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-10-23" itemprop="datePublished">Oct 23, 2025</time>
-        <meta itemprop="dateModified" content="2025-10-23">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/catering-da-nang">
-      <img src="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Roly Poly catering in Da Nang — spring roll platters with sauces" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Introducing Roly Poly Catering: fresh spring roll platters, tidy setup, and quick delivery for villas, offices, and small events across Da Nang.</p>
-    <footer><a class="btn text-link" href="/blog/catering-da-nang">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/catering-da-nang">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/catering-da-nang" itemprop="url">Catering in Da Nang — Fresh Spring Rolls for Small Parties &amp; Office Lunches</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-10-23" itemprop="datePublished">Oct 23, 2025</time>
+            <meta itemprop="dateModified" content="2025-10-23"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/catering-da-nang">
+          <img src="/images/roly-poly-da-nang-catering-office-lunch-spring-roll-platters-guests-2.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Roly Poly catering in Da Nang — spring roll platters with sauces" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Introducing Roly Poly Catering: fresh spring roll platters, tidy setup, and quick delivery for villas, offices, and small events across Da Nang.</p>
+        <footer><a class="btn text-link" href="/blog/catering-da-nang">Read more →</a></footer>
+      </article>
 
-  <!-- Existing posts (shifted down) -->
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/featured-on-ahoy-vietnam-da-nang-restaurants">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/featured-on-ahoy-vietnam-da-nang-restaurants" itemprop="url">Featured on Ahoy Vietnam — 21 Great Places to Eat in Da Nang</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-10-10" itemprop="datePublished">Oct 10, 2025</time>
-        <meta itemprop="dateModified" content="2025-10-10">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/featured-on-ahoy-vietnam-da-nang-restaurants">
-      <img src="/images/Roly-Poly-Fresh-Spring-Rolls-Da-Nang-AhoyVietnam-2048x1536.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Shopfront of Roly Poly Fresh Spring Rolls & Coffee Da Nang featured on Ahoy Vietnam" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">We’re thrilled to be featured in <em>Ahoy Vietnam’s</em> local dining guide “21 Great Places to Eat in Da Nang.” Read how we made the list and meet the writer behind the visit.</p>
-    <footer><a class="btn text-link" href="/blog/featured-on-ahoy-vietnam-da-nang-restaurants">Read more →</a></footer>
-  </article>
+      <!-- Existing posts -->
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/featured-on-ahoy-vietnam-da-nang-restaurants">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/featured-on-ahoy-vietnam-da-nang-restaurants" itemprop="url">Featured on Ahoy Vietnam — 21 Great Places to Eat in Da Nang</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-10-10" itemprop="datePublished">Oct 10, 2025</time>
+            <meta itemprop="dateModified" content="2025-10-10"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/featured-on-ahoy-vietnam-da-nang-restaurants">
+          <img src="/images/Roly-Poly-Fresh-Spring-Rolls-Da-Nang-AhoyVietnam-2048x1536.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Shopfront of Roly Poly Fresh Spring Rolls & Coffee Da Nang featured on Ahoy Vietnam" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">We’re thrilled to be featured in <em>Ahoy Vietnam’s</em> local dining guide “21 Great Places to Eat in Da Nang.” Read how we made the list and meet the writer behind the visit.</p>
+        <footer><a class="btn text-link" href="/blog/featured-on-ahoy-vietnam-da-nang-restaurants">Read more →</a></footer>
+      </article>
 
-  <!-- Post cards (newest first) -->
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each" itemprop="url">Where to Eat in Da Nang for Under $5</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each">
-      <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Fresh Vietnamese spring rolls with dipping sauces at Roly Poly Da Nang" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Budget-friendly and fresh: build a full meal for under $5 with made-to-order gỏi cuốn near My Khe Beach.</p>
-    <footer><a class="btn text-link" href="/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each" itemprop="url">Where to Eat in Da Nang for Under $5</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each">
+          <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Fresh Vietnamese spring rolls with dipping sauces at Roly Poly Da Nang" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Budget-friendly and fresh: build a full meal for under $5 with made-to-order gỏi cuốn near My Khe Beach.</p>
+        <footer><a class="btn text-link" href="/blog/where-to-eat-in-da-nang-for-under-5-fresh-spring-rolls-from-35-000-vnd-each">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls" itemprop="url">Vegan &amp; Gluten-Free in Da Nang</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls">
-      <img src="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Tofu, mushroom &amp; avocado Vietnamese fresh spring rolls with sesame dipping sauce" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Tofu, Mushroom &amp; Avocado rolls with vegan sauces — plant-based, naturally gluten-free, rolled to order.</p>
-    <footer><a class="btn text-link" href="/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls" itemprop="url">Vegan &amp; Gluten-Free in Da Nang</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls">
+          <img src="/images/tofu-mushroom-avocado-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Tofu, mushroom &amp; avocado Vietnamese fresh spring rolls with sesame dipping sauce" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Tofu, Mushroom &amp; Avocado rolls with vegan sauces — plant-based, naturally gluten-free, rolled to order.</p>
+        <footer><a class="btn text-link" href="/blog/vegan-gluten-free-in-da-nang-tofu-mushroom-avocado-rice-paper-rolls">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/the-matcha-latte-experience-at-roly-poly">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/the-matcha-latte-experience-at-roly-poly" itemprop="url">The Matcha Latte Experience at Roly Poly</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/the-matcha-latte-experience-at-roly-poly">
-      <img src="/images/iced-strawberry-matcha-latte-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Iced matcha latte poured over ice at Roly Poly" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Ceremonial-grade Shizuoka matcha, oat milk, and three signature lattes — crafted to order.</p>
-    <footer><a class="btn text-link" href="/blog/the-matcha-latte-experience-at-roly-poly">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/the-matcha-latte-experience-at-roly-poly">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/the-matcha-latte-experience-at-roly-poly" itemprop="url">The Matcha Latte Experience at Roly Poly</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/the-matcha-latte-experience-at-roly-poly">
+          <img src="/images/iced-strawberry-matcha-latte-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Iced matcha latte poured over ice at Roly Poly" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Ceremonial-grade Shizuoka matcha, oat milk, and three signature lattes — crafted to order.</p>
+        <footer><a class="btn text-link" href="/blog/the-matcha-latte-experience-at-roly-poly">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite" itemprop="url">Salted Coffee in Da Nang</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite">
-      <img src="/images/iced-salted-coffee-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Iced salted coffee with whipped cream at Roly Poly" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Our lightly sweet, velvety take on Huế’s salted coffee — perfect with fresh spring rolls.</p>
-    <footer><a class="btn text-link" href="/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite" itemprop="url">Salted Coffee in Da Nang</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite">
+          <img src="/images/iced-salted-coffee-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Iced salted coffee with whipped cream at Roly Poly" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Our lightly sweet, velvety take on Huế’s salted coffee — perfect with fresh spring rolls.</p>
+        <footer><a class="btn text-link" href="/blog/salted-coffee-in-da-nang-our-unique-twist-on-a-local-favorite">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe" itemprop="url">The Art of Gỏi Cuốn</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe">
-      <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Garlic prawn rice paper roll dipped into nước chấm" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Behind the scenes at Da Nang’s first fresh spring roll café — texture, technique, and sauces.</p>
-    <footer><a class="btn text-link" href="/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe" itemprop="url">The Art of Gỏi Cuốn</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe">
+          <img src="/images/garlic-prawn-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Garlic prawn rice paper roll dipped into nước chấm" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Behind the scenes at Da Nang’s first fresh spring roll café — texture, technique, and sauces.</p>
+        <footer><a class="btn text-link" href="/blog/the-art-of-goi-cuon-inside-da-nang-s-first-fresh-spring-roll-cafe">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/post-beach-perfection-where-to-eat-after-my-khe-beach">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/post-beach-perfection-where-to-eat-after-my-khe-beach" itemprop="url">Post-Beach Perfection Near My Khe</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/post-beach-perfection-where-to-eat-after-my-khe-beach">
-      <img src="/images/five-sauces-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Fresh spring rolls and iced drinks after the beach" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Light, refreshing rolls and cooling drinks — the ideal stop after a swim at My Khe.</p>
-    <footer><a class="btn text-link" href="/blog/post-beach-perfection-where-to-eat-after-my-khe-beach">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/post-beach-perfection-where-to-eat-after-my-khe-beach">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/post-beach-perfection-where-to-eat-after-my-khe-beach" itemprop="url">Post-Beach Perfection Near My Khe</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/post-beach-perfection-where-to-eat-after-my-khe-beach">
+          <img src="/images/five-sauces-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Fresh spring rolls and iced drinks after the beach" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Light, refreshing rolls and cooling drinks — the ideal stop after a swim at My Khe.</p>
+        <footer><a class="btn text-link" href="/blog/post-beach-perfection-where-to-eat-after-my-khe-beach">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/how-to-eat-vietnamese-goi-cuon-like-a-local">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/how-to-eat-vietnamese-goi-cuon-like-a-local" itemprop="url">How to Eat Gỏi Cuốn Like a Local</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/how-to-eat-vietnamese-goi-cuon-like-a-local">
-      <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Dipping a Vietnamese fresh spring roll into peanut sauce" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Tips for dipping, pairing sauces, and enjoying fresh spring rolls the Vietnamese way.</p>
-    <footer><a class="btn text-link" href="/blog/how-to-eat-vietnamese-goi-cuon-like-a-local">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/how-to-eat-vietnamese-goi-cuon-like-a-local">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/how-to-eat-vietnamese-goi-cuon-like-a-local" itemprop="url">How to Eat Gỏi Cuốn Like a Local</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/how-to-eat-vietnamese-goi-cuon-like-a-local">
+          <img src="/images/lemongrass-beef-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Dipping a Vietnamese fresh spring roll into peanut sauce" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Tips for dipping, pairing sauces, and enjoying fresh spring rolls the Vietnamese way.</p>
+        <footer><a class="btn text-link" href="/blog/how-to-eat-vietnamese-goi-cuon-like-a-local">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces" itemprop="url">From Peanut to Sesame: Our Sauces</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces">
-      <img src="/images/trio-of-sauces-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Peanut, sesame, and nước chấm dipping sauces at Roly Poly" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Three house-made sauces, made fresh daily — and how to match them with each roll.</p>
-    <footer><a class="btn text-link" href="/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces" itemprop="url">From Peanut to Sesame: Our Sauces</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces">
+          <img src="/images/trio-of-sauces-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Peanut, sesame, and nước chấm dipping sauces at Roly Poly" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Three house-made sauces, made fresh daily — and how to match them with each roll.</p>
+        <footer><a class="btn text-link" href="/blog/from-peanut-to-sesame-the-story-behind-our-house-made-dipping-sauces">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time" itemprop="url">Best Healthy Food in Da Nang</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time">
-      <img src="/images/poached-chicken-avocado-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Healthy fresh spring rolls with herbs and vegetables" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Light, balanced, and packed with herbs — why gỏi cuốn is Da Nang’s healthiest fast meal.</p>
-    <footer><a class="btn text-link" href="/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time" itemprop="url">Best Healthy Food in Da Nang</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time">
+          <img src="/images/poached-chicken-avocado-spring-roll-roly-poly-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Healthy fresh spring rolls with herbs and vegetables" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Light, balanced, and packed with herbs — why gỏi cuốn is Da Nang’s healthiest fast meal.</p>
+        <footer><a class="btn text-link" href="/blog/best-healthy-food-in-da-nang-why-fresh-spring-rolls-win-every-time">Read more →</a></footer>
+      </article>
 
-  <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks">
-    <header>
-      <h3 itemprop="headline">
-        <a href="/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks" itemprop="url">Best Café Near An Thuong</a>
-      </h3>
-      <p class="post-meta">
-        <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
-        <meta itemprop="dateModified" content="2025-08-15">
-        · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
-      </p>
-    </header>
-    <a class="post-thumb" href="/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks">
-      <img src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async"
-           alt="Roly Poly café interior with spring rolls and drinks" itemprop="image">
-    </a>
-    <p class="post-excerpt" itemprop="description">Your go-to café in An Thuong for fresh spring rolls, salted coffee, and matcha lattes.</p>
-    <footer><a class="btn text-link" href="/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks">Read more →</a></footer>
-  </article>
+      <article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" content="https://www.rolypolydanang.vn/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks">
+        <header>
+          <h3 itemprop="headline">
+            <a href="/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks" itemprop="url">Best Café Near An Thuong</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="2025-08-15" itemprop="datePublished">Aug 15, 2025</time>
+            <meta itemprop="dateModified" content="2025-08-15"> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Roly Poly Team</span></span>
+          </p>
+        </header>
+        <a class="post-thumb" href="/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks">
+          <img src="/images/hero-shopfront-roly-poly-fresh-spring-rolls-da-nang.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Roly Poly café interior with spring rolls and drinks" itemprop="image">
+        </a>
+        <p class="post-excerpt" itemprop="description">Your go-to café in An Thuong for fresh spring rolls, salted coffee, and matcha lattes.</p>
+        <footer><a class="btn text-link" href="/blog/best-cafe-an-thuong-fresh-spring-rolls-specialty-drinks">Read more →</a></footer>
+      </article>
 
-  <!-- Pagination (add when you have more pages) -->
-  <nav class="pagination" aria-label="Pagination">
-    <!-- Example: <a class="prev" href="/blog/page/2" rel="next">Older posts</a> -->
-  </nav>
-</section>
-</main>
+      <!-- Pagination placeholder -->
+      <nav class="pagination" aria-label="Pagination"></nav>
+    </section>
+  </main>
 
-  <!-- Footer (IDENTICAL TO MENU/ORDER) -->
+  <!-- FOOTER (same structure & icon styles as other pages) -->
   <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title" style="background:#111;color:#fff;">
     <div class="container">
       <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Footer</h2>
@@ -599,56 +543,36 @@
     </div>
   </footer>
 
-  <!-- Footer icon color fix (IDENTICAL) -->
+  <!-- Footer icon color fix (same snippet as other pages) -->
   <style>
-    /* ===== Footer social icons: force white ===== */
-    .site-footer .social-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      color: #fff;
-      text-decoration: none;
-      opacity: 1;
-      transition:
-        opacity .15s ease-in-out,
-        transform .15s ease-in-out,
-        color .15s ease-in-out,
-        filter .15s ease-in-out;
-    }
-    .site-footer .social-links a i {
-      font-size: 1.125rem;
-      line-height: 1;
-    }
+    .site-footer .social-links a{
+      display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;color:#fff;text-decoration:none;opacity:1;
+      transition:opacity .15s ease-in-out,transform .15s ease-in-out,color .15s ease-in-out,filter .15s ease-in-out}
+    .site-footer .social-links a i{font-size:1.125rem;line-height:1}
     .site-footer .social-links .fa-solid,
     .site-footer .social-links .fas,
     .site-footer .social-links .fab,
-    .site-footer .social-links .fa-brands {
-      color: currentColor;
-    }
-    .site-footer .social-links a + a { margin-left: .5rem; }
-    .site-footer .social-links a:hover,
-    .site-footer .social-links a:focus-visible {
-      opacity: .9;
-      transform: translateY(-1px);
-      outline: none;
-    }
-    .site-footer .social-links img.social-icon-img {
-      display: block;
-      width: 36px;
-      height: 36px;
-      filter: brightness(0) invert(1);
-    }
-    .site-footer .social-links a:hover img.social-icon-img,
-    .site-footer .social-links a:focus-visible img.social-icon-img {
-      filter: brightness(0) invert(1) opacity(.9);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .site-footer .social-links a { transition: none; }
-    }
+    .site-footer .social-links .fa-brands{color:currentColor}
+    .site-footer .social-links a + a{margin-left:.5rem}
+    .site-footer .social-links a:hover,.site-footer .social-links a:focus-visible{opacity:.9;transform:translateY(-1px);outline:none}
+    .site-footer .social-links img.social-icon-img{display:block;width:36px;height:36px;filter:brightness(0) invert(1)}
+    .site-footer .social-links a:hover img.social-icon-img,.site-footer .social-links a:focus-visible img.social-icon-img{filter:brightness(0) invert(1) opacity(.9)}
+    @media (prefers-reduced-motion: reduce){.site-footer .social-links a{transition:none}}
   </style>
 
+  <!-- Utilities -->
   <script>document.getElementById('current-year').textContent=new Date().getFullYear();</script>
+
+  <!-- Simple GA4 click tagging (optional, mirrors other pages) -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a'); if(!a || typeof gtag !== 'function') return;
+      try {
+        if (a.href.indexOf('google.com/maps') !== -1) gtag('event','click_maps',{link_url:a.href, location:'blog'});
+        if (a.href.indexOf('grab.com') !== -1) gtag('event','click_grabfood',{link_url:a.href, location:'blog'});
+        if (a.href.indexOf('tel:') === 0) gtag('event','click_call',{phone:a.href, location:'blog'});
+      } catch(err) {}
+    }, {passive:true});
+  </script>
 </body>
 </html>
