@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-  <!-- Charset & viewport -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <!-- Primary SEO -->
   <title>Customer Support | Roly Poly Da Nang</title>
@@ -15,14 +14,22 @@
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- Performance -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-  <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" as="image" href="/images/assorted-spring-rolls-platter-roly-poly-da-nang.webp" type="image/webp" />
-  <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="/main.css" /></noscript>
+  <link rel="preload" as="style" href="/main.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/main.css"></noscript>
+  <!-- Font Awesome (same load pattern as Menu page) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
 
-  <!-- Open Graph -->
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Customer Support | Roly Poly Da Nang">
   <meta property="og:description" content="GrabFood issue with your order? Message us and include your Order ID for the fastest help.">
@@ -35,39 +42,21 @@
   <meta property="og:site_name" content="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang">
   <meta property="og:locale" content="en_US">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Customer Support | Roly Poly Da Nang">
   <meta name="twitter:description" content="GrabFood issue with your order? Message us and include your Order ID for faster help.">
   <meta name="twitter:image" content="https://www.rolypolydanang.vn/images/assorted-spring-rolls-platter-roly-poly-da-nang.png">
   <meta name="twitter:image:alt" content="Assorted fresh spring rolls platter at Roly Poly Da Nang">
 
-  <!-- Icons & PWA -->
-  <link rel="icon" sizes="any" href="/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta name="theme-color" content="#ffffff" />
-
-  <!-- Hreflang -->
-  <link rel="alternate" href="https://www.rolypolydanang.vn/support" hreflang="x-default">
-  <link rel="alternate" href="https://www.rolypolydanang.vn/support" hreflang="en">
-  <link rel="alternate" href="https://www.rolypolydanang.vn/support" hreflang="en-VN">
-
-  <!-- Font Awesome (footer icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
-
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLRTTJDJYL"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer=window.dataLayer||[];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-BLRTTJDJYL');
+    gtag('js',new Date()); gtag('config','G-BLRTTJDJYL');
   </script>
 
-  <!-- Page styles (scoped) -->
+  <!-- Page styles (scoped to support content only) -->
   <style>
     :root{ --brand:#ff6a00; --brand-d:#e55b00; }
 
@@ -78,11 +67,9 @@
     .order-id{ display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem; }
     .order-id input{ border:1px solid #e3e3e3; border-radius:8px; padding:.6rem .8rem; min-width:260px; width:100%; max-width:520px; }
 
-    /* Contact grid */
     .contact-grid{ display:grid; grid-template-columns:1fr; gap:15px; margin-top:1.5rem }
     @media (min-width: 700px){ .contact-grid{ grid-template-columns:repeat(2,1fr); } }
 
-    /* Base contact button (no icons, bold, pill) */
     .rp-btn{
       display:flex; align-items:center; justify-content:center;
       text-decoration:none; font-weight:800; font-size:1.08rem; letter-spacing:.2px;
@@ -92,7 +79,6 @@
     }
     .rp-btn:hover{ transform:translateY(-2px); opacity:.95; }
 
-    /* Platform brand colors */
     .rp-wa{ background:#25D366; border-color:#20b457; }
     .rp-wa:hover{ background:#20b457; border-color:#1a9449; }
 
@@ -105,27 +91,19 @@
     .rp-ig{ background:#E1306C; border-color:#c42a60; }
     .rp-ig:hover{ background:#c42a60; border-color:#a92453; }
 
-    /* Outline variant for Call (secondary priority) */
-    .rp-btn--outline{
-      background:transparent; border-color:#111; color:#111 !important;
-    }
-    .rp-btn--outline:hover{
-      background:#111; border-color:#111; color:#fff !important;
-    }
+    .rp-btn--outline{ background:transparent; border-color:#111; color:#111 !important; }
+    .rp-btn--outline:hover{ background:#111; border-color:#111; color:#fff !important; }
     .rp-btn--full{ grid-column:1 / -1; }
 
-    /* Card (tips) */
     .card { max-width: 760px; margin: 14px auto 22px; background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 18px 20px; box-shadow: 0 6px 18px rgba(0,0,0,.04); }
     .card-title { font-weight: 800; font-size: 1.12rem; }
 
-    /* Focus ring */
     a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid rgba(255,106,0,.5); outline-offset: 2px; border-radius: 10px; }
 
-    /* Container width (scoped) */
     main.support-wrap > .container { max-width: 960px; margin-inline: auto; padding-inline: 1rem; }
 
-    /* Accessibility helper */
-    .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    /* visually hidden helper (used by label) */
+    .visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;white-space:nowrap}
 
     /* Dark mode */
     @media (prefers-color-scheme: dark){
@@ -192,12 +170,12 @@
         <button id="clearOrderBtn" class="rp-btn rp-btn--outline" type="button">Clear</button>
       </form>
 
-      <!-- Contact buttons in platform brand colors (no icons) -->
+      <!-- Contact buttons (no icons) -->
       <section class="contact-grid" aria-label="Contact options">
-        <a id="btn-wa"   class="rp-btn rp-wa"   href="https://wa.me/84327306076" target="_blank" rel="noopener nofollow">WhatsApp</a>
-        <a id="btn-zalo" class="rp-btn rp-zalo" href="https://zalo.me/84327306076" target="_blank" rel="noopener nofollow">Zalo</a>
-        <a id="btn-msgr" class="rp-btn rp-msgr" href="https://m.me/rolypolydanang" target="_blank" rel="noopener nofollow">Messenger</a>
-        <a id="btn-ig"   class="rp-btn rp-ig"   href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener nofollow">Instagram</a>
+        <a id="btn-wa"   class="rp-btn rp-wa"   href="https://wa.me/84327306076" target="_blank" rel="noopener">WhatsApp</a>
+        <a id="btn-zalo" class="rp-btn rp-zalo" href="https://zalo.me/84327306076" target="_blank" rel="noopener">Zalo</a>
+        <a id="btn-msgr" class="rp-btn rp-msgr" href="https://m.me/rolypolydanang" target="_blank" rel="noopener">Messenger</a>
+        <a id="btn-ig"   class="rp-btn rp-ig"   href="https://ig.me/m/rolypolydanang" target="_blank" rel="noopener">Instagram</a>
         <a id="btn-call" class="rp-btn rp-btn--outline rp-btn--full" href="tel:+84327306076">Call Us (fastest)</a>
       </section>
 
@@ -212,42 +190,56 @@
     </div>
   </main>
 
-  <!-- FULL FOOTER -->
-  <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title">
+  <!-- ===== MATCHED FOOTER (identical to Menu page) ===== -->
+  <footer class="site-footer" role="contentinfo" aria-labelledby="footer-title" style="background:#111;color:#fff;">
     <div class="container">
-      <h2 id="footer-title" class="visually-hidden">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Footer</h2>
+      <h2 id="footer-title" class="visually-hidden">
+        Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Footer
+      </h2>
+
       <div class="footer-grid">
+        <!-- Brand Info -->
         <section class="footer-col" aria-labelledby="footer-brand">
-          <h3 id="footer-brand"><a href="/" aria-label="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Home">Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang</a></h3>
-          <p class="footer-tagline">Vietnamese restaurant &amp; café in <strong>An Thuong (My An)</strong>, near <strong>My Khe Beach</strong>, Da Nang.</p>
+          <h3 id="footer-brand">
+            <a href="/" aria-label="Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang — Home" style="color:#fff;">
+              Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang
+            </a>
+          </h3>
+          <p class="footer-tagline">
+            Vietnamese restaurant &amp; café in An Thuong (My An), near My Khe Beach, Da Nang.
+          </p>
           <address>
             05 An Thượng 6, Bắc Mỹ Phú,<br />Ngũ Hành Sơn, Đà Nẵng 550000<br />
-            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159&amp;utm_source=footer&amp;utm_medium=link&amp;utm_campaign=rolypoly_site" target="_blank" rel="noopener noreferrer nofollow" aria-label="Directions to Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps">Directions (Google Maps)</a><br />
-            <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang">+84 327 306 076</a><br />
-            <a href="mailto:rolypolydanang@gmail.com">rolypolydanang@gmail.com</a>
+            <a class="map-link" href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener noreferrer" aria-label="Directions to Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang on Google Maps" style="color:#fff;">Directions (Google Maps)</a><br />
+            <a href="tel:+84327306076" aria-label="Call Roly Poly Fresh Spring Rolls &amp; Coffee Da Nang" style="color:#fff;">+84 327 306 076</a><br />
+            <a href="mailto:rolypolydanang@gmail.com" style="color:#fff;">rolypolydanang@gmail.com</a>
           </address>
           <p><strong>Open:</strong> Daily, 10:00–20:00</p>
         </section>
 
+        <!-- Quick Links -->
         <nav class="footer-col" aria-labelledby="footer-links">
           <h3 id="footer-links">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/" style="color:#fff;">Home</a></li>
+            <li><a href="/menu" style="color:#fff;">Menu</a></li>
+            <li><a href="/order" style="color:#fff;">Order</a></li>
+            <li><a href="/about" style="color:#fff;">About</a></li>
+            <li><a href="/blog" style="color:#fff;">Blog</a></li>
+            <li><a href="/contact" style="color:#fff;">Contact</a></li>
           </ul>
         </nav>
 
+        <!-- Social Links -->
         <section class="footer-col" aria-labelledby="footer-social">
           <h3 id="footer-social">Socials</h3>
           <div class="social-links" role="group" aria-label="Social media">
-            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662.html" target="_blank" rel="noopener noreferrer nofollow" aria-label="Roly Poly Da Nang on Tripadvisor">
-              <img class="social-icon-img" src="/images/trip-adv.png" width="32" height="32" alt="Tripadvisor" decoding="async" loading="lazy" />
+            <a href="https://www.instagram.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/rolypolydanang" target="_blank" rel="me noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.google.com/maps?cid=8457966646420358159" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></a>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g298085-d33243662.html" target="_blank" rel="noopener" aria-label="Tripadvisor">
+              <img class="social-icon-img" src="/images/trip-adv.png" width="36" height="36" alt="Tripadvisor" decoding="async" loading="lazy" />
             </a>
           </div>
         </section>
@@ -258,6 +250,56 @@
       </div>
     </div>
   </footer>
+
+  <!-- Footer icon color fix (identical to Menu page) -->
+  <style>
+    /* ===== Footer social icons: force white ===== */
+    .site-footer .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      text-decoration: none;
+      opacity: 1;
+      transition:
+        opacity .15s ease-in-out,
+        transform .15s ease-in-out,
+        color .15s ease-in-out,
+        filter .15s ease-in-out;
+    }
+    .site-footer .social-links a i {
+      font-size: 1.125rem;
+      line-height: 1;
+    }
+    .site-footer .social-links .fa-solid,
+    .site-footer .social-links .fas,
+    .site-footer .social-links .fab,
+    .site-footer .social-links .fa-brands {
+      color: currentColor;
+    }
+    .site-footer .social-links a + a { margin-left: .5rem; }
+    .site-footer .social-links a:hover,
+    .site-footer .social-links a:focus-visible {
+      opacity: .9;
+      transform: translateY(-1px);
+      outline: none;
+    }
+    .site-footer .social-links img.social-icon-img {
+      display: block;
+      width: 36px;
+      height: 36px;
+      filter: brightness(0) invert(1);
+    }
+    .site-footer .social-links a:hover img.social-icon-img,
+    .site-footer .social-links a:focus-visible img.social-icon-img {
+      filter: brightness(0) invert(1) opacity(.9);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .site-footer .social-links a { transition: none; }
+    }
+  </style>
 
   <!-- Utilities -->
   <script>document.getElementById('current-year').textContent=new Date().getFullYear();</script>
@@ -277,7 +319,7 @@
     }, {passive:true});
   </script>
 
-  <!-- WhatsApp Order ID autofill --> 
+  <!-- WhatsApp Order ID autofill -->
   <script>
     (function(){
       const orderInput=document.getElementById('orderIdInput');
